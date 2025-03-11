@@ -3,8 +3,66 @@
 @tailwind utilities;
 
 :root {
+  /* TODO: Adjust these colors */
   --background: #ffffff;
   --foreground: #171717;
+
+  --black: #0a0a1a;
+  --black-100: #020205;
+  --black-200: #04040a;
+  --black-300: #06060f;
+  --black-400: #080815;
+  --black-500: #0a0a1a;
+  --black-600: #25255e;
+  --black-700: #3f3fa2;
+  --black-800: #7676ca;
+  --black-900: #bbbbe4;
+
+  --lime: #ceff1a;
+  --lime-100: #2c3800;
+  --lime-200: #587000;
+  --lime-300: #84a800;
+  --lime-400: #b0e000;
+  --lime-500: #ceff1a;
+  --lime-600: #d7ff47;
+  --lime-700: #e1ff75;
+  --lime-800: #ebffa3;
+  --lime-900: #f5ffd1;
+
+  --violet: #7d3cff;
+  --violet-100: #15003f;
+  --violet-200: #2a007e;
+  --violet-300: #3f00be;
+  --violet-400: #5400fd;
+  --violet-500: #7d3cff;
+  --violet-600: #9864ff;
+  --violet-700: #b18bff;
+  --violet-800: #cbb1ff;
+  --violet-900: #e5d8ff;
+
+  --blue: #1be7ff;
+  --blue-100: #003238;
+  --blue-200: #006570;
+  --blue-300: #0097a8;
+  --blue-400: #00cae0;
+  --blue-500: #1be7ff;
+  --blue-600: #47edff;
+  --blue-700: #75f1ff;
+  --blue-800: #a3f6ff;
+  --blue-900: #d1faff;
+
+  --white: #eef0f2;
+  --white-100: #2a3036;
+  --white-200: #53606c;
+  --white-300: #81909e;
+  --white-400: #b8c0c8;
+  --white-500: #eef0f2;
+  --white-600: #f1f3f4;
+  --white-700: #f5f6f7;
+  --white-800: #f8f9fa;
+  --white-900: #fcfcfc;
+
+  --header-height: 95px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,6 +74,7 @@
 
 body {
   color: var(--foreground);
+  background: var(--background);
 }
 
 .custom-background {
