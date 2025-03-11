@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   description: 'A portfolio website for Arjun Puri representing his work and skills.',
 };
 
+// TODO: Create a footer
+// TODO: Create a contact me section
+// TODO: Place portfolio behind password with ability to request password
+// TODO: Animate main entry so it opens like a curtain or something
+// TODO: Put all todos in todoist
+// TODO: Fix issue on page load
 export default function RootLayout({
   children,
 }: Readonly<{
