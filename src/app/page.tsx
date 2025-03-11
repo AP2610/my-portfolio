@@ -1,22 +1,34 @@
+import { About } from '@/components/about';
 import { Button } from '@/components/buttons';
 import { Section } from '@/components/section';
 
-export default function Home() {
+const Home = () => {
   return (
-    <Section className="font-sans min-h-[100svh] flex flex-col items-center justify-center gap-16">
-      <div className="flex flex-col gap-4">
-        <h1 className="text-4xl text-center font-sans font-black">Hi! I&apos;m Arjun</h1>
-        <p className="text-center text-2xl text-lime">Welcome to my portfolio</p>
-      </div>
+    <>
+      <Section
+        className="font-sans min-h-[100svh] flex flex-col items-center justify-center gap-16 custom-background-violet"
+        id="hero"
+      >
+        <div className="flex flex-col gap-4">
+          <h1 className="text-4xl text-center font-sans font-black">Hi! I&apos;m Arjun</h1>
+          <p className="text-center text-2xl font-light text-lime">Welcome to my portfolio</p>
+        </div>
 
-      <div className="flex gap-4">
-        <Button isLinkButton href="/cv">
-          View CV
-        </Button>
-        <Button isLinkButton href="/projects" variant="secondary">
-          Projects
-        </Button>
-      </div>
-    </Section>
+        <div className="flex gap-4">
+          <Button isLinkButton href="/cv">
+            View CV
+          </Button>
+          <Button variant="secondary" scrollTo="about">
+            About Me
+          </Button>
+        </div>
+      </Section>
+
+      <Section id="about" isFullWidth hasTopPadding hasBottomPadding>
+        <About />
+      </Section>
+    </>
   );
-}
+};
+
+export default Home;
