@@ -64,7 +64,7 @@ export const Header = () => {
           </AnimatedElementPresence>
 
           <AnimatedElementPresence entryAnimationDelay={0.2} animationProperty="opacity">
-            <NavigationMenu scrollYProgress={scrollYProgress} isOpen={isNavOpen} setIsOpen={setIsNavOpen} />
+            <NavigationMenu isOpen={isNavOpen} setIsOpen={setIsNavOpen} />
           </AnimatedElementPresence>
         </div>
       </motion.header>
