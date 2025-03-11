@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={clsx(`${raleway.variable} antialiased`)}>
+      <body className={clsx(`${raleway.variable} antialiased custom-background`)}>
         <main className="min-h-screen">{children}</main>
       </body>
     </html>
