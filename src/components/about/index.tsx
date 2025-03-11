@@ -1,7 +1,13 @@
 import { Button } from '@/components/buttons';
 import { Section } from '../section';
+import { Badge } from '@/components/badge';
+import { InfoBox } from '@/components/info-box';
+import { Blockquote } from '@/components/blockquote';
+import { TextHighlight } from '@/components/text-highlight';
 
 export const About = () => {
+  const specializations = ['JavaScript', 'TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'Sanity CMS'];
+
   return (
     <Section className="space-y-8 text-lg">
       <h2 className="text-3xl md:text-4xl font-black">
@@ -24,20 +30,21 @@ export const About = () => {
 
       <div>
         <p className="mb-4">I specialise in:</p>
-        <ul className="list-none grid grid-cols-2 md:grid-cols-3 gap-2 text-blue font-sans font-light">
-          <li>JavaScript</li>
-          <li>TypeScript</li>
-          <li>React</li>
-          <li>Next.js</li>
-          <li>Tailwind CSS</li>
-          <li>Sanity CMS</li>
+        <ul className="flex flex-wrap gap-2">
+          {specializations.map((skill) => (
+            <li key={skill}>
+              <Badge>{skill}</Badge>
+            </li>
+          ))}
         </ul>
       </div>
 
       <p>
         With a service mindset rooted in my background in hospitality and tech marketing, I bring strong interpersonal skills and
-        adaptability to dynamic environments. Having lived in Australia, India, Kenya, Switzerland, and now the Netherlands, I
-        excel at understanding cultural dynamics and seamlessly integrating into different teams.
+        adaptability to dynamic environments. Having lived in
+        <TextHighlight color="blue">Australia, India, Kenya, Switzerland, and now the Netherlands,</TextHighlight>I excel at
+        understanding cultural dynamics and seamlessly integrating into different teams .
+        {/* TODO: Write something about working in teams and remotely */}
       </p>
 
       <p>
@@ -45,32 +52,32 @@ export const About = () => {
         experimenting, and building, both digitally and physically.
       </p>
 
-      <div className="bg-blue/5 p-6 rounded-lg border border-blue/10">
+      <InfoBox color="blue">
         <p className="text-lg">
           If you&apos;re looking for someone who codes full time, i.e., gets off work and then continues coding late into night -
           that&apos;s not me. It was at one point. I sacrificed a work-life balance for my job and my craft - and I suffered
           because of it. I&apos;ve since taken pride in being able to balance my work, craft, and personal life.
         </p>
-        <p className="mt-4 text-lg">
+        <p className="text-lg">
           Now, once I&apos;m done with work, I enjoy spending time with my partner, coming up with a new recipe or thinking of the
           next DIY project around the house. I firmly believe that exploring my creativity in a fashion that is not related to my
           job, leads to an unbound ability to be creative in my job.
         </p>
-        <p className="mt-4 text-lg">
+        <p className="text-lg">
           When all I did was code, I found myself demoralised after a while. Since I&apos;ve expanded my portfolio of creativity,
           I find myself more excited to apply myself in all of them. I&apos;ve solved many a code-related issue while being
           hunched over my stove wondering what&apos;s missing from a dish.
         </p>
-        <p className="mt-4 text-lg">
+        <p className="text-lg">
           While I fully appreciate people who love to spend all their time writing code or writing about writing code - I
           wouldn&apos;t give up the balance I&apos;ve worked very hard to create over the last half decade.
         </p>
-      </div>
+      </InfoBox>
 
-      <p className="text-blue font-medium text-center italic">
-        &quot;Quality is king, but flexibility is key. I believe in delivering high-quality work while adapting to real-world
-        constraints.&quot;
-      </p>
+      <Blockquote color="blue">
+        Quality is king, but flexibility is key. I believe in delivering high-quality work while adapting to real-world
+        constraints.
+      </Blockquote>
 
       <div className="space-y-4">
         <p className="text-lg">
