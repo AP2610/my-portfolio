@@ -1,0 +1,31 @@
+/* TODO: make light mode and dark mode print option */
+
+@media print {
+  /* Hide navigation and other non-essential elements */
+  .printHide {
+    display: none !important;
+  }
+
+  /* Ensure text is black for better printing */
+  .printBody {
+    color: black !important;
+    background: white !important;
+  }
+
+  /* Adjust spacing for print */
+  .printFriendly {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Ensure links are visible */
+  .printLink {
+    text-decoration: none !important;
+    color: black !important;
+  }
+
+  /* Break pages appropriately */
+  .printArticle {
+    page-break-inside: avoid;
+  }
+}
