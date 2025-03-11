@@ -1,7 +1,14 @@
 export const scrollToElement = (elementId: string) => {
   const element = document.getElementById(elementId);
-
   if (!element) return;
 
-  element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  // Get fixed header height from CSS var, fallback to 0
+  const headerHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 0;
+  // Get absolute position of target element
+  const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+
+  window.scrollTo({
+    top: elementPosition - headerHeight,
+    behavior: 'smooth',
+  });
 };
