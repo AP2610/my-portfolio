@@ -7,6 +7,8 @@ import { AnimatedElementPresence } from '../animated-element-presence';
 import { Logo } from '../logo';
 import { NavigationMenu } from '../navigation';
 
+// TODO: Create a switch for light mode or darkmode
+// TODO: make header frosted by default so it works on all pages or consider adding back hasSolidBackground styles - This is needed for the CV page
 export const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const pathname = usePathname();
@@ -41,7 +43,7 @@ export const Header = () => {
   );
 
   // Adds blur effect as user scrolls
-  const blurStyle = useTransform(scrollYProgress, [0.5, 1], ['blur(0px)', 'blur(10px)']);
+  const blurStyle = useTransform(scrollYProgress, [0.2, 0.4], ['blur(0px)', 'blur(10px)']);
 
   return (
     <>
@@ -50,7 +52,7 @@ export const Header = () => {
         className="fixed top-0 left-0 right-0 z-10  h-[var(--header-height)]"
         // The initial styles solve the issue where useTransform is not reset on page navigation.
         initial={{
-          background: 'initialBackground',
+          background: initialBackground,
           backdropFilter: 'blur(0px)',
         }}
         style={{
