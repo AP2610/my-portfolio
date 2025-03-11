@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import type { Metadata } from 'next';
 import { Raleway } from 'next/font/google';
 import './globals.css';
+import { Header } from '@/components/header';
 
 const raleway = Raleway({
   variable: '--font-raleway',
@@ -20,7 +21,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={clsx(`${raleway.variable} antialiased custom-background`)}>
+      <body className={clsx(`${raleway.variable} antialiased`)}>
+        <Header />
         <main className="min-h-screen">{children}</main>
       </body>
     </html>
