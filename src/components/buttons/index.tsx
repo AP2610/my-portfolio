@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { AnchorHTMLAttributes } from 'react';
 import { ButtonHTMLAttributes } from 'react';
 
-type ButtonVariant = 'primary' | 'secondary' | 'icon-button';
+type ButtonVariant = 'primary' | 'secondary' | 'icon-button' | 'blue-secondary';
 
 type BaseProps = {
   children: React.ReactNode;
@@ -47,6 +47,7 @@ export const Button = ({
     'w-[fit-content] p-4': variant === 'icon-button',
     'bg-white text-black hover:bg-white-400': variant === 'primary',
     'border-2 border-lime text-lime hover:bg-lime/10': variant === 'secondary',
+    'border-2 border-blue text-blue hover:bg-blue/10': variant === 'blue-secondary',
     // For all other variants except icon button
     'px-4 py-2 min-w-[160px] font-sans text-center text-base transition-all duration-300 flex items-center justify-center':
       variant !== 'icon-button',

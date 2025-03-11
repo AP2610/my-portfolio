@@ -86,7 +86,7 @@ export const About = () => {
         <Button isLinkButton href="/cv">
           View My CV
         </Button>
-        <Button isLinkButton href="/projects" variant="blue">
+        <Button isLinkButton href="/projects" variant="blue-secondary">
           See My Projects
         </Button>
       </div>
