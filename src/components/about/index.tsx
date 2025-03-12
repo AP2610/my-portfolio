@@ -42,8 +42,8 @@ export const About = () => {
 
       <p>
         With a service mindset rooted in my background in hospitality and tech marketing, I bring strong interpersonal skills and
-        adaptability to dynamic environments. Having lived in
-        <TextHighlight color="blue">Australia, India, Kenya, Switzerland, and now the Netherlands,</TextHighlight>I excel at
+        adaptability to dynamic environments. Having lived in{' '}
+        <TextHighlight color="blue">Australia, India, Kenya, Switzerland, and now the Netherlands,</TextHighlight> I excel at
         understanding cultural dynamics and seamlessly integrating into different teams .
       </p>
 
@@ -90,7 +90,7 @@ export const About = () => {
         </p>
       </div>
 
-      <div className="flex gap-4 md:w-1/4 ml-auto">
+      <div className="flex gap-4 md:w-1/4 md:mt-12">
         <Button isLinkButton href="/cv" className="w-full">
           View My CV
         </Button>
