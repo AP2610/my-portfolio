@@ -5,6 +5,7 @@ import { InfoBox } from '@/components/info-box';
 import { Blockquote } from '@/components/blockquote';
 import { TextHighlight } from '@/components/text-highlight';
 
+// TODO: Add something about beauty in simplicity
 export const About = () => {
   const specializations = ['JavaScript', 'TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'Sanity CMS'];
 

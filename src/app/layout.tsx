@@ -20,6 +20,7 @@ export const metadata: Metadata = {
 // TODO: Animate main entry so it opens like a curtain or something
 // TODO: Put all todos in todoist
 // TODO: Fix issue on page load
+// TODO: Add favicon
 export default function RootLayout({
   children,
 }: Readonly<{
