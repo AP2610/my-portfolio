@@ -52,6 +52,7 @@ export const About = () => {
         experimenting, and building, both digitally and physically.
       </p>
 
+      {/* Move this to core values section get values from previous CV */}
       <InfoBox color="blue">
         <p className="text-lg">
           If you&apos;re looking for someone who codes full time, i.e., gets off work and then continues coding late into night -

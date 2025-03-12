@@ -13,10 +13,10 @@ export const InfoBox = ({ children, color = 'blue', className }: InfoBoxProps) =
   const classes = clsx(
     'p-6 rounded-lg flex flex-col items-center gap-4',
     {
-      'bg-blue/5 border border-blue/10': color === 'blue',
-      'bg-lime/5 border border-lime/10': color === 'lime',
-      'bg-violet/5 border border-violet/10': color === 'violet',
-      'bg-white/5 border border-white/10': color === 'white',
+      'bg-blue/20 border border-blue/40': color === 'blue',
+      'bg-lime/20 border border-lime/40': color === 'lime',
+      'bg-violet/20 border border-violet/40': color === 'violet',
+      'bg-white/20 border border-white/40': color === 'white',
     },
     className
   );
