@@ -19,7 +19,7 @@ const Home = () => {
             View CV
           </Button>
           {/* TODO: Add arrow pointing down to about me button so its clear where it is */}
-          {/* Also consider addting down arrow to bottom of hero */}
+          {/* TODO: Also consider addting down arrow to bottom of hero */}
           <Button variant="secondary" scrollTo="about">
             About Me
           </Button>

@@ -45,7 +45,6 @@ export const About = () => {
         adaptability to dynamic environments. Having lived in
         <TextHighlight color="blue">Australia, India, Kenya, Switzerland, and now the Netherlands,</TextHighlight>I excel at
         understanding cultural dynamics and seamlessly integrating into different teams .
-        {/* TODO: Write something about working in teams and remotely */}
       </p>
 
       <p>
