@@ -3,6 +3,7 @@ import { projectsData } from './data';
 import { Section } from '@/components/section';
 import { Button } from '@/components/buttons';
 import { FaArrowDown } from 'react-icons/fa';
+import Link from 'next/link';
 
 const ProjectsPage = () => {
   return (
@@ -17,38 +18,62 @@ const ProjectsPage = () => {
               done my best to keep the information unique to each section.
             </p>
 
+            <p>TLDR: Hit the Projects button below if you&apos;re just interested in my projects.</p>
+
             <div className="flex items-center justify-between gap-4 md:w-1/4">
               <Button isLinkButton href="/cv" className="w-full">
                 View my CV here
               </Button>
 
               <Button variant="secondary" scrollTo="featured-projects" className="w-full md:hidden">
-                Projects <FaArrowDown className="ml-2" />
+                Projects <FaArrowDown className="ml-2 bounce-vertical" />
               </Button>
             </div>
 
             <p>
-              What you will see below are not all the projects I have worked on in my career. I have included the ones which have
-              been most impactful to me as a developer and to the users of the applications. Besides what is listed, I have worked
-              on a few custom wordpress sites (fully custom theme) on both the frontend and backend early in my career. These
-              sites utilised the then new Gutenberg editor, which as you may know makes heavy use of React. This was my first
-              professional forray into the world of React.
+              What you&apos;ll find below are some of the most impactful projects I&apos;ve worked on—both in my growth as a
+              developer and in their impact on users. These aren&apos;t all the projects I&apos;ve contributed to throughout my
+              career, but they represent key milestones.
             </p>
 
             <p>
-              I have also built a couple of tools for internal use at my previous companies. Two of the most impactful ones were a
-              randomizer for my team at the Coronavirus dashboard, and an XML parser for my team at VodafoneZiggo, both built with
-              React. The randomizer was used to help our team pick a team member who was to lead each sprint. The XML parser was
-              used to parse very large XML files from Salesforce Commerce Cloud and convert them into a format that could be used
-              by our team.
+              Earlier in my career, I worked on fully custom WordPress themes, handling both frontend and backend development.
+              These projects leveraged the then-new Gutenberg editor, which heavily utilizes React. This was my first professional
+              exposure to React and marked the beginning of my journey into modern frontend development.
             </p>
 
             <p>
-              I do have access to the code for the randomizer and the XML parser, and will be adding them to my portfolio in due
-              time. My first use of React was for a code assignment when i was interviewing with Clockwork. I built a weather
-              widget. The API is no longer free, however the code lives on my github page if you would like to see it. Be kind
-              though, this was my first time using React, at which point it had been only a few months since i learned how to
-              code.
+              Beyond client-facing applications, I&apos;ve also built internal tools for my teams. Two of the most notable ones
+              include:
+            </p>
+
+            <ul className="list-disc list-inside ml-4 mb-4 font-sans">
+              <li>A team randomizer (Coronavirus Dashboard) – Used to fairly assign a team member to lead each sprint.</li>
+              <li>
+                An XML parser (VodafoneZiggo) – Designed to handle large XML files from Salesforce Commerce Cloud and convert them
+                into a usable format.
+              </li>
+            </ul>
+
+            <p>
+              Both tools were built with React. I still have access to the code for these projects and plan to add them to my
+              portfolio soon - they need to be cleaned up and refined slightly.
+            </p>
+
+            <p>
+              Additionally, my very first use of React was for a technical assignment during my interview with Clockwork. I built
+              a weather widget, which, while simple, was an important learning experience for me. The API is no longer free, but
+              the code is still available on my{' '}
+              <Link
+                href="https://github.com/AP2610?tab=repositories"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue hover:underline"
+              >
+                GitHub
+              </Link>{' '}
+              if you&apos;d like to check it out. (Be kind—it was my first React project, just a few months after I started
+              coding!)
             </p>
           </div>
         </header>
