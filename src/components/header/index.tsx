@@ -52,7 +52,7 @@ export const Header = () => {
   // Adds blur effect as user scrolls, but only when there isn't a solid background
   const blurStyle = useTransform(
     scrollYProgress,
-    [0.2, 0.4],
+    [0.2, 0.8],
     hasSolidBackground
       ? ['blur(10px)', 'blur(10px)'] // Keep constant blur when solid background
       : ['blur(0px)', 'blur(10px)'] // Transform blur based on scroll when transparent

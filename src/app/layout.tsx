@@ -1,8 +1,8 @@
+import { Header } from '@/components/header';
 import clsx from 'clsx';
 import type { Metadata } from 'next';
 import { Raleway } from 'next/font/google';
-import './globals.css';
-import { Header } from '@/components/header';
+import '../styles/globals.css';
 
 const raleway = Raleway({
   variable: '--font-raleway',
