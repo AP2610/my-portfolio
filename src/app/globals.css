@@ -77,6 +77,7 @@ body {
   background: var(--background);
 }
 
+/* TODO: Extract to background colors css file */
 .custom-background-violet {
   background: rgb(10, 10, 26);
   background: linear-gradient(167deg, rgba(10, 10, 26, 1) 60%, rgba(125, 60, 255, 1) 100%);  
@@ -85,6 +86,11 @@ body {
 .custom-background-blue {
   background: rgb(10, 10, 26);
   background: linear-gradient(167deg, rgba(10, 10, 26, 1) 70%, rgba(27, 231, 255, 1) 100%);
+}
+
+.custom-background-lime {
+  background: rgb(10, 10, 26);
+  background: linear-gradient(153deg, rgba(10, 10, 26, 1) 80%, rgba(206, 255, 26, 1) 100%);
 }
 
 h1,
