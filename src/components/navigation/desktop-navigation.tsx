@@ -18,7 +18,7 @@ export const DesktopNavigation = ({ className }: DesktopNavigationProps) => {
           <NavLink
             key={`${index}-${link.href}`}
             href={link.href}
-            className={`${pathname === link.href ? 'text-lime' : 'text-white'} hover:text-lime-600`}
+            className={`${pathname === link.href ? 'text-lime' : 'text-white'} hover:text-lime-600 font-medium`}
           >
             {link.label}
           </NavLink>
