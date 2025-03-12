@@ -12,7 +12,7 @@ import Link from 'next/link';
 export default function CV() {
   return (
     <>
-      <Section className={`max-w-4xl mx-auto mt-[var(--header-height)] ${styles.printFriendly}`} hasTopPadding hasBottomPadding>
+      <Section className={`mx-auto mt-[var(--header-height)] ${styles.printFriendly}`} hasTopPadding hasBottomPadding>
         <header className={`${styles.printHide} mb-8`}>
           <h1 className="text-4xl mb-4">Professional Experience</h1>
           <p className="text-lime text-lg">A comprehensive overview of my career journey.</p>

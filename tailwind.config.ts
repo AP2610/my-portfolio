@@ -10,6 +10,21 @@ export default {
     fontFamily: {
       sans: ['var(--font-raleway)'],
     },
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: '1rem',
+        sm: '1.5rem',
+        lg: '2rem',
+      },
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1024px',
+        '2xl': '1024px', // Match your header width
+      },
+    },
     extend: {
       colors: {
         black: {

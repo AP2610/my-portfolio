@@ -52,7 +52,7 @@ export const Header = () => {
   // Adds blur effect as user scrolls, but only when there isn't a solid background
   const blurStyle = useTransform(
     scrollYProgress,
-    [0.2, 0.8],
+    [0.1, 0.3],
     hasSolidBackground
       ? ['blur(10px)', 'blur(10px)'] // Keep constant blur when solid background
       : ['blur(0px)', 'blur(10px)'] // Transform blur based on scroll when transparent
@@ -73,7 +73,7 @@ export const Header = () => {
           backdropFilter: blurStyle,
         }}
       >
-        <div className="max-w-[1400px] h-full mx-auto p-4 sm:p-6 lg:p-8 flex justify-between items-center relative">
+        <div className="container h-full mx-auto p-4 sm:p-6 lg:p-8 flex justify-between items-center relative">
           <AnimatedElementPresence entryAnimationDelay={0.2} animationProperty="opacity">
             <Logo isNavOpen={isNavOpen} />
           </AnimatedElementPresence>

@@ -31,7 +31,7 @@ export const InfoBox = ({ children, color = 'blue', className }: InfoBoxProps) =
   return (
     <div className={classes}>
       <FaInfoCircle className={iconClasses} />
-      <div className="space-y-4 text-center">{children}</div>
+      <div className="space-y-4">{children}</div>
     </div>
   );
 };
