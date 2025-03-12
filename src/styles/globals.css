@@ -1,3 +1,5 @@
+@import './animations/bounce.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -69,6 +71,18 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+  }
+}
+
+/* TODO: Implement the same for framer motion animations using useReducedMotion hook */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
