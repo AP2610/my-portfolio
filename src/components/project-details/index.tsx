@@ -20,15 +20,19 @@ export const ProjectDetails = ({
 }: ProjectProps) => {
   return (
     <article className="space-y-8 pb-16 border-b border-white/10 last:border-b-0">
-      <header className="space-y-4">
-        <h2 className="text-2xl text-blue">{company}</h2>
-        <p className="text-xl font-medium">{role}</p>
-        <p className="text-lime-600">{period}</p>
+      <header>
+        <h2 className="text-2xl text-blue mb-4">{company}</h2>
+        <span className="text-xl font-medium mb-2 font-sans">{role}</span>
+        <span className="text-lime-600 block md:inline md:font-medium font-sans ml-4">{period}</span>
       </header>
 
       {image && (
-        <div className="relative aspect-video w-full overflow-hidden rounded-lg">
-          <MyImage src={image} alt={`${company} project screenshot`} />
+        <div className="max-w-4xl mx-auto">
+          <MyImage
+            src={image}
+            alt={`${company} project screenshot`}
+            containerClasses="aspect-video rounded-lg overflow-hidden md:max-h-[32rem]"
+          />
         </div>
       )}
 
