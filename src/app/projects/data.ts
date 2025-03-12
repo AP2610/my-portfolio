@@ -6,14 +6,21 @@ export type Project = {
   tasks: string[];
   results: string;
   specializations: string[];
+  slug: string;
   image?: string;
+  githubUrl?: string;
+  websiteUrl?: string;
+  additionalInfo?: string;
 };
 
 export const projectsData: Project[] = [
   {
+    slug: 'capacare',
     role: 'Team Lead, Frontend Developer, Designer',
     company: 'Capacare',
     period: 'May 2024 - November 2024',
+    additionalInfo:
+      'Please note that the website URL has not been inlcuded as at the time of writing, the website is not live. This is because the client has yet to fill in the content into the new content management system. Additionally, the Github repository lives inside of a private organisation, therefore, I am unable to share it.',
     situation:
       "Capacare, a non-profit organisation dedicated to improving access to surgical care in underdeveloped regions of Africa, particularly Sierra Leone, required a complete renewal of their existing website. The goal was to create a modern, stable, and user-friendly platform that could serve the organisation's needs for at least the next five years without requiring ongoing developer intervention.",
     tasks: [
@@ -27,13 +34,36 @@ export const projectsData: Project[] = [
     ],
     results:
       "Successfully completed the initial design phase, delivering modern and intuitive designs that meet the client's needs. The project is on track to meet its goals, with the final product expected to provide a stable and maintainable website that will effectively support Capacare's mission in the years to come.",
-    specializations: ['Agile', 'JavaScript', 'React', 'CSS', 'TypeScript', 'Git', 'NextJS', 'Sanity'],
+    specializations: ['Agile', 'JavaScript', 'React', 'TailwindCSS', 'TypeScript', 'Git', 'NextJS', 'Sanity'],
   },
   {
+    slug: 'totheroot',
+    role: 'Frontend Developer',
+    company: 'ToTheRoot',
+    period: 'November 2023 - July 2024',
+    image: '/project-images/totheroot.png',
+    websiteUrl: 'https://totheroot.io/',
+    situation:
+      'Worked on the development and maintenance of TotheRoot, a technical blog platform built by Ordina with Vue and Nuxt.js. Later, in 2024, I led the redesign of the website, transitioning it from Ordina branding to Sopra Steria branding, handling both design and development aspects.',
+    tasks: [
+      'Developed and maintained features using Vue and Nuxt.js, adapting to a new frontend ecosystem',
+      'Led the rebranding initiative in 2024, executing both design and frontend implementation',
+      'Worked with and extended functionality of the Strapi CMS',
+    ],
+    results:
+      'Successfully delivered the rebranding project and maintained the platform, ensuring a smooth transition from Ordina to Sopra Steria branding while keeping the technical blog platform running efficiently.',
+    specializations: ['Vue.js', 'Nuxt.js', 'JavaScript', 'TypeScript', 'CSS', 'SCSS', 'Git'],
+  },
+  {
+    slug: 'ministry-of-health',
     role: 'Frontend Developer',
     company: 'Ministry of Health, Wellness, and Sport',
     period: 'October 2022 - November 2023',
-    image: '/project-images/corona-dashboard.png',
+    image: '/project-images/coronavirus-dashboard.png',
+    githubUrl: 'https://github.com/minvws/nl-covid19-data-dashboard',
+    websiteUrl: 'https://web.archive.org/web/20230320185659/https://coronadashboard.government.nl/',
+    additionalInfo:
+      'The website is no longer live as the pandemic has subsided, this is why the wesbite URL points to a web archive link.',
     situation:
       "In 2020, as COVID-19 gripped the world, the government faced the urgent need to inform the public about the virus's evolving status. The information had to be accessible to civilians yet rooted in complex data from the National Institute for Public Health and the Environment. We managed the dashboard through some of the worst times of Covid, ensuring that the public received a fantastic user experience while observing data represented in user-friendly ways.",
     tasks: [
@@ -65,10 +95,13 @@ export const projectsData: Project[] = [
     ],
   },
   {
+    slug: 'vodafone-ziggo',
     role: 'Frontend Developer',
     company: 'VodafoneZiggo',
     period: 'April 2021 - July 2022',
-    image: '/project-images/vodafoneziggo.png',
+    image: '/project-images/vodafone.png',
+    websiteUrl: 'https://www.vodafoneziggo.nl',
+    additionalInfo: 'I am unable to share the link to the repository for this website as it is within a private organisation.',
     situation:
       "A collaboration between VodafoneZiggo, Salesforce, and Ordina, the goal of the project was to build an entirely new portal for Vodafone Ziggo's business customers on Salesforce Commerce Cloud.",
     tasks: [
@@ -97,10 +130,13 @@ export const projectsData: Project[] = [
     ],
   },
   {
+    slug: 'prenatal',
     role: 'Frontend Developer',
     company: 'Prenatal',
     period: 'April 2020 - June 2022',
     image: '/project-images/prenatal.png',
+    websiteUrl: 'https://www.prenatal.nl',
+    additionalInfo: 'I am unable to share the link to the repository for this website as it is within a private organisation.',
     situation:
       'The objective was to enhance the existing website by introducing innovative features aimed at optimizing performance and elevating the overall customer experience. Upon joining the project, I worked towards a series of substantial improvement initiatives, including a comprehensive redesign of the checkout process, enabling international shipping capabilities, and the integration of diverse shipping and delivery methods, among other enhancements.',
     tasks: [
@@ -125,10 +161,14 @@ export const projectsData: Project[] = [
     ],
   },
   {
+    slug: 'blokker',
     role: 'Frontend Developer',
     company: 'Blokker',
     period: 'August 2021 - March 2022',
     image: '/project-images/blokker.png',
+    websiteUrl: 'https://web.archive.org/web/20240718234101/https://www.blokker.nl/',
+    additionalInfo:
+      'I am unable to share the link the repository for this website as it is within a private organisation. Additionally, due to a rough time during the pandemic, Blokker had to declate bankruptcy, therefore the website URL points to a web archive link. The good news is that Blokker should be returning in 2025 as per the news.',
     situation:
       'To elevate the online customer experience, Blokker.nl sought to revolutionize its product delivery system. The project aimed to introduce Packaly as a new shipping method, necessitating a complete overhaul of the delivery process, including a redesign of user interactions during checkout.',
     tasks: [
@@ -141,10 +181,13 @@ export const projectsData: Project[] = [
     specializations: ['Agile', 'AJAX', 'JavaScript', 'HTML 5', 'CSS', 'SCSS', 'Git', 'Cypress', 'Bootstrap', 'jQuery'],
   },
   {
+    slug: 'schuurman-schoenen',
     role: 'Frontend Developer',
     company: 'Schuurman Schoenen',
     period: 'April 2020 - March 2022',
-    image: '/project-images/schuurman.png',
+    image: '/project-images/schuurman-schoenen.png',
+    websiteUrl: 'https://www.schuurman-schoenen.nl',
+    additionalInfo: 'I am unable to share the link to the repository for this website as it is within a private organisation.',
     situation:
       'Upon joining this project, our team had already constructed the website. My role then shifted towards maintaining the site, improving performance, progressing with the development of outstanding features, and concurrently enhancing the overall functionality and user experience.',
     tasks: [
