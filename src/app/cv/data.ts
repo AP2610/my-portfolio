@@ -134,6 +134,7 @@ export const experiences: Experience[] = [
     role: 'Frontend Developer',
     period: 'March 2020 - March 2021 (1 year 1 month)',
     location: 'Amsterdam, North Holland, Netherlands',
-    description: 'Started my career as a frontend developer at Clockwork, working on various client projects.',
+    description:
+      'Started my career as a frontend developer at Clockwork, working on various client projects including Prenatal, VodafoneZiggo (Carried over to Ordina), Schuurman Schoenen, and more.',
   },
 ];
