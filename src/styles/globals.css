@@ -15,59 +15,59 @@
   --foreground: #ededed;
 
   --black: #0a0a1a;
-  --black-100: #020205;
-  --black-200: #04040a;
-  --black-300: #06060f;
-  --black-400: #080815;
+  --black-100: #bbbbe4;
+  --black-200: #7676ca;
+  --black-300: #3f3fa2;
+  --black-400: #25255e;
   --black-500: #0a0a1a;
-  --black-600: #25255e;
-  --black-700: #3f3fa2;
-  --black-800: #7676ca;
-  --black-900: #bbbbe4;
+  --black-600: #080815;
+  --black-700: #06060f;
+  --black-800: #04040a;
+  --black-900: #020205;
 
   --lime: #ceff1a;
-  --lime-100: #2c3800;
-  --lime-200: #587000;
-  --lime-300: #84a800;
-  --lime-400: #b0e000;
+  --lime-100: #f5ffd1;
+  --lime-200: #ebffa3;
+  --lime-300: #e1ff75;
+  --lime-400: #d7ff47;
   --lime-500: #ceff1a;
-  --lime-600: #d7ff47;
-  --lime-700: #e1ff75;
-  --lime-800: #ebffa3;
-  --lime-900: #f5ffd1;
+  --lime-600: #b0e000;
+  --lime-700: #84a800;
+  --lime-800: #587000;
+  --lime-900: #2c3800;
 
   --violet: #7d3cff;
-  --violet-100: #15003f;
-  --violet-200: #2a007e;
-  --violet-300: #3f00be;
-  --violet-400: #5400fd;
+  --violet-100: #e5d8ff;
+  --violet-200: #cbb1ff;
+  --violet-300: #b18bff;
+  --violet-400: #9864ff;
   --violet-500: #7d3cff;
-  --violet-600: #9864ff;
-  --violet-700: #b18bff;
-  --violet-800: #cbb1ff;
-  --violet-900: #e5d8ff;
+  --violet-600: #5400fd;
+  --violet-700: #3f00be;
+  --violet-800: #2a007e;
+  --violet-900: #15003f;
 
   --blue: #1be7ff;
-  --blue-100: #003238;
-  --blue-200: #006570;
-  --blue-300: #0097a8;
-  --blue-400: #00cae0;
+  --blue-100: #d1faff;
+  --blue-200: #a3f6ff;
+  --blue-300: #75f1ff;
+  --blue-400: #47edff;
   --blue-500: #1be7ff;
-  --blue-600: #47edff;
-  --blue-700: #75f1ff;
-  --blue-800: #a3f6ff;
-  --blue-900: #d1faff;
+  --blue-600: #00cae0;
+  --blue-700: #0097a8;
+  --blue-800: #006570;
+  --blue-900: #003238;
 
   --white: #eef0f2;
-  --white-100: #2a3036;
-  --white-200: #53606c;
-  --white-300: #81909e;
-  --white-400: #b8c0c8;
+  --white-100: #fcfcfc;
+  --white-200: #f8f9fa;
+  --white-300: #f5f6f7;
+  --white-400: #f1f3f4;
   --white-500: #eef0f2;
-  --white-600: #f1f3f4;
-  --white-700: #f5f6f7;
-  --white-800: #f8f9fa;
-  --white-900: #fcfcfc;
+  --white-600: #b8c0c8;
+  --white-700: #81909e;
+  --white-800: #53606c;
+  --white-900: #2a3036;
 
   --header-height: 95px;
 }
@@ -98,6 +98,18 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 2.5cm;
+  }
+
+  body {
+    print-color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
   }
 }
 
