@@ -5,7 +5,7 @@ const prettierConfig = {
   semi: true,
   printWidth: 130,
   plugins: ['prettier-plugin-tailwindcss'],
-  tailwindStyleSheet: './src/app/globals.css',
+  tailwindStylesheet: './src/styles/globals.css',
   tailwindConfig: './tailwind.config.ts',
 };
 
