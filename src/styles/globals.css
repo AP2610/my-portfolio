@@ -6,8 +6,13 @@
 
 :root {
   /* TODO: Adjust these colors */
-  --background: #ffffff;
-  --foreground: #171717;
+  /* This is for light mode, will be done later. */
+  /* --background: #ffffff;
+  --foreground: #171717; */
+
+  /* For dark mode, default setting for now. */
+  --background: #0a0a0a;
+  --foreground: #ededed;
 
   --black: #0a0a1a;
   --black-100: #020205;
@@ -67,12 +72,22 @@
   --header-height: 95px;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+
+  .custom-background-violet {
+    background: rgb(10, 10, 26);
+    background: linear-gradient(167deg, rgba(10, 10, 26, 1) 60%, rgba(125, 60, 255, 1) 100%);
+  }
+
+  .custom-background-blue {
+    background: rgb(10, 10, 26);
+    background: linear-gradient(167deg, rgba(10, 10, 26, 1) 70%, rgba(27, 231, 255, 1) 100%);
+  }
+} */
 
 /* TODO: Implement the same for framer motion animations using useReducedMotion hook */
 @media (prefers-reduced-motion: reduce) {
@@ -92,9 +107,20 @@ body {
 }
 
 /* TODO: Extract to background colors css file */
+/* For light mode, will be implemented later, not critical */
+/* .custom-background-violet {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(167deg, rgba(255, 255, 255, 1) 60%, rgba(125, 60, 255, 1) 100%);  
+}
+
+.custom-background-blue {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(167deg, rgba(255, 255, 255, 1) 70%, rgba(27, 231, 255, 1) 100%);
+} */
+
 .custom-background-violet {
   background: rgb(10, 10, 26);
-  background: linear-gradient(167deg, rgba(10, 10, 26, 1) 60%, rgba(125, 60, 255, 1) 100%);  
+  background: linear-gradient(167deg, rgba(10, 10, 26, 1) 60%, rgba(125, 60, 255, 1) 100%);
 }
 
 .custom-background-blue {
@@ -102,10 +128,10 @@ body {
   background: linear-gradient(167deg, rgba(10, 10, 26, 1) 70%, rgba(27, 231, 255, 1) 100%);
 }
 
-.custom-background-lime {
+/* .custom-background-lime {
   background: rgb(10, 10, 26);
   background: linear-gradient(153deg, rgba(10, 10, 26, 1) 80%, rgba(206, 255, 26, 1) 100%);
-}
+} */
 
 h1,
 h2,
