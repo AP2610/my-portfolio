@@ -21,8 +21,11 @@ export const Experience = ({
     <article className={clsx('space-y-4', className)}>
       <header>
         <h2 className="text-2xl text-blue print:text-black">{company}</h2>
+
         <p className="text-xl font-medium">{role}</p>
+
         {subText && <p className="text-sm text-lime-600 print:text-black">{subText}</p>}
+
         <p className="text-lime-600 print:text-black">
           {period} | {location}
         </p>
