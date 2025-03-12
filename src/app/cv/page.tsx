@@ -16,6 +16,7 @@ export default function CV() {
         <header className={`${styles.printHide} mb-8`}>
           <h1 className="text-4xl mb-4">Professional Experience</h1>
           <p className="text-lime text-lg">A comprehensive overview of my career journey.</p>
+
           <p className="text-lg mt-4">
             You can also hit the button in the top right corner to print or save my CV as a PDF. Please keep in mind, my CV
             contains consolidated and condensed information about my experiences. Should you wish to gain a deeper understanding
