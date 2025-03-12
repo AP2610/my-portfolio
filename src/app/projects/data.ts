@@ -1,0 +1,159 @@
+export type Project = {
+  role: string;
+  company: string;
+  period: string;
+  situation: string;
+  tasks: string[];
+  results: string;
+  specializations: string[];
+  image?: string;
+};
+
+export const projectsData: Project[] = [
+  {
+    role: 'Team Lead, Frontend Developer, Designer',
+    company: 'Capacare',
+    period: 'May 2024 - November 2024',
+    situation:
+      "Capacare, a non-profit organisation dedicated to improving access to surgical care in underdeveloped regions of Africa, particularly Sierra Leone, required a complete renewal of their existing website. The goal was to create a modern, stable, and user-friendly platform that could serve the organisation's needs for at least the next five years without requiring ongoing developer intervention.",
+    tasks: [
+      'Managing and guiding the team through the entire project lifecycle',
+      'Acting as the primary point of contact with the client to gather requirements, provide updates, and ensure alignment with their vision',
+      'Leading the design process to create a modern, user-friendly interface, along with overseeing and contributing to the implementation',
+      'Creating and assigning tasks via tickets',
+      'Facilitating team meetings',
+      'Ensuring project milestones are on track',
+      'Implementing the website using NextJS, React, Typescript, Tailwind, NextUI, and Sanity CMS',
+    ],
+    results:
+      "Successfully completed the initial design phase, delivering modern and intuitive designs that meet the client's needs. The project is on track to meet its goals, with the final product expected to provide a stable and maintainable website that will effectively support Capacare's mission in the years to come.",
+    specializations: ['Agile', 'JavaScript', 'React', 'CSS', 'TypeScript', 'Git', 'NextJS', 'Sanity'],
+  },
+  {
+    role: 'Frontend Developer',
+    company: 'Ministry of Health, Wellness, and Sport',
+    period: 'October 2022 - November 2023',
+    image: '/project-images/corona-dashboard.png',
+    situation:
+      "In 2020, as COVID-19 gripped the world, the government faced the urgent need to inform the public about the virus's evolving status. The information had to be accessible to civilians yet rooted in complex data from the National Institute for Public Health and the Environment. We managed the dashboard through some of the worst times of Covid, ensuring that the public received a fantastic user experience while observing data represented in user-friendly ways.",
+    tasks: [
+      'Maintain the codebase',
+      'Maintain and configure a headless CMS using Sanity',
+      'Migration to the latest version of Sanity CMS',
+      'Find creative and intuitive ways to represent various data types so it would be understandable to all audiences',
+      'Collaborate with various stakeholders to bring new features and data to the dashboard',
+      'Work with designers to redesign various parts of the dashboard',
+      'Build user-friendly interfaces',
+      'Coaching junior colleagues which included organising pair-programming sessions and coaching calls',
+    ],
+    results:
+      'A user-friendly, accurate dashboard that effectively communicated vital COVID-19 information to the public, fostering informed decision-making during a critical time. With my team, we successfully delivered all tasks, with releases on a 3-week basis. The website would receive more than 300,000 visitors on a daily basis. The project was and continues to be open source, so all code, including my contributions, can be found on GitHub.',
+    specializations: [
+      'Agile',
+      'AJAX',
+      'JavaScript',
+      'React',
+      'HTML 5',
+      'CSS',
+      'SCSS',
+      'TypeScript',
+      'Git',
+      'NextJS',
+      'visx',
+      'Sanity',
+      'Styled Components',
+    ],
+  },
+  {
+    role: 'Frontend Developer',
+    company: 'VodafoneZiggo',
+    period: 'April 2021 - July 2022',
+    image: '/project-images/vodafoneziggo.png',
+    situation:
+      "A collaboration between VodafoneZiggo, Salesforce, and Ordina, the goal of the project was to build an entirely new portal for Vodafone Ziggo's business customers on Salesforce Commerce Cloud.",
+    tasks: [
+      'Develop a cutting-edge new site from scratch using a B2C platform for B2B customers',
+      'Built a complex product configurator using Web Components, allowing businesses to customize their telecom solutions with real-time pricing and validation',
+      'Implemented advanced asynchronous JavaScript functionality to handle dynamic product configurations and dependencies',
+      'Using the most modern approaches – Web components for the frontend, creation of a single page application, using the latest Vanilla Javascript ES6 features',
+      'Build and improve the website with new features',
+      'Add new configurator products to the website',
+      'Enablement of a page builder similar to a drag and drop editor',
+    ],
+    results:
+      'The website has been successfully launched with numerous versions already. This has given VodafoneZiggo an entirely new presence on the web and enables it to better serve its business customers.',
+    specializations: [
+      'Agile',
+      'AJAX',
+      'JavaScript',
+      'HTML 5',
+      'CSS',
+      'SCSS',
+      'Git',
+      'Cypress',
+      'Salesforce Commerce Cloud',
+      'Bootstrap',
+      'Web Components',
+    ],
+  },
+  {
+    role: 'Frontend Developer',
+    company: 'Prenatal',
+    period: 'April 2020 - June 2022',
+    image: '/project-images/prenatal.png',
+    situation:
+      'The objective was to enhance the existing website by introducing innovative features aimed at optimizing performance and elevating the overall customer experience. Upon joining the project, I worked towards a series of substantial improvement initiatives, including a comprehensive redesign of the checkout process, enabling international shipping capabilities, and the integration of diverse shipping and delivery methods, among other enhancements.',
+    tasks: [
+      'Spearheaded the development of an enhanced checkout flow',
+      'Led frontend efforts to seamlessly integrate a new shipping method',
+      'Proactively addressed frontend tickets during sprint cycles',
+    ],
+    results:
+      'The implemented features on the website, now live on Prenatal.nl, are functioning seamlessly, providing users with an enhanced and efficient online experience. Introducing new shipping methods resulted in expanded delivery capabilities to two additional countries, leading to a tangible increase in sales and broader market reach.',
+    specializations: [
+      'Agile',
+      'AJAX',
+      'JavaScript',
+      'HTML 5',
+      'CSS',
+      'SCSS',
+      'TypeScript',
+      'Git',
+      'Cypress',
+      'Bootstrap',
+      'jQuery',
+    ],
+  },
+  {
+    role: 'Frontend Developer',
+    company: 'Blokker',
+    period: 'August 2021 - March 2022',
+    image: '/project-images/blokker.png',
+    situation:
+      'To elevate the online customer experience, Blokker.nl sought to revolutionize its product delivery system. The project aimed to introduce Packaly as a new shipping method, necessitating a complete overhaul of the delivery process, including a redesign of user interactions during checkout.',
+    tasks: [
+      'Collaborated with the design team to implement enhancements to the user experience during the checkout process',
+      'Took charge of developing all front-end requirements for the project',
+      'Worked closely with the backend team to ensure seamless collaboration and integration',
+    ],
+    results:
+      'Successfully delivered all front-end requirements for the project, navigating through iterative feedback and implementing numerous dynamic changes to meet constantly evolving requirements.',
+    specializations: ['Agile', 'AJAX', 'JavaScript', 'HTML 5', 'CSS', 'SCSS', 'Git', 'Cypress', 'Bootstrap', 'jQuery'],
+  },
+  {
+    role: 'Frontend Developer',
+    company: 'Schuurman Schoenen',
+    period: 'April 2020 - March 2022',
+    image: '/project-images/schuurman.png',
+    situation:
+      'Upon joining this project, our team had already constructed the website. My role then shifted towards maintaining the site, improving performance, progressing with the development of outstanding features, and concurrently enhancing the overall functionality and user experience.',
+    tasks: [
+      'Collaborate with the client to ideate and implement novel features and enhancements',
+      'Address frontend tickets during sprint cycles to ensure prompt issue resolution and continuous improvement',
+      'Collaborate with the backend to ensure seamless integration of new features',
+    ],
+    results:
+      "To date, the site has consistently operated smoothly, contributing to the client's receipt of several awards, recognizing it as one of the best webshops in the country.",
+    specializations: ['Agile', 'AJAX', 'JavaScript', 'HTML 5', 'CSS', 'SCSS', 'Git', 'Cypress', 'Bootstrap', 'jQuery'],
+  },
+];
