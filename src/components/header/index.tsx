@@ -7,11 +7,17 @@ import { AnimatedElementPresence } from '../animated-element-presence';
 import { Logo } from '../logo';
 import { NavigationMenu } from '../navigation';
 
+const SOLID_BACKGROUND_PATHS = ['/cv', '/projects'];
+
 // TODO: Create a switch for light mode or darkmode
-// TODO: make header frosted by default so it works on all pages or consider adding back hasSolidBackground styles - This is needed for the CV page
 export const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [hasSolidBackground, setHasSolidBackground] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    setHasSolidBackground(SOLID_BACKGROUND_PATHS.includes(pathname));
+  }, [pathname]);
 
   // Reference to the hero section for scroll-based animations
   const heroRef = useRef<HTMLElement | null>(null);
@@ -28,7 +34,8 @@ export const Header = () => {
     layoutEffect: false,
   });
 
-  const initialBackground = 'transparent';
+  const frostedBlackBackgroundColor = 'rgba(10, 10, 26, 0.6)';
+  const initialBackgroundColor = hasSolidBackground ? frostedBlackBackgroundColor : 'transparent';
 
   // Dynamic background transformation based on scroll progress
   // As user scrolls from 20% to 40% through the hero section:
@@ -37,13 +44,19 @@ export const Header = () => {
     scrollYProgress,
     [0.2, 0.4],
     [
-      initialBackground,
-      'rgba(10, 10, 26, 0.6)', // frosted black
+      initialBackgroundColor,
+      frostedBlackBackgroundColor, // frosted black
     ]
   );
 
-  // Adds blur effect as user scrolls
-  const blurStyle = useTransform(scrollYProgress, [0.2, 0.4], ['blur(0px)', 'blur(10px)']);
+  // Adds blur effect as user scrolls, but only when there isn't a solid background
+  const blurStyle = useTransform(
+    scrollYProgress,
+    [0.2, 0.4],
+    hasSolidBackground
+      ? ['blur(10px)', 'blur(10px)'] // Keep constant blur when solid background
+      : ['blur(0px)', 'blur(10px)'] // Transform blur based on scroll when transparent
+  );
 
   return (
     <>
@@ -52,7 +65,7 @@ export const Header = () => {
         className="fixed top-0 left-0 right-0 z-10  h-[var(--header-height)]"
         // The initial styles solve the issue where useTransform is not reset on page navigation.
         initial={{
-          background: initialBackground,
+          background: initialBackgroundColor,
           backdropFilter: 'blur(0px)',
         }}
         style={{
