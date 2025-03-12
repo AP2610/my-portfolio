@@ -19,15 +19,15 @@ export const ProjectDetails = ({
   additionalInfo,
 }: ProjectProps) => {
   return (
-    <article className="space-y-8 pb-16 border-b border-white/10 last:border-b-0">
+    <article className="space-y-8 border-b border-white/10 pb-16 last:border-b-0">
       <header className="mb-8">
-        <h2 className="text-2xl text-blue mb-4">{company}</h2>
-        <span className="text-xl font-medium mb-2 md:mb-0 font-sans">{role}</span>
-        <span className="text-lime-600 block md:inline md:font-medium font-sans md:ml-4">{period}</span>
+        <h2 className="mb-4 text-2xl text-blue">{company}</h2>
+        <span className="mb-2 font-sans text-xl font-medium md:mb-0">{role}</span>
+        <span className="block font-sans text-lime-600 md:ml-4 md:inline md:font-medium">{period}</span>
       </header>
 
       {image && (
-        <div className="max-w-4xl mx-auto">
+        <div className="mx-auto max-w-4xl">
           <MyImage
             src={image}
             alt={`${company} project screenshot`}
@@ -38,14 +38,14 @@ export const ProjectDetails = ({
 
       <div className="space-y-6">
         <div>
-          <h3 className="text-lg font-medium mb-4">Situation</h3>
+          <h3 className="mb-4 text-lg font-medium">Situation</h3>
           <p>{situation}</p>
         </div>
 
         <div>
-          <h3 className="text-lg font-medium mb-4">Tasks</h3>
+          <h3 className="mb-4 text-lg font-medium">Tasks</h3>
 
-          <ul className="list-disc pl-4 space-y-2 font-sans">
+          <ul className="list-disc space-y-2 pl-4 font-sans">
             {tasks.map((task, index) => (
               <li key={index}>{task}</li>
             ))}
@@ -53,19 +53,19 @@ export const ProjectDetails = ({
         </div>
 
         <div>
-          <h3 className="text-lg font-medium mb-4">Results</h3>
+          <h3 className="mb-4 text-lg font-medium">Results</h3>
           <p>{results}</p>
         </div>
 
         {additionalInfo && (
           <div>
-            <h3 className="text-lg font-medium mb-4">Additional Information</h3>
+            <h3 className="mb-4 text-lg font-medium">Additional Information</h3>
             <p>{additionalInfo}</p>
           </div>
         )}
 
         <div>
-          <h3 className="text-lg font-medium mb-4">Technologies & Skills</h3>
+          <h3 className="mb-4 text-lg font-medium">Technologies & Skills</h3>
 
           <ul className="flex flex-wrap gap-2">
             {specializations.map((skill) => (

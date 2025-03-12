@@ -35,7 +35,7 @@ export const Experience = ({
         {Array.isArray(description) ? description.map((desc, index) => <p key={index}>{desc}</p>) : <p>{description}</p>}
 
         {bulletPoints && (
-          <ul className="list-disc pl-5 space-y-2">
+          <ul className="list-disc space-y-2 pl-5">
             {bulletPoints.map((point, index) => (
               <li key={index}>{point}</li>
             ))}
@@ -45,7 +45,7 @@ export const Experience = ({
         {link && (
           <Link
             href={link.url}
-            className="text-blue hover:underline mt-4 inline-block print:hidden"
+            className="mt-4 inline-block text-blue hover:underline print:hidden"
             target="_blank"
             rel="noopener noreferrer"
           >

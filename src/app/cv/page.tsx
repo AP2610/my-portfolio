@@ -33,16 +33,18 @@ const SKILLS_PRINT = [
 const SKILLS_FULL = [...SKILLS_PRINT, 'Wordpress', 'Strapi CMS', 'Remote Work', 'Nuxt', 'VueJS', 'NPM'];
 
 // TODO: Go through the text here for any issues and things that dont fit properly
+// TODO: Extract page parts to components
+// Not the cleanest code right now, but i was in a rush. I will refactor, promise.
 export default function CV() {
   return (
     <Section
-      className="mx-auto mt-[var(--header-height)] print:w-[21cm] print:max-w-[21cm] print:h-auto print:px-10 print:py-16 print:text-black print:bg-white"
+      className="mx-auto mt-[var(--header-height)] print:h-auto print:w-[21cm] print:max-w-[21cm] print:bg-white print:px-10 print:py-16 print:text-black"
       hasTopPadding
       hasBottomPadding
     >
       {/* Intro with image */}
-      <Section isFullWidth className="flex flex-col md:flex-row gap-4 items-start justify-between print:break-inside-avoid mb-8">
-        <div className="flex flex-col items-center md:items-start print:items-start w-full md:w-auto gap-4">
+      <Section isFullWidth className="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row print:break-inside-avoid">
+        <div className="flex w-full flex-col items-center gap-4 md:w-auto md:items-start print:items-start">
           <MyImage
             src="/cv/headshot.png"
             alt="Arjun Puri"
@@ -51,12 +53,12 @@ export default function CV() {
 
           {/* TODO: IMPORTANT Make into component this is for print only */}
           <div className="hidden print:block">
-            <p className="font-semibold text-blue print:text-blue-600 mb-2">Skills & Methodologies</p>
-            <p className="text-[12px] text-blue print:text-blue-600 mb-2">
+            <p className="mb-2 font-semibold text-blue print:text-blue-600">Skills & Methodologies</p>
+            <p className="mb-2 text-[12px] text-blue print:text-blue-600">
               *For a comprehensive list, please see the CV on my website.
             </p>
 
-            <ul className="flex flex-wrap gap-2 w-60">
+            <ul className="flex w-60 flex-wrap gap-2">
               {SKILLS_PRINT.map((skill) => (
                 <li key={skill}>
                   <Badge color="blue-700">{skill}</Badge>
@@ -67,13 +69,13 @@ export default function CV() {
         </div>
 
         <div className="space-y-4 md:ml-8">
-          <div className="flex items-center justify-between mb-4">
+          <div className="mb-4 flex items-center justify-between">
             <h1 className="text-4xl text-blue print:text-blue-600">Arjun Puri</h1>
 
             <DownloadButton className="print:hidden" />
           </div>
 
-          <p className="text-lime font-semibold print:text-lime-700">
+          <p className="font-semibold text-lime print:text-lime-700">
             Frontend Engineer | JavaScript, TypeScript, React, Next.js, Tailwind | Building Reliable, Engaging & User-Centric Web
             Experiences
           </p>
@@ -83,7 +85,7 @@ export default function CV() {
           </p>
 
           {/* About me - only for print */}
-          <div className="space-y-2 hidden print:block">
+          <div className="hidden space-y-2 print:block">
             <p>
               I&apos;m a frontend developer who loves building interactive, accessible, and user-friendly applications. While I
               trained as a full-stack developer, I naturally gravitated toward the frontend because of its direct impact on users.
@@ -105,7 +107,7 @@ export default function CV() {
 
           {/* TODO: Add icons for links */}
           {/* TODO: Add correct links */}
-          <div className="flex gap-4 text-sm font-sans font-medium">
+          <div className="flex gap-4 font-sans text-sm font-medium">
             <Link href="https://github.com/yourusername" className="text-blue-600 hover:underline">
               GitHub
             </Link>
@@ -119,10 +121,10 @@ export default function CV() {
         </div>
       </Section>
 
-      <header className="print:hidden mb-8">
-        <h2 className="text-4xl mb-4">Professional Experience</h2>
+      <header className="mb-8 print:hidden">
+        <h2 className="mb-4 text-4xl">Professional Experience</h2>
 
-        <p className="text-lime mb-4">A comprehensive overview of my career journey</p>
+        <p className="mb-4 text-lime">A comprehensive overview of my career journey</p>
 
         <p>You can also hit the button in the top right corner to download my CV as a PDF.</p>
 
@@ -137,8 +139,8 @@ export default function CV() {
         </p>
       </header>
 
-      <div className="space-y-12 print:space-y-10 font-sans">
-        <h3 className="hidden print:block print:text-3xl text-blue-600">My Experience</h3>
+      <div className="space-y-12 font-sans print:space-y-10">
+        <h3 className="hidden text-blue-600 print:block print:text-3xl">My Experience</h3>
 
         <div className="space-y-8 md:space-y-16 print:space-y-10">
           {experiences.map((experience, index) => (
@@ -148,8 +150,8 @@ export default function CV() {
       </div>
 
       {/* TODO: IMPORTANT Make into component this is for non print */}
-      <div className="print:hidden mt-8">
-        <h4 className="text-2xl text-blue print:text-blue-600 mb-6">Skills & Methodologies</h4>
+      <div className="mt-8 print:hidden">
+        <h4 className="mb-6 text-2xl text-blue print:text-blue-600">Skills & Methodologies</h4>
 
         <ul className="flex flex-wrap gap-2">
           {SKILLS_FULL.map((skill) => (
@@ -161,9 +163,9 @@ export default function CV() {
       </div>
 
       {/* Languages & Certifications */}
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 print:grid-cols-2">
+      <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 print:grid-cols-2">
         <div>
-          <h4 className="text-2xl text-blue print:text-black mb-4">Languages</h4>
+          <h4 className="mb-4 text-2xl text-blue print:text-black">Languages</h4>
 
           <ul className="flex flex-col space-y-4 font-sans">
             <li>
@@ -179,7 +181,7 @@ export default function CV() {
         </div>
 
         <div>
-          <h4 className="text-2xl text-blue print:text-black mb-4">Certifications</h4>
+          <h4 className="mb-4 text-2xl text-blue print:text-black">Certifications</h4>
 
           <ul className="flex flex-col space-y-4 font-sans">
             <li>

@@ -6,12 +6,13 @@ import { Blockquote } from '@/components/blockquote';
 import { TextHighlight } from '@/components/text-highlight';
 
 // TODO: Add something about beauty in simplicity
+// TODO: Add something about using AI in my workflow.
 export const About = () => {
   const specializations = ['JavaScript', 'TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'Sanity CMS'];
 
   return (
     <Section className="space-y-8 text-lg">
-      <h2 className="text-3xl md:text-4xl font-black">
+      <h2 className="text-3xl md:text-4xl">
         About <span className="text-blue">Me</span>
       </h2>
 
@@ -90,7 +91,7 @@ export const About = () => {
         </p>
       </div>
 
-      <div className="flex gap-4 md:w-1/4 md:mt-12">
+      <div className="flex gap-4 md:mt-12 md:w-1/4">
         <Button isLinkButton href="/cv" className="w-full">
           View My CV
         </Button>

@@ -24,14 +24,14 @@ I created the recipe because this was the 500th time I had to do this and in the
 ### Code Example
 
 ```tsx
-<article className="bg-black-600/30 border-2 border-black-600 h-full flex flex-col rounded-lg shadow-md overflow-hidden hover:transform hover:scale-[1.02] transition-transform">
+<article className="flex h-full flex-col overflow-hidden rounded-lg border-2 border-black-600 bg-black-600/30 shadow-md transition-transform hover:scale-[1.02] hover:transform">
   {image && <MyImage src={image} alt={`${company} project`} containerClasses="aspect-video" />}
 
-  <div className="p-6 flex-grow flex flex-col space-y-4">
+  <div className="flex flex-grow flex-col space-y-4 p-6">
     <h2 className="text-2xl text-blue">{company}</h2>
     <p className="text-xl font-medium">{role}</p>
 
-    <div className="flex-grow flex flex-col">
+    <div className="flex flex-grow flex-col">
       <p className={`${clsx({ 'line-clamp-3': image })} mb-4`}>{situation}</p>
 
       <Button isLinkButton href={`/projects/${slug}`} variant="blue-secondary" className="mt-auto">

@@ -62,7 +62,7 @@ export const Header = () => {
     <>
       <motion.header
         key={pathname}
-        className="fixed top-0 left-0 right-0 z-10  h-[var(--header-height)] print:hidden"
+        className="fixed left-0 right-0 top-0 z-10 h-[var(--header-height)] print:hidden"
         // The initial styles solve the issue where useTransform is not reset on page navigation.
         initial={{
           background: initialBackgroundColor,
@@ -73,7 +73,7 @@ export const Header = () => {
           backdropFilter: blurStyle,
         }}
       >
-        <div className="container h-full mx-auto p-4 sm:p-6 lg:p-8 flex justify-between items-center relative">
+        <div className="container relative mx-auto flex h-full items-center justify-between p-4 sm:p-6 lg:p-8">
           <AnimatedElementPresence entryAnimationDelay={0.2} animationProperty="opacity">
             <Logo isNavOpen={isNavOpen} />
           </AnimatedElementPresence>

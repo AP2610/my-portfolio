@@ -35,7 +35,7 @@ export const MobileNavigation = ({ isOpen, setIsOpen, className }: MobileNavigat
       >
         {/* Hamburger button that transforms into close icon */}
         <motion.button
-          className="h-14 w-14 relative rounded-full z-20"
+          className="relative z-20 h-14 w-14 rounded-full"
           initial={false} // Prevents animation from triggering on page load.
           onClick={() => setIsOpen(!isOpen)}
           animate={isOpen ? 'open' : 'closed'}
@@ -110,7 +110,7 @@ export const MobileNavigation = ({ isOpen, setIsOpen, className }: MobileNavigat
 
       {/* Full-screen overlay menu */}
       <motion.div
-        className="absolute custom-background-blue w-full h-svh p-4"
+        className="custom-background-blue absolute h-svh w-full p-4"
         style={{
           top: 0,
           left: '50%',
@@ -131,8 +131,8 @@ export const MobileNavigation = ({ isOpen, setIsOpen, className }: MobileNavigat
         }}
       >
         {/* Navigation links container */}
-        <nav className="flex flex-col h-full">
-          <ul className="flex flex-col h-full justify-center gap-16 text-center">
+        <nav className="flex h-full flex-col">
+          <ul className="flex h-full flex-col justify-center gap-16 text-center">
             {NAVIGATION_LINKS.map((link) => (
               <li key={link.href}>
                 <NavLink

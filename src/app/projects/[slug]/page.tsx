@@ -3,16 +3,14 @@ import { Section } from '@/components/section';
 import { notFound } from 'next/navigation';
 import { projectsData } from '../data';
 
-export const generateStaticParams = () => {
+export const generateStaticParams = async () => {
   return projectsData.map((project) => ({
     slug: project.slug,
   }));
 };
 
 type ProjectPageProps = {
-  params: {
-    slug: string;
-  };
+  params: { slug: string };
 };
 
 const ProjectPage = ({ params }: ProjectPageProps) => {

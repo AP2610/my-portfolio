@@ -7,14 +7,14 @@ const Home = () => {
   return (
     <>
       <Section
-        className="min-h-[100svh] flex flex-col items-center justify-center custom-background-violet"
+        className="custom-background-violet flex min-h-[100svh] flex-col items-center justify-center"
         isFullWidth
         // The id is needed for my animated styling on the hero to work. Note to self: Consider getting rid of it and the associated logic.
         id="hero"
       >
-        <Section className="font-sans h-full flex flex-col items-center justify-center gap-16">
+        <Section className="flex h-full flex-col items-center justify-center gap-16 font-sans">
           <div className="flex flex-col gap-4">
-            <h1 className="text-4xl text-center font-sans font-black">Hi! I&apos;m Arjun</h1>
+            <h1 className="text-center font-sans text-4xl font-black">Hi! I&apos;m Arjun</h1>
             <p className="text-center text-2xl font-light text-lime">Welcome to my portfolio</p>
           </div>
 
@@ -24,7 +24,7 @@ const Home = () => {
             </Button>
 
             <Button variant="secondary" scrollTo="about">
-              About Me <FaArrowDown className="ml-2 bounce-vertical" />
+              About Me <FaArrowDown className="bounce-vertical ml-2" />
             </Button>
           </div>
         </Section>

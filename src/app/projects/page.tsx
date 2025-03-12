@@ -10,7 +10,7 @@ const ProjectsPage = () => {
     <Section className="mt-[var(--header-height)]" hasTopPadding hasBottomPadding>
       <div className="space-y-12">
         <header>
-          <h1 className="text-4xl mb-8">My Projects</h1>
+          <h1 className="mb-8 text-4xl">My Projects</h1>
 
           <div className="space-y-6">
             <p className="text-lime">
@@ -26,7 +26,7 @@ const ProjectsPage = () => {
               </Button>
 
               <Button variant="secondary" scrollTo="featured-projects" className="w-full md:hidden">
-                Projects <FaArrowDown className="ml-2 bounce-vertical" />
+                Projects <FaArrowDown className="bounce-vertical ml-2" />
               </Button>
             </div>
 
@@ -47,7 +47,7 @@ const ProjectsPage = () => {
               include:
             </p>
 
-            <ul className="list-disc list-inside ml-4 mb-4 font-sans">
+            <ul className="mb-4 ml-4 list-inside list-disc font-sans">
               <li>A team randomizer (Coronavirus Dashboard) – Used to fairly assign a team member to lead each sprint.</li>
               <li>
                 An XML parser (VodafoneZiggo) – Designed to handle large XML files from Salesforce Commerce Cloud and convert them
@@ -80,11 +80,11 @@ const ProjectsPage = () => {
 
         <Section isFullWidth id="featured-projects">
           <div className="mb-8">
-            <h2 className="text-2xl mb-4">Featured Projects</h2>
+            <h2 className="mb-4 text-2xl">Featured Projects</h2>
             <p className="text-lime">Projects are listed in chronological order, more or less.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {projectsData.map((project, index) => (
               <ProjectCard
                 key={index}
