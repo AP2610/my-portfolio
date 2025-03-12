@@ -1,8 +1,10 @@
 import { Experience as ExperienceType } from '@/app/cv/data';
-import styles from '@/app/cv/cv.module.css';
 import Link from 'next/link';
+import clsx from 'clsx';
 
-type ExperienceProps = ExperienceType;
+type ExperienceProps = ExperienceType & {
+  className?: string;
+};
 
 export const Experience = ({
   company,
@@ -13,14 +15,15 @@ export const Experience = ({
   description,
   bulletPoints,
   link,
+  className,
 }: ExperienceProps) => {
   return (
-    <article className={`space-y-4 ${styles.printArticle}`}>
+    <article className={clsx('space-y-4', className)}>
       <header>
-        <h2 className="text-2xl text-blue">{company}</h2>
+        <h2 className="text-2xl text-blue print:text-black">{company}</h2>
         <p className="text-xl font-medium">{role}</p>
-        {subText && <p className="text-sm text-lime-600">{subText}</p>}
-        <p className="text-lime-600">
+        {subText && <p className="text-sm text-lime-600 print:text-black">{subText}</p>}
+        <p className="text-lime-600 print:text-black">
           {period} | {location}
         </p>
       </header>
@@ -39,7 +42,7 @@ export const Experience = ({
         {link && (
           <Link
             href={link.url}
-            className={`text-blue hover:underline mt-4 inline-block ${styles.printLink}`}
+            className="text-blue hover:underline mt-4 inline-block print:hidden"
             target="_blank"
             rel="noopener noreferrer"
           >
