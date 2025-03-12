@@ -89,11 +89,11 @@ export const About = () => {
         </p>
       </div>
 
-      <div className="flex justify-center gap-4">
-        <Button isLinkButton href="/cv">
+      <div className="flex gap-4 md:w-1/4 ml-auto">
+        <Button isLinkButton href="/cv" className="w-full">
           View My CV
         </Button>
-        <Button isLinkButton href="/projects" variant="blue-secondary">
+        <Button isLinkButton href="/projects" variant="blue-secondary" className="w-full">
           See My Projects
         </Button>
       </div>
