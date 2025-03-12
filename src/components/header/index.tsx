@@ -62,7 +62,7 @@ export const Header = () => {
     <>
       <motion.header
         key={pathname}
-        className="fixed top-0 left-0 right-0 z-10  h-[var(--header-height)]"
+        className="fixed top-0 left-0 right-0 z-10  h-[var(--header-height)] print:hidden"
         // The initial styles solve the issue where useTransform is not reset on page navigation.
         initial={{
           background: initialBackgroundColor,
