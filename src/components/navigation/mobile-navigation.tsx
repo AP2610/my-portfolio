@@ -26,7 +26,6 @@ export const MobileNavigation = ({ isOpen, setIsOpen, className }: MobileNavigat
 
   return (
     <nav className={className}>
-      {/* Configuration for all motion animations within the menu */}
       <MotionConfig
         transition={{
           duration: 0.2,
@@ -137,7 +136,7 @@ export const MobileNavigation = ({ isOpen, setIsOpen, className }: MobileNavigat
               <li key={link.href}>
                 <NavLink
                   setIsOpen={setIsOpen}
-                  className={pathname === link.href ? 'text-lavender-700' : 'text-lavender-600'}
+                  className={`${pathname === link.href ? 'text-lavender-700' : 'text-lavender-600'} hover:text-blue-600`}
                   href={link.href}
                 >
                   {link.label}
