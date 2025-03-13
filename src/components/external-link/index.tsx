@@ -14,6 +14,7 @@ type ExternalLinkProps = {
   variant?: LinkVariants;
   showIcon?: boolean;
   isRounded?: boolean;
+  noHover?: boolean;
 };
 
 export const ExternalLink = ({
@@ -21,8 +22,9 @@ export const ExternalLink = ({
   href,
   className,
   variant = 'inline',
-  showIcon = true,
+  showIcon = false,
   isRounded = true,
+  noHover = false,
 }: ExternalLinkProps) => {
   const isInlineVariant = variant === 'inline';
 
@@ -34,7 +36,8 @@ export const ExternalLink = ({
       'rounded-md': isRounded && !isInlineVariant,
 
       // Inline link styles
-      'text-blue hover:text-blue-600 hover:underline inline-flex items-center gap-1': isInlineVariant,
+      'text-blue inline-flex items-center gap-1': isInlineVariant,
+      'hover:text-blue-600 hover:underline': isInlineVariant && !noHover,
     },
     className
   );
@@ -51,7 +54,7 @@ export const ExternalLink = ({
       })}
     >
       {children}
-      {showIcon && isInlineVariant && !isMailTo && <FaExternalLinkAlt size={12} />}
+      {showIcon && !isInlineVariant && !isMailTo && <FaExternalLinkAlt className="tilt-shaking ml-2" />}
     </a>
   );
 };

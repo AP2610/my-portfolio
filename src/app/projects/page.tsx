@@ -3,7 +3,7 @@ import { projectsData } from './data';
 import { Section } from '@/components/section';
 import { Button } from '@/components/buttons';
 import { FaArrowDown } from 'react-icons/fa';
-import Link from 'next/link';
+import { ExternalLink } from '@/components/external-link';
 
 const ProjectsPage = () => {
   return (
@@ -65,14 +65,9 @@ const ProjectsPage = () => {
               Additionally, my very first use of React was for a technical assignment during my interview with Clockwork. I built
               a weather widget, which, while simple, was an important learning experience for me. The API is no longer free, but
               the code is still available on my{' '}
-              <Link
-                href="https://github.com/AP2610?tab=repositories"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue hover:underline"
-              >
+              <ExternalLink href="https://github.com/AP2610?tab=repositories" variant="inline">
                 GitHub
-              </Link>{' '}
+              </ExternalLink>{' '}
               if you&apos;d like to check it out. (Be kind—it was my first React project, just a few months after I started
               coding!)
             </p>

@@ -7,6 +7,7 @@ import { SocialIcon } from '@/components/social-icon';
 import Link from 'next/link';
 import { FaGithub, FaGlobe, FaLinkedin } from 'react-icons/fa';
 import { experiences } from './data';
+import { ExternalLink } from '@/components/external-link';
 
 const SKILLS_PRINT = [
   'JavaScript',
@@ -251,55 +252,51 @@ const CvPage = () => {
 
           <ul className="flex flex-wrap gap-2 font-sans">
             <li>
-              <Link
+              <ExternalLink
+                noHover
                 href="https://www.linkedin.com/in/arjunpuri26/overlay/1574531685954/single-media-viewer/?profileId=ACoAAB61nJkB4W7StLKExMHGTXbDlDd3Lvi6sgs"
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 <Badge color="violet" hasLink>
                   Le Wagon Fullstack Bootcamp
                 </Badge>
-              </Link>
+              </ExternalLink>
             </li>
             <li>
-              <Link
+              <ExternalLink
+                noHover
                 href="https://www.linkedin.com/in/arjunpuri26/overlay/1635498506856/single-media-viewer/?profileId=ACoAAB61nJkB4W7StLKExMHGTXbDlDd3Lvi6sgs"
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 <Badge color="violet" hasLink>
                   React Tutorial
                 </Badge>
-              </Link>
+              </ExternalLink>
             </li>
             <li>
-              <Link href="https://www.udemy.com/certificate/UC-KEQX9LVH/" target="_blank" rel="noopener noreferrer">
+              <ExternalLink noHover href="https://www.udemy.com/certificate/UC-KEQX9LVH/">
                 <Badge color="violet" hasLink>
                   Complete Javascript Certification
                 </Badge>
-              </Link>
+              </ExternalLink>
             </li>
             <li>
-              <Link
+              <ExternalLink
+                noHover
                 href="https://www.linkedin.com/in/arjunpuri26/overlay/1574531584404/single-media-viewer/?profileId=ACoAAB61nJkB4W7StLKExMHGTXbDlDd3Lvi6sgs"
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 <Badge color="violet" hasLink>
                   Learn Javascript Certification
                 </Badge>
-              </Link>
+              </ExternalLink>
             </li>
             <li>
-              <Link
+              <ExternalLink
+                noHover
                 href="https://www.linkedin.com/learning/certificates/b0b5c1a8e36afa9d6aaf0be2d6978fc70a5ad5939ff1afa6d51b071e38e96f5b?trk=backfilled_certificate"
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 <Badge color="violet" hasLink>
                   Testing with Cypress.io
                 </Badge>
-              </Link>
+              </ExternalLink>
             </li>
           </ul>
         </div>

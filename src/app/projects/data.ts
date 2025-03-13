@@ -100,8 +100,10 @@ export const projectsData: Project[] = [
     company: 'VodafoneZiggo',
     period: 'April 2021 - July 2022',
     image: '/project-images/vodafone.png',
-    websiteUrl: 'https://www.vodafoneziggo.nl',
-    additionalInfo: 'I am unable to share the link to the repository for this website as it is within a private organisation.',
+    websiteUrl:
+      'https://www.vodafone.nl/zakelijk/mobiel/abonnement/sim-only?duration=24&together-extra-subscription-count=0&red-pro-unlimited=1',
+    additionalInfo:
+      'I am unable to share the link to the repository for this website as it is within a private organisation. Also, the product has changed since I worked on it 3 years ago.',
     situation:
       "A collaboration between VodafoneZiggo, Salesforce, and Ordina, the goal of the project was to build an entirely new portal for Vodafone Ziggo's business customers on Salesforce Commerce Cloud.",
     tasks: [

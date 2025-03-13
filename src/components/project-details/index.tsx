@@ -1,7 +1,7 @@
 import { Project as ProjectType } from '@/app/projects/data';
 import { Badge } from '@/components/badge';
-import { Button } from '@/components/buttons';
 import { MyImage } from '@/components/image';
+import { ExternalLink } from '../external-link';
 
 type ProjectProps = ProjectType;
 
@@ -79,15 +79,15 @@ export const ProjectDetails = ({
 
         <div className="flex gap-4 pt-4">
           {websiteUrl && (
-            <Button href={websiteUrl} isLinkButton variant="primary" target="_blank">
+            <ExternalLink href={websiteUrl} variant="primary" showIcon>
               Visit Project Website
-            </Button>
+            </ExternalLink>
           )}
 
           {githubUrl && (
-            <Button href={githubUrl} isLinkButton variant="blue-secondary" target="_blank">
+            <ExternalLink href={githubUrl} variant="blue-secondary" showIcon>
               View Source Code
-            </Button>
+            </ExternalLink>
           )}
         </div>
       </div>
