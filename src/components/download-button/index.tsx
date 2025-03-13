@@ -28,7 +28,7 @@ export const DownloadButton = ({ className }: DownloadButtonProps) => {
       )}
       title="Download CV as PDF"
     >
-      <FaDownload />
+      <FaDownload className="tilt-shaking" />
     </Button>
   );
 };
