@@ -1,18 +1,19 @@
 import clsx from 'clsx';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 
 type BadgeColor = 'blue' | 'blue-700' | 'lime' | 'violet' | 'white';
 
 type BadgeProps = {
   children: React.ReactNode;
   className?: string;
-  hasHover?: boolean;
+  hasLink?: boolean;
   onClick?: () => void;
   color?: BadgeColor;
 };
 
-export const Badge = ({ children, className, hasHover = false, onClick, color = 'blue' }: BadgeProps) => {
+export const Badge = ({ children, className, hasLink = false, onClick, color = 'blue' }: BadgeProps) => {
   const classes = clsx(
-    'inline-block px-3 py-1 font-sans rounded-full text-[14px]',
+    'inline-block px-3 py-1 font-sans rounded-full text-[14px] flex items-center gap-2',
     {
       // Base styles without hover
       'bg-blue/10 text-blue border border-blue/20': color === 'blue',
@@ -21,13 +22,13 @@ export const Badge = ({ children, className, hasHover = false, onClick, color = 
       'bg-violet/10 text-violet border border-violet/20': color === 'violet',
       'bg-white/10 text-white border border-white/20': color === 'white',
 
-      // Hover styles only applied when hasHover is true
-      'hover:bg-blue/20': hasHover && color === 'blue',
-      'hover:bg-blue-700/20': hasHover && color === 'blue-700',
-      'hover:bg-lime/20': hasHover && color === 'lime',
-      'hover:bg-violet/20': hasHover && color === 'violet',
-      'hover:bg-white/20': hasHover && color === 'white',
-      'transition-colors duration-300': hasHover,
+      // Hover styles only applied when hasLink is true
+      'hover:bg-blue/20': hasLink && color === 'blue',
+      'hover:bg-blue-700/20': hasLink && color === 'blue-700',
+      'hover:bg-lime/20': hasLink && color === 'lime',
+      'hover:bg-violet/20': hasLink && color === 'violet',
+      'hover:bg-white/20': hasLink && color === 'white',
+      'transition-colors duration-300': hasLink,
     },
     className
   );
@@ -35,6 +36,7 @@ export const Badge = ({ children, className, hasHover = false, onClick, color = 
   return (
     <span className={classes} onClick={onClick} role={onClick ? 'button' : undefined}>
       {children}
+      {hasLink && <FaExternalLinkAlt size={12} />}
     </span>
   );
 };
