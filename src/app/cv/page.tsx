@@ -119,7 +119,7 @@ const CvPage = () => {
             </p>
             <p>
               Outside of work, you&apos;ll find me cooking, tackling DIY projects, gaming, or reading—always learning,
-              experimenting, and building. Quality matters, but being adaptable is just as important.
+              experimenting, and building.
             </p>
           </div>
 
