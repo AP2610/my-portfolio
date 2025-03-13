@@ -1,12 +1,12 @@
 # My Portfolio Website
 
-This is my personal portfolio website showcasing my work, experience, and technical skills. Built with a focus on performance and clean design, it highlights the projects I've worked on throughout professional journey.
+This is my personal portfolio website showcasing my work, experience, and technical skills. It highlights the projects I've worked on throughout professional journey.
 
 ## Live Website  
 [View Portfolio](https://www.itsap.dev/)  
 
 ## Features  
-- Fully responsive design 
+- Fully responsive design - Mobile first
 - Built with Next.js & Tailwind CSS   
 - Custom-designed UI with a modern aesthetic  
 - Project showcase  
