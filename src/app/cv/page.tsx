@@ -56,7 +56,7 @@ const SKILLS_FULL = [
 const CvPage = () => {
   return (
     <Section
-      className="mx-auto mt-[var(--header-height)] print:m-0 print:w-full print:bg-white print:p-0 print:text-black"
+      className="mx-auto mt-[var(--header-height)] print:m-0 print:w-full print:max-w-none print:bg-white print:p-0 print:text-black"
       hasTopPadding
       hasBottomPadding
     >
