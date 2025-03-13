@@ -11,11 +11,8 @@ type DownloadButtonProps = {
 // TODO: Double check title logic
 export const DownloadButton = ({ className }: DownloadButtonProps) => {
   const handleDownload = () => {
-    const originalTitle = document.title;
-    document.title = 'Arjun-Puri-CV-2025';
-
+    document.title = 'Arjun-Puri-CV';
     window.print();
-    document.title = originalTitle;
   };
 
   return (
