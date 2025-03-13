@@ -111,18 +111,21 @@ const CvPage = () => {
               I'm a frontend developer passionate about building interactive, accessible, and user-friendly applications. Trained
               as a full-stack developer, I gravitated toward the frontend for its direct user impact. I thrive on turning ideas
               into functional, beautiful web experiences and value clear, honest communication. For the past five years, I've
-              worked remotely and excel at remote collaboration. In the past year, I've integrated AI into my workflow and use it
-              to boost my productivity.
-            </p>
-            <p>
-              I've worked in e-commerce, telecom, logistics, and the public sector, including the Corona Dashboard, which had over
-              250K daily visitors. With a service mindset shaped by a hospitality education, I bring strong interpersonal skills
-              and have a keen eye for detail.
+              worked remotely and honed my skills of remote collaboration. In the past year, I've integrated AI into my workflow
+              and use it to boost my productivity.
             </p>
             <p>
               Having lived across five countries-Australia, India, Kenya, Switzerland, and the Netherlands-I excel at navigating
-              cultural dynamics and integrating into diverse teams. My strengths extend not only to coding but also include
-              coaching juniors, technical analysis, strategic planning, giving presentations, and effective communication.
+              cultural dynamics and integrating into diverse teams.
+            </p>
+            <p>
+              I've worked in e-commerce, telecom, logistics, and the public sector, including the Corona Dashboard, which had over
+              250K daily visitors.
+            </p>
+            <p>
+              With a service mindset shaped by a hospitality education, I bring strong interpersonal skills and have a keen eye
+              for detail. My strengths extend not only to coding but also include coaching juniors, technical analysis, strategic
+              planning, giving presentations, and effective communication.
             </p>
             <p>
               Outside of work, you'll find me cooking, tackling DIY projects, gaming, or reading—always learning, experimenting,
