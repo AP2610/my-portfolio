@@ -1,13 +1,20 @@
 import { Badge } from '@/components/badge';
 import { DownloadButton } from '@/components/download-button';
 import { Experience } from '@/components/experience';
+import { ExternalLink } from '@/components/external-link';
 import { MyImage } from '@/components/image';
 import { Section } from '@/components/section';
 import { SocialIcon } from '@/components/social-icon';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { FaGithub, FaGlobe, FaLinkedin } from 'react-icons/fa';
 import { experiences } from './data';
-import { ExternalLink } from '@/components/external-link';
+
+export const metadata: Metadata = {
+  title: "Arjun Puri's CV",
+  description:
+    'Frontend Engineer with expertise in JavaScript, TypeScript, React, Next.js and TailwindCSS. View my professional experience, skills, and qualifications.',
+};
 
 const SKILLS_PRINT = [
   'JavaScript',
