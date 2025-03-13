@@ -3,16 +3,15 @@
 import { scrollToElement } from '@/utils/scroll-to-element';
 import clsx from 'clsx';
 import Link from 'next/link';
-import { AnchorHTMLAttributes } from 'react';
-import { ButtonHTMLAttributes } from 'react';
-
-type ButtonVariant = 'primary' | 'secondary' | 'icon-button' | 'blue-secondary';
+import { AnchorHTMLAttributes, ButtonHTMLAttributes } from 'react';
+import { buttonStyles } from './styles';
+import { ButtonVariants } from './types';
 
 type BaseProps = {
   children: React.ReactNode;
   className?: string;
   href?: string;
-  variant?: ButtonVariant;
+  variant?: ButtonVariants;
   isRounded?: boolean;
 };
 
@@ -45,17 +44,15 @@ export const Button = ({
   target,
   ...props
 }: ButtonProps) => {
-  const classes = clsx(className, {
-    'w-[fit-content] p-4': variant === 'icon-button',
-    'bg-white text-black hover:bg-white-600 border-2 border-white hover:border-white-600': variant === 'primary',
-    'border-2 border-lime text-lime hover:bg-lime/10': variant === 'secondary',
-    'border-2 border-blue text-blue hover:bg-blue/10': variant === 'blue-secondary',
-    // For all other variants except icon button
-    'px-4 py-2 min-w-[160px] font-sans text-center text-base transition-all duration-300 flex items-center justify-center':
-      variant !== 'icon-button',
-    'rounded-md': isRounded,
-    'cursor-not-allowed opacity-50': 'disabled' in props && props.disabled,
-  });
+  const classes = clsx(
+    {
+      [buttonStyles.variants[variant]]: true,
+      [buttonStyles.nonIconButtonStyles]: variant !== 'icon-button',
+      'rounded-md': isRounded,
+      'cursor-not-allowed opacity-50': 'disabled' in props && props.disabled,
+    },
+    className
+  );
 
   const handleClick = () => {
     if (!scrollTo) return;
@@ -66,7 +63,6 @@ export const Button = ({
   return (
     <>
       {isLinkButton ? (
-        // ...props need to be explicitly casted to AnchorHTMLAttributes<HTMLAnchorElement>.
         <Link
           href={href as string}
           className={classes}
@@ -77,7 +73,6 @@ export const Button = ({
           {children}
         </Link>
       ) : (
-        // ...props need to be explicitly casted to ButtonHTMLAttributes<HTMLButtonElement>.
         <button className={classes} onClick={handleClick} {...(props as ButtonHTMLAttributes<HTMLButtonElement>)}>
           {children}
         </button>
