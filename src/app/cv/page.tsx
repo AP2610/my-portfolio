@@ -14,9 +14,11 @@ const SKILLS_PRINT = [
   'CSS',
   'SCSS',
   'Tailwind CSS',
+  'Framer Motion',
   'Bootstrap',
-  'NextJS',
+  'Next.js',
   'Cypress',
+  'Jest',
   'Test Automation',
   'REST',
   'CI/CD',
@@ -30,7 +32,18 @@ const SKILLS_PRINT = [
   'Coaching',
 ];
 
-const SKILLS_FULL = [...SKILLS_PRINT, 'Wordpress', 'Strapi CMS', 'Remote Work', 'Nuxt', 'VueJS', 'NPM'];
+const SKILLS_FULL = [
+  ...SKILLS_PRINT,
+  'Wordpress',
+  'Strapi CMS',
+  'Remote Work',
+  'Nuxt',
+  'VueJS',
+  'NPM',
+  'Github Actions',
+  'Prettier',
+  'EsLint',
+];
 
 // TODO: Go through the text here for any issues and things that dont fit properly
 // TODO: Extract page parts to components
@@ -38,16 +51,20 @@ const SKILLS_FULL = [...SKILLS_PRINT, 'Wordpress', 'Strapi CMS', 'Remote Work', 
 export default function CV() {
   return (
     <Section
-      className="mx-auto mt-[var(--header-height)] print:h-auto print:w-[21cm] print:max-w-[21cm] print:bg-white print:px-10 print:py-16 print:text-black"
+      className="mx-auto mt-[var(--header-height)] print:m-0 print:bg-white print:text-black print:w-full print:p-0"
       hasTopPadding
       hasBottomPadding
     >
-      {/* Intro with image */}
-      <Section isFullWidth className="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row print:break-inside-avoid">
+      <Section
+        isFullWidth
+        className="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row print:flex-row print:break-inside-avoid"
+      >
+        {/* Intro with image and skills in print */}
         <div className="flex w-full flex-col items-center gap-4 md:w-auto md:items-start print:items-start">
           <MyImage
             src="/cv/headshot.png"
             alt="Arjun Puri"
+            priority
             containerClasses="w-48 h-48 rounded-full overflow-hidden flex-shrink-0 border-4 border-lime print:border-lime-700"
           />
 
@@ -58,7 +75,7 @@ export default function CV() {
               *For a comprehensive list, please see the CV on my website.
             </p>
 
-            <ul className="flex w-60 flex-wrap gap-2">
+            <ul className="flex w-60 print:w-52 flex-wrap gap-2">
               {SKILLS_PRINT.map((skill) => (
                 <li key={skill}>
                   <Badge color="blue-700">{skill}</Badge>
@@ -87,17 +104,18 @@ export default function CV() {
           {/* About me - only for print */}
           <div className="hidden space-y-2 print:block">
             <p>
-              I&apos;m a frontend developer who loves building interactive, accessible, and user-friendly applications. While I
-              trained as a full-stack developer, I naturally gravitated toward the frontend because of its direct impact on users.
-              I enjoy turning ideas into beautiful, functional web experiences and believe in clear, honest communication—no
-              fluff, just real conversations. I&apos;ve worked remote for the last 5 years, and continue to love collaborating
-              with my team.
+              I&apos;m a frontend developer passionate about building interactive, accessible, and user-friendly applications.
+              Trained as a full-stack developer, I gravitated toward the frontend for its direct user impact. I thrive on turning
+              ideas into functional, beautiful web experiences and value clear, honest communication. For the past five years,
+              I&apos;ve worked remotely and excel at remote collaboration. In the past year, I&apos;ve integrated AI in my
+              workflow and use it to boost my productivity.
             </p>
             <p>
-              I&apos;ve worked on e-commerce, telecom, logistics, media, and public sector projects, including the Corona
-              Dashboard, which had over 250K daily visitors. My background in hospitality and tech marketing has shaped my ability
-              to adapt, collaborate, and thrive in diverse teams—a skill sharpened by living in Australia, India, Kenya,
-              Switzerland, and the Netherlands.
+              I&apos;ve worked in e-commerce, telecom, logistics, and the public sector, including the Corona Dashboard, which had
+              over 250K daily visitors. With a service mindset shaped by a hospitality education, I bring strong interpersonal
+              skills. Having lived across five countries-Australia, India, Kenya, Switzerland, and the Netherlands-I excel at
+              navigating cultural dynamics and integrating into diverse teams. My strengths include coaching, technical analysis,
+              and strategic planning, often leading meetings and guiding projects.
             </p>
             <p>
               Outside of work, you&apos;ll find me cooking, tackling DIY projects, gaming, or reading—always learning,
@@ -107,7 +125,7 @@ export default function CV() {
 
           {/* TODO: Add icons for links */}
           {/* TODO: Add correct links */}
-          <div className="flex gap-4 font-sans text-sm font-medium">
+          <div className="flex gap-4 font-sans text-sm font-medium print:hidden">
             <Link href="https://github.com/yourusername" className="text-blue-600 hover:underline">
               GitHub
             </Link>
@@ -121,6 +139,7 @@ export default function CV() {
         </div>
       </Section>
 
+      {/* Hidden in print */}
       <header className="mb-8 print:hidden">
         <h2 className="mb-4 text-4xl">Professional Experience</h2>
 
@@ -139,8 +158,50 @@ export default function CV() {
         </p>
       </header>
 
+      {/* For print only - Certifications and languages */}
+      <div className="hidden print:grid print:mt-0 grid-cols-1 print:gap-8 print:grid-cols-2">
+        <div>
+          <h4 className="mb-4 text-2xl text-blue print:text-black">Certifications</h4>
+
+          <ul className="flex flex-wrap gap-2 font-sans">
+            <li>
+              <Badge color="violet">Le Wagon Fullstack Bootcamp</Badge>
+            </li>
+            <li>
+              <Badge color="violet">Testing with Cypress.io</Badge>
+            </li>
+            <li>
+              <Badge color="violet">Complete Javascript Certification</Badge>
+            </li>
+            <li>
+              <Badge color="violet">React Tutorial</Badge>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="mb-4 text-2xl text-blue print:text-black">Languages</h4>
+
+          <ul className="flex flex-wrap gap-2 font-sans">
+            <li>
+              <Badge color="violet">English (Native or Bilingual)</Badge>
+            </li>
+            <li>
+              <Badge color="violet">French (B1)</Badge>
+            </li>
+            <li>
+              <Badge color="violet">Hindi (Native or Bilingual)</Badge>
+            </li>
+            <li>
+              <Badge color="violet">Dutch (A2)</Badge>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Experience section for both print and web */}
       <div className="space-y-12 font-sans print:space-y-10">
-        <h3 className="hidden text-blue-600 print:block print:text-3xl">My Experience</h3>
+        <h3 className="hidden text-blue-600 print:block print:text-3xl page-break">Professional Experience</h3>
 
         <div className="space-y-8 md:space-y-16 print:space-y-10">
           {experiences.map((experience, index) => (
@@ -162,20 +223,23 @@ export default function CV() {
         </ul>
       </div>
 
-      {/* Languages & Certifications */}
-      <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 print:grid-cols-2">
+      {/* Languages & Certifications - non print */}
+      <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 print:grid-cols-2 print:hidden">
         <div>
           <h4 className="mb-4 text-2xl text-blue print:text-black">Languages</h4>
 
-          <ul className="flex flex-col space-y-4 font-sans">
+          <ul className="flex flex-wrap gap-2 font-sans">
             <li>
               <Badge color="violet">English (Native or Bilingual)</Badge>
             </li>
             <li>
-              <Badge color="violet">French</Badge>
+              <Badge color="violet">French (B1)</Badge>
             </li>
             <li>
               <Badge color="violet">Hindi (Native or Bilingual)</Badge>
+            </li>
+            <li>
+              <Badge color="violet">Dutch (A2)</Badge>
             </li>
           </ul>
         </div>
@@ -183,12 +247,12 @@ export default function CV() {
         <div>
           <h4 className="mb-4 text-2xl text-blue print:text-black">Certifications</h4>
 
-          <ul className="flex flex-col space-y-4 font-sans">
+          <ul className="flex flex-wrap gap-2 font-sans">
             <li>
-              <Badge color="violet">Le Wagon Full Stack Bootcamp</Badge>
+              <Badge color="violet">Le Wagon Fullstack Bootcamp</Badge>
             </li>
             <li>
-              <Badge color="violet">End-to-End JavaScript Testing with Cypress.io</Badge>
+              <Badge color="violet">Testing with Cypress.io</Badge>
             </li>
             <li>
               <Badge color="violet">Complete Javascript Certification</Badge>
