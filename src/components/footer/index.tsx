@@ -1,4 +1,4 @@
-// import { Button } from '@/components/buttons';
+import { ExternalLink } from '@/components/external-link';
 import { Logo } from '@/components/logo';
 import { NavLink } from '@/components/navigation/nav-link';
 import { NAVIGATION_LINKS } from '@/components/navigation/nav-links';
@@ -37,9 +37,9 @@ export const Footer = () => {
             <h3 className="text-xl font-bold">Let&apos;s Connect</h3>
             <p>Interested in working together? Let&apos;s chat!</p>
 
-            <a href="mailto:corned-tippets-5g@icloud.com">
+            <ExternalLink href="mailto:corned-tippets-5g@icloud.com" variant="secondary">
               Get in Touch <FaEnvelope className="tilt-shaking ml-2" />
-            </a>
+            </ExternalLink>
           </div>
 
           <div>
