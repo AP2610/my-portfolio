@@ -5,6 +5,7 @@ import { DownloadButton } from '@/components/download-button';
 import Link from 'next/link';
 import { MyImage } from '@/components/image';
 import { Badge } from '@/components/badge';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 const SKILLS_PRINT = [
   'JavaScript',
@@ -75,7 +76,7 @@ export default function CV() {
               *For a comprehensive list, please see the CV on my website.
             </p>
 
-            <ul className="flex w-60 print:w-52 flex-wrap gap-2">
+            <ul className="flex w-60 print:text-[14px] flex-wrap gap-2">
               {SKILLS_PRINT.map((skill) => (
                 <li key={skill}>
                   <Badge color="blue-700">{skill}</Badge>
@@ -123,17 +124,32 @@ export default function CV() {
             </p>
           </div>
 
-          {/* TODO: Add icons for links */}
           {/* TODO: Add correct links */}
           <div className="flex gap-4 font-sans text-sm font-medium print:hidden">
-            <Link href="https://github.com/yourusername" className="text-blue-600 hover:underline">
-              GitHub
+            <Link
+              href="https://github.com/AP2610"
+              className="text-blue-600 hover:text-blue-400 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="GitHub Profile"
+            >
+              <FaGithub size={24} />
             </Link>
-            <Link href="https://linkedin.com/in/yourusername" className="text-blue-600 hover:underline">
-              LinkedIn
+            <Link
+              href="https://www.linkedin.com/in/arjunpuri26/"
+              className="text-blue-600 hover:text-blue-400 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="LinkedIn Profile"
+            >
+              <FaLinkedin size={24} />
             </Link>
-            <Link href="mailto:your.email@example.com" className="text-blue-600 hover:underline">
-              Email
+            <Link
+              href="mailto:corned-tippets-5g@icloud.com"
+              className="text-blue-600 hover:text-blue-400 transition-colors"
+              title="Send Email - If the email looks weird, thats because i would rather not share my personal email online. This email address forwards emails to my personal email."
+            >
+              <FaEnvelope size={24} />
             </Link>
           </div>
         </div>
@@ -200,10 +216,10 @@ export default function CV() {
       </div>
 
       {/* Experience section for both print and web */}
-      <div className="space-y-12 font-sans print:space-y-10">
-        <h3 className="hidden text-blue-600 print:block print:text-3xl page-break">Professional Experience</h3>
+      <div className="space-y-12 font-sans print:space-y-6">
+        <h3 className="hidden text-blue-600 print:block print:text-2xl page-break">Professional Experience</h3>
 
-        <div className="space-y-8 md:space-y-16 print:space-y-10">
+        <div className="space-y-10 md:space-y-12 print:space-y-10">
           {experiences.map((experience, index) => (
             <Experience key={index} {...experience} className="print:break-inside-avoid" />
           ))}
@@ -211,7 +227,7 @@ export default function CV() {
       </div>
 
       {/* TODO: IMPORTANT Make into component this is for non print */}
-      <div className="mt-8 print:hidden">
+      <div className="mt-10 print:hidden">
         <h4 className="mb-6 text-2xl text-blue print:text-blue-600">Skills & Methodologies</h4>
 
         <ul className="flex flex-wrap gap-2">
@@ -224,9 +240,9 @@ export default function CV() {
       </div>
 
       {/* Languages & Certifications - non print */}
-      <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 print:grid-cols-2 print:hidden">
+      <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 print:grid-cols-2 print:hidden">
         <div>
-          <h4 className="mb-4 text-2xl text-blue print:text-black">Languages</h4>
+          <h4 className="mb-6 text-2xl text-blue print:text-black">Languages</h4>
 
           <ul className="flex flex-wrap gap-2 font-sans">
             <li>
@@ -245,7 +261,7 @@ export default function CV() {
         </div>
 
         <div>
-          <h4 className="mb-4 text-2xl text-blue print:text-black">Certifications</h4>
+          <h4 className="mb-6 text-2xl text-blue print:text-black">Certifications</h4>
 
           <ul className="flex flex-wrap gap-2 font-sans">
             <li>
