@@ -24,6 +24,7 @@ export const DownloadButton = ({ className }: DownloadButtonProps) => {
         className
       )}
       title="Download CV as PDF"
+      aria-label="Download CV as PDF"
     >
       <FaDownload className="tilt-shaking" />
     </Button>

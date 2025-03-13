@@ -12,8 +12,7 @@ export const Footer = () => {
   return (
     <footer className="custom-background-violet print:hidden">
       <Section hasTopPadding hasBottomPadding>
-        <div className="h-[2px] bg-white/60 blur-[7px] mb-8 rounded-full"></div>
-        <div className="grid gap-8 md:gap-12 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 border-t border-white-700 pt-8 md:grid-cols-2 md:gap-12 lg:grid-cols-4">
           <div className="space-y-4">
             <Logo isNavOpen={false} />
 
@@ -39,7 +38,7 @@ export const Footer = () => {
             <p>Interested in working together? Let&apos;s chat!</p>
 
             <Button isLinkButton href="mailto:corned-tippets-5g@icloud.com" variant="secondary">
-              Get in Touch <FaEnvelope className="ml-2 tilt-shaking" />
+              Get in Touch <FaEnvelope className="tilt-shaking ml-2" />
             </Button>
           </div>
 
