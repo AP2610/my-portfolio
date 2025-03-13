@@ -5,7 +5,7 @@ import { DownloadButton } from '@/components/download-button';
 import Link from 'next/link';
 import { MyImage } from '@/components/image';
 import { Badge } from '@/components/badge';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaGlobe } from 'react-icons/fa';
 
 const SKILLS_PRINT = [
   'JavaScript',
@@ -60,23 +60,22 @@ const CvPage = () => {
         isFullWidth
         className="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row print:flex-row print:break-inside-avoid"
       >
-        {/* Intro with image and skills in print */}
+        {/* Intro with image and skills in print, image is for web, skills only for print */}
         <div className="flex w-full flex-col items-center gap-4 md:w-auto md:items-start print:items-start">
           <MyImage
             src="/cv/headshot.png"
             alt="Arjun Puri"
             priority
-            containerClasses="w-48 h-48 rounded-full overflow-hidden flex-shrink-0 border-4 border-lime print:border-lime-700"
+            containerClasses="w-48 h-48 rounded-full overflow-hidden flex-shrink-0 border-4 border-lime print:border-lime-700 hover:scale-105 transition-transform duration-300 print:scale-100 print:hover:scale-100 print:transition-none print:duration-0 print:hover:scale-100"
           />
 
           {/* TODO: IMPORTANT Make into component this is for print only */}
+          {/* Skills for print only */}
           <div className="hidden print:block">
-            <p className="mb-2 font-semibold text-blue print:text-blue-600">Skills & Methodologies</p>
-            <p className="mb-2 text-[12px] text-blue print:text-blue-600">
-              *For a comprehensive list, please see the CV on my website.
-            </p>
+            <p className="mb-2 font-semibold text-blue-600">Skills & Methodologies</p>
+            <p className="mb-2 text-[10px] text-blue-600">*For a comprehensive list, please see the CV on my website.</p>
 
-            <ul className="flex w-60 print:text-[14px] flex-wrap gap-2">
+            <ul className="flex w-60 flex-wrap gap-2">
               {SKILLS_PRINT.map((skill) => (
                 <li key={skill}>
                   <Badge color="blue-700">{skill}</Badge>
@@ -155,7 +154,7 @@ const CvPage = () => {
         </div>
       </Section>
 
-      {/* Hidden in print */}
+      {/* Hidden in print, for web only */}
       <header className="mb-8 print:hidden">
         <h2 className="mb-4 text-4xl">Professional Experience</h2>
 
@@ -229,7 +228,7 @@ const CvPage = () => {
         </div>
       </div>
 
-      {/* TODO: IMPORTANT Make into component this is for non print */}
+      {/* TODO: Skills for web only! IMPORTANT Make into component this is for non print */}
       <div className="mt-10 print:hidden">
         <h4 className="mb-6 text-2xl text-blue print:text-blue-600">Skills & Methodologies</h4>
 
@@ -323,7 +322,7 @@ const CvPage = () => {
       </div>
 
       {/* Education section for both print and web */}
-      <div className="mt-10 font-sans">
+      <div className="mt-10">
         <h3 className="text-2xl mb-6 text-blue print:text-blue-600">Education</h3>
 
         <div className="flex flex-col md:flex-row gap-8 print:gap-6">
@@ -343,6 +342,31 @@ const CvPage = () => {
             </div>
 
             <p className="text-sm text-gray-400 print:text-gray-600">2019</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Useful Links - Print only */}
+      <div className="hidden print:block mt-10">
+        <h3 className="text-2xl mb-6 text-blue-600">Useful Links</h3>
+
+        <div className="flex flex-col gap-2 font-sans">
+          <div className="flex items-center gap-2">
+            <FaLinkedin className="text-blue-600" size={16} />
+            <span className="font-semibold">LinkedIn:</span>
+            <span className="text-blue-600">linkedin.com/in/arjunpuri26</span>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <FaGithub className="text-blue-600" size={16} />
+            <span className="font-semibold">GitHub:</span>
+            <span className="text-blue-600">github.com/AP2610</span>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <FaGlobe className="text-blue-600" size={16} />
+            <span className="font-semibold">Portfolio:</span>
+            <span className="text-blue-600">itsap.dev</span>
           </div>
         </div>
       </div>
