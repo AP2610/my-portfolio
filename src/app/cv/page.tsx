@@ -122,7 +122,7 @@ const CvPage = () => {
             <p>
               Having lived across five countries-Australia, India, Kenya, Switzerland, and the Netherlands-I excel at navigating
               cultural dynamics and integrating into diverse teams. My strengths outside of writing clean and quality code include
-              coaching, technical analysis, and strategic planning, often leading meetings and guiding projects.
+              coaching, technical analysis, and strategic planning.
             </p>
             <p>
               Outside of work, you'll find me cooking, tackling DIY projects, gaming, or reading—always learning, experimenting,
