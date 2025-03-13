@@ -62,7 +62,7 @@ const CvPage = () => {
     >
       <Section
         isFullWidth
-        className="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row print:break-inside-avoid print:flex-row"
+        className="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row print:break-inside-avoid print:flex-row print:gap-8"
       >
         {/* Intro with image and skills in print, image is for web, skills only for print */}
         <div className="flex w-full flex-col items-center gap-4 md:w-auto md:items-start print:items-start">
@@ -77,9 +77,9 @@ const CvPage = () => {
           {/* Skills for print only */}
           <div className="hidden print:block">
             <p className="mb-2 font-semibold text-blue-600">Skills & Methodologies</p>
-            <p className="mb-2 text-[10px] text-blue-600">*For a comprehensive list, please see the CV on my website.</p>
+            <p className="mb-6 text-[10px] text-blue-600">*For a comprehensive list, please see the CV on my website.</p>
 
-            <ul className="flex w-60 flex-wrap gap-2">
+            <ul className="flex w-64 flex-wrap gap-2">
               {SKILLS_PRINT.map((skill) => (
                 <li key={skill}>
                   <Badge color="blue-700">{skill}</Badge>
@@ -106,7 +106,7 @@ const CvPage = () => {
           </p>
 
           {/* About me - only for print */}
-          <div className="hidden space-y-2 hyphens-auto text-justify print:block">
+          <div className="hidden space-y-2 hyphens-auto text-justify print:mt-6 print:block">
             <p>
               I&apos;m a frontend developer passionate about building interactive, accessible, and user-friendly applications.
               Trained as a full-stack developer, I gravitated toward the frontend for its direct user impact. I thrive on turning
@@ -149,7 +149,7 @@ const CvPage = () => {
 
         <p className="mt-2">
           Please keep in mind, my CV contains consolidated and condensed information about my experiences. Should you wish to gain
-          a deeper understanding of the projects I have worked on, including the situation, tasks, results, technical details. and
+          a deeper understanding of the projects I have worked on, including the situation, tasks, results, technical details, and
           specializations, I invite you to explore the{' '}
           <Link href="/projects" className="text-blue hover:text-blue-600 hover:underline">
             projects section
@@ -159,11 +159,11 @@ const CvPage = () => {
       </header>
 
       {/* For print only - Certifications and languages */}
-      <div className="hidden grid-cols-1 print:mt-0 print:grid print:grid-cols-2 print:gap-8">
+      <div className="hidden grid-cols-1 print:mt-0 print:grid print:grid-cols-2 print:gap-10">
         <div>
           <h4 className="mb-4 text-2xl text-blue print:text-black">Certifications</h4>
 
-          <ul className="flex flex-wrap gap-2 font-sans">
+          <ul className="flex flex-wrap gap-4 font-sans">
             <li>
               <Badge color="violet">Le Wagon Fullstack Bootcamp</Badge>
             </li>
@@ -185,7 +185,7 @@ const CvPage = () => {
         <div>
           <h4 className="mb-4 text-2xl text-blue print:text-black">Languages</h4>
 
-          <ul className="flex flex-wrap gap-2 font-sans">
+          <ul className="flex flex-wrap gap-4 font-sans">
             <li>
               <Badge color="violet">English (Native or Bilingual)</Badge>
             </li>
