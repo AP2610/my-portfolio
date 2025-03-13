@@ -13,7 +13,7 @@ import { experiences } from './data';
 export const metadata: Metadata = {
   title: "Arjun Puri's CV",
   description:
-    'Frontend Engineer with expertise in JavaScript, TypeScript, React, Next.js and TailwindCSS. View my professional experience, skills, and qualifications.',
+    'Frontend Engineer with expertise in JavaScript, TypeScript, React, Next.js and Tailwind CSS. View my professional experience, skills, and qualifications.',
 };
 
 const SKILLS_PRINT = [

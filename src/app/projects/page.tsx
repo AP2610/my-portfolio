@@ -1,9 +1,16 @@
+import type { Metadata } from 'next';
 import { ProjectCard } from '@/components/project-card';
 import { projectsData } from './data';
 import { Section } from '@/components/section';
 import { Button } from '@/components/buttons';
 import { FaArrowDown } from 'react-icons/fa';
 import { ExternalLink } from '@/components/external-link';
+
+export const metadata: Metadata = {
+  title: "Arjun Puri's Projects",
+  description:
+    'Explore my portfolio of web development projects, featuring work with React, Next.js, and TypeScript, Tailwind CSS, and more.',
+};
 
 const ProjectsPage = () => {
   return (
