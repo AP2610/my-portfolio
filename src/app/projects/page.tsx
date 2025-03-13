@@ -20,12 +20,12 @@ const ProjectsPage = () => {
 
             <p>TLDR: Hit the Projects button below if you&apos;re just interested in my projects.</p>
 
-            <div className="flex items-center justify-between gap-4 md:w-1/4">
+            <div className="flex items-center gap-4 md:w-1/2">
               <Button isLinkButton href="/cv" className="w-full">
                 View my CV here
               </Button>
 
-              <Button variant="secondary" scrollTo="featured-projects" className="w-full md:hidden">
+              <Button variant="secondary" scrollTo="featured-projects" className="w-full">
                 Projects <FaArrowDown className="bounce-vertical ml-2" />
               </Button>
             </div>
