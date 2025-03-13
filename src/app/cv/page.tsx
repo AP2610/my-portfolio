@@ -49,7 +49,7 @@ const SKILLS_FULL = [
 // TODO: Go through the text here for any issues and things that dont fit properly
 // TODO: Extract page parts to components
 // Not the cleanest code right now and the file is way too big for my liking, but i was in a rush. I will refactor, promise.
-export default function CV() {
+const CvPage = () => {
   return (
     <Section
       className="mx-auto mt-[var(--header-height)] print:m-0 print:bg-white print:text-black print:w-full print:p-0"
@@ -348,4 +348,6 @@ export default function CV() {
       </div>
     </Section>
   );
-}
+};
+
+export default CvPage;

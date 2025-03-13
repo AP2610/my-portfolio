@@ -14,11 +14,11 @@ export const metadata: Metadata = {
   description: 'A portfolio website for Arjun Puri representing his work and skills.',
 };
 
-export default function RootLayout({
+const RootLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>) => {
   return (
     <html lang="en">
       <body className={clsx(`${raleway.variable} antialiased`)}>
@@ -27,4 +27,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

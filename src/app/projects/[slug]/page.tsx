@@ -3,13 +3,13 @@ import { Section } from '@/components/section';
 import { notFound } from 'next/navigation';
 import { projectsData } from '../data';
 
-export async function generateStaticParams() {
+export const generateStaticParams = async () => {
   return projectsData.map((project) => ({
     slug: project.slug,
   }));
-}
+};
 
-export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
+const ProjectPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const { slug } = await params;
   const project = projectsData.find((project) => project.slug === slug);
 
@@ -22,4 +22,6 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       <ProjectDetails {...project} />
     </Section>
   );
-}
+};
+
+export default ProjectPage;
