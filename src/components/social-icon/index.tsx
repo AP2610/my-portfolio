@@ -42,6 +42,7 @@ export const SocialIcon = ({ platform, size = 24, className, iconClassNAme }: So
       target={platform !== 'email' ? '_blank' : undefined}
       rel={platform !== 'email' ? 'noopener noreferrer' : undefined}
       title={title}
+      aria-label={title}
     >
       <Icon size={size} className={iconClassNAme} />
     </Link>
