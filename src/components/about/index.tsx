@@ -115,7 +115,7 @@ export const About = () => {
 
         <p>
           While I fully appreciate people who love to spend all their time writing code or writing about writing code - I
-          wouldn&apos;t give up the balance I&apos;ve worked very hard to create over the last half decade.
+          wouldn&apos;t give up the balance I&apos;ve worked very hard to create.
         </p>
       </InfoBox>
 
