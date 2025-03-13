@@ -48,7 +48,7 @@ const SKILLS_FULL = [
 
 // TODO: Go through the text here for any issues and things that dont fit properly
 // TODO: Extract page parts to components
-// Not the cleanest code right now, but i was in a rush. I will refactor, promise.
+// Not the cleanest code right now and the file is way too big for my liking, but i was in a rush. I will refactor, promise.
 export default function CV() {
   return (
     <Section
@@ -124,7 +124,7 @@ export default function CV() {
             </p>
           </div>
 
-          {/* TODO: Add correct links */}
+          {/* TODO: Check if mailto works in production */}
           <div className="flex gap-4 font-sans text-sm font-medium print:hidden">
             <Link
               href="https://github.com/AP2610"
@@ -184,13 +184,16 @@ export default function CV() {
               <Badge color="violet">Le Wagon Fullstack Bootcamp</Badge>
             </li>
             <li>
-              <Badge color="violet">Testing with Cypress.io</Badge>
-            </li>
-            <li>
-              <Badge color="violet">Complete Javascript Certification</Badge>
-            </li>
-            <li>
               <Badge color="violet">React Tutorial</Badge>
+            </li>
+            <li>
+              <Badge color="violet">Complete Javascript</Badge>
+            </li>
+            <li>
+              <Badge color="violet">Learn Javascript</Badge>
+            </li>
+            <li>
+              <Badge color="violet">Testing with Cypress.io</Badge>
             </li>
           </ul>
         </div>
@@ -239,7 +242,7 @@ export default function CV() {
         </ul>
       </div>
 
-      {/* Languages & Certifications - non print */}
+      {/* Languages & Certifications - Web only */}
       <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 print:grid-cols-2 print:hidden">
         <div>
           <h4 className="mb-6 text-2xl text-blue print:text-black">Languages</h4>
@@ -265,18 +268,82 @@ export default function CV() {
 
           <ul className="flex flex-wrap gap-2 font-sans">
             <li>
-              <Badge color="violet">Le Wagon Fullstack Bootcamp</Badge>
+              <Link
+                href="https://www.linkedin.com/in/arjunpuri26/overlay/1574531685954/single-media-viewer/?profileId=ACoAAB61nJkB4W7StLKExMHGTXbDlDd3Lvi6sgs"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Badge color="violet" hasLink>
+                  Le Wagon Fullstack Bootcamp
+                </Badge>
+              </Link>
             </li>
             <li>
-              <Badge color="violet">Testing with Cypress.io</Badge>
+              <Link
+                href="https://www.linkedin.com/in/arjunpuri26/overlay/1635498506856/single-media-viewer/?profileId=ACoAAB61nJkB4W7StLKExMHGTXbDlDd3Lvi6sgs"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Badge color="violet" hasLink>
+                  React Tutorial
+                </Badge>
+              </Link>
             </li>
             <li>
-              <Badge color="violet">Complete Javascript Certification</Badge>
+              <Link href="https://www.udemy.com/certificate/UC-KEQX9LVH/" target="_blank" rel="noopener noreferrer">
+                <Badge color="violet" hasLink>
+                  Complete Javascript Certification
+                </Badge>
+              </Link>
             </li>
             <li>
-              <Badge color="violet">React Tutorial</Badge>
+              <Link
+                href="https://www.linkedin.com/in/arjunpuri26/overlay/1574531584404/single-media-viewer/?profileId=ACoAAB61nJkB4W7StLKExMHGTXbDlDd3Lvi6sgs"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Badge color="violet" hasLink>
+                  Learn Javascript Certification
+                </Badge>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="https://www.linkedin.com/learning/certificates/b0b5c1a8e36afa9d6aaf0be2d6978fc70a5ad5939ff1afa6d51b071e38e96f5b?trk=backfilled_certificate"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Badge color="violet" hasLink>
+                  Testing with Cypress.io
+                </Badge>
+              </Link>
             </li>
           </ul>
+        </div>
+      </div>
+
+      {/* Education section for both print and web */}
+      <div className="mt-10 font-sans">
+        <h3 className="text-2xl mb-6 text-blue print:text-blue-600">Education</h3>
+
+        <div className="flex flex-col md:flex-row gap-8 print:gap-6">
+          <div className="flex flex-col print:break-inside-avoid">
+            <div className="mb-2">
+              <h4 className="text-xl font-semibold">Ecole hôtelière de Lausanne</h4>
+              <p className="text-lime print:text-lime-700">Bachelor of Science Degree, Hospitality Administration/Management</p>
+            </div>
+
+            <p className="text-sm text-gray-400 print:text-gray-600">2014 - 2018</p>
+          </div>
+
+          <div className="flex flex-col print:break-inside-avoid">
+            <div className="mb-2">
+              <h4 className="text-xl font-semibold">Le Wagon</h4>
+              <p className="text-lime print:text-lime-700">Computer Programming</p>
+            </div>
+
+            <p className="text-sm text-gray-400 print:text-gray-600">2019</p>
+          </div>
         </div>
       </div>
     </Section>
