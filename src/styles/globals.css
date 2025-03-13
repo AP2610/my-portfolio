@@ -1,4 +1,5 @@
 @import './animations/bounce.css';
+@import './animations/shake.css';
 
 @tailwind base;
 @tailwind components;
