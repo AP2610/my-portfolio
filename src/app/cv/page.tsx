@@ -111,7 +111,7 @@ const CvPage = () => {
               I'm a frontend developer passionate about building interactive, accessible, and user-friendly applications. Trained
               as a full-stack developer, I gravitated toward the frontend for its direct user impact. I thrive on turning ideas
               into functional, beautiful web experiences and value clear, honest communication. For the past five years, I've
-              worked remotely and honed my skills of remote collaboration. In the past year, I've integrated AI into my workflow
+              worked remotely and honed my skills in remote collaboration. In the past year, I've integrated AI into my workflow
               and use it to boost my productivity.
             </p>
             <p>
