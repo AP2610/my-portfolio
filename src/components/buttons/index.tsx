@@ -45,7 +45,7 @@ export const Button = ({
 }: ButtonProps) => {
   const classes = clsx(className, {
     'w-[fit-content] p-4': variant === 'icon-button',
-    'bg-white text-black hover:bg-white-400 border-2 border-white hover:border-white-400': variant === 'primary',
+    'bg-white text-black hover:bg-white-600 border-2 border-white hover:border-white-600': variant === 'primary',
     'border-2 border-lime text-lime hover:bg-lime/10': variant === 'secondary',
     'border-2 border-blue text-blue hover:bg-blue/10': variant === 'blue-secondary',
     // For all other variants except icon button
