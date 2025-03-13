@@ -5,7 +5,7 @@ import { InfoBox } from '@/components/info-box';
 import { Blockquote } from '@/components/blockquote';
 import { TextHighlight } from '@/components/text-highlight';
 
-const specializations = ['JavaScript', 'TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'Sanity CMS'];
+const specialisations = ['JavaScript', 'TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'Sanity CMS'];
 
 export const About = () => {
   return (
@@ -16,7 +16,7 @@ export const About = () => {
 
       <p>
         I&apos;m a frontend developer with a passion for creating beautiful, interactive, and accessible applications that
-        prioritize the user experience. While trained as a full-stack developer, I gravitated towards the frontend for its direct
+        prioritise the user experience. While trained as a full-stack developer, I gravitated towards the frontend for its direct
         impact on users. I thrive on transforming ideas into functional, visually appealing web applications and believe in clear,
         honest communication—no beating around the bush, just constructive and transparent discussions.
       </p>
@@ -37,7 +37,7 @@ export const About = () => {
         <p className="mb-4">I specialise in:</p>
 
         <ul className="flex flex-wrap gap-2">
-          {specializations.map((skill) => (
+          {specialisations.map((skill) => (
             <li key={skill}>
               <Badge>{skill}</Badge>
             </li>
@@ -62,7 +62,7 @@ export const About = () => {
 
       <p>
         In the past year, I have worked extensively with AI tools like GitHub Copilot, Augment, and ChatGPT and found way to
-        integrate them into my development workflow, leveraging them to optimize development processes, automate repetitive tasks,
+        integrate them into my development workflow, leveraging them to optimise development processes, automate repetitive tasks,
         and enhance productivity. Beyond work, I use AI extensively in my personal life, whether it&apos;s for DIY projects or
         recipe development—helping me refine and improve ideas efficiently.
       </p>

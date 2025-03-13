@@ -44,7 +44,7 @@ export const projectsData: Project[] = [
     image: '/project-images/totheroot.png',
     websiteUrl: 'https://totheroot.io/',
     situation:
-      'Worked on the development and maintenance of TotheRoot, a technical blog platform built by Ordina with Vue and Nuxt.js. Later, in 2024, I led the redesign of the website, transitioning it from Ordina branding to Sopra Steria branding, handling both design and development aspects.',
+      'Worked on the development and maintenance of ToTheRoot, a technical blog platform built by Ordina with Vue and Nuxt.js. Later, in 2024, I led the redesign of the website, transitioning it from Ordina branding to Sopra Steria branding, handling both design and development aspects.',
     tasks: [
       'Developed and maintained features using Vue and Nuxt.js, adapting to a new frontend ecosystem',
       'Led the rebranding initiative in 2024, executing both design and frontend implementation',
@@ -98,17 +98,17 @@ export const projectsData: Project[] = [
     slug: 'vodafone-ziggo',
     role: 'Frontend Developer',
     company: 'VodafoneZiggo',
-    period: 'April 2021 - July 2022',
+    period: 'April 2021 - June 2022',
     image: '/project-images/vodafone.png',
     websiteUrl:
       'https://www.vodafone.nl/zakelijk/mobiel/abonnement/sim-only?duration=24&together-extra-subscription-count=0&red-pro-unlimited=1',
     additionalInfo:
       'I am unable to share the link to the repository for this website as it is within a private organisation. Also, the product has changed since I worked on it 3 years ago.',
     situation:
-      "A collaboration between VodafoneZiggo, Salesforce, and Ordina, the goal of the project was to build an entirely new portal for Vodafone Ziggo's business customers on Salesforce Commerce Cloud.",
+      "A collaboration between VodafoneZiggo, Salesforce, and Ordina, the goal of the project was to build an entirely new portal for VodafoneZiggo's business customers on Salesforce Commerce Cloud.",
     tasks: [
       'Develop a cutting-edge new site from scratch using a B2C platform for B2B customers',
-      'Built a complex product configurator using Web Components, allowing businesses to customize their telecom solutions with real-time pricing and validation',
+      'Built a complex product configurator using Web Components, allowing businesses to customise their telecom solutions with real-time pricing and validation',
       'Implemented advanced asynchronous JavaScript functionality to handle dynamic product configurations and dependencies',
       'Using the most modern approaches – Web components for the frontend, creation of a single page application, using the latest Vanilla Javascript ES6 features',
       'Build and improve the website with new features',
@@ -135,12 +135,12 @@ export const projectsData: Project[] = [
     slug: 'prenatal',
     role: 'Frontend Developer',
     company: 'Prenatal',
-    period: 'April 2020 - June 2022',
+    period: 'October 2020 - June 2022',
     image: '/project-images/prenatal.png',
     websiteUrl: 'https://www.prenatal.nl',
     additionalInfo: 'I am unable to share the link to the repository for this website as it is within a private organisation.',
     situation:
-      'The objective was to enhance the existing website by introducing innovative features aimed at optimizing performance and elevating the overall customer experience. Upon joining the project, I worked towards a series of substantial improvement initiatives, including a comprehensive redesign of the checkout process, enabling international shipping capabilities, and the integration of diverse shipping and delivery methods, among other enhancements.',
+      'The objective was to enhance the existing website by introducing innovative features aimed at optimising performance and elevating the overall customer experience. Upon joining the project, I worked towards a series of substantial improvement initiatives, including a comprehensive redesign of the checkout process, enabling international shipping capabilities, and the integration of diverse shipping and delivery methods, among other enhancements.',
     tasks: [
       'Spearheaded the development of an enhanced checkout flow',
       'Led frontend efforts to seamlessly integrate a new shipping method',
@@ -172,7 +172,7 @@ export const projectsData: Project[] = [
     additionalInfo:
       'I am unable to share the link the repository for this website as it is within a private organisation. Additionally, due to a rough time during the pandemic, Blokker had to declate bankruptcy, therefore the website URL points to a web archive link. The good news is that Blokker should be returning in 2025 as per the news.',
     situation:
-      'To elevate the online customer experience, Blokker.nl sought to revolutionize its product delivery system. The project aimed to introduce Packaly as a new shipping method, necessitating a complete overhaul of the delivery process, including a redesign of user interactions during checkout.',
+      'To elevate the online customer experience, Blokker.nl sought to revolutionise its product delivery system. The project aimed to introduce Packaly as a new shipping method, necessitating a complete overhaul of the delivery process, including a redesign of user interactions during checkout.',
     tasks: [
       'Collaborated with the design team to implement enhancements to the user experience during the checkout process',
       'Took charge of developing all front-end requirements for the project',

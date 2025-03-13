@@ -31,7 +31,7 @@ export const experiences: Experience[] = [
   {
     company: 'CapaCare',
     role: 'Frontend Developer and Designer',
-    period: 'May 2024 - October 2024 (6 months)',
+    period: 'May 2024 - November 2024 (6 months)',
     location: 'Netherlands',
     subText: '(via Ordina - now Sopra Steria)',
     description:
