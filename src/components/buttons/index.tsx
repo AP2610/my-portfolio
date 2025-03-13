@@ -21,6 +21,7 @@ type ButtonAsButton = BaseProps &
     isLinkButton?: false;
     scrollTo?: string;
     disabled?: boolean;
+    target?: never;
   };
 
 type ButtonAsLink = BaseProps &
@@ -41,6 +42,7 @@ export const Button = ({
   variant = 'primary',
   isLinkButton = false,
   isRounded = true,
+  target,
   ...props
 }: ButtonProps) => {
   const classes = clsx(className, {
@@ -65,7 +67,13 @@ export const Button = ({
     <>
       {isLinkButton ? (
         // ...props need to be explicitly casted to AnchorHTMLAttributes<HTMLAnchorElement>.
-        <Link href={href as string} className={classes} {...(props as AnchorHTMLAttributes<HTMLAnchorElement>)}>
+        <Link
+          href={href as string}
+          className={classes}
+          target={target}
+          rel={target === '_blank' ? 'noopener noreferrer' : undefined}
+          {...(props as AnchorHTMLAttributes<HTMLAnchorElement>)}
+        >
           {children}
         </Link>
       ) : (
