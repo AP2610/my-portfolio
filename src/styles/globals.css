@@ -104,12 +104,12 @@
 @media print {
   @page {
     size: A4;
-    margin: 2.5cm;
+    margin: 1.5cm 1.2cm 1cm 1.2cm;
   }
 
-  body {
-    print-color-adjust: exact !important;
-    -webkit-print-color-adjust: exact !important;
+  .page-break {
+    page-break-before: always;
+    break-before: page;
   }
 }
 
