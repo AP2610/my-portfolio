@@ -108,16 +108,16 @@ const CvPage = () => {
           {/* About me - only for print */}
           <div className="hidden space-y-2 hyphens-auto text-justify print:mt-6 print:block">
             <p>
-              I&apos;m a frontend developer passionate about building interactive, accessible, and user-friendly applications.
-              Trained as a full-stack developer, I gravitated toward the frontend for its direct user impact. I thrive on turning
-              ideas into functional, beautiful web experiences and value clear, honest communication. For the past five years,
-              I&apos;ve worked remotely and excel at remote collaboration. In the past year, I&apos;ve integrated AI into my
-              workflow and use it to boost my productivity.
+              I'm a frontend developer passionate about building interactive, accessible, and user-friendly applications. Trained
+              as a full-stack developer, I gravitated toward the frontend for its direct user impact. I thrive on turning ideas
+              into functional, beautiful web experiences and value clear, honest communication. For the past five years, I've
+              worked remotely and excel at remote collaboration. In the past year, I've integrated AI into my workflow and use it
+              to boost my productivity.
             </p>
             <p>
-              I&apos;ve worked in e-commerce, telecom, logistics, and the public sector, including the Corona Dashboard, which had
-              over 250K daily visitors. With a service mindset shaped by a hospitality education, I bring strong interpersonal
-              skills and have a keen eye for detail.
+              I've worked in e-commerce, telecom, logistics, and the public sector, including the Corona Dashboard, which had over
+              250K daily visitors. With a service mindset shaped by a hospitality education, I bring strong interpersonal skills
+              and have a keen eye for detail.
             </p>
             <p>
               Having lived across five countries-Australia, India, Kenya, Switzerland, and the Netherlands-I excel at navigating
@@ -125,8 +125,8 @@ const CvPage = () => {
               coaching, technical analysis, and strategic planning, often leading meetings and guiding projects.
             </p>
             <p>
-              Outside of work, you&apos;ll find me cooking, tackling DIY projects, gaming, or reading—always learning,
-              experimenting, and building.
+              Outside of work, you'll find me cooking, tackling DIY projects, gaming, or reading—always learning, experimenting,
+              and building.
             </p>
           </div>
 

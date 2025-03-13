@@ -23,6 +23,7 @@ const eslintConfig = [
           printWidth: 130,
         },
       ],
+      'react/no-unescaped-entities': 'off',
     },
   },
 ];

@@ -34,8 +34,8 @@ export const Footer = () => {
           </div>
 
           <div className="space-y-6">
-            <h3 className="text-xl font-bold">Let&apos;s Connect</h3>
-            <p>Interested in working together? Let&apos;s chat!</p>
+            <h3 className="text-xl font-bold">Let's Connect</h3>
+            <p>Interested in working together? Let's chat!</p>
 
             <ExternalLink href="mailto:corned-tippets-5g@icloud.com" variant="secondary">
               Get in Touch <FaEnvelope className="tilt-shaking ml-2" />

@@ -16,7 +16,7 @@ const Home = () => {
         <AnimatedElementPresence entryAnimationDelay={0.2} animationProperty="opacity">
           <Section className="flex h-full flex-col items-center justify-center gap-16 font-sans">
             <div className="flex flex-col gap-4">
-              <h1 className="text-center font-sans text-4xl font-black">Hi! I&apos;m Arjun</h1>
+              <h1 className="text-center font-sans text-4xl font-black">Hi! I'm Arjun</h1>
               <p className="text-center text-2xl font-light text-lime">Welcome to my portfolio</p>
             </div>
             <div className="flex gap-4">

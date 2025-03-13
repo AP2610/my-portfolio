@@ -14,10 +14,10 @@ export const About = () => {
       </h2>
 
       <p>
-        I&apos;m a frontend developer with a passion for creating beautiful, interactive, and accessible applications that
-        prioritise the user experience. While trained as a full-stack developer, I gravitated towards the frontend for its direct
-        impact on users. I thrive on transforming ideas into functional, visually appealing web applications and believe in clear,
-        honest communication—no beating around the bush, just constructive and transparent discussions.
+        I'm a frontend developer with a passion for creating beautiful, interactive, and accessible applications that prioritise
+        the user experience. While trained as a full-stack developer, I gravitated towards the frontend for its direct impact on
+        users. I thrive on transforming ideas into functional, visually appealing web applications and believe in clear, honest
+        communication—no beating around the bush, just constructive and transparent discussions.
       </p>
 
       <p>
@@ -52,9 +52,9 @@ export const About = () => {
       </p>
 
       <p>
-        I&apos;ve worked remotely for the past five years, honing my skills in remote collaboration, asynchronous communication,
-        and cross-timezone teamwork. While I appreciate the autonomy and trust required for remote work, I&apos;m also happy to
-        return to a hybrid environment. Having said that, my preference is for mostly remote work.
+        I've worked remotely for the past five years, honing my skills in remote collaboration, asynchronous communication, and
+        cross-timezone teamwork. While I appreciate the autonomy and trust required for remote work, I'm also happy to return to a
+        hybrid environment. Having said that, my preference is for mostly remote work.
       </p>
 
       <h3 className="text-xl">AI in My Workflow</h3>
@@ -62,7 +62,7 @@ export const About = () => {
       <p>
         In the past year, I have worked with AI tools like GitHub Copilot, Augment, and ChatGPT and found ways to integrate them
         into my development workflow, leveraging them to optimise development processes, automate repetitive tasks, and enhance
-        productivity. Beyond work, I use AI extensively in my personal life, whether it&apos;s for DIY projects or recipe
+        productivity. Beyond work, I use AI extensively in my personal life, whether it's for DIY projects or recipe
         development—helping me refine and improve ideas efficiently.
       </p>
 
@@ -71,10 +71,10 @@ export const About = () => {
       <p>
         While some pride themselves on complex solutions, I value clarity and simplicity in code. A well-structured, simple
         codebase improves both productivity and collaboration. Having said that, I myself have written some overly complex logic
-        in the past, only to find myself returning months later trying to demystify it. That&apos;s only reinforced my belief in
-        KISS - Keep It Simple, Stupid. Additionally, working in teams with a varying range of experience, I&apos;ve learnt the
-        importance of keeping code understandable by all levels. I am far from perfect at this, but I always try to keep it in
-        mind when writing code.
+        in the past, only to find myself returning months later trying to demystify it. That's only reinforced my belief in KISS -
+        Keep It Simple, Stupid. Additionally, working in teams with a varying range of experience, I've learnt the importance of
+        keeping code understandable by all levels. I am far from perfect at this, but I always try to keep it in mind when writing
+        code.
       </p>
 
       <h3 className="text-xl">Experience with Large Codebases & Clean Code Philosophy</h3>
@@ -82,8 +82,8 @@ export const About = () => {
       <p>
         I have experience with large-scale codebases, particularly at the Corona Dashboard and Blokker. I am a strong advocate for
         refactoring—a clean, well-structured codebase is paramount to long-term productivity and maintainability. However, I also
-        understand the need for balance between code quality and efficient delivery. Like my mother taught me, &quot;a clean
-        closet makes for a clear mind.&quot;
+        understand the need for balance between code quality and efficient delivery. Like my mother taught me, &"a clean closet
+        makes for a clear mind.&"
       </p>
 
       <p>
@@ -94,26 +94,26 @@ export const About = () => {
       {/* Move this to core values section get values from previous CV */}
       <InfoBox color="blue">
         <p>
-          If you&apos;re looking for someone who codes full time, i.e., gets off work and then continues coding late into night -
-          that&apos;s not me. It was at one point. I sacrificed a work-life balance for my job and my craft - and I suffered
-          because of it. I&apos;ve since taken pride in being able to balance my work, craft, and personal life.
+          If you're looking for someone who codes full time, i.e., gets off work and then continues coding late into night -
+          that's not me. It was at one point. I sacrificed a work-life balance for my job and my craft - and I suffered because of
+          it. I've since taken pride in being able to balance my work, craft, and personal life.
         </p>
 
         <p>
-          Now, once I&apos;m done with work, I enjoy spending time with my partner, coming up with a new recipe or thinking of the
-          next DIY project around the house. I firmly believe that exploring my creativity in a fashion that is not related to my
-          job, leads to an unbound ability to be creative in my job.
+          Now, once I'm done with work, I enjoy spending time with my partner, coming up with a new recipe or thinking of the next
+          DIY project around the house. I firmly believe that exploring my creativity in a fashion that is not related to my job,
+          leads to an unbound ability to be creative in my job.
         </p>
 
         <p>
-          When all I did was code, I found myself demoralised after a while. Since I&apos;ve expanded my portfolio of creativity,
-          I find myself more excited to apply myself in all of them. I&apos;ve solved many a code-related issue while being
-          hunched over my stove.
+          When all I did was code, I found myself demoralised after a while. Since I've expanded my portfolio of creativity, I
+          find myself more excited to apply myself in all of them. I've solved many a code-related issue while being hunched over
+          my stove.
         </p>
 
         <p>
-          While I fully appreciate people who love to spend all their time writing code or writing about writing code - I
-          wouldn&apos;t give up the balance I&apos;ve worked very hard to create.
+          While I fully appreciate people who love to spend all their time writing code or writing about writing code - I wouldn't
+          give up the balance I've worked very hard to create.
         </p>
       </InfoBox>
 
@@ -123,11 +123,11 @@ export const About = () => {
       </Blockquote>
 
       <div className="space-y-4">
-        <p>If you&apos;ve made it this far, I appreciate you taking the time to read a little bit about my story.</p>
+        <p>If you've made it this far, I appreciate you taking the time to read a little bit about my story.</p>
 
         <p>
-          If you&apos;re still interested, head over to my CV, it will give you a comprehensive overview of my work experience and
-          my skills. From there, feel free to dive into the projects I&apos;ve worked on over the last 6 years of my career.
+          If you're still interested, head over to my CV, it will give you a comprehensive overview of my work experience and my
+          skills. From there, feel free to dive into the projects I've worked on over the last 6 years of my career.
         </p>
       </div>
 

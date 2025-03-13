@@ -14,11 +14,11 @@ const ProjectsPage = () => {
 
           <div className="space-y-6">
             <p className="text-lime">
-              You might find some duplication here from the content on the CV page, for that, I sincerely apologise. I&apos;ve
-              done my best to keep the information unique to each section.
+              You might find some duplication here from the content on the CV page, for that, I sincerely apologise. I've done my
+              best to keep the information unique to each section.
             </p>
 
-            <p>TLDR: Hit the Projects button below if you&apos;re just interested in my projects.</p>
+            <p>TLDR: Hit the Projects button below if you're just interested in my projects.</p>
 
             <div className="flex items-center gap-4 md:w-1/2">
               <Button isLinkButton href="/cv" className="w-full">
@@ -31,9 +31,9 @@ const ProjectsPage = () => {
             </div>
 
             <p>
-              What you&apos;ll find below are some of the most impactful projects I&apos;ve worked on—both in my growth as a
-              developer and in their impact on users. These aren&apos;t all the projects I&apos;ve contributed to throughout my
-              career, but they represent key milestones.
+              What you'll find below are some of the most impactful projects I've worked on—both in my growth as a developer and
+              in their impact on users. These aren't all the projects I've contributed to throughout my career, but they represent
+              key milestones.
             </p>
 
             <p>
@@ -43,7 +43,7 @@ const ProjectsPage = () => {
             </p>
 
             <p>
-              Beyond client-facing applications, I&apos;ve also built internal tools for my teams. Two of the most notable ones
+              Beyond client-facing applications, I've also built internal tools for my teams. Two of the most notable ones
               include:
             </p>
 
@@ -68,8 +68,7 @@ const ProjectsPage = () => {
               <ExternalLink href="https://github.com/AP2610?tab=repositories" variant="inline">
                 GitHub
               </ExternalLink>{' '}
-              if you&apos;d like to check it out. (Be kind—it was my first React project, just a few months after I started
-              coding!)
+              if you'd like to check it out. (Be kind—it was my first React project, just a few months after I started coding!)
             </p>
           </div>
         </header>
