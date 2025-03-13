@@ -18,13 +18,14 @@ export const experiences: Experience[] = [
     role: 'Project Manager',
     period: 'December 2023 - November 2024 (1 year)',
     location: 'Netherlands',
+    subText: '(Ordina merged with Sopra Steria in late 2023)',
     description:
       'Aside from my projects as a frontend developer, I also worked as a project manager on the rAIse program from January to October 2024. Working on this program led me to start using AI significantly as I was equipped with a business license for Copilot. Since then, I have been an avid user of AI tools and have used them to enrich my workflow and boost my productivity.',
     bulletPoints: [
-      'Led the creation of a community of AI experts focused on AI in software development.',
-      'Designed and circulated a comprehensive questionnaire to over 2,000 developers, gathering insights on AI assistants and their impact on development work.',
-      'Analysed and presented the collected data to inform internal decision-making and demonstrate AI benefits to clients.',
-      'Led bi-monthly community meetings, sharing insights, updates, and fostering discussions on AI-driven software development.',
+      'Led the creation of a community of AI experts focused on AI in software development',
+      'Designed and circulated a comprehensive questionnaire to over 2,000 developers, gathering insights on AI assistants and their impact on development work',
+      'Analysed and presented the collected data to inform internal decision-making and demonstrate AI benefits to clients',
+      'Led bi-monthly community meetings, sharing insights, updates, and fostering discussions on AI-driven software development',
     ],
   },
   {
@@ -57,10 +58,10 @@ export const experiences: Experience[] = [
     period: 'November 2023 - July 2024 (9 months)',
     location: 'Netherlands',
     description:
-      'Worked on the development and maintenance of TotheRoot, a technical blog platform built by Ordina with Vue and Nuxt.js, requiring me to expand my skill set into new technologies like VueJS and Nuxt. Later, in 2024, I led the redesign of the website, transitioning it from Ordina branding to Sopra Steria branding, handling both design and development aspects.',
+      'Worked on the development and maintenance of ToTheRoot, a technical blog platform built by Ordina with Vue and Nuxt.js, requiring me to expand my skill set into new technologies like VueJS and Nuxt. Later, in 2024, I led the redesign of the website, transitioning it from Ordina branding to Sopra Steria branding, handling both design and development aspects.',
     bulletPoints: [
-      'Developed and maintained features using Vue and Nuxt.js, adapting to a new frontend ecosystem.',
-      'Led the rebranding initiative in 2024, executing both design and frontend implementation.',
+      'Developed and maintained features using Vue and Nuxt.js, adapting to a new frontend ecosystem',
+      'Led the rebranding initiative in 2024, executing both design and frontend implementation',
     ],
     link: {
       url: 'https://totheroot.io/',

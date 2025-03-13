@@ -148,7 +148,7 @@ const CvPage = () => {
 
         <p className="mt-2">
           Please keep in mind, my CV contains consolidated and condensed information about my experiences. Should you wish to gain
-          a deeper understanding of the projects i have worked on, including the situation, tasks, results, technical details. and
+          a deeper understanding of the projects I have worked on, including the situation, tasks, results, technical details. and
           specializations, I invite you to explore the{' '}
           <Link href="/projects" className="text-blue hover:text-blue-600 hover:underline">
             projects section
