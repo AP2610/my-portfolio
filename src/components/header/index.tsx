@@ -66,7 +66,7 @@ export const Header = () => {
         // The initial styles solve the issue where useTransform is not reset on page navigation.
         initial={{
           background: initialBackgroundColor,
-          backdropFilter: 'blur(0px)',
+          backdropFilter: hasSolidBackground ? 'blur(10px)' : 'blur(0px)',
         }}
         style={{
           background: backgroundStyle,
