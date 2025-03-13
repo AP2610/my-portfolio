@@ -38,7 +38,7 @@ const ProjectsPage = () => {
 
             <p>
               Earlier in my career, I worked on fully custom WordPress themes, handling both frontend and backend development.
-              These projects leveraged the then-new Gutenberg editor, which heavily utilizes React. This was my first professional
+              These projects leveraged the then-new Gutenberg editor, which heavily utilises React. This was my first professional
               exposure to React and marked the beginning of my journey into modern frontend development.
             </p>
 
@@ -48,7 +48,7 @@ const ProjectsPage = () => {
             </p>
 
             <ul className="mb-4 ml-4 list-inside list-disc font-sans">
-              <li>A team randomizer (Coronavirus Dashboard) – Used to fairly assign a team member to lead each sprint.</li>
+              <li>A team randomiser (Coronavirus Dashboard) – Used to fairly assign a team member to lead each sprint.</li>
               <li>
                 An XML parser (VodafoneZiggo) – Designed to handle large XML files from Salesforce Commerce Cloud and convert them
                 into a usable format.
@@ -57,7 +57,8 @@ const ProjectsPage = () => {
 
             <p>
               Both tools were built with React. I still have access to the code for these projects and plan to add them to my
-              portfolio soon - they need to be cleaned up and refined slightly.
+              portfolio soon - they need to be cleaned up and refined slightly. The XML parse especially was created in a rush, I
+              need to refactor its code.
             </p>
 
             <p>
