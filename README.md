@@ -22,8 +22,6 @@ This is my personal portfolio website showcasing my work, experience, and techni
 There's more to come - this portfolio was built extremely quickly over a few long days because I was working to a deadline. I will now take some time to make further refinements, improvements, and additions.
 
 - **Personal Projects:** Pig Game, Recipe Search & Groceries App, Speed Typer  
-- **Connect Content to a CMS:** Sanity  
-- **Storybook Implementation**  
 - **Core Values Page**  
 - **Additional Animations:** Using Framer Motion  
 - **Accessibility Improvements**  
