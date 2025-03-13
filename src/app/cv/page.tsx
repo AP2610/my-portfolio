@@ -84,7 +84,7 @@ const CvPage = () => {
           {/* Skills for print only */}
           <div className="hidden print:block">
             <p className="mb-2 font-semibold text-blue-600">Skills & Methodologies</p>
-            <p className="mb-6 text-[10px] text-blue-600">*For a comprehensive list, please see the CV on my website.</p>
+            <p className="mb-6 text-[10px] text-blue-600">*For a comprehensive list, please see the CV page on my website.</p>
 
             <ul className="flex w-64 flex-wrap gap-2">
               {SKILLS_PRINT.map((skill) => (
