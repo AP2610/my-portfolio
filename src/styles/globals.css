@@ -11,8 +11,8 @@
   --foreground: #171717; */
 
   /* For dark mode, default setting for now. */
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --background: #0a0a1a;
+  --foreground: #eef0f2;
 
   --black: #0a0a1a;
   --black-100: #bbbbe4;
@@ -58,6 +58,7 @@
   --blue-800: #006570;
   --blue-900: #003238;
 
+  /* TODO: This is clearly not white, but too many usages to change it now. Refactor white to grey */
   --white: #eef0f2;
   --white-100: #fcfcfc;
   --white-200: #f8f9fa;
