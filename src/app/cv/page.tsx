@@ -1,11 +1,12 @@
-import { Section } from '@/components/section';
-import { Experience } from '@/components/experience';
-import { experiences } from './data';
-import { DownloadButton } from '@/components/download-button';
-import Link from 'next/link';
-import { MyImage } from '@/components/image';
 import { Badge } from '@/components/badge';
-import { FaGithub, FaLinkedin, FaEnvelope, FaGlobe } from 'react-icons/fa';
+import { DownloadButton } from '@/components/download-button';
+import { Experience } from '@/components/experience';
+import { MyImage } from '@/components/image';
+import { Section } from '@/components/section';
+import { SocialIcon } from '@/components/social-icon';
+import Link from 'next/link';
+import { FaGithub, FaGlobe, FaLinkedin } from 'react-icons/fa';
+import { experiences } from './data';
 
 const SKILLS_PRINT = [
   'JavaScript',
@@ -44,6 +45,8 @@ const SKILLS_FULL = [
   'Github Actions',
   'Prettier',
   'EsLint',
+  'Micro Animations',
+  'Husky',
 ];
 
 // TODO: Go through the text here for any issues and things that dont fit properly
@@ -128,31 +131,9 @@ const CvPage = () => {
 
           {/* TODO: Check if mailto works in production */}
           <div className="flex gap-4 font-sans text-sm font-medium print:hidden">
-            <Link
-              href="https://github.com/AP2610"
-              className="text-blue-600 hover:text-blue-400 transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="GitHub Profile"
-            >
-              <FaGithub size={24} />
-            </Link>
-            <Link
-              href="https://www.linkedin.com/in/arjunpuri26/"
-              className="text-blue-600 hover:text-blue-400 transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="LinkedIn Profile"
-            >
-              <FaLinkedin size={24} />
-            </Link>
-            <Link
-              href="mailto:corned-tippets-5g@icloud.com"
-              className="text-blue-600 hover:text-blue-400 transition-colors"
-              title="Send Email - If the email looks weird, thats because i would rather not share my personal email online. This email address forwards emails to my personal email."
-            >
-              <FaEnvelope size={24} />
-            </Link>
+            <SocialIcon platform="github" />
+            <SocialIcon platform="linkedin" />
+            <SocialIcon platform="email" />
           </div>
         </div>
       </Section>
