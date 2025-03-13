@@ -1,4 +1,5 @@
 import { Header } from '@/components/header';
+import { Footer } from '@/components/footer';
 import clsx from 'clsx';
 import type { Metadata } from 'next';
 import { Raleway } from 'next/font/google';
@@ -21,9 +22,10 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="en">
-      <body className={clsx(`${raleway.variable} antialiased`)}>
+      <body className={clsx(`${raleway.variable} antialiased min-h-screen flex flex-col`)}>
         <Header />
-        <main className="min-h-screen">{children}</main>
+        <main className="flex-grow">{children}</main>
+        <Footer />
       </body>
     </html>
   );
