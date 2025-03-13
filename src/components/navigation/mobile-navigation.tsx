@@ -38,6 +38,7 @@ export const MobileNavigation = ({ isOpen, setIsOpen, className }: MobileNavigat
           initial={false} // Prevents animation from triggering on page load.
           onClick={() => setIsOpen(!isOpen)}
           animate={isOpen ? 'open' : 'closed'}
+          aria-label="Hamburger navigation menu button"
         >
           {/* Top line of hamburger */}
           <motion.span

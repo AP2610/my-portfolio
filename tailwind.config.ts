@@ -26,6 +26,16 @@ export default {
       },
     },
     extend: {
+      // Accesibility approved line heights
+      fontSize: {
+        '4xl': ['2.25rem', { lineHeight: '1.3' }], // 36px font → 47px line height
+        '3xl': ['1.875rem', { lineHeight: '1.3' }], // 30px font → 39px line height
+        '2xl': ['1.5rem', { lineHeight: '1.5' }], // 24px font → 36px line height
+        xl: ['1.25rem', { lineHeight: '1.5' }], // 20px font → 30px line height
+        lg: ['1.125rem', { lineHeight: '1.5' }], // 18px font → 27px line height
+        base: ['1rem', { lineHeight: '1.5' }], // 16px font → 24px line height
+        sm: ['0.875rem', { lineHeight: '1.6' }], // 14px → 22px line height
+      },
       colors: {
         black: {
           DEFAULT: '#0a0a1a',
