@@ -22,7 +22,7 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="en">
-      <body className={clsx(`${raleway.variable} antialiased min-h-screen flex flex-col`)}>
+      <body className={clsx(`${raleway.variable} flex min-h-screen flex-col antialiased`)}>
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />

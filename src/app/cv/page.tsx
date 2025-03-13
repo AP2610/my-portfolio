@@ -55,13 +55,13 @@ const SKILLS_FULL = [
 const CvPage = () => {
   return (
     <Section
-      className="mx-auto mt-[var(--header-height)] print:m-0 print:bg-white print:text-black print:w-full print:p-0"
+      className="mx-auto mt-[var(--header-height)] print:m-0 print:w-full print:bg-white print:p-0 print:text-black"
       hasTopPadding
       hasBottomPadding
     >
       <Section
         isFullWidth
-        className="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row print:flex-row print:break-inside-avoid"
+        className="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row print:break-inside-avoid print:flex-row"
       >
         {/* Intro with image and skills in print, image is for web, skills only for print */}
         <div className="flex w-full flex-col items-center gap-4 md:w-auto md:items-start print:items-start">
@@ -105,7 +105,7 @@ const CvPage = () => {
           </p>
 
           {/* About me - only for print */}
-          <div className="hidden space-y-2 print:block hyphens-auto text-justify">
+          <div className="hidden space-y-2 hyphens-auto text-justify print:block">
             <p>
               I&apos;m a frontend developer passionate about building interactive, accessible, and user-friendly applications.
               Trained as a full-stack developer, I gravitated toward the frontend for its direct user impact. I thrive on turning
@@ -158,7 +158,7 @@ const CvPage = () => {
       </header>
 
       {/* For print only - Certifications and languages */}
-      <div className="hidden print:grid print:mt-0 grid-cols-1 print:gap-8 print:grid-cols-2">
+      <div className="hidden grid-cols-1 print:mt-0 print:grid print:grid-cols-2 print:gap-8">
         <div>
           <h4 className="mb-4 text-2xl text-blue print:text-black">Certifications</h4>
 
@@ -203,7 +203,7 @@ const CvPage = () => {
 
       {/* Experience section for both print and web */}
       <div className="space-y-12 font-sans print:space-y-6">
-        <h3 className="hidden text-blue-600 print:block print:text-2xl page-break">Professional Experience</h3>
+        <h3 className="page-break hidden text-blue-600 print:block print:text-2xl">Professional Experience</h3>
 
         <div className="space-y-10 md:space-y-12 print:space-y-10">
           {experiences.map((experience, index) => (
@@ -226,7 +226,7 @@ const CvPage = () => {
       </div>
 
       {/* Languages & Certifications - Web only */}
-      <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 print:grid-cols-2 print:hidden">
+      <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 print:hidden print:grid-cols-2">
         <div>
           <h4 className="mb-6 text-2xl text-blue print:text-black">Languages</h4>
 
@@ -307,9 +307,9 @@ const CvPage = () => {
 
       {/* Education section for both print and web */}
       <div className="mt-10">
-        <h3 className="text-2xl mb-6 text-blue print:text-blue-600">Education</h3>
+        <h3 className="mb-6 text-2xl text-blue print:text-blue-600">Education</h3>
 
-        <div className="flex flex-col md:flex-row gap-8 print:gap-6">
+        <div className="flex flex-col gap-8 md:flex-row print:gap-6">
           <div className="flex flex-col print:break-inside-avoid">
             <div className="mb-2">
               <h4 className="text-xl font-semibold">Ecole hôtelière de Lausanne</h4>
@@ -331,8 +331,8 @@ const CvPage = () => {
       </div>
 
       {/* Useful Links - Print only */}
-      <div className="hidden print:block mt-10">
-        <h3 className="text-2xl mb-6 text-blue-600">Useful Links</h3>
+      <div className="mt-10 hidden print:block">
+        <h3 className="mb-6 text-2xl text-blue-600">Useful Links</h3>
 
         <div className="flex flex-col gap-2 font-sans">
           <div className="flex items-center gap-2">

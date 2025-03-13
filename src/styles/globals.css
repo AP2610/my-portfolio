@@ -114,7 +114,9 @@
     break-before: page;
   }
 
-  p, li, span {
+  p,
+  li,
+  span {
     font-size: 14px !important;
   }
 }
