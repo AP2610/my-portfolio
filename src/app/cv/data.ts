@@ -19,7 +19,7 @@ export const experiences: Experience[] = [
     period: 'December 2023 - November 2024 (1 year)',
     location: 'Netherlands',
     description:
-      'Aside from my projects as a frontend developer, I also worked as a project manager on the rAIse program from January to October 2024.',
+      'Aside from my projects as a frontend developer, I also worked as a project manager on the rAIse program from January to October 2024. Working on this program led me to start using AI significantly as I was equipped with a business license for Copilot. Since then, I have been an avid user of AI tools and have used them to enrich my workflow and boost my productivity.',
     bulletPoints: [
       'Led the creation of a community of AI experts focused on AI in software development.',
       'Designed and circulated a comprehensive questionnaire to over 2,000 developers, gathering insights on AI assistants and their impact on development work.',
@@ -32,7 +32,7 @@ export const experiences: Experience[] = [
     role: 'Frontend Developer and Designer',
     period: 'May 2024 - October 2024 (6 months)',
     location: 'Netherlands',
-    subText: '(via Sopra Steria and Ordina, a Sopra Steria Company)',
+    subText: '(via Ordina - now Sopra Steria)',
     description:
       'Contributed and led the development of the Capacare platform, a customisable web application for an NGO providing medical aid and training in Africa, designed to be self-sustainable for 5 years without developer intervention.',
     bulletPoints: [
@@ -44,14 +44,16 @@ export const experiences: Experience[] = [
   {
     company: 'Ordina',
     role: 'Frontend Developer',
+    subText: '(Software Engineer III)',
     period: 'January 2021 - August 2024 (3 years 8 months)',
     location: 'Amsterdam, North Holland, Netherlands',
     description:
-      'Worked on various client projects across different industries, including e-commerce, telecom, and public sector. For details on specific projects, see the rest of my CV.',
+      'Worked on various client projects across different industries, including e-commerce, telecom, and public sector. For details on specific projects, see the rest of my CV or visit the projects page of my portfolio website. At Ordina, I worked 90% remote and honed my skills of remote collaboration. Ordina merged with Sopra Steria late in 2023.',
   },
   {
     company: 'ToTheRoot',
-    role: 'Frontend Developer (Via Ordina)',
+    role: 'Frontend Developer',
+    subText: '(via Ordina - now Sopra Steria)',
     period: 'November 2023 - July 2024 (9 months)',
     location: 'Netherlands',
     description:
@@ -67,7 +69,8 @@ export const experiences: Experience[] = [
   },
   {
     company: 'Ministry of Health, Wellness, and Sport',
-    role: 'Frontend Engineer (Via Ordina)',
+    role: 'Frontend Engineer',
+    subText: '(via Ordina - now Sopra Steria)',
     period: 'October 2022 - November 2023 (1 year 2 months)',
     location: 'Netherlands',
     description:
@@ -81,7 +84,8 @@ export const experiences: Experience[] = [
   },
   {
     company: 'VodafoneZiggo',
-    role: 'Frontend Developer (Via Ordina)',
+    role: 'Frontend Developer',
+    subText: '(via Clockwork and Ordina - now Sopra Steria)',
     period: 'April 2021 - June 2022 (1 year 3 months)',
     location: 'Netherlands',
     description:
@@ -95,7 +99,8 @@ export const experiences: Experience[] = [
   },
   {
     company: 'Prenatal Moeder en Kind B.V.',
-    role: 'Frontend Developer (Via Clockwork and Ordina)',
+    role: 'Frontend Developer',
+    subText: '(via Clockwork and Ordina - now Sopra Steria)',
     period: 'October 2020 - May 2022 (1 year 8 months)',
     location: 'Netherlands',
     description:
@@ -109,8 +114,9 @@ export const experiences: Experience[] = [
   },
   {
     company: 'Blokker',
-    role: 'Frontend Developer (Via Ordina)',
+    role: 'Frontend Developer',
     period: 'August 2021 - March 2022 (8 months)',
+    subText: '(via Ordina - now Sopra Steria)',
     location: 'Netherlands',
     description:
       'Led the frontend development for integrating a new delivery system on Blokker.nl, focusing on enhancing the checkout experience with the Packaly shipping method.',
@@ -122,7 +128,8 @@ export const experiences: Experience[] = [
   },
   {
     company: 'Schuurman Schoenen',
-    role: 'Frontend Developer (Via Clockwork)',
+    role: 'Frontend Developer',
+    subText: '(via Clockwork and Ordina - now Sopra Steria)',
     period: 'April 2020 - March 2022 (1 year 11 months)',
     location: 'Netherlands',
     description:
@@ -132,9 +139,10 @@ export const experiences: Experience[] = [
   {
     company: 'Clockwork',
     role: 'Frontend Developer',
+    subText: '(Software Engineer I)',
     period: 'March 2020 - March 2021 (1 year 1 month)',
     location: 'Amsterdam, North Holland, Netherlands',
     description:
-      'Started my career as a frontend developer at Clockwork, working on various client projects including Prenatal, VodafoneZiggo (Carried over to Ordina), Schuurman Schoenen, and more.',
+      'I started my career as a frontend developer at Clockwork, working on various client projects including Prenatal, VodafoneZiggo, Schuurman Schoenen, and more. At one point, I was working on 4 projects simultaneously for over a year. I happened to start my job 4 days before the first Covid-19 lockdown in the Netherlands. As you can imagine, that was not easy, but I have since become very good at remote work - trial by fire, as they say. Clockwork was absorbed by its parent entity, Ordina, early in 2021. Therefore, many of my projects carried over to Ordina.',
   },
 ];
