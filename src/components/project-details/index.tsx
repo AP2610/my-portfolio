@@ -19,7 +19,7 @@ export const ProjectDetails = ({
   additionalInfo,
 }: ProjectProps) => {
   return (
-    <article className="space-y-8 border-b border-white/10 pb-16 last:border-b-0">
+    <article className="space-y-8 border-b border-white/10 last:border-b-0">
       <header className="mb-8">
         <h2 className="mb-4 text-2xl text-blue">{company}</h2>
         <span className="mb-2 font-sans text-xl font-medium md:mb-0">{role}</span>
@@ -67,6 +67,7 @@ export const ProjectDetails = ({
         <div>
           <h3 className="mb-4 text-lg font-medium">Technologies & Skills</h3>
 
+          {/* TODO: Create generic list component */}
           <ul className="flex flex-wrap gap-2">
             {specializations.map((skill) => (
               <li key={skill}>
@@ -78,13 +79,13 @@ export const ProjectDetails = ({
 
         <div className="flex gap-4 pt-4">
           {websiteUrl && (
-            <Button href={websiteUrl} isLinkButton variant="primary">
+            <Button href={websiteUrl} isLinkButton variant="primary" target="_blank">
               Visit Project Website
             </Button>
           )}
 
           {githubUrl && (
-            <Button href={githubUrl} isLinkButton variant="blue-secondary">
+            <Button href={githubUrl} isLinkButton variant="blue-secondary" target="_blank">
               View Source Code
             </Button>
           )}

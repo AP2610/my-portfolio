@@ -79,7 +79,7 @@ const ProjectsPage = () => {
         </header>
 
         <Section isFullWidth id="featured-projects">
-          <div className="mb-8">
+          <div className="mb-12">
             <h2 className="mb-4 text-2xl">Featured Projects</h2>
             <p className="text-lime">Projects are listed in chronological order, more or less.</p>
           </div>
