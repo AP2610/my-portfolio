@@ -34,7 +34,7 @@ export const projectsData: Project[] = [
     ],
     results:
       "Successfully completed the initial design phase, delivering modern and intuitive designs that meet the client's needs. The project is on track to meet its goals, with the final product expected to provide a stable and maintainable website that will effectively support Capacare's mission in the years to come.",
-    specializations: ['Agile', 'JavaScript', 'React', 'TailwindCSS', 'TypeScript', 'Git', 'NextJS', 'Sanity'],
+    specializations: ['Agile', 'JavaScript', 'React', 'TailwindCSS', 'TypeScript', 'Git', 'NextJS', 'Sanity', 'Scrum'],
   },
   {
     slug: 'totheroot',
@@ -52,7 +52,7 @@ export const projectsData: Project[] = [
     ],
     results:
       'Successfully delivered the rebranding project and maintained the platform, ensuring a smooth transition from Ordina to Sopra Steria branding while keeping the technical blog platform running efficiently.',
-    specializations: ['Vue.js', 'Nuxt.js', 'JavaScript', 'TypeScript', 'CSS', 'SCSS', 'Git'],
+    specializations: ['Vue.js', 'Nuxt.js', 'JavaScript', 'TypeScript', 'CSS', 'SCSS', 'Git', 'Scrum'],
   },
   {
     slug: 'ministry-of-health',
@@ -92,6 +92,7 @@ export const projectsData: Project[] = [
       'visx',
       'Sanity',
       'Styled Components',
+      'Scrum',
     ],
   },
   {
@@ -129,6 +130,7 @@ export const projectsData: Project[] = [
       'Salesforce Commerce Cloud',
       'Bootstrap',
       'Web Components',
+      'Scrum',
     ],
   },
   {
@@ -160,6 +162,7 @@ export const projectsData: Project[] = [
       'Cypress',
       'Bootstrap',
       'jQuery',
+      'Scrum',
     ],
   },
   {
@@ -180,7 +183,7 @@ export const projectsData: Project[] = [
     ],
     results:
       'Successfully delivered all front-end requirements for the project, navigating through iterative feedback and implementing numerous dynamic changes to meet constantly evolving requirements.',
-    specializations: ['Agile', 'AJAX', 'JavaScript', 'HTML 5', 'CSS', 'SCSS', 'Git', 'Cypress', 'Bootstrap', 'jQuery'],
+    specializations: ['Agile', 'AJAX', 'JavaScript', 'HTML 5', 'CSS', 'SCSS', 'Git', 'Cypress', 'Bootstrap', 'jQuery', 'Scrum'],
   },
   {
     slug: 'schuurman-schoenen',
@@ -199,6 +202,6 @@ export const projectsData: Project[] = [
     ],
     results:
       "To date, the site has consistently operated smoothly, contributing to the client's receipt of several awards, recognizing it as one of the best webshops in the country.",
-    specializations: ['Agile', 'AJAX', 'JavaScript', 'HTML 5', 'CSS', 'SCSS', 'Git', 'Cypress', 'Bootstrap', 'jQuery'],
+    specializations: ['Agile', 'AJAX', 'JavaScript', 'HTML 5', 'CSS', 'SCSS', 'Git', 'Cypress', 'Bootstrap', 'jQuery', 'Scrum'],
   },
 ];

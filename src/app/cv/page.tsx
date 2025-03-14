@@ -37,6 +37,7 @@ const SKILLS_PRINT = [
   'Figma',
   'Accessibility',
   'Agile',
+  'Scrum',
   'Pair Programming',
   'AI Pair Programming',
   'Coaching',
