@@ -14,7 +14,7 @@ export const About = () => {
       </h2>
 
       <p>
-        I'm a frontend developer with a passion for creating beautiful, interactive, and accessible applications that prioritise
+        I'm a frontend engineer with a passion for creating beautiful, interactive, and accessible applications that prioritise
         the user experience. While trained as a full-stack developer, I gravitated towards the frontend for its direct impact on
         users. I thrive on transforming ideas into functional, visually appealing web applications and believe in clear, honest
         communication—no beating around the bush, just constructive and transparent discussions.
