@@ -53,7 +53,7 @@ export const experiences: Experience[] = [
   },
   {
     company: 'ToTheRoot',
-    role: 'Frontend Developer',
+    role: 'Frontend Engineer',
     subText: '(via Ordina - now Sopra Steria)',
     period: 'November 2023 - July 2024 (9 months)',
     location: 'Netherlands',
@@ -85,7 +85,7 @@ export const experiences: Experience[] = [
   },
   {
     company: 'VodafoneZiggo',
-    role: 'Frontend Developer',
+    role: 'Frontend Engineer',
     subText: '(via Clockwork and Ordina - now Sopra Steria)',
     period: 'April 2021 - June 2022 (1 year 3 months)',
     location: 'Netherlands',

@@ -38,7 +38,7 @@ export const projectsData: Project[] = [
   },
   {
     slug: 'totheroot',
-    role: 'Frontend Developer',
+    role: 'Frontend Engineer',
     company: 'ToTheRoot',
     period: 'November 2023 - July 2024',
     image: '/project-images/totheroot.png',
@@ -56,7 +56,7 @@ export const projectsData: Project[] = [
   },
   {
     slug: 'ministry-of-health',
-    role: 'Frontend Developer',
+    role: 'Frontend Engineer',
     company: 'Ministry of Health, Wellness, and Sport',
     period: 'October 2022 - November 2023',
     image: '/project-images/coronavirus-dashboard.png',
@@ -96,7 +96,7 @@ export const projectsData: Project[] = [
   },
   {
     slug: 'vodafone-ziggo',
-    role: 'Frontend Developer',
+    role: 'Frontend Engineer',
     company: 'VodafoneZiggo',
     period: 'April 2021 - June 2022',
     image: '/project-images/vodafone.png',
