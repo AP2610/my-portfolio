@@ -32,9 +32,10 @@ export const MyImage = ({
         fill
         quality={quality}
         priority={priority}
+        loading={priority ? 'eager' : 'lazy'}
         sizes={sizes}
-        {...props}
         className={imageClassNames}
+        {...props}
       />
     </div>
   );
