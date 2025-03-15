@@ -82,8 +82,8 @@ export const About = () => {
       <p>
         I have experience with large-scale codebases, particularly at the Corona Dashboard and Blokker. I am a strong advocate for
         refactoring—a clean, well-structured codebase is paramount to long-term productivity and maintainability. However, I also
-        understand the need for balance between code quality and efficient delivery. Like my mother taught me, &"a clean closet
-        makes for a clear mind.&"
+        understand the need for balance between code quality and efficient delivery. Like my mother taught me, "a clean closet
+        makes for a clear mind."
       </p>
 
       <p>
