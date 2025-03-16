@@ -16,7 +16,7 @@ export const experiences: Experience[] = [
   {
     company: 'Sopra Steria',
     role: 'Project Manager',
-    period: 'December 2023 - November 2024 (1 year)',
+    period: 'December 2023 - December 2024 (1 year)',
     location: 'Netherlands',
     subText: '(Ordina merged with Sopra Steria in late 2023)',
     description:
