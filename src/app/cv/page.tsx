@@ -34,6 +34,7 @@ const SKILLS_PRINT = [
   'CI/CD',
   'Git',
   'Sanity CMS',
+  'Monorepo',
   'Figma',
   'Accessibility',
   'Agile',
@@ -56,6 +57,7 @@ const SKILLS_FULL = [
   'EsLint',
   'Micro Animations',
   'Husky',
+  'Web Components',
 ];
 
 // TODO: Go through the text here for any issues and things that dont fit properly
@@ -75,7 +77,7 @@ const CvPage = () => {
         {/* Intro with image and skills in print, image is for web, skills only for print */}
         <div className="flex w-full flex-col items-center gap-4 md:w-auto md:items-start print:items-start">
           <MyImage
-            src="/cv/headshot.png"
+            src="/cv/headshot.webp"
             alt="Arjun Puri"
             priority
             containerClasses="w-48 h-48 rounded-full overflow-hidden flex-shrink-0 border-4 border-lime print:border-lime-700 hover:scale-105 transition-transform duration-300 print:scale-100 print:hover:scale-100 print:transition-none print:duration-0 print:hover:scale-100"
@@ -116,11 +118,12 @@ const CvPage = () => {
           {/* About me - only for print */}
           <div className="hidden space-y-2 hyphens-auto text-justify print:mt-6 print:block">
             <p>
-              I'm a frontend engineer passionate about building interactive, accessible, and user-friendly applications. Trained
-              as a full-stack developer, I gravitated towards the frontend for its direct user impact. I thrive on turning ideas
-              into functional, beautiful web experiences and value clear, honest communication. For the past five years, I've
-              worked remotely and honed my skills in remote collaboration. In the past year, I've integrated AI into my workflow
-              and use it to boost my productivity.
+              I'm a frontend engineer specialising in React, Next.js and Typescript with strong fundamentals in JavaScript, HTML,
+              and CSS. I'm passionate about building interactive, accessible, and user-friendly applications. Trained as a
+              full-stack developer, I gravitated towards the frontend for its direct user impact. I thrive on turning ideas into
+              functional, beautiful web experiences and value clear, honest communication. For the past five years, I've worked
+              remotely and honed my skills in remote collaboration. In the past year, I've integrated AI into my workflow and use
+              it to boost my productivity.
             </p>
             <p>
               Having lived across five countries-Australia, India, Kenya, Switzerland, and the Netherlands-I excel at navigating
