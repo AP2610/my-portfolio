@@ -20,9 +20,7 @@ export const MobileNavigation = ({ isOpen, setIsOpen, className }: MobileNavigat
   }, [isOpen]);
 
   const motionSpanCommonClasses = `absolute h-[2px] rounded-md transition-[background-color] duration-200`;
-
-  // Use blue background when menu is open, otherwise use scroll-based color
-  const backgroundColor = isOpen ? 'var(--blue)' : 'var(--lime)';
+  const backgroundColor = isOpen ? 'rgb(var(--accent-blue))' : 'rgb(var(--accent-lime))';
 
   return (
     <nav className={className}>
@@ -137,7 +135,12 @@ export const MobileNavigation = ({ isOpen, setIsOpen, className }: MobileNavigat
               <li key={link.href}>
                 <NavLink
                   setIsOpen={setIsOpen}
-                  className={`${pathname === link.href ? 'text-lavender-700' : 'text-lavender-600'} hover:text-blue-600`}
+                  // TODO: This logic id duplicated in dektop nav, refactor
+                  className={`${
+                    (link.href !== '/' && pathname.startsWith(link.href)) || pathname === link.href
+                      ? 'text-accent-blue'
+                      : 'text-foreground'
+                  } hover:text-accent-blue`}
                   href={link.href}
                 >
                   {link.label}
