@@ -51,10 +51,9 @@ export default {
           DEFAULT: 'rgba(var(--primary), 1)',
           foreground: 'rgba(var(--primary-foreground), 1)',
         },
-        accent: {
-          DEFAULT: 'rgba(var(--accent), 1)',
-          foreground: 'rgba(var(--accent-foreground), 1)',
-        },
+        'accent-lime': 'rgba(var(--accent-lime), 1)',
+        'accent-blue': 'rgba(var(--accent-blue), 1)',
+        'accent-violet': 'rgba(var(--accent-violet), 1)',
 
         // Original color scale - potentially remove after refactoring
         black: {
