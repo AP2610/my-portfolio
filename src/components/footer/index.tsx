@@ -16,11 +16,11 @@ export const Footer = () => {
           <div className="space-y-4">
             <Logo isNavOpen={false} />
 
-            <p className="text-blue">Building Reliable, Engaging & User-Centric Web Experiences</p>
+            <p className="text-accent-blue">Building Reliable, Engaging & User-Centric Web Experiences</p>
           </div>
 
           <div>
-            <h3 className="mb-4 text-xl font-bold">Quick Links</h3>
+            <h3 className="mb-4 text-xl font-bold text-foreground">Quick Links</h3>
 
             <ul className="space-y-2">
               {NAVIGATION_LINKS.map((link) => (
@@ -34,8 +34,8 @@ export const Footer = () => {
           </div>
 
           <div className="space-y-6">
-            <h3 className="text-xl font-bold">Let's Connect</h3>
-            <p>Interested in working together? Let's chat!</p>
+            <h3 className="text-xl font-bold text-foreground">Let's Connect</h3>
+            <p className="text-foreground">Interested in working together? Let's chat!</p>
 
             <ExternalLink href="mailto:corned-tippets-5g@icloud.com" variant="secondary">
               Get in Touch <FaEnvelope className="tilt-shaking ml-2" />
@@ -43,7 +43,8 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h3 className="mb-4 text-xl font-bold">More Ways to Connect</h3>
+            <h3 className="mb-4 text-xl font-bold text-foreground">More Ways to Connect</h3>
+
             <div className="flex gap-4">
               <SocialIcon platform="github" />
               <SocialIcon platform="linkedin" />
@@ -51,7 +52,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-white-700 pt-8 text-center text-sm">
+        <div className="mt-12 border-t border-white-700 pt-8 text-center text-sm text-foreground">
           <p>© {currentYear} Arjun Puri. All Rights Reserved.</p>
         </div>
       </Section>

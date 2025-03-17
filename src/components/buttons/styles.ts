@@ -1,6 +1,6 @@
 export const buttonStyles = {
   variants: {
-    'icon-button': 'w-[fit-content] p-4 text-foreground',
+    'icon-button': 'w-[fit-content] p-4',
     primary: 'bg-primary text-primary-foreground hover:bg-primary/80',
     secondary: 'bg-accent-lime/20 text-accent-lime-foreground border-2 border-accent-lime hover:bg-accent-lime/5',
     'blue-secondary': 'text-accent-blue border-2 border-accent-blue hover:bg-accent-blue/10',
