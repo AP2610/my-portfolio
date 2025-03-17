@@ -9,6 +9,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { FaGithub, FaGlobe, FaLinkedin } from 'react-icons/fa';
 import { experiences } from './data';
+import { InfoBox } from '@/components/info-box';
 
 export const metadata: Metadata = {
   title: "Arjun Puri's CV",
@@ -159,9 +160,16 @@ const CvPage = () => {
 
         <p className="mb-4 text-lime">A comprehensive overview of my career journey</p>
 
-        <p>You can also hit the button in the top right corner to download my CV as a PDF.</p>
+        <InfoBox className="my-8">
+          <p>
+            You can hit the button in the top right corner to download my CV as a PDF. Clicking the button will open the print
+            dialogue, from there, you will have the option to save it as a PDF, or print it if you'd like.
+          </p>
 
-        <p className="mt-2">
+          <p className="font-bold">Fair warning, this works better on desktop, and is currently optimised for Chrome.</p>
+        </InfoBox>
+
+        <p>
           Please keep in mind, my CV contains consolidated and condensed information about my experiences. Should you wish to gain
           a deeper understanding of the projects I have worked on, including the situation, tasks, results, technical details, and
           specializations, I invite you to explore the{' '}
@@ -218,7 +226,7 @@ const CvPage = () => {
 
       {/* Experience section for both print and web */}
       <div className="space-y-12 font-sans print:space-y-6">
-        <h3 className="page-break hidden text-blue-600 print:block print:text-2xl">Professional Experience</h3>
+        <h3 className="page-break hidden text-blue-600 print:block print:text-3xl">Professional Experience</h3>
 
         <div className="space-y-10 md:space-y-12 print:space-y-10">
           {experiences.map((experience, index) => (
