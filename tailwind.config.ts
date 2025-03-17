@@ -38,15 +38,8 @@ export default {
       },
       colors: {
         // Semantic colors
-        background: {
-          DEFAULT: 'rgba(var(--background))',
-          subtle: 'rgba(var(--background-subtle))',
-        },
-        foreground: {
-          DEFAULT: 'rgba(var(--foreground))',
-          subtle: 'rgba(var(--foreground-subtle))',
-        },
-        muted: 'rgba(var(--muted))',
+        background: 'rgba(var(--background))',
+        foreground: 'rgba(var(--foreground))',
         primary: {
           DEFAULT: 'rgba(var(--primary))',
           foreground: 'rgba(var(--primary-foreground))',
@@ -58,7 +51,7 @@ export default {
         'accent-blue': 'rgba(var(--accent-blue))',
         'accent-violet': 'rgba(var(--accent-violet))',
 
-        // Original color scale - potentially remove after refactoring
+        // Original color scales
         black: {
           DEFAULT: 'rgba(var(--black))',
           100: 'rgba(var(--black-100))',
