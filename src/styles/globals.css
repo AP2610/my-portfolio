@@ -76,6 +76,8 @@
   --primary-foreground: var(--white);
 
   --accent-lime: var(--lime-600);
+  --accent-lime-foreground: var(--lime-700);
+
   --accent-blue: var(--blue-600);
   --accent-violet: var(--violet-600);
 }
@@ -91,6 +93,8 @@
   --primary-foreground: var(--black);
 
   --accent-lime: var(--lime);
+  --accent-lime-foreground: var(--lime);
+
   --accent-blue: var(--blue);
   --accent-violet: var(--violet);
 }
@@ -126,35 +130,22 @@
 }
 
 body {
-  /* color: rgba(var(--foreground));
-  background: rgba(var(--background)); */
+  background: rgba(var(--background));
 }
 
 /* TODO: Extract to background colors css file */
-/* For light mode, will be implemented later, not critical */
-/* .custom-background-violet {
-  background: rgb(255, 255, 255);
-  background: linear-gradient(167deg, rgba(255, 255, 255, 1) 60%, rgba(125, 60, 255, 1) 100%);  
-}
 
+.custom-background-violet,
 .custom-background-blue {
-  background: rgb(255, 255, 255);
-  background: linear-gradient(167deg, rgba(255, 255, 255, 1) 70%, rgba(27, 231, 255, 1) 100%);
-} */
+  background: rgba(var(--background));
+}
 
 .custom-background-violet {
-  background: rgb(10, 10, 26);
-  background: linear-gradient(167deg, rgba(10, 10, 26, 1) 60%, rgba(125, 60, 255, 1) 100%);
-
-  .light & {
-    background: rgb(255, 255, 255);
-    background: linear-gradient(167deg, rgba(255, 255, 255, 1) 60%, rgba(125, 60, 255, 1) 100%);
-  }
+  background: linear-gradient(167deg, rgba(var(--background)) 60%, rgba(var(--violet)) 100%);
 }
 
 .custom-background-blue {
-  background: rgb(10, 10, 26);
-  background: linear-gradient(167deg, rgba(10, 10, 26, 1) 70%, rgba(27, 231, 255, 1) 100%);
+  background: linear-gradient(167deg, rgba(var(--background)) 70%, rgba(var(--blue)) 100%);
 }
 
 h1,
@@ -168,5 +159,5 @@ h6 {
 
 p,
 button {
-  @apply font-sans;
+  @apply font-sans font-medium;
 }

@@ -1,17 +1,10 @@
 export const buttonStyles = {
-  base: {
-    'w-[fit-content] p-4': 'icon-button',
-    'bg-white text-black hover:bg-white-600 border-2 border-white hover:border-white-600': 'primary',
-    'border-2 border-lime text-lime hover:bg-lime/10': 'secondary',
-    'border-2 border-blue text-blue hover:bg-blue/10': 'blue-secondary',
-    'px-4 py-2 min-w-[160px] font-sans text-center text-base transition-all duration-300 flex items-center justify-center': true,
-  },
   variants: {
-    'icon-button': 'w-[fit-content] p-4',
-    primary: 'bg-white text-black hover:bg-white-600 border-2 border-white hover:border-white-600',
-    secondary: 'border-2 border-lime text-lime hover:bg-lime/10',
-    'blue-secondary': 'border-2 border-blue text-blue hover:bg-blue/10',
+    'icon-button': 'w-[fit-content] p-4 text-foreground',
+    primary: 'bg-primary text-primary-foreground hover:bg-primary/80',
+    secondary: 'bg-accent-lime/20 text-accent-lime-foreground border-2 border-accent-lime hover:bg-accent-lime/5',
+    'blue-secondary': 'text-accent-blue border-2 border-accent-blue hover:bg-accent-blue/10',
   },
   nonIconButtonStyles:
-    'px-4 py-2 min-w-[160px] font-sans text-center text-base transition-all duration-300 flex items-center justify-center',
+    'px-4 py-2 min-w-[160px] font-sans font-medium text-center text-base transition-all duration-300 flex items-center justify-center',
 };
