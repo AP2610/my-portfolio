@@ -6,90 +6,92 @@
 @tailwind utilities;
 
 :root {
-  /* TODO: Adjust these colors */
-  /* This is for light mode, will be done later. */
-  /* --background: #ffffff;
-  --foreground: #171717; */
+  --black: 10, 10, 26;
+  --black-100: 187, 187, 228;
+  --black-200: 118, 118, 202;
+  --black-300: 63, 63, 162;
+  --black-400: 37, 37, 94;
+  --black-500: 10, 10, 26;
+  --black-600: 8, 8, 21;
+  --black-700: 6, 6, 15;
+  --black-800: 4, 4, 10;
+  --black-900: 2, 2, 5;
 
-  /* For dark mode, default setting for now. */
-  --background: #0a0a1a;
-  --foreground: #eef0f2;
+  --lime: 206, 255, 26;
+  --lime-100: 245, 255, 209;
+  --lime-200: 235, 255, 163;
+  --lime-300: 225, 255, 117;
+  --lime-400: 215, 255, 71;
+  --lime-500: 206, 255, 26;
+  --lime-600: 176, 224, 0;
+  --lime-700: 132, 168, 0;
+  --lime-800: 88, 112, 0;
+  --lime-900: 44, 56, 0;
 
-  --black: #0a0a1a;
-  --black-100: #bbbbe4;
-  --black-200: #7676ca;
-  --black-300: #3f3fa2;
-  --black-400: #25255e;
-  --black-500: #0a0a1a;
-  --black-600: #080815;
-  --black-700: #06060f;
-  --black-800: #04040a;
-  --black-900: #020205;
+  --violet: 125, 60, 255;
+  --violet-100: 229, 216, 255;
+  --violet-200: 203, 177, 255;
+  --violet-300: 177, 139, 255;
+  --violet-400: 152, 100, 255;
+  --violet-500: 125, 60, 255;
+  --violet-600: 84, 0, 253;
+  --violet-700: 63, 0, 190;
+  --violet-800: 42, 0, 126;
+  --violet-900: 21, 0, 63;
 
-  --lime: #ceff1a;
-  --lime-100: #f5ffd1;
-  --lime-200: #ebffa3;
-  --lime-300: #e1ff75;
-  --lime-400: #d7ff47;
-  --lime-500: #ceff1a;
-  --lime-600: #b0e000;
-  --lime-700: #84a800;
-  --lime-800: #587000;
-  --lime-900: #2c3800;
-
-  --violet: #7d3cff;
-  --violet-100: #e5d8ff;
-  --violet-200: #cbb1ff;
-  --violet-300: #b18bff;
-  --violet-400: #9864ff;
-  --violet-500: #7d3cff;
-  --violet-600: #5400fd;
-  --violet-700: #3f00be;
-  --violet-800: #2a007e;
-  --violet-900: #15003f;
-
-  --blue: #1be7ff;
-  --blue-100: #d1faff;
-  --blue-200: #a3f6ff;
-  --blue-300: #75f1ff;
-  --blue-400: #47edff;
-  --blue-500: #1be7ff;
-  --blue-600: #00cae0;
-  --blue-700: #0097a8;
-  --blue-800: #006570;
-  --blue-900: #003238;
+  --blue: 27, 231, 255;
+  --blue-100: 209, 250, 255;
+  --blue-200: 163, 246, 255;
+  --blue-300: 117, 241, 255;
+  --blue-400: 71, 237, 255;
+  --blue-500: 27, 231, 255;
+  --blue-600: 0, 202, 224;
+  --blue-700: 0, 151, 168;
+  --blue-800: 0, 101, 112;
+  --blue-900: 0, 50, 56;
 
   /* TODO: This is clearly not white, but too many usages to change it now. Refactor white to grey */
-  --white: #eef0f2;
-  --white-100: #fcfcfc;
-  --white-200: #f8f9fa;
-  --white-300: #f5f6f7;
-  --white-400: #f1f3f4;
-  --white-500: #eef0f2;
-  --white-600: #b8c0c8;
-  --white-700: #81909e;
-  --white-800: #53606c;
-  --white-900: #2a3036;
+  --white: 238, 240, 242;
+  --white-100: 252, 252, 252;
+  --white-200: 248, 249, 250;
+  --white-300: 245, 246, 247;
+  --white-400: 241, 243, 244;
+  --white-500: 238, 240, 242;
+  --white-600: 184, 192, 200;
+  --white-700: 129, 144, 158;
+  --white-800: 83, 96, 108;
+  --white-900: 42, 48, 54;
 
   --header-height: 95px;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.light {
+  --background: var(--white);
+  --background-subtle: var(--white-200);
+  --foreground: var(--black);
+  --foreground-subtle: var(--black-300);
+  --muted: var(--black-100);
 
-  .custom-background-violet {
-    background: rgb(10, 10, 26);
-    background: linear-gradient(167deg, rgba(10, 10, 26, 1) 60%, rgba(125, 60, 255, 1) 100%);
-  }
+  --primary: var(--black);
+  --primary-foreground: var(--white);
 
-  .custom-background-blue {
-    background: rgb(10, 10, 26);
-    background: linear-gradient(167deg, rgba(10, 10, 26, 1) 70%, rgba(27, 231, 255, 1) 100%);
-  }
-} */
+  --accent: var(--lime-600);
+  --accent-foreground: var(--black);
+}
+
+.dark {
+  --background: var(--black);
+  --background-subtle: var(--black-400);
+  --foreground: var(--white);
+  --foreground-subtle: var(--white-300);
+  --muted: var(--white-700);
+
+  --primary: var(--white);
+  --primary-foreground: var(--black);
+
+  --accent: var(--lime);
+  --accent-foreground: var(--black);
+}
 
 /* TODO: Implement the same for framer motion animations using useReducedMotion hook */
 @media (prefers-reduced-motion: reduce) {
@@ -122,8 +124,8 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  /* color: rgba(var(--foreground));
+  background: rgba(var(--background)); */
 }
 
 /* TODO: Extract to background colors css file */
@@ -141,17 +143,17 @@ body {
 .custom-background-violet {
   background: rgb(10, 10, 26);
   background: linear-gradient(167deg, rgba(10, 10, 26, 1) 60%, rgba(125, 60, 255, 1) 100%);
+
+  .light & {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(167deg, rgba(255, 255, 255, 1) 60%, rgba(125, 60, 255, 1) 100%);
+  }
 }
 
 .custom-background-blue {
   background: rgb(10, 10, 26);
   background: linear-gradient(167deg, rgba(10, 10, 26, 1) 70%, rgba(27, 231, 255, 1) 100%);
 }
-
-/* .custom-background-lime {
-  background: rgb(10, 10, 26);
-  background: linear-gradient(153deg, rgba(10, 10, 26, 1) 80%, rgba(206, 255, 26, 1) 100%);
-} */
 
 h1,
 h2,
