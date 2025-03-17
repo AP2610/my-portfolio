@@ -19,7 +19,7 @@ export const Badge = ({ children, className, hasLink = false, onClick, color = '
       'bg-blue/10 text-accent-blue border border-accent-blue/20': color === 'blue',
       'bg-blue-700/10 text-blue-700 border border-blue-700/40': color === 'blue-700',
       'bg-accent-lime/10 text-accent-lime border border-accent-lime/20': color === 'lime',
-      'bg-accent-violet/15 text-accent-violet-400 border border-accent-violet/40': color === 'violet',
+      'bg-accent-violet/15 text-accent-violet border border-accent-violet/40': color === 'violet',
 
       // Hover styles only applied when hasLink is true
       'hover:bg-accent-blue/20': hasLink && color === 'blue',
