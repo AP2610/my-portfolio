@@ -36,7 +36,7 @@ export const ExternalLink = ({
       'rounded-md': isRounded && !isInlineVariant,
 
       // Inline link styles
-      'text-blue inline-flex items-center gap-1': isInlineVariant,
+      'text-accent-blue inline-flex items-center gap-1': isInlineVariant,
       'hover:text-blue-600 hover:underline': isInlineVariant && !noHover,
     },
     className

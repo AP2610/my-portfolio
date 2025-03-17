@@ -17,15 +17,10 @@ const ProjectsPage = () => {
     <Section className="mt-[var(--header-height)]" hasTopPadding hasBottomPadding>
       <div className="space-y-12">
         <header>
-          <h1 className="mb-8 text-4xl">My Projects</h1>
+          <h1 className="mb-8 text-4xl text-foreground">My Projects</h1>
 
           <div className="space-y-6">
-            <p className="text-lime">
-              You might find some duplication here from the content on the CV page, for that, I sincerely apologise. I've done my
-              best to keep the information unique to each section.
-            </p>
-
-            <p>TLDR: Hit the Projects button below if you're just interested in my projects.</p>
+            <p className="text-foreground">TLDR: Hit the Projects button below if you're just interested in my projects.</p>
 
             <div className="flex items-center gap-4 md:w-1/2">
               <Button isLinkButton href="/cv" className="w-full">
@@ -37,24 +32,24 @@ const ProjectsPage = () => {
               </Button>
             </div>
 
-            <p>
+            <p className="text-foreground">
               What you'll find below are some of the most impactful projects I've worked on—both in my growth as a developer and
               in their impact on users. These aren't all the projects I've contributed to throughout my career, but they represent
               key milestones.
             </p>
 
-            <p>
+            <p className="text-foreground">
               Earlier in my career, I worked on fully custom WordPress themes, handling both frontend and backend development.
               These projects leveraged the then-new Gutenberg editor, which heavily utilises React. This was my first professional
               exposure to React and marked the beginning of my journey into modern frontend development.
             </p>
 
-            <p>
+            <p className="text-foreground">
               Beyond client-facing applications, I've also built internal tools for my teams. Two of the most notable ones
               include:
             </p>
 
-            <ul className="mb-4 ml-4 list-inside list-disc font-sans">
+            <ul className="mb-4 ml-4 list-inside list-disc text-foreground">
               <li>A team randomiser (Coronavirus Dashboard) – Used to fairly assign a team member to lead each sprint.</li>
               <li>
                 An XML parser (VodafoneZiggo) – Designed to handle large XML files from Salesforce Commerce Cloud and convert them
@@ -62,13 +57,13 @@ const ProjectsPage = () => {
               </li>
             </ul>
 
-            <p>
+            <p className="text-foreground">
               Both tools were built with React. I still have access to the code for these projects and plan to add them to my
-              portfolio soon - they need to be cleaned up and refined slightly. The XML parse especially was created in a rush, I
+              portfolio soon - they need to be cleaned up and refined slightly. The XML parser especially was created in a rush, I
               need to refactor its code.
             </p>
 
-            <p>
+            <p className="text-foreground">
               Additionally, my very first use of React was for a technical assignment during my interview with Clockwork. I built
               a weather widget, which, while simple, was an important learning experience for me. The API is no longer free, but
               the code is still available on my{' '}
@@ -82,8 +77,9 @@ const ProjectsPage = () => {
 
         <Section isFullWidth id="featured-projects">
           <div className="mb-12">
-            <h2 className="mb-4 text-2xl">Featured Projects</h2>
-            <p className="text-lime">Projects are listed in chronological order, more or less.</p>
+            <h2 className="mb-4 text-2xl text-foreground">Featured Projects</h2>
+
+            <p className="font-semibold text-accent-lime">Projects are listed in chronological order, more or less.</p>
           </div>
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
