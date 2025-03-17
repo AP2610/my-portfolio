@@ -20,18 +20,18 @@ export const Experience = ({
   return (
     <article className={clsx('space-y-4', className)}>
       <header>
-        <h2 className="text-2xl text-blue print:text-xl print:text-black">{company}</h2>
+        <h2 className="text-2xl text-accent-blue print:text-xl print:text-black">{company}</h2>
 
-        <p className="text-xl font-medium">{role}</p>
+        <p className="text-xl font-semibold text-foreground print:text-black">{role}</p>
 
-        {subText && <p className="text-sm text-lime-600 print:text-black">{subText}</p>}
+        {subText && <p className="text-sm text-foreground print:text-black">{subText}</p>}
 
-        <p className="text-lime-600 print:text-black">
+        <p className="text-accent-lime print:text-lime-700">
           {period} | {location}
         </p>
       </header>
 
-      <div className="space-y-4">
+      <div className="space-y-4 text-foreground print:text-black">
         {Array.isArray(description) ? description.map((desc, index) => <p key={index}>{desc}</p>) : <p>{description}</p>}
 
         {bulletPoints && (
