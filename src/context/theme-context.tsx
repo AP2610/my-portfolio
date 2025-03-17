@@ -2,7 +2,7 @@
 
 import { createContext, useEffect, useState } from 'react';
 
-type ThemeType = 'light' | 'dark';
+type ThemeType = 'light' | 'dark' | null;
 
 type ThemeContextType = {
   theme: ThemeType;
@@ -10,25 +10,31 @@ type ThemeContextType = {
 };
 
 export const ThemeContext = createContext<ThemeContextType>({
-  theme: 'dark',
+  theme: null,
   handleThemeToggle: () => {},
 });
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-  const [theme, setTheme] = useState<ThemeType>('dark');
+  const [theme, setTheme] = useState<ThemeType>(null);
 
   const handleThemeToggle = () => {
     setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
   };
 
   useEffect(() => {
-    const preferredTheme =
-      (localStorage.getItem('theme') ?? window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
-    setTheme(preferredTheme);
+    // Cant use lazy initial state as next.js intially renders on the server, even with use client.
+    const storedTheme = localStorage.getItem('theme');
+
+    // Match media ternary needs to be wrapped in () for ?? to take precedence over ternary.
+    const preferredTheme = storedTheme ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+    setTheme(preferredTheme as ThemeType);
   }, []);
 
   useEffect(() => {
-    if (theme) localStorage.setItem('theme', theme);
+    if (!theme) return;
+
+    localStorage.setItem('theme', theme);
 
     if (theme === 'dark') {
       document.body.classList.remove('light');
