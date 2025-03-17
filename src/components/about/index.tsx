@@ -91,32 +91,6 @@ export const About = () => {
         experimenting, and building, both digitally and physically.
       </p>
 
-      {/* Move this to core values section get values from previous CV */}
-      <InfoBox color="blue">
-        <p>
-          If you're looking for someone who codes full time, i.e., gets off work and then continues coding late into night -
-          that's not me. It was at one point. I sacrificed a work-life balance for my job and my craft - and I suffered because of
-          it. I've since taken pride in being able to balance my work, craft, and personal life.
-        </p>
-
-        <p>
-          Now, once I'm done with work, I enjoy spending time with my partner, coming up with a new recipe or thinking of the next
-          DIY project around the house. I firmly believe that exploring my creativity in a fashion that is not related to my job,
-          leads to an unbound ability to be creative in my job.
-        </p>
-
-        <p>
-          When all I did was code, I found myself demoralised after a while. Since I've expanded my portfolio of creativity, I
-          find myself more excited to apply myself in all of them. I've solved many a code-related issue while being hunched over
-          my stove.
-        </p>
-
-        <p>
-          While I fully appreciate people who love to spend all their time writing code or writing about writing code - I wouldn't
-          give up the balance I've worked very hard to create.
-        </p>
-      </InfoBox>
-
       <Blockquote color="blue">
         Quality is king, but flexibility is key. I believe in delivering high-quality work while adapting to real-world
         constraints.
