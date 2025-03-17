@@ -1,7 +1,7 @@
 import { FaQuoteLeft } from 'react-icons/fa';
 import clsx from 'clsx';
 
-type BlockquoteColor = 'blue' | 'lime' | 'violet' | 'white';
+type BlockquoteColor = 'blue' | 'lime' | 'violet';
 
 type BlockquoteProps = {
   children: React.ReactNode;
@@ -13,19 +13,17 @@ export const Blockquote = ({ children, color = 'blue', className }: BlockquotePr
   const classes = clsx(
     'flex flex-col items-center gap-4 text-center italic font-medium',
     {
-      'text-blue': color === 'blue',
-      'text-lime': color === 'lime',
-      'text-violet': color === 'violet',
-      'text-white': color === 'white',
+      'text-accent-blue': color === 'blue',
+      'text-accent-lime': color === 'lime',
+      'text-accent-violet': color === 'violet',
     },
     className
   );
 
   const iconClasses = clsx('w-8 h-8', {
-    'text-blue/50': color === 'blue',
-    'text-lime/50': color === 'lime',
-    'text-violet/50': color === 'violet',
-    'text-white/50': color === 'white',
+    'text-accent-blue/50': color === 'blue',
+    'text-accent-lime/50': color === 'lime',
+    'text-accent-violet/50': color === 'violet',
   });
 
   return (
