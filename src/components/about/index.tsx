@@ -1,7 +1,6 @@
 import { Button } from '@/components/buttons';
 import { Section } from '@/components/section';
 import { Badge } from '@/components/badge';
-import { InfoBox } from '@/components/info-box';
 import { Blockquote } from '@/components/blockquote';
 
 const specialisations = ['JavaScript', 'TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'Sanity CMS'];
