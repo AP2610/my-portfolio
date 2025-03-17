@@ -20,7 +20,7 @@ export const Section = ({
   const sectionClasses = clsx(
     {
       'w-full': isFullWidth,
-      'container mx-auto px-4 sm:px-6 lg:px-8': !isFullWidth,
+      container: !isFullWidth,
       'pt-16': hasTopPadding,
       'pb-16': hasBottomPadding,
     },
