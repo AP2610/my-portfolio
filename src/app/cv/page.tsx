@@ -81,7 +81,8 @@ const CvPage = () => {
             src="/cv/headshot.webp"
             alt="Arjun Puri"
             priority
-            containerClasses="w-48 h-48 rounded-full overflow-hidden flex-shrink-0 border-4 border-lime print:border-lime-700 hover:scale-105 transition-transform duration-300 print:scale-100 print:hover:scale-100 print:transition-none print:duration-0 print:hover:scale-100"
+            sizes="50vw"
+            containerClasses="w-48 h-48 rounded-full overflow-hidden flex-shrink-0 border-4 border-accent-lime hover:scale-105 transition-transform duration-300 print:border-lime-700 print:hover:scale-100 print:transition-none print:duration-0 print:hover:scale-100"
           />
 
           {/* TODO: IMPORTANT Make into component this is for print only */}
@@ -102,17 +103,17 @@ const CvPage = () => {
 
         <div className="space-y-4 md:ml-8">
           <div className="mb-4 flex items-center justify-between">
-            <h1 className="text-4xl text-blue print:text-blue-600">Arjun Puri</h1>
+            <h1 className="text-4xl text-accent-blue print:text-blue-600">Arjun Puri</h1>
 
             <DownloadButton className="print:hidden" />
           </div>
 
-          <p className="font-semibold text-lime print:text-lime-700">
+          <p className="font-bold text-accent-lime print:text-lime-700">
             Frontend Engineer | JavaScript, TypeScript, React, Next.js, Tailwind | Building Reliable, Engaging & User-Centric Web
             Experiences
           </p>
 
-          <p className="text-lime print:text-lime-700">
+          <p className="font-bold text-accent-lime print:text-lime-700">
             Location - Netherlands | Nationality - Indian (Dutch Permanent Residency)
           </p>
 
@@ -155,10 +156,8 @@ const CvPage = () => {
       </Section>
 
       {/* Hidden in print, for web only */}
-      <header className="mb-8 print:hidden">
+      <header className="mb-8 text-foreground print:hidden">
         <h2 className="mb-4 text-4xl">Professional Experience</h2>
-
-        <p className="mb-4 text-lime">A comprehensive overview of my career journey</p>
 
         <InfoBox className="my-8">
           <p>
@@ -173,7 +172,7 @@ const CvPage = () => {
           Please keep in mind, my CV contains consolidated and condensed information about my experiences. Should you wish to gain
           a deeper understanding of the projects I have worked on, including the situation, tasks, results, technical details, and
           specializations, I invite you to explore the{' '}
-          <Link href="/projects" className="text-blue hover:text-blue-600 hover:underline">
+          <Link href="/projects" className="text-accent-blue hover:text-blue-600 hover:underline">
             projects section
           </Link>{' '}
           of this website.
@@ -226,7 +225,7 @@ const CvPage = () => {
 
       {/* Experience section for both print and web */}
       <div className="space-y-12 font-sans print:space-y-6">
-        <h3 className="page-break hidden text-blue-600 print:block print:text-3xl">Professional Experience</h3>
+        <h3 className="page-break hidden print:block print:text-2xl print:text-blue-600">Professional Experience</h3>
 
         <div className="space-y-10 md:space-y-12 print:space-y-10">
           {experiences.map((experience, index) => (
@@ -237,7 +236,7 @@ const CvPage = () => {
 
       {/* TODO: Skills for web only! IMPORTANT Make into component this is for non print */}
       <div className="mt-10 print:hidden">
-        <h4 className="mb-6 text-2xl text-blue print:text-blue-600">Skills & Methodologies</h4>
+        <h4 className="mb-6 text-2xl text-accent-blue print:text-blue-600">Skills & Methodologies</h4>
 
         <ul className="flex flex-wrap gap-2">
           {SKILLS_FULL.map((skill) => (
@@ -251,7 +250,7 @@ const CvPage = () => {
       {/* Languages & Certifications - Web only */}
       <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 print:hidden print:grid-cols-2">
         <div>
-          <h4 className="mb-6 text-2xl text-blue print:text-black">Languages</h4>
+          <h4 className="mb-6 text-2xl text-accent-blue print:text-black">Languages</h4>
 
           <ul className="flex flex-wrap gap-2 font-sans">
             <li>
@@ -270,7 +269,7 @@ const CvPage = () => {
         </div>
 
         <div>
-          <h4 className="mb-6 text-2xl text-blue print:text-black">Certifications</h4>
+          <h4 className="mb-6 text-2xl text-accent-blue print:text-black">Certifications</h4>
 
           <ul className="flex flex-wrap gap-2 font-sans">
             <li>
@@ -326,13 +325,15 @@ const CvPage = () => {
 
       {/* Education section for both print and web */}
       <div className="mt-10">
-        <h3 className="mb-6 text-2xl text-blue print:text-blue-600">Education</h3>
+        <h3 className="mb-6 text-2xl text-accent-blue print:text-blue-600">Education</h3>
 
         <div className="flex flex-col gap-8 md:flex-row print:gap-6">
           <div className="flex flex-col print:break-inside-avoid">
             <div className="mb-2">
-              <h4 className="text-xl font-semibold">Ecole hôtelière de Lausanne</h4>
-              <p className="text-lime print:text-lime-700">Bachelor of Science Degree, Hospitality Administration/Management</p>
+              <h4 className="text-xl font-semibold text-foreground print:text-black">Ecole hôtelière de Lausanne</h4>
+              <p className="text-accent-lime print:text-lime-700">
+                Bachelor of Science Degree, Hospitality Administration/Management
+              </p>
             </div>
 
             <p className="text-sm text-gray-400 print:text-gray-600">2014 - 2018</p>
@@ -340,8 +341,8 @@ const CvPage = () => {
 
           <div className="flex flex-col print:break-inside-avoid">
             <div className="mb-2">
-              <h4 className="text-xl font-semibold">Le Wagon</h4>
-              <p className="text-lime print:text-lime-700">Computer Programming</p>
+              <h4 className="text-xl font-semibold text-foreground print:text-black">Le Wagon</h4>
+              <p className="text-accent-lime print:text-lime-700">Computer Programming</p>
             </div>
 
             <p className="text-sm text-gray-400 print:text-gray-600">2019</p>

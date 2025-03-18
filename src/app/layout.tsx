@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import type { Metadata } from 'next';
 import { Raleway } from 'next/font/google';
 import '../styles/globals.css';
+import { ThemeProvider } from '@/context/theme-context';
 
 const raleway = Raleway({
   variable: '--font-raleway',
@@ -22,11 +23,13 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="en">
-      <body className={clsx(`${raleway.variable} flex min-h-screen flex-col antialiased`)}>
-        <Header />
-        <main className="flex-grow">{children}</main>
-        <Footer />
-      </body>
+      <ThemeProvider>
+        <body className={clsx(`${raleway.variable} flex min-h-screen flex-col antialiased`)}>
+          <Header />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+        </body>
+      </ThemeProvider>
     </html>
   );
 };

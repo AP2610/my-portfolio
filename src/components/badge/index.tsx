@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
-type BadgeColor = 'blue' | 'blue-700' | 'lime' | 'violet' | 'white';
+type BadgeColor = 'blue' | 'blue-700' | 'lime' | 'violet';
 
 type BadgeProps = {
   children: React.ReactNode;
@@ -16,18 +16,16 @@ export const Badge = ({ children, className, hasLink = false, onClick, color = '
     'inline-block px-3 py-1 font-sans rounded-full text-[14px] flex items-center gap-2',
     {
       // Base styles without hover
-      'bg-blue/10 text-blue border border-blue/20': color === 'blue',
+      'bg-blue/10 text-accent-blue border border-accent-blue/20': color === 'blue',
       'bg-blue-700/10 text-blue-700 border border-blue-700/40': color === 'blue-700',
-      'bg-lime/10 text-lime border border-lime/20': color === 'lime',
-      'bg-violet/15 text-violet-400 border border-violet/40': color === 'violet',
-      'bg-white/10 text-white border border-white/20': color === 'white',
+      'bg-accent-lime/10 text-accent-lime border border-accent-lime/20': color === 'lime',
+      'bg-accent-violet/15 text-accent-violet border border-accent-violet/40': color === 'violet',
 
       // Hover styles only applied when hasLink is true
-      'hover:bg-blue/20': hasLink && color === 'blue',
+      'hover:bg-accent-blue/20': hasLink && color === 'blue',
       'hover:bg-blue-700/20': hasLink && color === 'blue-700',
-      'hover:bg-lime/20': hasLink && color === 'lime',
-      'hover:bg-violet/20': hasLink && color === 'violet',
-      'hover:bg-white/20': hasLink && color === 'white',
+      'hover:bg-accent-lime/20': hasLink && color === 'lime',
+      'hover:bg-accent-violet/20': hasLink && color === 'violet',
       'transition-colors duration-300': hasLink,
     },
     className

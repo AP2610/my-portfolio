@@ -6,90 +6,92 @@
 @tailwind utilities;
 
 :root {
-  /* TODO: Adjust these colors */
-  /* This is for light mode, will be done later. */
-  /* --background: #ffffff;
-  --foreground: #171717; */
+  --black: 10, 10, 26;           /* rgb(10, 10, 26) */
+  --black-100: 187, 187, 228;    /* rgb(187, 187, 228) */
+  --black-200: 118, 118, 202;    /* rgb(118, 118, 202) */
+  --black-300: 63, 63, 162;      /* rgb(63, 63, 162) */
+  --black-400: 37, 37, 94;       /* rgb(37, 37, 94) */
+  --black-500: 10, 10, 26;       /* rgb(10, 10, 26) */
+  --black-600: 8, 8, 21;         /* rgb(8, 8, 21) */
+  --black-700: 6, 6, 15;         /* rgb(6, 6, 15) */
+  --black-800: 4, 4, 10;         /* rgb(4, 4, 10) */
+  --black-900: 2, 2, 5;          /* rgb(2, 2, 5) */
 
-  /* For dark mode, default setting for now. */
-  --background: #0a0a1a;
-  --foreground: #eef0f2;
+  --lime: 206, 255, 26;          /* rgb(206, 255, 26) */
+  --lime-100: 245, 255, 209;     /* rgb(245, 255, 209) */
+  --lime-200: 235, 255, 163;     /* rgb(235, 255, 163) */
+  --lime-300: 225, 255, 117;     /* rgb(225, 255, 117) */
+  --lime-400: 215, 255, 71;      /* rgb(215, 255, 71) */
+  --lime-500: 206, 255, 26;      /* rgb(206, 255, 26) */
+  --lime-600: 176, 224, 0;       /* rgb(176, 224, 0) */
+  --lime-700: 132, 168, 0;       /* rgb(132, 168, 0) */
+  --lime-800: 88, 112, 0;        /* rgb(88, 112, 0) */
+  --lime-900: 44, 56, 0;         /* rgb(44, 56, 0) */
 
-  --black: #0a0a1a;
-  --black-100: #bbbbe4;
-  --black-200: #7676ca;
-  --black-300: #3f3fa2;
-  --black-400: #25255e;
-  --black-500: #0a0a1a;
-  --black-600: #080815;
-  --black-700: #06060f;
-  --black-800: #04040a;
-  --black-900: #020205;
+  --violet: 125, 60, 255;        /* rgb(125, 60, 255) */
+  --violet-100: 229, 216, 255;   /* rgb(229, 216, 255) */
+  --violet-200: 203, 177, 255;   /* rgb(203, 177, 255) */
+  --violet-300: 177, 139, 255;   /* rgb(177, 139, 255) */
+  --violet-400: 152, 100, 255;   /* rgb(152, 100, 255) */
+  --violet-500: 125, 60, 255;    /* rgb(125, 60, 255) */
+  --violet-600: 84, 0, 253;      /* rgb(84, 0, 253) */
+  --violet-700: 63, 0, 190;      /* rgb(63, 0, 190) */
+  --violet-800: 42, 0, 126;      /* rgb(42, 0, 126) */
+  --violet-900: 21, 0, 63;       /* rgb(21, 0, 63) */
 
-  --lime: #ceff1a;
-  --lime-100: #f5ffd1;
-  --lime-200: #ebffa3;
-  --lime-300: #e1ff75;
-  --lime-400: #d7ff47;
-  --lime-500: #ceff1a;
-  --lime-600: #b0e000;
-  --lime-700: #84a800;
-  --lime-800: #587000;
-  --lime-900: #2c3800;
+  --blue: 27, 231, 255;          /* rgb(27, 231, 255) */
+  --blue-100: 209, 250, 255;     /* rgb(209, 250, 255) */
+  --blue-200: 163, 246, 255;     /* rgb(163, 246, 255) */
+  --blue-300: 117, 241, 255;     /* rgb(117, 241, 255) */
+  --blue-400: 71, 237, 255;      /* rgb(71, 237, 255) */
+  --blue-500: 27, 231, 255;      /* rgb(27, 231, 255) */
+  --blue-600: 0, 202, 224;       /* rgb(0, 202, 224) */
+  --blue-700: 0, 151, 168;       /* rgb(0, 151, 168) */
+  --blue-800: 0, 101, 112;       /* rgb(0, 101, 112) */
+  --blue-900: 0, 50, 56;         /* rgb(0, 50, 56) */
 
-  --violet: #7d3cff;
-  --violet-100: #e5d8ff;
-  --violet-200: #cbb1ff;
-  --violet-300: #b18bff;
-  --violet-400: #9864ff;
-  --violet-500: #7d3cff;
-  --violet-600: #5400fd;
-  --violet-700: #3f00be;
-  --violet-800: #2a007e;
-  --violet-900: #15003f;
-
-  --blue: #1be7ff;
-  --blue-100: #d1faff;
-  --blue-200: #a3f6ff;
-  --blue-300: #75f1ff;
-  --blue-400: #47edff;
-  --blue-500: #1be7ff;
-  --blue-600: #00cae0;
-  --blue-700: #0097a8;
-  --blue-800: #006570;
-  --blue-900: #003238;
-
-  /* TODO: This is clearly not white, but too many usages to change it now. Refactor white to grey */
-  --white: #eef0f2;
-  --white-100: #fcfcfc;
-  --white-200: #f8f9fa;
-  --white-300: #f5f6f7;
-  --white-400: #f1f3f4;
-  --white-500: #eef0f2;
-  --white-600: #b8c0c8;
-  --white-700: #81909e;
-  --white-800: #53606c;
-  --white-900: #2a3036;
+  /* TODO: This is clearly not white, but too many usages to change it now. Refactor white to cosmic-latte */
+  --white: 255, 248, 231;        /* rgb(255, 248, 231) */
+  --white-100: 255, 253, 250;    /* rgb(255, 253, 250) */
+  --white-200: 255, 252, 245;    /* rgb(255, 252, 245) */
+  --white-300: 255, 250, 240;    /* rgb(255, 250, 240) */
+  --white-400: 255, 249, 235;    /* rgb(255, 249, 235) */
+  --white-500: 255, 248, 231;    /* rgb(255, 248, 231) */
+  --white-600: 255, 218, 133;    /* rgb(255, 218, 133) */
+  --white-700: 255, 189, 36;     /* rgb(255, 189, 36) */
+  --white-800: 194, 136, 0;      /* rgb(194, 136, 0) */
+  --white-900: 97, 68, 0;        /* rgb(97, 68, 0) */
 
   --header-height: 95px;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.light {
+  --background: var(--white);
+  --foreground: var(--black);
 
-  .custom-background-violet {
-    background: rgb(10, 10, 26);
-    background: linear-gradient(167deg, rgba(10, 10, 26, 1) 60%, rgba(125, 60, 255, 1) 100%);
-  }
+  --primary: var(--black);
+  --primary-foreground: var(--white);
 
-  .custom-background-blue {
-    background: rgb(10, 10, 26);
-    background: linear-gradient(167deg, rgba(10, 10, 26, 1) 70%, rgba(27, 231, 255, 1) 100%);
-  }
-} */
+  --accent-lime: var(--lime-600);
+  --accent-lime-foreground: var(--lime-700);
+
+  --accent-blue: var(--blue-600);
+  --accent-violet: var(--violet-600);
+}
+
+.dark {
+  --background: var(--black);
+  --foreground: var(--white);
+
+  --primary: var(--white);
+  --primary-foreground: var(--black);
+
+  --accent-lime: var(--lime);
+  --accent-lime-foreground: var(--lime);
+
+  --accent-blue: var(--blue);
+  --accent-violet: var(--violet);
+}
 
 /* TODO: Implement the same for framer motion animations using useReducedMotion hook */
 @media (prefers-reduced-motion: reduce) {
@@ -127,36 +129,23 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  background: rgba(var(--background));
 }
 
 /* TODO: Extract to background colors css file */
-/* For light mode, will be implemented later, not critical */
-/* .custom-background-violet {
-  background: rgb(255, 255, 255);
-  background: linear-gradient(167deg, rgba(255, 255, 255, 1) 60%, rgba(125, 60, 255, 1) 100%);  
-}
 
+.custom-background-violet,
 .custom-background-blue {
-  background: rgb(255, 255, 255);
-  background: linear-gradient(167deg, rgba(255, 255, 255, 1) 70%, rgba(27, 231, 255, 1) 100%);
-} */
+  background: rgba(var(--background));
+}
 
 .custom-background-violet {
-  background: rgb(10, 10, 26);
-  background: linear-gradient(167deg, rgba(10, 10, 26, 1) 60%, rgba(125, 60, 255, 1) 100%);
+  background: linear-gradient(167deg, rgba(var(--background)) 60%, rgba(var(--violet)) 100%);
 }
 
 .custom-background-blue {
-  background: rgb(10, 10, 26);
-  background: linear-gradient(167deg, rgba(10, 10, 26, 1) 70%, rgba(27, 231, 255, 1) 100%);
+  background: linear-gradient(167deg, rgba(var(--background)) 70%, rgba(var(--blue)) 100%);
 }
-
-/* .custom-background-lime {
-  background: rgb(10, 10, 26);
-  background: linear-gradient(153deg, rgba(10, 10, 26, 1) 80%, rgba(206, 255, 26, 1) 100%);
-} */
 
 h1,
 h2,
@@ -168,6 +157,7 @@ h6 {
 }
 
 p,
-button {
-  @apply font-sans;
+button,
+ul {
+  @apply font-sans font-medium;
 }

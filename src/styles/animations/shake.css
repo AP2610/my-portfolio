@@ -2,6 +2,10 @@
   animation: tilt-shaking 0.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
+*:hover > .tilt-shaking {
+  animation: none;
+}
+
 @keyframes tilt-shaking {
   0%,
   50%,

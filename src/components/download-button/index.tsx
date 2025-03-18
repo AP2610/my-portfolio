@@ -20,7 +20,7 @@ export const DownloadButton = ({ className }: DownloadButtonProps) => {
       onClick={handleDownload}
       variant="icon-button"
       className={clsx(
-        '!rounded-full border-2 border-lime text-lime transition-colors duration-300 hover:bg-lime-400/30',
+        '!rounded-full border-2 border-accent-lime text-accent-lime transition-colors duration-300 hover:bg-accent-lime/30',
         className
       )}
       title="Download CV as PDF"

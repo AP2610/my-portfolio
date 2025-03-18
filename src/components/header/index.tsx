@@ -1,11 +1,12 @@
 'use client';
 
+import { AnimatedElementPresence } from '@/components/animated-element-presence';
+import { Logo } from '@/components/logo';
+import { NavigationMenu } from '@/components/navigation';
+import { ThemeSwitcher } from '@/components/theme-switcher';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
-import { AnimatedElementPresence } from '../animated-element-presence';
-import { Logo } from '../logo';
-import { NavigationMenu } from '../navigation';
 
 const SOLID_BACKGROUND_PATHS = ['/cv', '/projects'];
 
@@ -16,7 +17,7 @@ export const Header = () => {
   const pathname = usePathname();
 
   useEffect(() => {
-    setHasSolidBackground(SOLID_BACKGROUND_PATHS.includes(pathname));
+    setHasSolidBackground(SOLID_BACKGROUND_PATHS.includes(pathname) && pathname !== '/');
   }, [pathname]);
 
   // Reference to the hero section for scroll-based animations
@@ -34,7 +35,7 @@ export const Header = () => {
     layoutEffect: false,
   });
 
-  const frostedBlackBackgroundColor = 'rgba(10, 10, 26, 0.6)';
+  const frostedBlackBackgroundColor = 'rgba(var(--background), 0.5)';
   const initialBackgroundColor = hasSolidBackground ? frostedBlackBackgroundColor : 'transparent';
 
   // Dynamic background transformation based on scroll progress
@@ -54,7 +55,7 @@ export const Header = () => {
   // Adds blur effect as user scrolls, but only when there isn't a solid background
   const blurStyle = useTransform(
     scrollYProgress,
-    [0.1, 0.3],
+    [0.2, 0.6],
     hasSolidBackground
       ? ['blur(10px)', 'blur(10px)'] // Keep constant blur when solid background
       : ['blur(0px)', 'blur(10px)'] // Transform blur based on scroll when transparent
@@ -82,7 +83,13 @@ export const Header = () => {
             <Logo isNavOpen={isNavOpen} />
           </AnimatedElementPresence>
 
-          <AnimatedElementPresence entryAnimationDelay={0.2} animationProperty="opacity">
+          <AnimatedElementPresence
+            className="flex items-center gap-6 md:gap-10"
+            entryAnimationDelay={0.2}
+            animationProperty="opacity"
+          >
+            <ThemeSwitcher />
+
             <NavigationMenu isOpen={isNavOpen} setIsOpen={setIsNavOpen} />
           </AnimatedElementPresence>
         </div>
