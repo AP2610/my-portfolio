@@ -79,7 +79,11 @@ export const Header = () => {
             <Logo isNavOpen={isNavOpen} />
           </AnimatedElementPresence>
 
-          <AnimatedElementPresence className="flex items-center gap-4" entryAnimationDelay={0.2} animationProperty="opacity">
+          <AnimatedElementPresence
+            className="flex items-center gap-6 md:gap-10"
+            entryAnimationDelay={0.2}
+            animationProperty="opacity"
+          >
             <ThemeSwitcher />
 
             <NavigationMenu isOpen={isNavOpen} setIsOpen={setIsNavOpen} />
