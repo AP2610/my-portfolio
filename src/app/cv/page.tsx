@@ -159,8 +159,6 @@ const CvPage = () => {
       <header className="mb-8 text-foreground print:hidden">
         <h2 className="mb-4 text-4xl">Professional Experience</h2>
 
-        <p className="mb-4 text-lime">A comprehensive overview of my career journey</p>
-
         <InfoBox className="my-8">
           <p>
             You can hit the button in the top right corner to download my CV as a PDF. Clicking the button will open the print
