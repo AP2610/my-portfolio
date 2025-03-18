@@ -11,7 +11,7 @@ type InfoBoxProps = {
 
 export const InfoBox = ({ children, color = 'blue', className }: InfoBoxProps) => {
   const classes = clsx(
-    'p-6 rounded-lg flex flex-col items-center gap-4',
+    'p-6 rounded-lg flex flex-col md:flex-row items-start md:items-center gap-4',
     {
       'bg-blue/20 border border-blue/40': color === 'blue',
       'bg-lime/20 border border-lime/40': color === 'lime',

@@ -111,6 +111,11 @@
     margin: 1.5cm 1.2cm 1cm 1.2cm;
   }
 
+  html,
+  body {
+    background-color: white !important;
+  }
+
   .page-break {
     page-break-before: always;
     break-before: page;

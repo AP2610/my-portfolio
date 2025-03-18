@@ -50,6 +50,8 @@ export const Header = () => {
     ]
   );
 
+  const initialBackdropFilter = hasSolidBackground ? 'blur(10px)' : 'blur(0px)';
+
   // Adds blur effect as user scrolls, but only when there isn't a solid background
   const blurStyle = useTransform(
     scrollYProgress,
@@ -67,11 +69,13 @@ export const Header = () => {
         // The initial styles solve the issue where useTransform is not reset on page navigation.
         initial={{
           background: initialBackgroundColor,
-          backdropFilter: hasSolidBackground ? 'blur(10px)' : 'blur(0px)',
+          backdropFilter: initialBackdropFilter,
+          WebkitBackdropFilter: initialBackdropFilter,
         }}
         style={{
           background: backgroundStyle,
           backdropFilter: blurStyle,
+          WebkitBackdropFilter: blurStyle,
         }}
       >
         <div className="container relative mx-auto flex h-full items-center justify-between p-4 sm:p-6 lg:p-8">
