@@ -1,5 +1,6 @@
 'use client';
 
+import clsx from 'clsx';
 import { motion, MotionConfig } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 import { useEffect } from 'react';
@@ -23,7 +24,7 @@ export const MobileNavigation = ({ isOpen, setIsOpen, className }: MobileNavigat
   const backgroundColor = isOpen ? 'rgb(var(--accent-blue))' : 'rgb(var(--accent-lime))';
 
   return (
-    <nav className={className}>
+    <nav className={clsx('h-14 w-14', className)}>
       <MotionConfig
         transition={{
           duration: 0.2,
@@ -32,7 +33,7 @@ export const MobileNavigation = ({ isOpen, setIsOpen, className }: MobileNavigat
       >
         {/* Hamburger button that transforms into close icon */}
         <motion.button
-          className="relative z-20 h-14 w-14 rounded-full"
+          className="relative z-20 h-full w-full rounded-full"
           initial={false} // Prevents animation from triggering on page load.
           onClick={() => setIsOpen(!isOpen)}
           animate={isOpen ? 'open' : 'closed'}
