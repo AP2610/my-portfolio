@@ -21,9 +21,9 @@ export const ProjectDetails = ({
   return (
     <article className="space-y-8 border-b border-white/10 last:border-b-0">
       <header className="mb-8">
-        <h2 className="mb-4 text-2xl text-blue">{company}</h2>
-        <span className="mb-2 font-sans text-xl font-medium md:mb-0">{role}</span>
-        <span className="block font-sans text-lime-600 md:ml-4 md:inline md:font-medium">{period}</span>
+        <h2 className="mb-4 text-2xl text-accent-blue">{company}</h2>
+        <span className="mb-2 font-sans text-xl font-medium text-foreground md:mb-0">{role}</span>
+        <span className="block font-sans font-medium text-accent-lime md:ml-4 md:inline">{period}</span>
       </header>
 
       {image && (
@@ -36,14 +36,14 @@ export const ProjectDetails = ({
         </div>
       )}
 
-      <div className="space-y-6">
+      <div className="space-y-6 text-foreground">
         <div>
-          <h3 className="mb-4 text-lg font-medium">Situation</h3>
+          <h3 className="mb-4 text-xl font-semibold">Situation</h3>
           <p>{situation}</p>
         </div>
 
-        <div>
-          <h3 className="mb-4 text-lg font-medium">Tasks</h3>
+        <div className="text-foreground">
+          <h3 className="mb-4 text-xl font-semibold">Tasks</h3>
 
           <ul className="list-disc space-y-2 pl-4 font-sans">
             {tasks.map((task, index) => (
@@ -52,20 +52,20 @@ export const ProjectDetails = ({
           </ul>
         </div>
 
-        <div>
-          <h3 className="mb-4 text-lg font-medium">Results</h3>
+        <div className="text-foreground">
+          <h3 className="mb-4 text-xl font-semibold">Results</h3>
           <p>{results}</p>
         </div>
 
         {additionalInfo && (
-          <div>
-            <h3 className="mb-4 text-lg font-medium">Additional Information</h3>
+          <div className="text-foreground">
+            <h3 className="mb-4 text-xl font-semibold">Additional Information</h3>
             <p>{additionalInfo}</p>
           </div>
         )}
 
-        <div>
-          <h3 className="mb-4 text-lg font-medium">Technologies & Skills</h3>
+        <div className="text-foreground">
+          <h3 className="mb-4 text-xl font-semibold">Technologies & Skills</h3>
 
           {/* TODO: Create generic list component */}
           <ul className="flex flex-wrap gap-2">
