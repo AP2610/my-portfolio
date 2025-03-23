@@ -9,7 +9,7 @@ export default {
   darkMode: 'selector',
   theme: {
     fontFamily: {
-      sans: ['var(--font-raleway)'],
+      sans: ['var(--font-raleway)', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
     },
     container: {
       center: true,
