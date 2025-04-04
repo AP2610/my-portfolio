@@ -144,9 +144,11 @@ export const projectsData: Project[] = [
     situation:
       'The objective was to enhance the existing website by introducing innovative features aimed at optimising performance and elevating the overall customer experience. Upon joining the project, I worked towards a series of substantial improvement initiatives, including a comprehensive redesign of the checkout process, enabling international shipping capabilities, and the integration of diverse shipping and delivery methods, among other enhancements.',
     tasks: [
-      'Spearheaded the development of an enhanced checkout flow',
-      'Led frontend efforts to seamlessly integrate a new shipping method',
-      'Proactively addressed frontend tickets during sprint cycles',
+      'Developed and optimised UI to enhance user experience',
+      'Contributed to a major checkout flow overhaul, improving usability and flexibility',
+      'Implemented performance improvements and new features to keep the platform modern and competitive',
+      'Worked in an Agile environment, participating in sprint planning, refinements, and retrospectives to ensure smooth delivery',
+      'Maintained direct communication with the client, answering questions and guiding technical decisions to align with business goals',
     ],
     results:
       'The implemented features on the website, now live on Prenatal.nl, are functioning seamlessly, providing users with an enhanced and efficient online experience. Introducing new shipping methods resulted in expanded delivery capabilities to two additional countries, leading to a tangible increase in sales and broader market reach.',
