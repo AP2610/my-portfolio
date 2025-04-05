@@ -4,7 +4,7 @@ import { ThemeContext } from '@/context/theme-context';
 import { useContext } from 'react';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import clsx from 'clsx';
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 
 export const ThemeSwitcher = ({ className }: { className?: string }) => {
   const { theme, handleThemeToggle } = useContext(ThemeContext);

@@ -4,7 +4,7 @@ import { ThemeProvider } from '@/context/theme-context';
 import clsx from 'clsx';
 import type { Metadata } from 'next';
 import { Raleway } from 'next/font/google';
-import '../styles/globals.css';
+import '../styles/globals.scss';
 
 const raleway = Raleway({
   variable: '--font-raleway',
