@@ -13,7 +13,7 @@ const LinkStyles = {
   variants: {
     ...buttonStyles.variants,
     inline:
-      'font-sans text-accent-electric-blue relative cursor-pointer after:content-[""] after:absolute after:h-[1px] after:w-0 after:bg-accent-electric-blue after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300',
+      'inline-flex items-center font-sans text-accent-electric-blue relative cursor-pointer after:content-[""] after:absolute after:h-[1px] after:w-0 after:bg-accent-electric-blue after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300',
   },
 };
 
@@ -55,7 +55,7 @@ export const MyLink = ({
   return isInternal ? (
     <Link href={href as string} className={classes} target="_self">
       {children}
-      {showIcon && !isInlineVariant && <CgInternal className="tilt-shaking ml-2" />}
+      {showIcon && <CgInternal className="tilt-shaking ml-2" />}
     </Link>
   ) : (
     <a
