@@ -50,40 +50,42 @@
   --blue-800: 0, 101, 112;       /* rgb(0, 101, 112) */
   --blue-900: 0, 50, 56;         /* rgb(0, 50, 56) */
 
-  /* TODO: This is clearly not white, but too many usages to change it now. Refactor white to cosmic-latte */
-  --white: 255, 248, 231;        /* rgb(255, 248, 231) */
-  --white-100: 255, 253, 250;    /* rgb(255, 253, 250) */
-  --white-200: 255, 252, 245;    /* rgb(255, 252, 245) */
-  --white-300: 255, 250, 240;    /* rgb(255, 250, 240) */
-  --white-400: 255, 249, 235;    /* rgb(255, 249, 235) */
-  --white-500: 255, 248, 231;    /* rgb(255, 248, 231) */
-  --white-600: 255, 218, 133;    /* rgb(255, 218, 133) */
-  --white-700: 255, 189, 36;     /* rgb(255, 189, 36) */
-  --white-800: 194, 136, 0;      /* rgb(194, 136, 0) */
-  --white-900: 97, 68, 0;        /* rgb(97, 68, 0) */
+  /* TODO: This is clearly not cosmic-latte, but too many usages to change it now. Refactor cosmic-latte to cosmic-latte */
+  --cosmic-latte: 255, 248, 231;        /* rgb(255, 248, 231) */
+  --cosmic-latte-100: 255, 253, 250;    /* rgb(255, 253, 250) */
+  --cosmic-latte-200: 255, 252, 245;    /* rgb(255, 252, 245) */
+  --cosmic-latte-300: 255, 250, 240;    /* rgb(255, 250, 240) */
+  --cosmic-latte-400: 255, 249, 235;    /* rgb(255, 249, 235) */
+  --cosmic-latte-500: 255, 248, 231;    /* rgb(255, 248, 231) */
+  --cosmic-latte-600: 255, 218, 133;    /* rgb(255, 218, 133) */
+  --cosmic-latte-700: 255, 189, 36;     /* rgb(255, 189, 36) */
+  --cosmic-latte-800: 194, 136, 0;      /* rgb(194, 136, 0) */
+  --cosmic-latte-900: 97, 68, 0;        /* rgb(97, 68, 0) */
 
   --header-height: 95px;
 }
 
 .light {
-  --background: var(--white);
+  --background: var(--cosmic-latte);
   --foreground: var(--black);
 
   --primary: var(--black);
-  --primary-foreground: var(--white);
+  --primary-foreground: var(--cosmic-latte);
 
   --accent-lime: var(--lime-600);
   --accent-lime-foreground: var(--lime-700);
 
   --accent-blue: var(--blue-600);
   --accent-violet: var(--violet-600);
+
+  --homepage-card-bg: var(--violet-100)
 }
 
 .dark {
-  --background: var(--black);
-  --foreground: var(--white);
+  --background: 0,0,0;
+  --foreground: var(--cosmic-latte);
 
-  --primary: var(--white);
+  --primary: var(--cosmic-latte);
   --primary-foreground: var(--black);
 
   --accent-lime: var(--lime);
@@ -91,6 +93,8 @@
 
   --accent-blue: var(--blue);
   --accent-violet: var(--violet);
+
+  --homepage-card-bg: var(--black)
 }
 
 /* TODO: Implement the same for framer motion animations using useReducedMotion hook */
@@ -113,7 +117,7 @@
 
   html,
   body {
-    background-color: white !important;
+    background-color: cosmic-latte !important;
   }
 
   .page-break {
@@ -140,11 +144,16 @@ body {
 }
 
 .custom-background-violet {
-  background: linear-gradient(167deg, rgba(var(--background)) 60%, rgba(var(--violet)) 100%);
+  /* background: linear-gradient(167deg, rgba(var(--background)) 60%, rgba(var(--violet)) 100%); */
 }
 
 .custom-background-blue {
   background: linear-gradient(167deg, rgba(var(--background)) 70%, rgba(var(--blue)) 100%);
+}
+
+.homepage-radial-background {
+  background: rgb(84, 0, 253);
+  background: radial-gradient(circle, rgba(84, 0, 253, 0.5088629201680672) 5%, rgba(84, 0, 253, 0) 55%);
 }
 
 h1,

@@ -19,7 +19,7 @@ export const ProjectDetails = ({
   additionalInfo,
 }: ProjectProps) => {
   return (
-    <article className="space-y-8 border-b border-white/10 last:border-b-0">
+    <article className="space-y-8 border-b border-cosmic-latte/10 last:border-b-0">
       <header className="mb-8">
         <h2 className="mb-4 text-2xl text-accent-blue">{company}</h2>
         <span className="mb-2 font-sans text-xl font-medium text-foreground md:mb-0">{role}</span>

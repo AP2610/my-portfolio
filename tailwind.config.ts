@@ -50,6 +50,7 @@ export default {
         },
         'accent-blue': 'rgba(var(--accent-blue))',
         'accent-violet': 'rgba(var(--accent-violet))',
+        'homepage-card-bg': 'rgba(var(--homepage-card-bg))',
 
         // Original color scales
         black: {
@@ -100,17 +101,17 @@ export default {
           800: 'rgba(var(--blue-800))',
           900: 'rgba(var(--blue-900))',
         },
-        white: {
-          DEFAULT: 'rgba(var(--white))',
-          100: 'rgba(var(--white-100))',
-          200: 'rgba(var(--white-200))',
-          300: 'rgba(var(--white-300))',
-          400: 'rgba(var(--white-400))',
-          500: 'rgba(var(--white-500))',
-          600: 'rgba(var(--white-600))',
-          700: 'rgba(var(--white-700))',
-          800: 'rgba(var(--white-800))',
-          900: 'rgba(var(--white-900))',
+        'cosmic-latte': {
+          DEFAULT: 'rgba(var(--cosmic-latte))',
+          100: 'rgba(var(--cosmic-latte-100))',
+          200: 'rgba(var(--cosmic-latte-200))',
+          300: 'rgba(var(--cosmic-latte-300))',
+          400: 'rgba(var(--cosmic-latte-400))',
+          500: 'rgba(var(--cosmic-latte-500))',
+          600: 'rgba(var(--cosmic-latte-600))',
+          700: 'rgba(var(--cosmic-latte-700))',
+          800: 'rgba(var(--cosmic-latte-800))',
+          900: 'rgba(var(--cosmic-latte-900))',
         },
       },
     },
