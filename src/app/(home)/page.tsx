@@ -1,9 +1,18 @@
-'use client';
-
 import { About } from '@/components/features/about';
-import { AnimatedElementPresence } from '@/components/ui/animated-element-presence';
+import { HomepageCard } from '@/components/features/home/homepage-card';
+import { IconList } from '@/components/features/home/icon-list';
 import { Section } from '@/components/layout/section';
-import { motion } from 'framer-motion';
+import { AnimatedElementPresence } from '@/components/ui/animated-element-presence';
+import { AnimatedRadialGradientBackground } from '@/components/ui/animated-radial-gradient-background';
+import { MyLink } from '@/components/ui/my-link';
+import { SocialIconLink } from '@/components/ui/social-icon-link';
+
+import JavaScriptIcon from '@/public/icons/javascript-48.png';
+import NextJsIcon from '@/public/icons/nextjs-200.png';
+import ReactIcon from '@/public/icons/react-40.png';
+import SanityIcon from '@/public/icons/sanity-180.png';
+import TailwindIcon from '@/public/icons/tailwindcss-48.png';
+import TypeScriptIcon from '@/public/icons/typescript-50.png';
 
 const Home = () => {
   return (
@@ -12,54 +21,68 @@ const Home = () => {
         className="relative flex flex-col items-center justify-center"
         isFullWidth
         hasTopPadding
+        hasBottomPadding
         hasHeaderMarginTop
+        // TODO: Get rid of the header logic on the hero
         // The id is needed for my animated styling on the header to work. Note to self: Consider getting rid of it and the associated logic.
         id="hero"
       >
-        <motion.div
-          initial={{ scale: 0.5, opacity: 0 }}
-          animate={{
-            scale: [1, 1.1, 1],
-            opacity: [0.5, 0.6, 0.5],
-          }}
-          transition={{
-            duration: 4,
-            times: [0, 0.5, 1],
-            ease: 'easeInOut',
-            repeat: Infinity,
-            opacity: {
-              duration: 2,
-              times: [0, 0.5, 1],
-              ease: 'easeIn',
-            },
-          }}
-          className="homepage-radial-background absolute bottom-0 left-0 right-0 top-[-20%] -z-10"
-        ></motion.div>
+        <AnimatedRadialGradientBackground />
+
         <Section>
           <AnimatedElementPresence
             entryAnimationDelay={0.2}
             animationProperty="opacity"
-            className="grid grid-cols-4 grid-rows-4 gap-6"
+            className="grid grid-cols-4 grid-rows-3 gap-6"
           >
-            <div className="flex flex-col items-center justify-center rounded-md bg-homepage-card-bg p-6 text-center text-foreground shadow-md transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+            <HomepageCard>
               <h1 className="mb-4 text-3xl font-semibold">Hi, I'm Arjun</h1>
               <p className="text-gray-600">Welcome to my portfolio!</p>
-            </div>
+            </HomepageCard>
 
-            <div className="flex flex-col items-center justify-center rounded-md bg-homepage-card-bg p-6 text-center text-foreground shadow-md transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+            <HomepageCard>
               <h2 className="mb-4 text-3xl font-semibold">5 years</h2>
-              <p className="text-gray-600">Of Frontend Development</p>
-            </div>
+              <p className="text-gray-600">Of frontend development experience</p>
+            </HomepageCard>
 
-            <div className="col-span-2 row-span-2 flex flex-col justify-center rounded-md bg-homepage-card-bg p-6 text-foreground shadow-md transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+            <HomepageCard className="col-span-2 row-span-2" textAlign="left" alignItems="start">
               <h2 className="mb-4 text-3xl font-semibold">About me</h2>
+
               <p className="text-gray-600">
                 I'm a frontend engineer with a passion for creating beautiful, interactive, and accessible applications that
                 prioritise the user experience. While trained as a full-stack developer, I gravitated towards the frontend for its
                 direct impact on users. I thrive on transforming ideas into functional, visually appealing web applications and
                 believe in clear, honest communication—no beating around the bush, just constructive and transparent discussions.
               </p>
-            </div>
+            </HomepageCard>
+
+            <HomepageCard className="col-span-2" textAlign="left" alignItems="start">
+              <div className="mb-4 flex items-center justify-between gap-4">
+                <h2 className="text-3xl font-semibold">Specialising in</h2>
+
+                <IconList iconList={[NextJsIcon, ReactIcon, JavaScriptIcon, TypeScriptIcon, TailwindIcon, SanityIcon]} />
+              </div>
+
+              <p className="text-gray-600">Next.js, React, JavaScript, TypeScript, Tailwind CSS, Sanity CMS</p>
+            </HomepageCard>
+
+            <HomepageCard>
+              <MyLink type="internal" href="/cv" showIcon className="text-3xl font-semibold">
+                My CV
+              </MyLink>
+            </HomepageCard>
+
+            <HomepageCard>
+              <MyLink type="internal" href="/projects" showIcon className="text-3xl font-semibold">
+                Projects
+              </MyLink>
+            </HomepageCard>
+
+            <HomepageCard className="col-span-2 gap-4" flexDirection="row">
+              <SocialIconLink platform="linkedin" size={32} />
+              <SocialIconLink platform="github" size={32} />
+              <SocialIconLink platform="email" size={32} />
+            </HomepageCard>
           </AnimatedElementPresence>
         </Section>
       </Section>

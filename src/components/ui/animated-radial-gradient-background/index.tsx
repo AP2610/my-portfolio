@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 export const AnimatedRadialGradientBackground = () => {
   return (
     <motion.div
-      initial={{ scale: 0.5, opacity: 0 }}
+      initial={{ scale: 0.3, opacity: 0 }}
       animate={{
         scale: 1,
         opacity: 0.8,
@@ -20,7 +20,7 @@ export const AnimatedRadialGradientBackground = () => {
           ease: 'easeIn',
         },
       }}
-      className="radial-background-gradient absolute bottom-0 left-0 right-0 top-[-20%] -z-10"
+      className="radial-background-gradient absolute bottom-0 left-0 right-0 top-0 -z-10"
     ></motion.div>
   );
 };
