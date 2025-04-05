@@ -1,7 +1,7 @@
-import { Button } from '@/components/buttons';
-import { Section } from '@/components/section';
-import { Badge } from '@/components/badge';
-import { Blockquote } from '@/components/blockquote';
+import { Button } from '@/components/ui/buttons';
+import { Section } from '@/components/layout/section';
+import { Badge } from '@/components/ui/badge';
+import { Blockquote } from '@/components/ui/blockquote';
 
 const specialisations = ['JavaScript', 'TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'Sanity CMS'];
 

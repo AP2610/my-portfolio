@@ -1,9 +1,9 @@
-import { ExternalLink } from '@/components/external-link';
-import { Logo } from '@/components/logo';
-import { NavLink } from '@/components/navigation/nav-link';
-import { NAVIGATION_LINKS } from '@/components/navigation/nav-links';
-import { Section } from '@/components/section';
-import { SocialIcon } from '@/components/social-icon';
+import { ExternalLink } from '@/components/ui/external-link';
+import { Logo } from '@/components/ui/logo';
+import { NavLink } from '@/components/layout/navigation/nav-link';
+import { NAVIGATION_LINKS } from '@/components/layout/navigation/nav-links';
+import { Section } from '@/components/layout/section';
+import { SocialIcon } from '@/components/ui/social-icon';
 import { FaEnvelope } from 'react-icons/fa';
 
 export const Footer = () => {

@@ -1,15 +1,15 @@
-import { Badge } from '@/components/badge';
-import { DownloadButton } from '@/components/download-button';
-import { Experience } from '@/components/experience';
-import { ExternalLink } from '@/components/external-link';
-import { MyImage } from '@/components/image';
-import { Section } from '@/components/section';
-import { SocialIcon } from '@/components/social-icon';
+import { Badge } from '@/components/ui/badge';
+import { DownloadButton } from '@/components/features/cv/download-button';
+import { Experience } from '@/components/features/experience';
+import { ExternalLink } from '@/components/ui/external-link';
+import { MyImage } from '@/components/ui/image';
+import { Section } from '@/components/layout/section';
+import { SocialIcon } from '@/components/ui/social-icon';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { FaGithub, FaGlobe, FaLinkedin } from 'react-icons/fa';
 import { experiences } from './data';
-import { InfoBox } from '@/components/info-box';
+import { InfoBox } from '@/components/ui/info-box';
 
 export const metadata: Metadata = {
   title: "Arjun Puri's CV",

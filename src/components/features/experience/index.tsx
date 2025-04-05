@@ -1,6 +1,6 @@
 import { Experience as ExperienceType } from '@/app/cv/data';
 import clsx from 'clsx';
-import { ExternalLink } from '../external-link';
+import { ExternalLink } from '../../ui/external-link';
 
 type ExperienceProps = ExperienceType & {
   className?: string;

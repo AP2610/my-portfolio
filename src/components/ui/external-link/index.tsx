@@ -2,8 +2,8 @@
 
 import clsx from 'clsx';
 import { FaExternalLinkAlt } from 'react-icons/fa';
-import { ButtonVariants } from '@/components/buttons/types';
-import { buttonStyles } from '@/components/buttons/styles';
+import { ButtonVariants } from '@/components/ui/buttons/types';
+import { buttonStyles } from '@/components/ui/buttons/styles';
 
 type LinkVariants = ButtonVariants | 'inline';
 

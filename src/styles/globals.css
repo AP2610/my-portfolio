@@ -151,9 +151,9 @@ body {
   background: linear-gradient(167deg, rgba(var(--background)) 70%, rgba(var(--electric-blue)) 100%);
 }
 
-.homepage-radial-background {
+.radial-background-gradient {
   background: rgb(84, 0, 253);
-  background: radial-gradient(circle, rgba(84, 0, 253, 0.5088629201680672) 5%, rgba(84, 0, 253, 0) 55%);
+  background: radial-gradient(circle, rgba(84, 0, 253, 0.5088629201680672) 5%, rgba(84, 0, 253, 0) 60%);
 }
 
 h1,
@@ -162,7 +162,7 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-sans font-rich-black;
+  @apply font-sans font-black;
 }
 
 p,

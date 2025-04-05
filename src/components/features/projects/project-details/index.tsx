@@ -1,6 +1,6 @@
 import { Project as ProjectType } from '@/app/projects/data';
-import { Badge } from '@/components/badge';
-import { MyImage } from '@/components/image';
+import { Badge } from '@/components/ui/badge';
+import { MyImage } from '@/components/ui/image';
 import { ExternalLink } from '../external-link';
 
 type ProjectProps = ProjectType;

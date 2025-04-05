@@ -1,5 +1,5 @@
-import { Button } from '@/components/buttons';
-import { Section } from '@/components/section';
+import { Button } from '@/components/ui/buttons';
+import { Section } from '@/components/layout/section';
 
 const NotFound = () => {
   return (

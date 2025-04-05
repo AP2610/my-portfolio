@@ -1,9 +1,9 @@
 'use client';
 
-import { AnimatedElementPresence } from '@/components/animated-element-presence';
-import { Logo } from '@/components/logo';
-import { NavigationMenu } from '@/components/navigation';
-import { ThemeSwitcher } from '@/components/theme-switcher';
+import { AnimatedElementPresence } from '@/components/ui/animated-element-presence';
+import { Logo } from '@/components/ui/logo';
+import { NavigationMenu } from '@/components/layout/navigation';
+import { ThemeSwitcher } from '@/components/ui/theme-switcher';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';

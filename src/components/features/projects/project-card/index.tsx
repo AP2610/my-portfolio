@@ -1,6 +1,6 @@
 import { Project } from '@/app/projects/data';
-import { MyImage } from '@/components/image';
-import { Button } from '../buttons';
+import { MyImage } from '@/components/ui/image';
+import { Button } from '../ui/buttons';
 import clsx from 'clsx';
 
 type ProjectCardProps = Pick<Project, 'slug' | 'company' | 'role' | 'situation' | 'image'>;

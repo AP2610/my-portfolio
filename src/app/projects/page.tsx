@@ -1,10 +1,10 @@
+import { ProjectCard } from '@/components/features/projects/project-card';
+import { Section } from '@/components/layout/section';
+import { Button } from '@/components/ui/buttons';
+import { ExternalLink } from '@/components/ui/external-link';
 import type { Metadata } from 'next';
-import { ProjectCard } from '@/components/project-card';
-import { projectsData } from './data';
-import { Section } from '@/components/section';
-import { Button } from '@/components/buttons';
 import { FaArrowDown } from 'react-icons/fa';
-import { ExternalLink } from '@/components/external-link';
+import { projectsData } from './data';
 
 export const metadata: Metadata = {
   title: "Arjun Puri's Projects",
