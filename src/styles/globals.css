@@ -6,16 +6,16 @@
 @tailwind utilities;
 
 :root {
-  --black: 10, 10, 26;           /* rgb(10, 10, 26) */
-  --black-100: 187, 187, 228;    /* rgb(187, 187, 228) */
-  --black-200: 118, 118, 202;    /* rgb(118, 118, 202) */
-  --black-300: 63, 63, 162;      /* rgb(63, 63, 162) */
-  --black-400: 37, 37, 94;       /* rgb(37, 37, 94) */
-  --black-500: 10, 10, 26;       /* rgb(10, 10, 26) */
-  --black-600: 8, 8, 21;         /* rgb(8, 8, 21) */
-  --black-700: 6, 6, 15;         /* rgb(6, 6, 15) */
-  --black-800: 4, 4, 10;         /* rgb(4, 4, 10) */
-  --black-900: 2, 2, 5;          /* rgb(2, 2, 5) */
+  --rich-black: 10, 10, 26;           /* rgb(10, 10, 26) */
+  --rich-black-100: 187, 187, 228;    /* rgb(187, 187, 228) */
+  --rich-black-200: 118, 118, 202;    /* rgb(118, 118, 202) */
+  --rich-black-300: 63, 63, 162;      /* rgb(63, 63, 162) */
+  --rich-black-400: 37, 37, 94;       /* rgb(37, 37, 94) */
+  --rich-black-500: 10, 10, 26;       /* rgb(10, 10, 26) */
+  --rich-black-600: 8, 8, 21;         /* rgb(8, 8, 21) */
+  --rich-black-700: 6, 6, 15;         /* rgb(6, 6, 15) */
+  --rich-black-800: 4, 4, 10;         /* rgb(4, 4, 10) */
+  --rich-black-900: 2, 2, 5;          /* rgb(2, 2, 5) */
 
   --lime: 206, 255, 26;          /* rgb(206, 255, 26) */
   --lime-100: 245, 255, 209;     /* rgb(245, 255, 209) */
@@ -67,9 +67,9 @@
 
 .light {
   --background: var(--cosmic-latte);
-  --foreground: var(--black);
+  --foreground: var(--rich-black);
 
-  --primary: var(--black);
+  --primary: var(--rich-black);
   --primary-foreground: var(--cosmic-latte);
 
   --accent-lime: var(--lime-600);
@@ -86,7 +86,7 @@
   --foreground: var(--cosmic-latte);
 
   --primary: var(--cosmic-latte);
-  --primary-foreground: var(--black);
+  --primary-foreground: var(--rich-black);
 
   --accent-lime: var(--lime);
   --accent-lime-foreground: var(--lime);
@@ -94,7 +94,7 @@
   --accent-electric-blue: var(--electric-blue);
   --accent-violet: var(--violet);
 
-  --homepage-card-bg: var(--black)
+  --homepage-card-bg: var(--rich-black)
 }
 
 /* TODO: Implement the same for framer motion animations using useReducedMotion hook */
@@ -162,7 +162,7 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-sans font-black;
+  @apply font-sans font-rich-black;
 }
 
 p,

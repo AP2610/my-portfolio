@@ -40,13 +40,13 @@ export const Header = () => {
 
   // Dynamic background transformation based on scroll progress
   // As user scrolls from 20% to 40% through the hero section:
-  // Transitions to frosted black
+  // Transitions to frosted rich-black
   const backgroundStyle = useTransform(
     scrollYProgress,
     [0.2, 0.4],
     [
       initialBackgroundColor,
-      frostedBlackBackgroundColor, // frosted black
+      frostedBlackBackgroundColor, // frosted rich-black
     ]
   );
 

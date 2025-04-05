@@ -67,7 +67,7 @@ const SKILLS_FULL = [
 const CvPage = () => {
   return (
     <Section
-      className="mt-[var(--header-height)] print:m-0 print:w-full print:max-w-none print:bg-cosmic-latte print:p-0 print:text-black"
+      className="mt-[var(--header-height)] print:m-0 print:w-full print:max-w-none print:bg-cosmic-latte print:p-0 print:text-rich-black"
       hasTopPadding
       hasBottomPadding
     >
@@ -184,7 +184,7 @@ const CvPage = () => {
       {/* For print only - Certifications and languages */}
       <div className="hidden grid-cols-1 print:mt-0 print:grid print:grid-cols-2 print:gap-10">
         <div>
-          <h4 className="mb-4 text-2xl text-electric-blue print:text-black">Certifications</h4>
+          <h4 className="mb-4 text-2xl text-electric-blue print:text-rich-black">Certifications</h4>
 
           <ul className="flex flex-wrap gap-4 font-sans">
             <li>
@@ -206,7 +206,7 @@ const CvPage = () => {
         </div>
 
         <div>
-          <h4 className="mb-4 text-2xl text-electric-blue print:text-black">Languages</h4>
+          <h4 className="mb-4 text-2xl text-electric-blue print:text-rich-black">Languages</h4>
 
           <ul className="flex flex-wrap gap-4 font-sans">
             <li>
@@ -252,7 +252,7 @@ const CvPage = () => {
       {/* Languages & Certifications - Web only */}
       <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 print:hidden print:grid-cols-2">
         <div>
-          <h4 className="mb-6 text-2xl text-accent-electric-blue print:text-black">Languages</h4>
+          <h4 className="mb-6 text-2xl text-accent-electric-blue print:text-rich-black">Languages</h4>
 
           <ul className="flex flex-wrap gap-2 font-sans">
             <li>
@@ -271,7 +271,7 @@ const CvPage = () => {
         </div>
 
         <div>
-          <h4 className="mb-6 text-2xl text-accent-electric-blue print:text-black">Certifications</h4>
+          <h4 className="mb-6 text-2xl text-accent-electric-blue print:text-rich-black">Certifications</h4>
 
           <ul className="flex flex-wrap gap-2 font-sans">
             <li>
@@ -332,7 +332,7 @@ const CvPage = () => {
         <div className="flex flex-col gap-8 md:flex-row print:gap-6">
           <div className="flex flex-col print:break-inside-avoid">
             <div className="mb-2">
-              <h4 className="text-xl font-semibold text-foreground print:text-black">Ecole hôtelière de Lausanne</h4>
+              <h4 className="text-xl font-semibold text-foreground print:text-rich-black">Ecole hôtelière de Lausanne</h4>
               <p className="text-accent-lime print:text-lime-700">
                 Bachelor of Science Degree, Hospitality Administration/Management
               </p>
@@ -343,7 +343,7 @@ const CvPage = () => {
 
           <div className="flex flex-col print:break-inside-avoid">
             <div className="mb-2">
-              <h4 className="text-xl font-semibold text-foreground print:text-black">Le Wagon</h4>
+              <h4 className="text-xl font-semibold text-foreground print:text-rich-black">Le Wagon</h4>
               <p className="text-accent-lime print:text-lime-700">Computer Programming</p>
             </div>
 
