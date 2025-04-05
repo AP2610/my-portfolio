@@ -1,12 +1,11 @@
 import { Badge } from '@/components/ui/badge';
 import { DownloadButton } from '@/components/features/cv/download-button';
 import { Experience } from '@/components/features/experience';
-import { ExternalLink } from '@/components/ui/external-link';
+import { MyLink } from '@/components/ui/my-link';
 import { MyImage } from '@/components/ui/image';
 import { Section } from '@/components/layout/section';
-import { SocialIcon } from '@/components/ui/social-icon';
+import { SocialIconLink } from '@/components/ui/social-icon-link';
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { FaGithub, FaGlobe, FaLinkedin } from 'react-icons/fa';
 import { experiences } from './data';
 import { InfoBox } from '@/components/ui/info-box';
@@ -150,9 +149,9 @@ const CvPage = () => {
 
           {/* TODO: Check if mailto works in production */}
           <div className="flex gap-4 font-sans text-sm font-medium print:hidden">
-            <SocialIcon platform="github" />
-            <SocialIcon platform="linkedin" />
-            <SocialIcon platform="email" />
+            <SocialIconLink platform="github" />
+            <SocialIconLink platform="linkedin" />
+            <SocialIconLink platform="email" />
           </div>
         </div>
       </Section>
@@ -174,9 +173,9 @@ const CvPage = () => {
           Please keep in mind, my CV contains consolidated and condensed information about my experiences. Should you wish to gain
           a deeper understanding of the projects I have worked on, including the situation, tasks, results, technical details, and
           specializations, I invite you to explore the{' '}
-          <Link href="/projects" className="text-accent-electric-blue hover:text-electric-blue-600 hover:underline">
+          <MyLink type="internal" href="/projects">
             projects section
-          </Link>{' '}
+          </MyLink>{' '}
           of this website.
         </p>
       </header>
@@ -275,51 +274,55 @@ const CvPage = () => {
 
           <ul className="flex flex-wrap gap-2 font-sans">
             <li>
-              <ExternalLink
-                noHover
+              <MyLink
+                type="external"
+                hasHover={false}
                 href="https://www.linkedin.com/in/arjunpuri26/overlay/1574531685954/single-media-viewer/?profileId=ACoAAB61nJkB4W7StLKExMHGTXbDlDd3Lvi6sgs"
               >
                 <Badge color="violet" hasLink>
                   Le Wagon Fullstack Bootcamp
                 </Badge>
-              </ExternalLink>
+              </MyLink>
             </li>
             <li>
-              <ExternalLink
-                noHover
+              <MyLink
+                type="external"
+                hasHover={false}
                 href="https://www.linkedin.com/in/arjunpuri26/overlay/1635498506856/single-media-viewer/?profileId=ACoAAB61nJkB4W7StLKExMHGTXbDlDd3Lvi6sgs"
               >
                 <Badge color="violet" hasLink>
                   React Tutorial
                 </Badge>
-              </ExternalLink>
+              </MyLink>
             </li>
             <li>
-              <ExternalLink noHover href="https://www.udemy.com/certificate/UC-KEQX9LVH/">
+              <MyLink type="external" hasHover={false} href="https://www.udemy.com/certificate/UC-KEQX9LVH/">
                 <Badge color="violet" hasLink>
                   Complete Javascript Certification
                 </Badge>
-              </ExternalLink>
+              </MyLink>
             </li>
             <li>
-              <ExternalLink
-                noHover
+              <MyLink
+                type="external"
+                hasHover={false}
                 href="https://www.linkedin.com/in/arjunpuri26/overlay/1574531584404/single-media-viewer/?profileId=ACoAAB61nJkB4W7StLKExMHGTXbDlDd3Lvi6sgs"
               >
                 <Badge color="violet" hasLink>
                   Learn Javascript Certification
                 </Badge>
-              </ExternalLink>
+              </MyLink>
             </li>
             <li>
-              <ExternalLink
-                noHover
+              <MyLink
+                type="external"
+                hasHover={false}
                 href="https://www.linkedin.com/learning/certificates/b0b5c1a8e36afa9d6aaf0be2d6978fc70a5ad5939ff1afa6d51b071e38e96f5b?trk=backfilled_certificate"
               >
                 <Badge color="violet" hasLink>
                   Testing with Cypress.io
                 </Badge>
-              </ExternalLink>
+              </MyLink>
             </li>
           </ul>
         </div>

@@ -1,7 +1,7 @@
 import { ProjectCard } from '@/components/features/projects/project-card';
 import { Section } from '@/components/layout/section';
 import { Button } from '@/components/ui/buttons';
-import { ExternalLink } from '@/components/ui/external-link';
+import { MyLink } from '@/components/ui/my-link';
 import type { Metadata } from 'next';
 import { FaArrowDown } from 'react-icons/fa';
 import { projectsData } from './data';
@@ -23,11 +23,11 @@ const ProjectsPage = () => {
             <p className="text-foreground">TLDR: Hit the Projects button below if you're just interested in my projects.</p>
 
             <div className="flex items-center gap-4 md:w-1/2">
-              <Button isLinkButton href="/cv" className="w-full">
+              <MyLink type="internal" variant="primary" href="/cv">
                 View my CV here
-              </Button>
+              </MyLink>
 
-              <Button variant="secondary" scrollTo="featured-projects" className="w-full">
+              <Button variant="secondary" scrollTo="featured-projects">
                 Projects <FaArrowDown className="bounce-vertical ml-2" />
               </Button>
             </div>
@@ -67,9 +67,9 @@ const ProjectsPage = () => {
               Additionally, my very first use of React was for a technical assignment during my interview with Clockwork. I built
               a weather widget, which, while simple, was an important learning experience for me. The API is no longer free, but
               the code is still available on my{' '}
-              <ExternalLink href="https://github.com/AP2610?tab=repositories" variant="inline">
+              <MyLink type="external" href="https://github.com/AP2610?tab=repositories" variant="inline">
                 GitHub
-              </ExternalLink>{' '}
+              </MyLink>{' '}
               if you'd like to check it out. (Be kind—it was my first React project, just a few months after I started coding!)
             </p>
           </div>

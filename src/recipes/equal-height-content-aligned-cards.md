@@ -34,9 +34,9 @@ I created the recipe because this was the 500th time I had to do this and in the
     <div className="flex flex-grow flex-col">
       <p className={`${clsx({ 'line-clamp-3': image })} mb-4`}>{situation}</p>
 
-      <Button isLinkButton href={`/projects/${slug}`} variant="electric-blue-secondary" className="mt-auto">
+      <MyLink type="internal" href={`/projects/${slug}`} variant="electric-blue-secondary" className="mt-auto">
         Read More
-      </Button>
+      </MyLink>
     </div>
   </div>
 </article>

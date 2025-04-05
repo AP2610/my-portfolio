@@ -1,5 +1,5 @@
 import { Project } from '@/app/projects/data';
-import { Button } from '@/components/ui/buttons';
+import { MyLink } from '@/components/ui/my-link';
 import { MyImage } from '@/components/ui/image';
 import clsx from 'clsx';
 
@@ -20,9 +20,9 @@ export const ProjectCard = ({ slug, company, role, situation, image }: ProjectCa
           <p className={`${clsx({ 'line-clamp-3': image })} mb-6 text-foreground`}>{situation}</p>
 
           {/* Button is always at the bottom using mt-auto */}
-          <Button isLinkButton href={`/projects/${slug}`} variant="primary-outline" className="mt-auto">
+          <MyLink type="internal" href={`/projects/${slug}`} variant="primary-outline" className="mt-auto">
             Read More
-          </Button>
+          </MyLink>
         </div>
       </div>
     </article>

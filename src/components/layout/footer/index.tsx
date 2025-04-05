@@ -1,9 +1,9 @@
-import { ExternalLink } from '@/components/ui/external-link';
-import { Logo } from '@/components/ui/logo';
 import { NavLink } from '@/components/layout/navigation/nav-link';
 import { NAVIGATION_LINKS } from '@/components/layout/navigation/nav-links';
 import { Section } from '@/components/layout/section';
-import { SocialIcon } from '@/components/ui/social-icon';
+import { MyLink } from '@/components/ui/my-link';
+import { Logo } from '@/components/ui/logo';
+import { SocialIconLink } from '@/components/ui/social-icon-link';
 import { FaEnvelope } from 'react-icons/fa';
 
 export const Footer = () => {
@@ -37,17 +37,17 @@ export const Footer = () => {
             <h3 className="text-xl font-bold text-foreground">Let's Connect</h3>
             <p className="text-foreground">Interested in working together? Let's chat!</p>
 
-            <ExternalLink href="mailto:corned-tippets-5g@icloud.com" variant="secondary">
+            <MyLink type="external" href="mailto:corned-tippets-5g@icloud.com" variant="secondary">
               Get in Touch <FaEnvelope className="tilt-shaking ml-2" />
-            </ExternalLink>
+            </MyLink>
           </div>
 
           <div>
             <h3 className="mb-4 text-xl font-bold text-foreground">More Ways to Connect</h3>
 
             <div className="flex gap-4">
-              <SocialIcon platform="github" />
-              <SocialIcon platform="linkedin" />
+              <SocialIconLink platform="github" />
+              <SocialIconLink platform="linkedin" />
             </div>
           </div>
         </div>

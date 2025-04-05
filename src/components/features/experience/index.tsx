@@ -1,6 +1,6 @@
 import { Experience as ExperienceType } from '@/app/cv/data';
 import clsx from 'clsx';
-import { ExternalLink } from '../../ui/external-link';
+import { MyLink } from '../../ui/my-link';
 
 type ExperienceProps = ExperienceType & {
   className?: string;
@@ -43,9 +43,9 @@ export const Experience = ({
         )}
 
         {link && (
-          <ExternalLink href={link.url} className="mt-4 print:hidden">
+          <MyLink type="external" href={link.url} className="mt-4 print:hidden">
             {link.text}
-          </ExternalLink>
+          </MyLink>
         )}
       </div>
     </article>

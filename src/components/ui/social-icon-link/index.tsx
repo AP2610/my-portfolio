@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
-import { ExternalLink } from '../external-link';
+import { MyLink } from '../my-link';
 
 type SocialPlatform = 'github' | 'linkedin' | 'email';
 
@@ -30,14 +30,14 @@ const PLATFORM_CONFIG = {
   },
 } as const;
 
-export const SocialIcon = ({ platform, size = 24, className, iconClassNAme }: SocialIconProps) => {
+export const SocialIconLink = ({ platform, size = 24, className, iconClassNAme }: SocialIconProps) => {
   const { icon: Icon, href, title } = PLATFORM_CONFIG[platform];
 
   const classes = clsx('text-accent-electric-blue hover:text-electric-blue-700 hover:scale-110 transition-all !p-0', className);
 
   return (
-    <ExternalLink href={href} className={classes} aria-label={title} variant="icon-button" noHover>
+    <MyLink type="external" href={href} className={classes} aria-label={title} variant="icon-button">
       <Icon size={size} className={iconClassNAme} />
-    </ExternalLink>
+    </MyLink>
   );
 };

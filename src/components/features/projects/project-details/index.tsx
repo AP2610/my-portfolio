@@ -1,7 +1,7 @@
 import { Project as ProjectType } from '@/app/projects/data';
 import { Badge } from '@/components/ui/badge';
+import { MyLink } from '@/components/ui/my-link';
 import { MyImage } from '@/components/ui/image';
-import { ExternalLink } from '../external-link';
 
 type ProjectProps = ProjectType;
 
@@ -79,15 +79,15 @@ export const ProjectDetails = ({
 
         <div className="flex gap-4 pt-4">
           {websiteUrl && (
-            <ExternalLink href={websiteUrl} variant="primary" showIcon>
+            <MyLink type="external" href={websiteUrl} variant="primary" showIcon>
               Visit Project Website
-            </ExternalLink>
+            </MyLink>
           )}
 
           {githubUrl && (
-            <ExternalLink href={githubUrl} variant="electric-blue-secondary" showIcon>
+            <MyLink type="external" href={githubUrl} variant="electric-blue-secondary" showIcon>
               View Source Code
-            </ExternalLink>
+            </MyLink>
           )}
         </div>
       </div>

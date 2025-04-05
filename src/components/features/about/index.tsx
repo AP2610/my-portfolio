@@ -1,7 +1,7 @@
-import { Button } from '@/components/ui/buttons';
 import { Section } from '@/components/layout/section';
 import { Badge } from '@/components/ui/badge';
 import { Blockquote } from '@/components/ui/blockquote';
+import { MyLink } from '@/components/ui/my-link';
 
 const specialisations = ['JavaScript', 'TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'Sanity CMS'];
 
@@ -112,13 +112,13 @@ export const About = () => {
       </div>
 
       <div className="flex gap-4 md:mt-12 md:w-1/4">
-        <Button isLinkButton href="/cv" className="w-full">
+        <MyLink type="internal" variant="primary" href="/cv" className="w-full">
           View My CV
-        </Button>
+        </MyLink>
 
-        <Button isLinkButton href="/projects" variant="electric-blue-secondary" className="w-full">
+        <MyLink type="internal" href="/projects" variant="electric-blue-secondary" className="w-full">
           See My Projects
-        </Button>
+        </MyLink>
       </div>
     </Section>
   );
