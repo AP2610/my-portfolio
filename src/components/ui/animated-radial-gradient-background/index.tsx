@@ -1,0 +1,26 @@
+'use client';
+
+import { motion } from 'framer-motion';
+
+export const AnimatedRadialGradientBackground = () => {
+  return (
+    <motion.div
+      initial={{ scale: 0.5, opacity: 0 }}
+      animate={{
+        scale: 1,
+        opacity: 0.8,
+      }}
+      transition={{
+        scale: {
+          duration: 3,
+          ease: 'easeInOut',
+        },
+        opacity: {
+          duration: 5,
+          ease: 'easeIn',
+        },
+      }}
+      className="radial-background-gradient absolute bottom-0 left-0 right-0 top-[-20%] -z-10"
+    ></motion.div>
+  );
+};
