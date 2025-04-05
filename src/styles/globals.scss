@@ -1,5 +1,6 @@
 @use './animations/bounce.scss';
 @use './animations/shake.scss';
+@use './backgrounds.scss';
 
 @tailwind base;
 @tailwind components;
@@ -90,7 +91,6 @@
   --electric-blue-900: 0, 50, 56;
   /* rgb(0, 50, 56) */
 
-  /* TODO: This is clearly not cosmic-latte, but too many usages to change it now. Refactor cosmic-latte to cosmic-latte */
   --cosmic-latte: 255, 248, 231;
   /* rgb(255, 248, 231) */
   --cosmic-latte-100: 255, 253, 250;
@@ -185,26 +185,6 @@
 
 body {
   background: rgba(var(--background));
-}
-
-/* TODO: Extract to background colors css file */
-
-.custom-background-violet,
-.custom-background-electric-blue {
-  background: rgba(var(--background));
-}
-
-.custom-background-violet {
-  background: linear-gradient(167deg, rgba(var(--background)) 60%, rgba(var(--violet)) 100%);
-}
-
-.custom-background-electric-blue {
-  background: linear-gradient(167deg, rgba(var(--background)) 70%, rgba(var(--electric-blue)) 100%);
-}
-
-.radial-background-gradient {
-  background: rgb(84, 0, 253);
-  background: radial-gradient(circle, rgba(84, 0, 253, 0.5088629201680672) 5%, rgba(84, 0, 253, 0) 60%);
 }
 
 h1,

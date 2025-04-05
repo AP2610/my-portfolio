@@ -1,0 +1,13 @@
+.custom-background {
+  &-violet {
+    background: linear-gradient(167deg, rgba(var(--background)) 60%, rgba(var(--violet)) 100%);
+  }
+
+  &-electric-blue {
+    background: linear-gradient(167deg, rgba(var(--background)) 70%, rgba(var(--electric-blue)) 100%);
+  }
+}
+
+.radial-background-gradient {
+  background: radial-gradient(circle, rgba(var(--violet-600), 0.5088629201680672) 5%, rgba(var(--violet-600), 0) 60%);
+}
