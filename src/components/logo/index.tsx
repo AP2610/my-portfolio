@@ -7,7 +7,7 @@ type LogoProps = {
 
 export const Logo = ({ isNavOpen }: LogoProps) => {
   const linkLogoClasses = clsx('text-3xl z-20 relative font-sans font-black transition-colors duration-300', {
-    'text-accent-blue hover:text-blue-700': isNavOpen,
+    'text-accent-electric-blue hover:text-electric-blue-700': isNavOpen,
     'text-accent-lime hover:text-lime-700': !isNavOpen,
   });
 

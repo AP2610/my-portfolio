@@ -21,7 +21,7 @@ export const ProjectDetails = ({
   return (
     <article className="space-y-8 border-b border-cosmic-latte/10 last:border-b-0">
       <header className="mb-8">
-        <h2 className="mb-4 text-2xl text-accent-blue">{company}</h2>
+        <h2 className="mb-4 text-2xl text-accent-electric-blue">{company}</h2>
         <span className="mb-2 font-sans text-xl font-medium text-foreground md:mb-0">{role}</span>
         <span className="block font-sans font-medium text-accent-lime md:ml-4 md:inline">{period}</span>
       </header>
@@ -85,7 +85,7 @@ export const ProjectDetails = ({
           )}
 
           {githubUrl && (
-            <ExternalLink href={githubUrl} variant="blue-secondary" showIcon>
+            <ExternalLink href={githubUrl} variant="electric-blue-secondary" showIcon>
               View Source Code
             </ExternalLink>
           )}

@@ -33,7 +33,7 @@ const PLATFORM_CONFIG = {
 export const SocialIcon = ({ platform, size = 24, className, iconClassNAme }: SocialIconProps) => {
   const { icon: Icon, href, title } = PLATFORM_CONFIG[platform];
 
-  const classes = clsx('text-accent-blue hover:text-blue-700 hover:scale-110 transition-all !p-0', className);
+  const classes = clsx('text-accent-electric-blue hover:text-electric-blue-700 hover:scale-110 transition-all !p-0', className);
 
   return (
     <ExternalLink href={href} className={classes} aria-label={title} variant="icon-button" noHover>

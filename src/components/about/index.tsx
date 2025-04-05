@@ -9,7 +9,7 @@ export const About = () => {
   return (
     <Section className="space-y-8">
       <h2 className="text-3xl text-foreground md:text-4xl">
-        About <span className="text-accent-blue">Me</span>
+        About <span className="text-accent-electric-blue">Me</span>
       </h2>
 
       <div className="space-y-4 text-foreground">
@@ -22,9 +22,10 @@ export const About = () => {
 
         <p>
           I have worked on a diverse range of projects across e-commerce, telecom, logistics, media, and public sector
-          domains—including the <span className="text-accent-blue">Corona Dashboard</span>, which saw over{' '}
-          <span className="text-accent-blue">250,000 daily visitors</span> at its peak. This project was particularly meaningful,
-          requiring rapid execution, accessibility considerations, and a high level of responsibility during a critical period.
+          domains—including the <span className="text-accent-electric-blue">Corona Dashboard</span>, which saw over{' '}
+          <span className="text-accent-electric-blue">250,000 daily visitors</span> at its peak. This project was particularly
+          meaningful, requiring rapid execution, accessibility considerations, and a high level of responsibility during a
+          critical period.
         </p>
 
         <p>
@@ -96,7 +97,7 @@ export const About = () => {
 
       {/* TODO: consider adding info box section here */}
 
-      <Blockquote color="blue">
+      <Blockquote color="electric-blue">
         Quality is king, but flexibility is key. I believe in delivering high-quality work while adapting to real-world
         constraints.
       </Blockquote>
@@ -115,7 +116,7 @@ export const About = () => {
           View My CV
         </Button>
 
-        <Button isLinkButton href="/projects" variant="blue-secondary" className="w-full">
+        <Button isLinkButton href="/projects" variant="electric-blue-secondary" className="w-full">
           See My Projects
         </Button>
       </div>

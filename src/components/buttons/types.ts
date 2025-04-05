@@ -1,1 +1,1 @@
-export type ButtonVariants = 'primary' | 'primary-outline' | 'secondary' | 'icon-button' | 'blue-secondary';
+export type ButtonVariants = 'primary' | 'primary-outline' | 'secondary' | 'icon-button' | 'electric-blue-secondary';

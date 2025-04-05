@@ -16,7 +16,7 @@ export const Footer = () => {
           <div className="space-y-4">
             <Logo isNavOpen={false} />
 
-            <p className="text-accent-blue">Building Reliable, Engaging & User-Centric Web Experiences</p>
+            <p className="text-accent-electric-blue">Building Reliable, Engaging & User-Centric Web Experiences</p>
           </div>
 
           <div>

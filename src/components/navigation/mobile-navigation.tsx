@@ -21,7 +21,7 @@ export const MobileNavigation = ({ isOpen, setIsOpen, className }: MobileNavigat
   }, [isOpen]);
 
   const motionSpanCommonClasses = `absolute h-[2px] rounded-md transition-[background-color] duration-200`;
-  const backgroundColor = isOpen ? 'rgb(var(--accent-blue))' : 'rgb(var(--accent-lime))';
+  const backgroundColor = isOpen ? 'rgb(var(--accent-electric-blue))' : 'rgb(var(--accent-lime))';
 
   return (
     <nav className={clsx('h-14 w-14', className)}>
@@ -109,7 +109,7 @@ export const MobileNavigation = ({ isOpen, setIsOpen, className }: MobileNavigat
 
       {/* Full-screen overlay menu */}
       <motion.div
-        className="custom-background-blue absolute h-svh w-full p-4"
+        className="custom-background-electric-blue absolute h-svh w-full p-4"
         style={{
           top: 0,
           left: '50%',
@@ -139,9 +139,9 @@ export const MobileNavigation = ({ isOpen, setIsOpen, className }: MobileNavigat
                   // TODO: This logic id duplicated in dektop nav, refactor
                   className={`${
                     (link.href !== '/' && pathname.startsWith(link.href)) || pathname === link.href
-                      ? 'text-accent-blue'
+                      ? 'text-accent-electric-blue'
                       : 'text-foreground'
-                  } hover:text-accent-blue`}
+                  } hover:text-accent-electric-blue`}
                   href={link.href}
                 >
                   {link.label}

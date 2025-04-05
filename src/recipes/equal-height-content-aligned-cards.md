@@ -28,13 +28,13 @@ I created the recipe because this was the 500th time I had to do this and in the
   {image && <MyImage src={image} alt={`${company} project`} containerClasses="aspect-video" />}
 
   <div className="flex flex-grow flex-col space-y-4 p-6">
-    <h2 className="text-2xl text-blue">{company}</h2>
+    <h2 className="text-2xl text-electric-blue">{company}</h2>
     <p className="text-xl font-medium">{role}</p>
 
     <div className="flex flex-grow flex-col">
       <p className={`${clsx({ 'line-clamp-3': image })} mb-4`}>{situation}</p>
 
-      <Button isLinkButton href={`/projects/${slug}`} variant="blue-secondary" className="mt-auto">
+      <Button isLinkButton href={`/projects/${slug}`} variant="electric-blue-secondary" className="mt-auto">
         Read More
       </Button>
     </div>

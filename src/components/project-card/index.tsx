@@ -12,7 +12,7 @@ export const ProjectCard = ({ slug, company, role, situation, image }: ProjectCa
       {image && <MyImage src={image} alt={`${company} project`} containerClasses="aspect-video" sizes="40vw" />}
 
       <div className="flex flex-grow flex-col space-y-4 p-4">
-        <h2 className="text-2xl text-accent-blue">{company}</h2>
+        <h2 className="text-2xl text-accent-electric-blue">{company}</h2>
         <p className="text-xl font-semibold text-foreground">{role}</p>
 
         <div className="flex flex-grow flex-col">

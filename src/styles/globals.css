@@ -39,16 +39,16 @@
   --violet-800: 42, 0, 126;      /* rgb(42, 0, 126) */
   --violet-900: 21, 0, 63;       /* rgb(21, 0, 63) */
 
-  --blue: 27, 231, 255;          /* rgb(27, 231, 255) */
-  --blue-100: 209, 250, 255;     /* rgb(209, 250, 255) */
-  --blue-200: 163, 246, 255;     /* rgb(163, 246, 255) */
-  --blue-300: 117, 241, 255;     /* rgb(117, 241, 255) */
-  --blue-400: 71, 237, 255;      /* rgb(71, 237, 255) */
-  --blue-500: 27, 231, 255;      /* rgb(27, 231, 255) */
-  --blue-600: 0, 202, 224;       /* rgb(0, 202, 224) */
-  --blue-700: 0, 151, 168;       /* rgb(0, 151, 168) */
-  --blue-800: 0, 101, 112;       /* rgb(0, 101, 112) */
-  --blue-900: 0, 50, 56;         /* rgb(0, 50, 56) */
+  --electric-blue: 27, 231, 255;          /* rgb(27, 231, 255) */
+  --electric-blue-100: 209, 250, 255;     /* rgb(209, 250, 255) */
+  --electric-blue-200: 163, 246, 255;     /* rgb(163, 246, 255) */
+  --electric-blue-300: 117, 241, 255;     /* rgb(117, 241, 255) */
+  --electric-blue-400: 71, 237, 255;      /* rgb(71, 237, 255) */
+  --electric-blue-500: 27, 231, 255;      /* rgb(27, 231, 255) */
+  --electric-blue-600: 0, 202, 224;       /* rgb(0, 202, 224) */
+  --electric-blue-700: 0, 151, 168;       /* rgb(0, 151, 168) */
+  --electric-blue-800: 0, 101, 112;       /* rgb(0, 101, 112) */
+  --electric-blue-900: 0, 50, 56;         /* rgb(0, 50, 56) */
 
   /* TODO: This is clearly not cosmic-latte, but too many usages to change it now. Refactor cosmic-latte to cosmic-latte */
   --cosmic-latte: 255, 248, 231;        /* rgb(255, 248, 231) */
@@ -75,7 +75,7 @@
   --accent-lime: var(--lime-600);
   --accent-lime-foreground: var(--lime-700);
 
-  --accent-blue: var(--blue-600);
+  --accent-electric-blue: var(--electric-blue-600);
   --accent-violet: var(--violet-600);
 
   --homepage-card-bg: var(--violet-100)
@@ -91,7 +91,7 @@
   --accent-lime: var(--lime);
   --accent-lime-foreground: var(--lime);
 
-  --accent-blue: var(--blue);
+  --accent-electric-blue: var(--electric-blue);
   --accent-violet: var(--violet);
 
   --homepage-card-bg: var(--black)
@@ -139,7 +139,7 @@ body {
 /* TODO: Extract to background colors css file */
 
 .custom-background-violet,
-.custom-background-blue {
+.custom-background-electric-blue {
   background: rgba(var(--background));
 }
 
@@ -147,8 +147,8 @@ body {
   /* background: linear-gradient(167deg, rgba(var(--background)) 60%, rgba(var(--violet)) 100%); */
 }
 
-.custom-background-blue {
-  background: linear-gradient(167deg, rgba(var(--background)) 70%, rgba(var(--blue)) 100%);
+.custom-background-electric-blue {
+  background: linear-gradient(167deg, rgba(var(--background)) 70%, rgba(var(--electric-blue)) 100%);
 }
 
 .homepage-radial-background {
