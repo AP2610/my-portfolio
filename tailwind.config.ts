@@ -28,7 +28,7 @@ export default {
     },
     extend: {
       padding: {
-        'header-height': 'calc(64px + var(--header-height))',
+        'header-height': 'calc(64px + calc(var(--header-height)/2))',
       },
       fontSize: {
         '4xl': ['2.25rem', { lineHeight: '1.3' }],
