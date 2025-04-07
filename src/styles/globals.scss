@@ -128,10 +128,13 @@
   --accent-electric-blue: var(--electric-blue-600);
   --accent-violet: var(--violet-600);
 
-  --homepage-card-bg: var(--violet-100)
+  --homepage-card-bg: var(--cosmic-latte-400);
+
+  --radial-background-color: var(--cosmic-latte-700);
 }
 
 .dark {
+  // Tailwind bg-gray-900
   --background: 17 24 39;
   --foreground: var(--cosmic-latte);
 
@@ -144,7 +147,9 @@
   --accent-electric-blue: var(--electric-blue);
   --accent-violet: var(--violet);
 
-  --homepage-card-bg: var(--rich-black)
+  --homepage-card-bg: var(--rich-black);
+
+  --radial-background-color: var(--lime);
 }
 
 /* TODO: Implement the same for framer motion animations using useReducedMotion hook */

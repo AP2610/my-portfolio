@@ -1,5 +1,6 @@
 .custom-background {
   &-violet {
+    // TODO: consider getting rid of this background
     background: linear-gradient(167deg, rgba(var(--background)) 60%, rgba(var(--violet)) 100%);
   }
 
@@ -9,5 +10,6 @@
 }
 
 .radial-background-gradient {
-  background: radial-gradient(circle, rgba(var(--violet-600), 0.5088629201680672) 5%, rgba(var(--violet-600), 0) 60%);
+  background: radial-gradient(circle, rgba(var(--radial-background-color), 0.8) 3%, rgba(var(--radial-background-color), 0.3) 25%, rgba(var(--radial-background-color), 0) 45%);
+  transition: background 0.5s ease-in-out;
 }
