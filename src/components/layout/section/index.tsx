@@ -7,7 +7,7 @@ type SectionProps = {
   isFullWidth?: boolean;
   hasBottomPadding?: boolean;
   hasTopPadding?: boolean;
-  hasHeaderMarginTop?: boolean;
+  hasHeaderPaddingTop?: boolean;
 };
 
 export const Section = ({
@@ -17,7 +17,7 @@ export const Section = ({
   isFullWidth = false,
   hasBottomPadding = false,
   hasTopPadding = false,
-  hasHeaderMarginTop = false,
+  hasHeaderPaddingTop = false,
 }: SectionProps) => {
   const sectionClasses = clsx(
     {
@@ -25,7 +25,7 @@ export const Section = ({
       container: !isFullWidth,
       'pt-16': hasTopPadding,
       'pb-16': hasBottomPadding,
-      'mt-[var(--header-height)]': hasHeaderMarginTop,
+      'pt-header-height': hasHeaderPaddingTop,
     },
     className
   );
