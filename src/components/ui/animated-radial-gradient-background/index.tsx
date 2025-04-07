@@ -12,15 +12,15 @@ export const AnimatedRadialGradientBackground = () => {
       }}
       transition={{
         scale: {
-          duration: 3,
+          duration: 2,
           ease: 'easeInOut',
         },
         opacity: {
-          duration: 5,
+          duration: 4,
           ease: 'easeIn',
         },
       }}
-      className="radial-background-gradient absolute bottom-0 left-0 right-0 top-0 -z-10"
+      className="radial-background-gradient absolute bottom-0 left-0 right-0 top-[40px] -z-10"
     ></motion.div>
   );
 };
