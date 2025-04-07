@@ -48,7 +48,7 @@ const RootLayout = ({
       </head>
 
       <ThemeProvider>
-        <body className={clsx(`${raleway.variable} flex min-h-screen flex-col antialiased`)}>
+        <body className={clsx(`${raleway.variable} flex min-h-screen flex-col overflow-hidden antialiased`)}>
           <Header />
           <main className="flex-grow">{children}</main>
           <Footer />
