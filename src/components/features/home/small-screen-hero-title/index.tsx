@@ -20,6 +20,7 @@ export const SmallScreenHeroTitle = ({ className }: SmallScreenHeroTitleProps) =
         <AnimatedText text="Hi, I'm Arjun" delay={0.4} onComplete={() => setShowDescription(true)} />
       </h1>
 
+      {/* TODO: Create hook or HOC to handle this for various scenarios */}
       <div className="relative">
         {/* This is a hack to avoid layout shift when the AnimatedElementPresence component below enters the DOM */}
         {!showDescription && (
