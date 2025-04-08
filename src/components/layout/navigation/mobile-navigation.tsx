@@ -47,12 +47,11 @@ export const MobileNavigation = ({ isOpen, setIsOpen, className }: MobileNavigat
               top: '30%',
               left: '50%',
               x: '-50%',
-              y: '-50%',
               backgroundColor: backgroundColor,
             }}
             variants={{
               open: {
-                rotate: ['0deg', '0deg', '45deg'],
+                rotate: ['0deg', '45deg'],
                 top: ['30%', '50%'],
               },
               closed: {
@@ -74,7 +73,7 @@ export const MobileNavigation = ({ isOpen, setIsOpen, className }: MobileNavigat
             }}
             variants={{
               open: {
-                rotate: ['0deg', '0deg', '-45deg'],
+                rotate: ['0deg', '-45deg'],
               },
               closed: {
                 rotate: ['-45deg', '0deg'],
@@ -85,22 +84,19 @@ export const MobileNavigation = ({ isOpen, setIsOpen, className }: MobileNavigat
           {/* Bottom line of hamburger */}
           <motion.span
             className={`${motionSpanCommonClasses} w-4`}
-            initial={{ rotate: '0deg' }}
+            initial={{ opacity: 1 }}
             style={{
               bottom: '30%',
               left: 'calc(50% + 8px)',
               x: '-50%',
-              y: '50%',
               backgroundColor: backgroundColor,
             }}
             variants={{
               open: {
-                rotate: ['0deg', '0deg', '45deg'],
-                bottom: ['30%', '43%'],
-                left: ['calc(50% + 10px)', '57%'],
+                opacity: 0,
               },
               closed: {
-                rotate: ['45deg', '0deg'],
+                opacity: 1,
               },
             }}
           ></motion.span>
@@ -109,7 +105,7 @@ export const MobileNavigation = ({ isOpen, setIsOpen, className }: MobileNavigat
 
       {/* Full-screen overlay menu */}
       <motion.div
-        className="custom-background-electric-blue absolute h-svh w-full p-4"
+        className="absolute h-dvh w-full bg-background p-4"
         style={{
           top: 0,
           left: '50%',
@@ -125,8 +121,13 @@ export const MobileNavigation = ({ isOpen, setIsOpen, className }: MobileNavigat
           opacity: isOpen ? 1 : 0,
         }}
         transition={{
-          duration: 0.6,
-          ease: [0.3, 0, 0.2, 1], // Custom easing for smooth animation
+          clipPath: {
+            duration: 0.3,
+          },
+          opacity: {
+            duration: 0.6,
+          },
+          ease: 'easeInOut',
         }}
       >
         {/* Navigation links container */}
