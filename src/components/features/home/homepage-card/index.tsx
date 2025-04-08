@@ -18,7 +18,7 @@ export const HomepageCard = ({
   shouldWrap = false,
 }: HomepageCardProps) => {
   const cardClasses = clsx(
-    'flex justify-center rounded-md bg-homepage-card-bg p-6 text-foreground shadow-md hover:shadow-2xl',
+    'flex justify-center rounded-md bg-homepage-card-bg p-6 text-foreground shadow-md',
     {
       'text-center': textAlign === 'center',
       'text-left': textAlign === 'left',
