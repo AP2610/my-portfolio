@@ -58,26 +58,3 @@ I created the recipe because this was the 500th time I had to do this and in the
 
 3. **Button Alignment**
    - Uses `mt-auto` so its pushed to the bottom
-
-## Use Cases
-
-- Project portfolios
-- Blog post cards
-- Product listings
-- Team member profiles
-- Feature showcases
-
-## Browser Support
-
-This solution uses modern CSS Flexbox properties, which are supported in all modern browsers:
-
-- Chrome 84+
-- Firefox 81+
-- Safari 14+
-- Edge 84+
-
-## Notes
-
-- The `line-clamp-3` class requires Tailwind CSS line-clamp plugin
-- Consider adding fallbacks for older browsers if needed
-- Adjust spacing values (`mt-6`, `p-6`, etc.) to match your design system
