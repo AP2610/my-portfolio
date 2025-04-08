@@ -1,5 +1,7 @@
 import clsx from 'clsx';
 
+type PaddingSizes = 'small' | 'medium' | 'large';
+
 type SectionProps = {
   children: React.ReactNode;
   className?: string;
@@ -8,12 +10,16 @@ type SectionProps = {
   hasBottomPadding?: boolean;
   hasTopPadding?: boolean;
   hasHeaderPaddingTop?: boolean;
+  paddingTop?: PaddingSizes;
+  paddingBottom?: PaddingSizes;
 };
 
 export const Section = ({
   children,
   className,
   id,
+  paddingTop,
+  paddingBottom,
   isFullWidth = false,
   hasBottomPadding = false,
   hasTopPadding = false,
@@ -21,11 +27,16 @@ export const Section = ({
 }: SectionProps) => {
   const sectionClasses = clsx(
     {
-      'w-full': isFullWidth,
       container: !isFullWidth,
-      'pt-16': hasTopPadding,
-      'pb-16': hasBottomPadding,
+      'w-full': isFullWidth,
+      // TODO: Remove hasTopPadding and hasBottomPadding, once they have all been removed
+      'pt-16': hasTopPadding || paddingTop === 'medium',
+      'pb-16': hasBottomPadding || paddingBottom === 'medium',
       'pt-header-height': hasHeaderPaddingTop,
+      'pt-8': paddingTop === 'small',
+      'pt-24': paddingTop === 'large',
+      'pb-8': paddingBottom === 'small',
+      'pb-24': paddingBottom === 'large',
     },
     className
   );

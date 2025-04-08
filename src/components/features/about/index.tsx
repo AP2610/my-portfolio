@@ -1,4 +1,3 @@
-import { Section } from '@/components/layout/section';
 import { Badge } from '@/components/ui/badge';
 import { Blockquote } from '@/components/ui/blockquote';
 import { MyLink } from '@/components/ui/my-link';
@@ -7,7 +6,7 @@ const specialisations = ['JavaScript', 'TypeScript', 'React', 'Next.js', 'Tailwi
 
 export const About = () => {
   return (
-    <Section className="space-y-8">
+    <article className="space-y-8">
       <h2 className="text-3xl text-foreground md:text-4xl">
         About <span className="text-accent-electric-blue">Me</span>
       </h2>
@@ -120,6 +119,6 @@ export const About = () => {
           See My Projects
         </MyLink>
       </div>
-    </Section>
+    </article>
   );
 };
