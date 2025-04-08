@@ -7,7 +7,7 @@ type IconListProps = {
 
 export const IconList = ({ iconList }: IconListProps) => {
   return (
-    <ul className="flex items-center gap-2">
+    <ul className="flex flex-wrap items-center gap-2">
       {iconList.map((icon) => (
         <li key={icon.src}>
           <MyImage src={icon.src} alt="Technology icon" containerClasses="w-6 h-6" />
