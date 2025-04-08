@@ -6,9 +6,10 @@ type AnimatedTextProps = {
   text: string;
   className?: string;
   delay?: number;
+  onComplete?: () => void;
 };
 
-export const AnimatedText = ({ text, className, delay = 0 }: AnimatedTextProps) => {
+export const AnimatedText = ({ text, className, delay = 0, onComplete }: AnimatedTextProps) => {
   // Create an array of letters
   const letters = Array.from(text);
 
@@ -39,7 +40,7 @@ export const AnimatedText = ({ text, className, delay = 0 }: AnimatedTextProps) 
   };
 
   return (
-    <motion.span className={className} variants={container} initial="hidden" animate="visible">
+    <motion.span className={className} variants={container} initial="hidden" animate="visible" onAnimationComplete={onComplete}>
       {letters.map((letter, index) => (
         <motion.span variants={child} key={index}>
           {letter === ' ' ? '\u00A0' : letter}
