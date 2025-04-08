@@ -1,10 +1,11 @@
 import { Footer } from '@/components/layout/footer';
-import { Header } from '@/components/layout/header';
+// import { Header } from '@/components/layout/header';
 import { ThemeProvider } from '@/context/theme-context';
 import clsx from 'clsx';
 import type { Metadata } from 'next';
 import { Raleway } from 'next/font/google';
 import '../styles/globals.scss';
+import { Sidebar } from '@/components/layout/sidebar';
 
 const raleway = Raleway({
   variable: '--font-raleway',
@@ -48,10 +49,17 @@ const RootLayout = ({
       </head>
 
       <ThemeProvider>
-        <body className={clsx(`${raleway.variable} flex min-h-screen flex-col antialiased`)}>
-          <Header />
-          <main className="flex-grow">{children}</main>
-          <Footer />
+        <body className={clsx(`${raleway.variable} antialiased`)}>
+          {/* <Header /> */}
+
+          <div className="flex min-h-[100dvh]">
+            <Sidebar />
+
+            <div className="flex flex-1 flex-col">
+              <main className="flex-grow">{children}</main>
+              <Footer />
+            </div>
+          </div>
         </body>
       </ThemeProvider>
     </html>
