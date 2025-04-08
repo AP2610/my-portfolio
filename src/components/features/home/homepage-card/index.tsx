@@ -6,6 +6,7 @@ type HomepageCardProps = {
   textAlign?: 'center' | 'left';
   alignItems?: 'center' | 'start';
   flexDirection?: 'column' | 'row';
+  shouldWrap?: boolean;
 };
 
 export const HomepageCard = ({
@@ -14,9 +15,10 @@ export const HomepageCard = ({
   textAlign = 'center',
   alignItems = 'center',
   flexDirection = 'column',
+  shouldWrap = false,
 }: HomepageCardProps) => {
   const cardClasses = clsx(
-    'flex justify-center rounded-md bg-homepage-card-bg p-6 text-foreground shadow-md transition-all duration-300 hover:scale-105 hover:shadow-2xl',
+    'flex justify-center rounded-md bg-homepage-card-bg p-6 text-foreground shadow-md hover:shadow-2xl',
     {
       'text-center': textAlign === 'center',
       'text-left': textAlign === 'left',
@@ -24,6 +26,7 @@ export const HomepageCard = ({
       'items-start': alignItems === 'start',
       'flex-col': flexDirection === 'column',
       'flex-row': flexDirection === 'row',
+      'flex-wrap': shouldWrap,
     },
     className
   );
