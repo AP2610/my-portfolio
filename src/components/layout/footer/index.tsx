@@ -10,7 +10,7 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="custom-background-violet print:hidden">
+    <footer className="print:hidden">
       <Section hasTopPadding hasBottomPadding>
         <div className="grid gap-8 border-t border-primary pt-8 md:grid-cols-2 md:gap-12 lg:grid-cols-4">
           <div className="space-y-4">
