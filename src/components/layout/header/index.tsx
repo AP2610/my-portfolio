@@ -1,21 +1,28 @@
 'use client';
 
+import { NavigationMenu } from '@/components/layout/navigation';
 import { AnimatedElementPresence } from '@/components/ui/animated-element-presence';
 import { Logo } from '@/components/ui/logo';
-import { NavigationMenu } from '@/components/layout/navigation';
 import { ThemeSwitcher } from '@/components/ui/theme-switcher';
+import clsx from 'clsx';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
-export const Header = () => {
+type HeaderProps = {
+  className?: string;
+};
+
+export const Header = ({ className }: HeaderProps) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const pathname = usePathname();
 
+  const headerClasses = clsx(
+    'fixed left-0 right-0 top-0 z-10 h-[var(--header-height)] bg-background/50 backdrop-blur-[10px] print:hidden',
+    className
+  );
+
   return (
-    <header
-      key={pathname}
-      className="fixed left-0 right-0 top-0 z-10 h-[var(--header-height)] bg-background/50 backdrop-blur-[10px] md:hidden print:hidden"
-    >
+    <header key={pathname} className={headerClasses}>
       <AnimatedElementPresence
         entryAnimationDelay={0.2}
         animationProperty="opacity"

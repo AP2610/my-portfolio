@@ -1,9 +1,26 @@
 import { MyImage } from '@/components/ui/image';
+import { Logo } from '@/components/ui/logo';
+import { ThemeSwitcher } from '@/components/ui/theme-switcher';
+import clsx from 'clsx';
 import { DesktopNavigation } from '../navigation/desktop-navigation';
 
-export const Sidebar = () => {
+type SidebarProps = {
+  className?: string;
+};
+
+export const Sidebar = ({ className }: SidebarProps) => {
+  const asideClasses = clsx(
+    'bg-sidebar-bg sticky top-0 h-screen w-[300px] flex-col items-center gap-16 py-16 text-foreground shadow-md',
+    className
+  );
+
   return (
-    <aside className="sticky top-0 hidden h-screen w-[300px] flex-col items-center gap-16 bg-homepage-card-bg py-16 text-foreground md:flex">
+    <aside className={asideClasses}>
+      <div className="flex items-center gap-6">
+        <Logo isNavOpen={false} />
+        <ThemeSwitcher />
+      </div>
+
       <div className="flex flex-col items-center gap-4 px-6">
         <MyImage
           src="/cv/headshot.webp"
