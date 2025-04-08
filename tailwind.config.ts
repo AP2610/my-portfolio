@@ -14,9 +14,9 @@ export default {
     container: {
       center: true,
       padding: {
-        DEFAULT: '1rem',
-        sm: '1.5rem',
-        lg: '2rem',
+        DEFAULT: '1.5rem',
+        md: '2rem',
+        lg: '2.5rem',
       },
       screens: {
         sm: '640px',
@@ -54,6 +54,7 @@ export default {
         'accent-electric-blue': 'rgba(var(--accent-electric-blue))',
         'accent-violet': 'rgba(var(--accent-violet))',
         'homepage-card-bg': 'rgba(var(--homepage-card-bg))',
+        'sidebar-bg': 'rgba(var(--sidebar-bg))',
 
         // Original color scales
         'rich-black': {

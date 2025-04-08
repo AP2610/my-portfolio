@@ -131,6 +131,8 @@
   --homepage-card-bg: var(--cosmic-latte-400);
 
   --radial-background-color: var(--cosmic-latte-700);
+
+  --sidebar-bg: var(--cosmic-latte-600);
 }
 
 .dark {
@@ -150,6 +152,8 @@
   --homepage-card-bg: var(--rich-black);
 
   --radial-background-color: var(--lime);
+
+  --sidebar-bg: var(--rich-black);
 }
 
 /* TODO: Implement the same for framer motion animations using useReducedMotion hook */
