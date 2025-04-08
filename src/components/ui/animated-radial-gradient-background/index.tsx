@@ -20,7 +20,7 @@ export const AnimatedRadialGradientBackground = () => {
           ease: 'easeIn',
         },
       }}
-      className="radial-background-gradient absolute bottom-0 left-0 right-0 top-[40px] -z-10"
+      className="radial-background-gradient absolute inset-0 -z-10"
     ></motion.div>
   );
 };
