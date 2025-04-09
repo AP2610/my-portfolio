@@ -2,7 +2,6 @@
 
 import clsx from 'clsx';
 import { motion, MotionConfig } from 'framer-motion';
-import { usePathname } from 'next/navigation';
 import { useEffect } from 'react';
 import { NavLink } from './nav-link';
 import { NAVIGATION_LINKS } from './nav-links';
@@ -14,13 +13,11 @@ type MobileNavigationProps = {
 };
 
 export const MobileNavigation = ({ isOpen, setIsOpen, className }: MobileNavigationProps) => {
-  const pathname = usePathname();
-
   useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : 'auto';
   }, [isOpen]);
 
-  const motionSpanCommonClasses = `absolute h-[2px] rounded-md transition-[background-color] duration-200`;
+  const motionSpanCommonClasses = 'absolute h-[2px] rounded-md transition-[background-color] duration-200';
   const backgroundColor = isOpen ? 'rgb(var(--accent-electric-blue))' : 'rgb(var(--accent-lime))';
 
   return (
@@ -105,7 +102,7 @@ export const MobileNavigation = ({ isOpen, setIsOpen, className }: MobileNavigat
 
       {/* Full-screen overlay menu */}
       <motion.div
-        className="absolute h-dvh w-full bg-background p-4"
+        className="absolute h-dvh w-full bg-background"
         style={{
           top: 0,
           left: '50%',
@@ -135,16 +132,7 @@ export const MobileNavigation = ({ isOpen, setIsOpen, className }: MobileNavigat
           <ul className="flex h-full flex-col justify-center gap-16 text-center">
             {NAVIGATION_LINKS.map((link) => (
               <li key={link.href}>
-                <NavLink
-                  setIsOpen={setIsOpen}
-                  // TODO: This logic id duplicated in dektop nav, refactor
-                  className={`${
-                    (link.href !== '/' && pathname.startsWith(link.href)) || pathname === link.href
-                      ? 'text-accent-electric-blue'
-                      : 'text-foreground'
-                  } hover:text-accent-electric-blue`}
-                  href={link.href}
-                >
+                <NavLink setIsOpen={setIsOpen} className="inline-block" href={link.href}>
                   {link.label}
                 </NavLink>
               </li>

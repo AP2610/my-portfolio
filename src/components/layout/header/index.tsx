@@ -1,17 +1,18 @@
 'use client';
 
-import { NavigationMenu } from '@/components/layout/navigation';
 import { AnimatedElementPresence } from '@/components/ui/animated-element-presence';
 import { Logo } from '@/components/ui/logo';
 import { ThemeSwitcher } from '@/components/ui/theme-switcher';
 import clsx from 'clsx';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
+import { MobileNavigation } from '../navigation/mobile-navigation';
 
 type HeaderProps = {
   className?: string;
 };
 
+// Header is only shown upto the md breakpoint, then the sidebar takes over. hidden class is added in the layout for a better overview.
 export const Header = ({ className }: HeaderProps) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const pathname = usePathname();
@@ -33,7 +34,7 @@ export const Header = ({ className }: HeaderProps) => {
         <div className="flex items-center gap-6 md:gap-10">
           <ThemeSwitcher />
 
-          <NavigationMenu isOpen={isNavOpen} setIsOpen={setIsNavOpen} />
+          <MobileNavigation isOpen={isNavOpen} setIsOpen={setIsNavOpen} />
         </div>
       </AnimatedElementPresence>
     </header>

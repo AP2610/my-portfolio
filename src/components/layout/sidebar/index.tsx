@@ -15,6 +15,7 @@ type SidebarProps = {
 export const Sidebar = ({ className }: SidebarProps) => {
   const [showRole, setShowRole] = useState(false);
 
+  // Flex class is applied where the component is used for a better overview
   const asideClasses = clsx(
     'bg-sidebar-bg sticky top-0 h-screen w-[300px] flex-col items-center gap-16 py-16 text-foreground shadow-md',
     className
@@ -41,7 +42,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
             <AnimatedText text="Arjun Puri" delay={0.4} onComplete={() => setShowRole(true)} />
           </h2>
 
-          <p className="relative text-xl font-light">
+          <p className="relative text-xl">
             {/* This is a hack to avoid layout shift when the AnimatedText enters the DOM */}
             {!showRole && (
               <span className="text-sidebar-bg" aria-hidden="true">
@@ -55,7 +56,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
       </div>
 
       <nav className="w-full">
-        <DesktopNavigation isVertical />
+        <DesktopNavigation />
       </nav>
     </aside>
   );
