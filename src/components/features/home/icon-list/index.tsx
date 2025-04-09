@@ -10,7 +10,7 @@ export const IconList = ({ iconList }: IconListProps) => {
     <ul className="flex flex-wrap items-center gap-2">
       {iconList.map((icon) => (
         <li key={icon.src}>
-          <MyImage src={icon.src} alt="Technology icon" containerClasses="w-6 h-6" />
+          <MyImage src={icon.src} sizes="10vw" alt="Technology icon" containerClasses="w-6 h-6" />
         </li>
       ))}
     </ul>
