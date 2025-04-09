@@ -1,5 +1,5 @@
-import { ProjectDetails } from '@/components/project-details';
-import { Section } from '@/components/section';
+import { ProjectDetails } from '@/components/features/projects/project-details';
+import { Section } from '@/components/layout/section';
 import { notFound } from 'next/navigation';
 import { projectsData } from '../data';
 

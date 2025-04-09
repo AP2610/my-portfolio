@@ -1,10 +1,12 @@
-import { Footer } from '@/components/footer';
-import { Header } from '@/components/header';
+import { Footer } from '@/components/layout/footer';
+import { Header } from '@/components/layout/header';
 import { ThemeProvider } from '@/context/theme-context';
 import clsx from 'clsx';
 import type { Metadata } from 'next';
 import { Raleway } from 'next/font/google';
-import '../styles/globals.css';
+import '../styles/globals.scss';
+import { Sidebar } from '@/components/layout/sidebar';
+import { AnimatedElementPresence } from '@/components/ui/animated-element-presence';
 
 const raleway = Raleway({
   variable: '--font-raleway',
@@ -48,10 +50,20 @@ const RootLayout = ({
       </head>
 
       <ThemeProvider>
-        <body className={clsx(`${raleway.variable} flex min-h-screen flex-col antialiased`)}>
-          <Header />
-          <main className="flex-grow">{children}</main>
-          <Footer />
+        <body className={clsx(`${raleway.variable} antialiased`)}>
+          {/* Header is only shown upto the md breakpoint, then the sidebar takes over */}
+          <Header className="md:hidden" />
+
+          <AnimatedElementPresence entryAnimationDelay={0.2} animationProperty="opacity">
+            <div className="flex min-h-dvh pt-header-height md:pt-0">
+              <Sidebar className="hidden md:flex" />
+
+              <div className="flex flex-1 flex-col">
+                <main className="flex-grow">{children}</main>
+                <Footer />
+              </div>
+            </div>
+          </AnimatedElementPresence>
         </body>
       </ThemeProvider>
     </html>

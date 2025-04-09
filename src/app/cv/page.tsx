@@ -1,15 +1,14 @@
-import { Badge } from '@/components/badge';
-import { DownloadButton } from '@/components/download-button';
-import { Experience } from '@/components/experience';
-import { ExternalLink } from '@/components/external-link';
-import { MyImage } from '@/components/image';
-import { Section } from '@/components/section';
-import { SocialIcon } from '@/components/social-icon';
+import { Badge } from '@/components/ui/badge';
+import { DownloadButton } from '@/components/features/cv/download-button';
+import { Experience } from '@/components/features/experience';
+import { MyLink } from '@/components/ui/my-link';
+import { MyImage } from '@/components/ui/image';
+import { Section } from '@/components/layout/section';
+import { SocialIconLink } from '@/components/ui/social-icon-link';
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { FaGithub, FaGlobe, FaLinkedin } from 'react-icons/fa';
 import { experiences } from './data';
-import { InfoBox } from '@/components/info-box';
+import { InfoBox } from '@/components/ui/info-box';
 
 export const metadata: Metadata = {
   title: "Arjun Puri's CV",
@@ -67,7 +66,7 @@ const SKILLS_FULL = [
 const CvPage = () => {
   return (
     <Section
-      className="mt-[var(--header-height)] print:m-0 print:w-full print:max-w-none print:bg-white print:p-0 print:text-black"
+      className="mt-[var(--header-height)] print:m-0 print:w-full print:max-w-none print:bg-cosmic-latte print:p-0 print:text-rich-black"
       hasTopPadding
       hasBottomPadding
     >
@@ -88,13 +87,15 @@ const CvPage = () => {
           {/* TODO: IMPORTANT Make into component this is for print only */}
           {/* Skills for print only */}
           <div className="hidden print:block">
-            <p className="mb-2 font-semibold text-blue-600">Skills & Methodologies</p>
-            <p className="mb-6 text-[10px] text-blue-600">*For a comprehensive list, please see the CV page on my website.</p>
+            <p className="mb-2 font-semibold text-electric-blue-600">Skills & Methodologies</p>
+            <p className="mb-6 text-[10px] text-electric-blue-600">
+              *For a comprehensive list, please see the CV page on my website.
+            </p>
 
             <ul className="flex w-64 flex-wrap gap-2">
               {SKILLS_PRINT.map((skill) => (
                 <li key={skill}>
-                  <Badge color="blue-700">{skill}</Badge>
+                  <Badge color="electric-blue-700">{skill}</Badge>
                 </li>
               ))}
             </ul>
@@ -103,7 +104,7 @@ const CvPage = () => {
 
         <div className="space-y-4 md:ml-8">
           <div className="mb-4 flex items-center justify-between">
-            <h1 className="text-4xl text-accent-blue print:text-blue-600">Arjun Puri</h1>
+            <h1 className="text-4xl text-accent-electric-blue print:text-electric-blue-600">Arjun Puri</h1>
 
             <DownloadButton className="print:hidden" />
           </div>
@@ -148,9 +149,9 @@ const CvPage = () => {
 
           {/* TODO: Check if mailto works in production */}
           <div className="flex gap-4 font-sans text-sm font-medium print:hidden">
-            <SocialIcon platform="github" />
-            <SocialIcon platform="linkedin" />
-            <SocialIcon platform="email" />
+            <SocialIconLink platform="github" />
+            <SocialIconLink platform="linkedin" />
+            <SocialIconLink platform="email" />
           </div>
         </div>
       </Section>
@@ -172,9 +173,9 @@ const CvPage = () => {
           Please keep in mind, my CV contains consolidated and condensed information about my experiences. Should you wish to gain
           a deeper understanding of the projects I have worked on, including the situation, tasks, results, technical details, and
           specializations, I invite you to explore the{' '}
-          <Link href="/projects" className="text-accent-blue hover:text-blue-600 hover:underline">
+          <MyLink type="internal" href="/projects">
             projects section
-          </Link>{' '}
+          </MyLink>{' '}
           of this website.
         </p>
       </header>
@@ -182,7 +183,7 @@ const CvPage = () => {
       {/* For print only - Certifications and languages */}
       <div className="hidden grid-cols-1 print:mt-0 print:grid print:grid-cols-2 print:gap-10">
         <div>
-          <h4 className="mb-4 text-2xl text-blue print:text-black">Certifications</h4>
+          <h4 className="mb-4 text-2xl text-electric-blue print:text-rich-black">Certifications</h4>
 
           <ul className="flex flex-wrap gap-4 font-sans">
             <li>
@@ -204,7 +205,7 @@ const CvPage = () => {
         </div>
 
         <div>
-          <h4 className="mb-4 text-2xl text-blue print:text-black">Languages</h4>
+          <h4 className="mb-4 text-2xl text-electric-blue print:text-rich-black">Languages</h4>
 
           <ul className="flex flex-wrap gap-4 font-sans">
             <li>
@@ -225,7 +226,7 @@ const CvPage = () => {
 
       {/* Experience section for both print and web */}
       <div className="space-y-12 font-sans print:space-y-6">
-        <h3 className="page-break hidden print:block print:text-2xl print:text-blue-600">Professional Experience</h3>
+        <h3 className="page-break hidden print:block print:text-2xl print:text-electric-blue-600">Professional Experience</h3>
 
         <div className="space-y-10 md:space-y-12 print:space-y-10">
           {experiences.map((experience, index) => (
@@ -236,12 +237,12 @@ const CvPage = () => {
 
       {/* TODO: Skills for web only! IMPORTANT Make into component this is for non print */}
       <div className="mt-10 print:hidden">
-        <h4 className="mb-6 text-2xl text-accent-blue print:text-blue-600">Skills & Methodologies</h4>
+        <h4 className="mb-6 text-2xl text-accent-electric-blue print:text-electric-blue-600">Skills & Methodologies</h4>
 
         <ul className="flex flex-wrap gap-2">
           {SKILLS_FULL.map((skill) => (
             <li key={skill}>
-              <Badge color="blue-700">{skill}</Badge>
+              <Badge color="electric-blue-700">{skill}</Badge>
             </li>
           ))}
         </ul>
@@ -250,7 +251,7 @@ const CvPage = () => {
       {/* Languages & Certifications - Web only */}
       <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 print:hidden print:grid-cols-2">
         <div>
-          <h4 className="mb-6 text-2xl text-accent-blue print:text-black">Languages</h4>
+          <h4 className="mb-6 text-2xl text-accent-electric-blue print:text-rich-black">Languages</h4>
 
           <ul className="flex flex-wrap gap-2 font-sans">
             <li>
@@ -269,55 +270,59 @@ const CvPage = () => {
         </div>
 
         <div>
-          <h4 className="mb-6 text-2xl text-accent-blue print:text-black">Certifications</h4>
+          <h4 className="mb-6 text-2xl text-accent-electric-blue print:text-rich-black">Certifications</h4>
 
           <ul className="flex flex-wrap gap-2 font-sans">
             <li>
-              <ExternalLink
-                noHover
+              <MyLink
+                type="external"
+                hasHover={false}
                 href="https://www.linkedin.com/in/arjunpuri26/overlay/1574531685954/single-media-viewer/?profileId=ACoAAB61nJkB4W7StLKExMHGTXbDlDd3Lvi6sgs"
               >
                 <Badge color="violet" hasLink>
                   Le Wagon Fullstack Bootcamp
                 </Badge>
-              </ExternalLink>
+              </MyLink>
             </li>
             <li>
-              <ExternalLink
-                noHover
+              <MyLink
+                type="external"
+                hasHover={false}
                 href="https://www.linkedin.com/in/arjunpuri26/overlay/1635498506856/single-media-viewer/?profileId=ACoAAB61nJkB4W7StLKExMHGTXbDlDd3Lvi6sgs"
               >
                 <Badge color="violet" hasLink>
                   React Tutorial
                 </Badge>
-              </ExternalLink>
+              </MyLink>
             </li>
             <li>
-              <ExternalLink noHover href="https://www.udemy.com/certificate/UC-KEQX9LVH/">
+              <MyLink type="external" hasHover={false} href="https://www.udemy.com/certificate/UC-KEQX9LVH/">
                 <Badge color="violet" hasLink>
                   Complete Javascript Certification
                 </Badge>
-              </ExternalLink>
+              </MyLink>
             </li>
             <li>
-              <ExternalLink
-                noHover
+              <MyLink
+                type="external"
+                hasHover={false}
                 href="https://www.linkedin.com/in/arjunpuri26/overlay/1574531584404/single-media-viewer/?profileId=ACoAAB61nJkB4W7StLKExMHGTXbDlDd3Lvi6sgs"
               >
                 <Badge color="violet" hasLink>
                   Learn Javascript Certification
                 </Badge>
-              </ExternalLink>
+              </MyLink>
             </li>
             <li>
-              <ExternalLink
-                noHover
+              <MyLink
+                type="external"
+                hasHover={false}
                 href="https://www.linkedin.com/learning/certificates/b0b5c1a8e36afa9d6aaf0be2d6978fc70a5ad5939ff1afa6d51b071e38e96f5b?trk=backfilled_certificate"
               >
                 <Badge color="violet" hasLink>
                   Testing with Cypress.io
                 </Badge>
-              </ExternalLink>
+              </MyLink>
             </li>
           </ul>
         </div>
@@ -325,12 +330,12 @@ const CvPage = () => {
 
       {/* Education section for both print and web */}
       <div className="mt-10">
-        <h3 className="mb-6 text-2xl text-accent-blue print:text-blue-600">Education</h3>
+        <h3 className="mb-6 text-2xl text-accent-electric-blue print:text-electric-blue-600">Education</h3>
 
         <div className="flex flex-col gap-8 md:flex-row print:gap-6">
           <div className="flex flex-col print:break-inside-avoid">
             <div className="mb-2">
-              <h4 className="text-xl font-semibold text-foreground print:text-black">Ecole hôtelière de Lausanne</h4>
+              <h4 className="text-xl font-semibold text-foreground print:text-rich-black">Ecole hôtelière de Lausanne</h4>
               <p className="text-accent-lime print:text-lime-700">
                 Bachelor of Science Degree, Hospitality Administration/Management
               </p>
@@ -341,7 +346,7 @@ const CvPage = () => {
 
           <div className="flex flex-col print:break-inside-avoid">
             <div className="mb-2">
-              <h4 className="text-xl font-semibold text-foreground print:text-black">Le Wagon</h4>
+              <h4 className="text-xl font-semibold text-foreground print:text-rich-black">Le Wagon</h4>
               <p className="text-accent-lime print:text-lime-700">Computer Programming</p>
             </div>
 
@@ -352,25 +357,25 @@ const CvPage = () => {
 
       {/* Useful Links - Print only */}
       <div className="mt-10 hidden print:block">
-        <h3 className="mb-6 text-2xl text-blue-600">Useful Links</h3>
+        <h3 className="mb-6 text-2xl text-electric-blue-600">Useful Links</h3>
 
         <div className="flex flex-col gap-2 font-sans">
           <div className="flex items-center gap-2">
-            <FaLinkedin className="text-blue-600" size={16} />
+            <FaLinkedin className="text-electric-blue-600" size={16} />
             <span className="font-semibold">LinkedIn:</span>
-            <span className="text-blue-600">linkedin.com/in/arjunpuri26</span>
+            <span className="text-electric-blue-600">linkedin.com/in/arjunpuri26</span>
           </div>
 
           <div className="flex items-center gap-2">
-            <FaGithub className="text-blue-600" size={16} />
+            <FaGithub className="text-electric-blue-600" size={16} />
             <span className="font-semibold">GitHub:</span>
-            <span className="text-blue-600">github.com/AP2610</span>
+            <span className="text-electric-blue-600">github.com/AP2610</span>
           </div>
 
           <div className="flex items-center gap-2">
-            <FaGlobe className="text-blue-600" size={16} />
+            <FaGlobe className="text-electric-blue-600" size={16} />
             <span className="font-semibold">Portfolio:</span>
-            <span className="text-blue-600">itsap.dev</span>
+            <span className="text-electric-blue-600">itsap.dev</span>
           </div>
         </div>
       </div>

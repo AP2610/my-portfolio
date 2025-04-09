@@ -1,5 +1,5 @@
-import { Button } from '@/components/buttons';
-import { Section } from '@/components/section';
+import { Section } from '@/components/layout/section';
+import { MyLink } from '@/components/ui/my-link';
 
 const NotFound = () => {
   return (
@@ -8,9 +8,9 @@ const NotFound = () => {
         <h2 className="text-2xl">Project Not Found</h2>
         <p>Could not find the requested project.</p>
 
-        <Button isLinkButton href="/projects">
+        <MyLink type="internal" variant="primary" href="/projects">
           Back to Projects
-        </Button>
+        </MyLink>
       </div>
     </Section>
   );
