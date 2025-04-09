@@ -1,14 +1,15 @@
 'use client';
 
+import { AccordionContext } from '@/context/accordion-context';
 import clsx from 'clsx';
-import { useState } from 'react';
+import { useContext } from 'react';
 import { AccordionItem } from './accordion-item';
-
-export type AccordionContent = string | string[] | React.ReactNode;
+import { AccordionContent, IdType, TitleSize } from './types';
 
 type AccordionData = {
-  id: string;
+  id: IdType;
   title: string;
+  titleSize?: TitleSize;
   content: AccordionContent;
 };
 
@@ -19,16 +20,16 @@ type AccordionProps = {
 };
 
 export const Accordion = ({ data, className, itemClassName }: AccordionProps) => {
-  const [activeId, setActiveId] = useState<string | null>(null);
+  const { activeId, setOpenAccordionIds } = useContext(AccordionContext);
 
-  const handleToggle = (id: string) => {
-    setActiveId((prevId) => (prevId === id ? null : id));
+  const handleToggle = (id: IdType) => {
+    setOpenAccordionIds(id);
   };
 
   const accordionClasses = clsx(className);
 
   return (
-    <div className={accordionClasses}>
+    <section className={accordionClasses}>
       {data.map((item) => (
         <AccordionItem
           key={item.id}
@@ -37,8 +38,9 @@ export const Accordion = ({ data, className, itemClassName }: AccordionProps) =>
           onToggle={() => handleToggle(item.id)}
           isOpen={activeId === item.id}
           className={itemClassName as string}
+          titleSize={item.titleSize}
         />
       ))}
-    </div>
+    </section>
   );
 };
