@@ -18,7 +18,7 @@ export const MobileNavigation = ({ isOpen, setIsOpen, className }: MobileNavigat
   }, [isOpen]);
 
   const motionSpanCommonClasses = 'absolute h-[2px] rounded-md transition-[background-color] duration-200';
-  const backgroundColor = isOpen ? 'rgb(var(--accent-electric-blue))' : 'rgb(var(--accent-lime))';
+  const backgroundColor = isOpen ? 'rgb(var(--accent-electric-blue))' : 'rgb(var(--accent-lime-foreground))';
 
   return (
     <nav className={clsx('h-14 w-14', className)}>

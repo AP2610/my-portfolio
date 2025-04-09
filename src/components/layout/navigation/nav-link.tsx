@@ -19,9 +19,10 @@ export const NavLink = ({ href, children, className, setIsOpen, fontSize = 'defa
     const isActiveLink = (href !== '/' && pathname.startsWith(href)) || pathname === href;
 
     const navLinkClasses = clsx(
-      'hover:text-accent-lime w-full text-center transition-colors duration-300 font-sans',
+      'hover:text-accent-lime-foreground w-full text-center transition-colors duration-300 font-sans',
       {
-        'font-bold text-accent-lime border-l-4 border-accent-lime border-r-4 border-r-transparent': isActiveLink,
+        'font-bold text-accent-lime-foreground border-l-4 border-accent-lime-foreground border-r-4 border-r-transparent':
+          isActiveLink,
         'font-normal text-foreground': !isActiveLink,
         'text-4xl md:text-xl': fontSize === 'default',
         'text-base': fontSize === 'small',
