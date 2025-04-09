@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/buttons';
+import { Button } from '@/components/ui/button';
 import { SocialIconLink } from '@/components/ui/social-icon-link';
 import { FaArrowDown } from 'react-icons/fa';
 import { HomepageCard } from '../homepage-card';

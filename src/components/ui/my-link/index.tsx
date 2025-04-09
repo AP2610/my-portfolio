@@ -1,8 +1,8 @@
 'use client';
 
 import clsx from 'clsx';
-import { ButtonVariants } from '@/components/ui/buttons/types';
-import { buttonStyles } from '@/components/ui/buttons/styles';
+import { ButtonVariants } from '@/components/ui/button/types';
+import { buttonStyles } from '@/components/ui/button/styles';
 import Link from 'next/link';
 import { CgExternal, CgInternal } from 'react-icons/cg';
 

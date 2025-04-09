@@ -1,6 +1,6 @@
 import { ProjectCard } from '@/components/features/projects/project-card';
 import { Section } from '@/components/layout/section';
-import { Button } from '@/components/ui/buttons';
+import { Button } from '@/components/ui/button';
 import { MyLink } from '@/components/ui/my-link';
 import type { Metadata } from 'next';
 import { FaArrowDown } from 'react-icons/fa';

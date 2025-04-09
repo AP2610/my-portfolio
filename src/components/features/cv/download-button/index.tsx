@@ -1,6 +1,6 @@
 'use client';
 
-import { Button } from '@/components/ui/buttons';
+import { Button } from '@/components/ui/button';
 import clsx from 'clsx';
 import { FaDownload } from 'react-icons/fa';
 
