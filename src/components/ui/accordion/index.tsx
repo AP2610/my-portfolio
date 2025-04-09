@@ -1,8 +1,8 @@
 'use client';
 
+import clsx from 'clsx';
 import { useState } from 'react';
 import { AccordionItem } from './accordion-item';
-import clsx from 'clsx';
 
 export type AccordionContent = string | string[] | React.ReactNode;
 
@@ -15,9 +15,10 @@ type AccordionData = {
 type AccordionProps = {
   data: AccordionData[];
   className?: string;
+  itemClassName?: string;
 };
 
-export const Accordion = ({ data, className }: AccordionProps) => {
+export const Accordion = ({ data, className, itemClassName }: AccordionProps) => {
   const [activeId, setActiveId] = useState<string | null>(null);
 
   const handleToggle = (id: string) => {
@@ -35,6 +36,7 @@ export const Accordion = ({ data, className }: AccordionProps) => {
           content={item.content}
           onToggle={() => handleToggle(item.id)}
           isOpen={activeId === item.id}
+          className={itemClassName as string}
         />
       ))}
     </div>
