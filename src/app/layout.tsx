@@ -1,12 +1,13 @@
 import { Footer } from '@/components/layout/footer';
 import { Header } from '@/components/layout/header';
+import { Sidebar } from '@/components/layout/sidebar';
+import { AnimatedElementPresence } from '@/components/ui/animated-element-presence';
+import { AccordionProvider } from '@/context/accordion-context';
 import { ThemeProvider } from '@/context/theme-context';
 import clsx from 'clsx';
 import type { Metadata } from 'next';
 import { Raleway } from 'next/font/google';
 import '../styles/globals.scss';
-import { Sidebar } from '@/components/layout/sidebar';
-import { AnimatedElementPresence } from '@/components/ui/animated-element-presence';
 
 const raleway = Raleway({
   variable: '--font-raleway',
@@ -59,7 +60,10 @@ const RootLayout = ({
               <Sidebar className="hidden md:flex" />
 
               <div className="flex flex-1 flex-col">
-                <main className="flex-grow">{children}</main>
+                <AccordionProvider>
+                  <main className="flex-grow">{children}</main>
+                </AccordionProvider>
+
                 <Footer />
               </div>
             </div>
