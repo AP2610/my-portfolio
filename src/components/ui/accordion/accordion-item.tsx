@@ -3,17 +3,18 @@
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
-import { AccordionContent } from './index';
+import { AccordionContent, TitleSize } from './types';
 
 type AccordionItemProps = {
   title: string;
+  titleSize?: TitleSize;
   content: AccordionContent;
   isOpen: boolean;
   onToggle: () => void;
   className: string;
 };
 
-export const AccordionItem = ({ title, content, isOpen, onToggle, className }: AccordionItemProps) => {
+export const AccordionItem = ({ title, titleSize, content, isOpen, onToggle, className }: AccordionItemProps) => {
   const contentRef = useRef<HTMLDivElement>(null);
 
   let accordionContent;
@@ -40,14 +41,23 @@ export const AccordionItem = ({ title, content, isOpen, onToggle, className }: A
     y: '-50%',
   };
 
+  const titleClasses = clsx({
+    'text-base': titleSize === 'default',
+    'text-sm': titleSize === 'small',
+    'text-lg': titleSize === 'medium',
+    'text-xl': titleSize === 'large',
+    'text-2xl': titleSize === 'xl',
+  });
+
   return (
-    <div className={wrapperClasses}>
+    <article className={wrapperClasses}>
       <div className="border-b border-foreground">
         <button
           className="group flex w-full items-center justify-between p-4 text-foreground transition-all duration-300 hover:bg-foreground/10 active:bg-foreground/20"
           onClick={onToggle}
+          aria-expanded={isOpen}
         >
-          <h3>{title}</h3>
+          <h3 className={titleClasses}>{title}</h3>
 
           <span className="relative block h-3 w-3 transition-all duration-300 group-hover:scale-125 group-active:scale-100">
             <motion.span className={`${commonSpanButtonClasses} h-[2px] w-3`} style={commonSpanButtonStyles}></motion.span>
@@ -69,7 +79,7 @@ export const AccordionItem = ({ title, content, isOpen, onToggle, className }: A
 
       <motion.div
         ref={contentRef}
-        initial={{ height: 0, maxHeight: 0, opacity: 0, scaleY: 0 }}
+        initial={{ height: 0, opacity: 0, scaleY: 0 }}
         animate={isOpen ? 'open' : 'closed'}
         variants={{
           open: {
@@ -78,24 +88,16 @@ export const AccordionItem = ({ title, content, isOpen, onToggle, className }: A
             opacity: 1,
             scaleY: 1,
           },
-          closed: { height: 0, maxHeight: 0, opacity: 0, scaleY: 0 },
+          closed: { height: 0, opacity: 0, scaleY: 0 },
         }}
         transition={{
-          height: {
-            duration: 0.5,
-          },
-          opacity: {
-            duration: 0.4,
-          },
-          scaleY: {
-            duration: 0.3,
-          },
+          duration: 0.4,
           ease: 'easeInOut',
         }}
         className="origin-top overflow-hidden"
       >
         <div className="space-y-4 p-4">{accordionContent}</div>
       </motion.div>
-    </div>
+    </article>
   );
 };
