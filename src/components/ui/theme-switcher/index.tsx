@@ -18,7 +18,7 @@ export const ThemeSwitcher = ({ className }: { className?: string }) => {
 
   return (
     <label className={classes}>
-      <input type="checkbox" className="h- peer hidden" checked={theme === 'dark'} onChange={handleThemeToggle} />
+      <input type="checkbox" className="peer hidden" checked={theme === 'dark'} onChange={handleThemeToggle} />
 
       <span className="p-1 transition-all duration-300 peer-checked:translate-x-[calc(var(--switchWidth)-100%)]">
         {theme === 'dark' ? <FaSun className={iconClasses} /> : <FaMoon className={iconClasses} />}
