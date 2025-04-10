@@ -5,6 +5,7 @@ import clsx from 'clsx';
 import { ButtonHTMLAttributes } from 'react';
 import { buttonStyles } from './styles';
 import { ButtonVariants } from './types';
+import { useMediaQuery } from '@/hooks/use-media-query';
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   children: React.ReactNode;
@@ -17,6 +18,8 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 // TODO: Check for accessibility
 export const Button = ({ children, scrollTo, className, variant = 'primary', isRounded = true, ...props }: ButtonProps) => {
+  const isMdOrLargerScreen = useMediaQuery('md');
+
   const classes = clsx(
     {
       [buttonStyles.variants[variant]]: true,
@@ -28,9 +31,11 @@ export const Button = ({ children, scrollTo, className, variant = 'primary', isR
   );
 
   const handleClick = () => {
+    console.log('🚀 ~ Button ~ isMdOrLargerScreen:', isMdOrLargerScreen);
     if (!scrollTo) return;
 
-    scrollToElement(scrollTo as string);
+    const includeHeaderHeight = !isMdOrLargerScreen;
+    scrollToElement(scrollTo as string, includeHeaderHeight);
   };
 
   return (
