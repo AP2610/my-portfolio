@@ -1,5 +1,5 @@
 import { Badge } from '@/components/ui/badge';
-import { DownloadButton } from '@/components/features/cv/download-button';
+// import { DownloadButton } from '@/components/features/cv/download-button';
 import { Experience } from '@/components/features/experience';
 import { MyLink } from '@/components/ui/my-link';
 import { MyImage } from '@/components/ui/image';
@@ -59,42 +59,43 @@ const SKILLS = [
 // TODO: Extract page parts to components
 const CvPage = () => {
   return (
-    <Section className="mt-[var(--header-height)]" hasTopPadding hasBottomPadding>
+    <Section hasTopPadding hasBottomPadding>
       <Section isFullWidth className="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row">
-        <div className="flex w-full flex-col items-center gap-4 md:w-auto md:items-start">
+        <header className="flex flex-col items-center gap-8 md:block">
           <MyImage
             src="/cv/headshot.webp"
             alt="Arjun Puri"
             priority
             sizes="50vw"
-            containerClasses="w-48 h-48 rounded-full overflow-hidden flex-shrink-0 border-4 border-accent-lime hover:scale-105 transition-transform duration-300"
+            containerClasses="w-48 h-48 rounded-full overflow-hidden flex-shrink-0 border-4 border-accent-lime hover:scale-105 transition-transform duration-300 md:hidden"
           />
-        </div>
 
-        <div className="space-y-4 md:ml-8">
-          <div className="mb-4 flex items-center justify-between">
-            <h1 className="text-4xl text-accent-electric-blue">Arjun Puri</h1>
+          <div className="space-y-4">
+            <div className="mb-4 flex items-center justify-between gap-12">
+              <p className="text-lg font-bold text-accent-lime-foreground md:max-w-[700px]">
+                Frontend Engineer | React, Next.js, JavaScript, TypeScript, TailwindCss | Building Reliable, Engaging &
+                User-Centric Web Experiences
+              </p>
 
-            <DownloadButton />
+              {/* Place in top right corner of screen on desktop and mobible figure it out */}
+              {/* <DownloadButton /> */}
+            </div>
+
+            <p className="text-accent-lime-foreground">Location - Netherlands</p>
+
+            <p className="text-accent-lime-foreground">Nationality - Indian (Dutch Permanent Residency)</p>
+
+            <div className="flex gap-4 font-sans text-sm font-medium">
+              <SocialIconLink platform="github" />
+              <SocialIconLink platform="linkedin" />
+              <SocialIconLink platform="email" />
+            </div>
           </div>
-
-          <p className="font-bold text-accent-lime">
-            Frontend Engineer | JavaScript, TypeScript, React, Next.js, Tailwind | Building Reliable, Engaging & User-Centric Web
-            Experiences
-          </p>
-
-          <p className="font-bold text-accent-lime">Location - Netherlands | Nationality - Indian (Dutch Permanent Residency)</p>
-
-          <div className="flex gap-4 font-sans text-sm font-medium">
-            <SocialIconLink platform="github" />
-            <SocialIconLink platform="linkedin" />
-            <SocialIconLink platform="email" />
-          </div>
-        </div>
+        </header>
       </Section>
 
-      <header className="mb-8 text-foreground">
-        <h2 className="mb-4 text-4xl">Professional Experience</h2>
+      <div className="mb-8 text-foreground">
+        <h1 className="mb-4 text-2xl">Professional Experience</h1>
 
         <InfoBox className="my-8">
           <p>
@@ -112,7 +113,7 @@ const CvPage = () => {
           </MyLink>{' '}
           of this website.
         </p>
-      </header>
+      </div>
 
       {/* Experience section */}
       <div className="space-y-10 font-sans md:space-y-12">
