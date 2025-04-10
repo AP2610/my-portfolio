@@ -60,7 +60,7 @@ export const AccordionItem = ({ id, title, titleSize, content, isOpen, onToggle,
     <article id={id.toString()} className={wrapperClasses}>
       <div className="border-b border-foreground">
         <button
-          className="group flex w-full items-center justify-between p-4 text-foreground transition-all duration-300 hover:bg-foreground/10 active:bg-foreground/20"
+          className="group flex w-full items-center justify-between gap-6 p-4 text-foreground transition-all duration-300 hover:bg-foreground/10 active:bg-foreground/20"
           onClick={onToggle}
           aria-expanded={isOpen}
         >
