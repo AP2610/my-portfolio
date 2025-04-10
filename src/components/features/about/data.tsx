@@ -1,12 +1,14 @@
+import { AccordionData } from '@/components/ui/accordion';
 import { Badge } from '@/components/ui/badge';
 
 const specialisations = ['JavaScript', 'TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'Sanity CMS'];
 
 // TODO: Edit all about me content
-export const aboutMeDataLeft = [
+export const aboutMeData: AccordionData[] = [
   {
     id: 'background-info',
     title: 'Background and Introduction',
+    column: 'left',
     content: (
       <>
         <div className="space-y-4 text-foreground">
@@ -53,6 +55,7 @@ export const aboutMeDataLeft = [
   {
     id: 'beyond-coding',
     title: 'Beyond Coding',
+    column: 'left',
     content: `Beyond coding, I excel at coaching juniors, technical analysis, and strategic planning, often leading meetings (more
             for the sake of keeping them efficient if nothing else) and shaping project direction.`,
   },
@@ -67,15 +70,14 @@ export const aboutMeDataLeft = [
   {
     id: 'outside-of-work',
     title: 'Outside of Work',
+    column: 'left',
     content: `Outside of work, I foster creativity through cooking, DIY projects, gaming, and reading—constantly learning,
           experimenting, and building, both digitally and physically.`,
   },
-];
-
-export const aboutMeDataRight = [
   {
     id: 'ai-in-my-workflow',
     title: 'AI in My Workflow',
+    column: 'right',
     content: `In the past year, I have worked with AI tools like GitHub Copilot, Augment, and ChatGPT and found ways to integrate them
           into my development workflow, leveraging them to optimise development processes, automate repetitive tasks, and enhance
           productivity. Beyond work, I use AI extensively in my personal life, whether it's for DIY projects or recipe
@@ -84,6 +86,7 @@ export const aboutMeDataRight = [
   {
     id: 'remote-work',
     title: 'Remote & Hybrid Work Experience',
+    column: 'right',
     content: `I've worked remotely for the past five years, honing my skills in remote collaboration, asynchronous communication,
             and cross-timezone teamwork. While I appreciate the autonomy and trust required for remote work, I'm also happy to
             return to a hybrid environment.`,
@@ -91,6 +94,7 @@ export const aboutMeDataRight = [
   {
     id: 'beauty-in-simplicity',
     title: 'Beauty in Simplicity',
+    column: 'right',
     content: `While some pride themselves on complex solutions, I value clarity and simplicity in code. A well-structured, simple
           codebase improves both productivity and collaboration. Having said that, I myself have written some overly complex logic
           in the past, only to find myself returning months later trying to demystify it. That's only reinforced my belief in KISS

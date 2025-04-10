@@ -1,7 +1,7 @@
 import { Accordion } from '@/components/ui/accordion';
 import { Blockquote } from '@/components/ui/blockquote';
 import { MyLink } from '@/components/ui/my-link';
-import { aboutMeDataLeft, aboutMeDataRight } from './data';
+import { aboutMeData } from './data';
 
 export const About = () => {
   return (
@@ -10,17 +10,7 @@ export const About = () => {
         About <span className="text-accent-electric-blue">Me</span>
       </h2>
 
-      <div className="!mb-14 !mt-10 grid auto-rows-auto grid-cols-1 lg:grid-cols-2 lg:gap-6">
-        <div className="space-y-4">
-          <Accordion data={aboutMeDataLeft} />
-        </div>
-
-        <div className="space-y-4">
-          <Accordion data={aboutMeDataRight} />
-        </div>
-      </div>
-
-      {/* TODO: consider adding info box section here */}
+      <Accordion data={aboutMeData} isTwoColumns className="!mb-14 !mt-10" />
 
       <Blockquote color="electric-blue">
         Quality is king, but flexibility is key. I believe in delivering high-quality work while adapting to real-world
