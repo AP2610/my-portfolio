@@ -1,4 +1,5 @@
 import { ExperienceType } from '@/app/cv/data';
+import { Accordion } from '@/components/ui/accordion';
 import clsx from 'clsx';
 
 type ExperienceProps = ExperienceType & {
@@ -17,57 +18,63 @@ export const Experience = ({
   carriedOverProjects,
   className,
 }: ExperienceProps) => {
+  const projectAccordionData = projects?.map((project, index) => ({
+    id: `${company}-project-${index}`,
+    title: project.name,
+    content: (
+      <div className="space-y-2">
+        {project.description && <p>{project.description}</p>}
+        {project.bulletPoints && (
+          <ul className="list-disc space-y-2 pl-5">
+            {project.bulletPoints.map((point, bulletIndex) => (
+              <li key={bulletIndex}>{point}</li>
+            ))}
+          </ul>
+        )}
+      </div>
+    ),
+  }));
+
   return (
     <article className={clsx('space-y-4', className)}>
       <header>
-        <h2 className="text-2xl text-accent-electric-blue print:text-xl print:text-rich-black">{company}</h2>
+        <h2 className="text-2xl text-accent-electric-blue">{company}</h2>
 
-        <p className="text-xl font-semibold text-foreground print:text-rich-black">{role}</p>
+        <p className="text-xl font-semibold text-foreground">{role}</p>
 
-        {subText && <p className="text-sm text-foreground print:text-rich-black">{subText}</p>}
+        {subText && <p className="text-sm text-foreground">{subText}</p>}
 
-        <p className="text-accent-lime print:text-lime-700">
+        <p className="text-accent-lime-foreground">
           {period} | {location}
         </p>
       </header>
 
-      <div className="space-y-6 text-foreground print:text-rich-black">
+      <div className="space-y-6 text-foreground">
         <p>{description}</p>
-
-        {projects && projects.length > 0 && (
-          <div className="space-y-6">
-            {projects.map((project, index) => (
-              <div key={index} className="space-y-2">
-                <h3 className="font-semibold">{project.name}</h3>
-                {project.description && <p>{project.description}</p>}
-                {project.bulletPoints && (
-                  <ul className="list-disc space-y-2 pl-5">
-                    {project.bulletPoints.map((point, bulletIndex) => (
-                      <li key={bulletIndex}>{point}</li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            ))}
-          </div>
-        )}
-
-        {additionalProjects && additionalProjects.length > 0 && (
-          <div>
-            <h3 className="mb-2 font-semibold">Additional Projects</h3>
-            <ul className="list-disc space-y-2 pl-5">
-              {additionalProjects.map((project, index) => (
-                <li key={index}>{project}</li>
-              ))}
-            </ul>
-          </div>
-        )}
 
         {carriedOverProjects && carriedOverProjects.length > 0 && (
           <div>
             <h3 className="mb-2 font-semibold">Carried Over Projects</h3>
             <ul className="list-disc space-y-2 pl-5">
               {carriedOverProjects.map((project, index) => (
+                <li key={index}>{project}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {projectAccordionData && projectAccordionData.length > 0 && (
+          <div className="space-y-6">
+            <Accordion data={projectAccordionData} />
+          </div>
+        )}
+
+        {additionalProjects && additionalProjects.length > 0 && (
+          <div>
+            <h3 className="mb-2 font-semibold">Additional Projects</h3>
+
+            <ul className="list-disc space-y-2 pl-5">
+              {additionalProjects.map((project, index) => (
                 <li key={index}>{project}</li>
               ))}
             </ul>
