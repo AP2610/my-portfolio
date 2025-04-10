@@ -1,8 +1,8 @@
 import clsx from 'clsx';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 type MyImageProps = {
-  src: string;
+  src: string | StaticImageData;
   alt: string;
   quality?: number;
   priority?: boolean;

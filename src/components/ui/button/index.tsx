@@ -31,7 +31,6 @@ export const Button = ({ children, scrollTo, className, variant = 'primary', isR
   );
 
   const handleClick = () => {
-    console.log('🚀 ~ Button ~ isMdOrLargerScreen:', isMdOrLargerScreen);
     if (!scrollTo) return;
 
     const includeHeaderHeight = !isMdOrLargerScreen;

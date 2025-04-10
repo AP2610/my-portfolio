@@ -16,7 +16,7 @@ export default {
       padding: {
         DEFAULT: '1.5rem',
         md: '2rem',
-        lg: '2.5rem',
+        lg: '3rem',
       },
       screens: {
         sm: '640px',
