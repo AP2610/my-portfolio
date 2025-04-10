@@ -43,7 +43,7 @@ export const AccordionItem = ({ id, title, titleSize, content, isOpen, onToggle,
     y: '-50%',
   };
 
-  const titleClasses = clsx('text-left', {
+  const titleClasses = clsx('text-left font-medium', {
     'text-base': titleSize === 'default',
     'text-sm': titleSize === 'small',
     'text-lg': titleSize === 'medium',
