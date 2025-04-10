@@ -37,10 +37,10 @@ export const Experience = ({
 
   return (
     <article className={clsx('space-y-4', className)}>
-      <header>
-        <h2 className="text-2xl text-accent-electric-blue">{company}</h2>
+      <header className="space-y-1">
+        <h2 className="font-semi-bold text-xl text-accent-electric-blue">{company}</h2>
 
-        <p className="text-xl font-semibold text-foreground">{role}</p>
+        <p className="text-lg text-foreground">{role}</p>
 
         {subText && <p className="text-sm text-foreground">{subText}</p>}
 

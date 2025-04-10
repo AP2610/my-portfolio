@@ -99,7 +99,7 @@ export const experiences: ExperienceType[] = [
   },
   {
     company: 'Clockwork',
-    role: 'Frontend Developer',
+    role: 'Frontend Engineer',
     subText: '(Absorbed by parent entity, Ordina, in early 2021)',
     period: 'March 2020 - March 2021 (1 year 1 month)',
     location: 'Amsterdam, North Holland, Netherlands',
