@@ -13,7 +13,7 @@ export const DesktopNavigation = ({ className }: DesktopNavigationProps) => {
     <nav className={navclasses}>
       <ul className="flex w-full flex-col items-center gap-12" role="Navigation list">
         {NAVIGATION_LINKS.map((link, index) => (
-          <NavLink key={`${index}-${link.href}`} href={link.href}>
+          <NavLink key={`${index}-${link.href}`} href={link.href} fontSize="small">
             {link.label}
           </NavLink>
         ))}
