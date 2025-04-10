@@ -71,7 +71,7 @@ export const AccordionItem = ({ id, title, titleSize, content, isOpen, onToggle,
     y: '-50%',
   };
 
-  const titleClasses = clsx('text-left font-medium', {
+  const titleClasses = clsx('text-left font-semibold', {
     'text-base': titleSize === 'default',
     'text-sm': titleSize === 'small',
     'text-lg': titleSize === 'medium',
