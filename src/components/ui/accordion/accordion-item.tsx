@@ -24,25 +24,27 @@ export const AccordionItem = ({ id, title, titleSize, content, isOpen, onToggle,
 
   // Need to do some hacky workarounds to compensate for the scroll when an accoridon is collapsed and another is opened
   useEffect(() => {
-    if (isOpen) {
-      const accordionWrapper = document.getElementById('accordion-wrapper');
-      if (!accordionWrapper) return;
+    if (!isOpen) return;
 
-      const includeHeaderHeight = !isMdOrLargerScreen;
-      const headerHeight = includeHeaderHeight
-        ? parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 0
-        : 0;
+    const accordionWrapper = document.getElementById('accordion-wrapper');
+    if (!accordionWrapper) return;
 
-      // Get accordion wrapper's position relative to viewport
-      const wrapperRect = accordionWrapper.getBoundingClientRect();
-      const wrapperTopPosition = wrapperRect.top + window.scrollY;
+    const includeHeaderHeight = !isMdOrLargerScreen;
+    const headerHeight = includeHeaderHeight
+      ? parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 0
+      : 0;
 
-      // Only scroll to the top of the scrollRef if we're scrolled past the top of the wrapper (accounting for header)
-      if (window.scrollY > wrapperTopPosition - headerHeight) {
-        setTimeout(() => {
-          scrollToElement(scrollRef.current?.id as string, includeHeaderHeight);
-        }, 400);
-      }
+    // Get accordion wrapper's position relative to viewport
+    const wrapperRect = accordionWrapper.getBoundingClientRect();
+    const wrapperTopPosition = wrapperRect.top + window.scrollY;
+
+    // Only scroll to the top of the scrollRef if we're scrolled past the top of the wrapper (accounting for header)
+    if (window.scrollY > wrapperTopPosition - headerHeight) {
+      const timeoutId = setTimeout(() => {
+        scrollToElement(scrollRef.current?.id as string, includeHeaderHeight);
+      }, 400);
+
+      return () => clearTimeout(timeoutId);
     }
   }, [isOpen]);
 
