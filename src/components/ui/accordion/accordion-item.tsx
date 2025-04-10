@@ -37,10 +37,10 @@ export const AccordionItem = ({ id, title, titleSize, content, isOpen, onToggle,
       const wrapperRect = accordionWrapper.getBoundingClientRect();
       const wrapperTopPosition = wrapperRect.top + window.scrollY;
 
-      // Only scroll if we're scrolled past the top of the wrapper (accounting for header)
+      // Only scroll to the top of the scrollRef if we're scrolled past the top of the wrapper (accounting for header)
       if (window.scrollY > wrapperTopPosition - headerHeight) {
         setTimeout(() => {
-          scrollToElement(accordionWrapper.id, includeHeaderHeight);
+          scrollToElement(scrollRef.current?.id as string, includeHeaderHeight);
         }, 400);
       }
     }
