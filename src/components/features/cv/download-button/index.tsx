@@ -1,6 +1,6 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
+import { MyLink } from '@/components/ui/my-link';
 import clsx from 'clsx';
 import { FaDownload } from 'react-icons/fa';
 
@@ -8,25 +8,19 @@ type DownloadButtonProps = {
   className?: string;
 };
 
-// TODO: Double check title logic
 export const DownloadButton = ({ className }: DownloadButtonProps) => {
-  const handleDownload = () => {
-    document.title = 'Arjun-Puri-CV';
-    window.print();
-  };
-
   return (
-    <Button
-      onClick={handleDownload}
-      variant="icon-button"
-      className={clsx(
-        '!rounded-full border-2 border-accent-lime text-accent-lime transition-colors duration-300 hover:bg-accent-lime/30',
-        className
-      )}
-      title="Download CV as PDF"
+    <MyLink
+      href="/files/arjun-puri-cv.pdf"
+      type="internal"
+      variant="electric-blue-secondary"
+      className={clsx('flex items-center gap-3 text-sm', className)}
       aria-label="Download CV as PDF"
+      download
+      target="_blank"
     >
-      <FaDownload className="tilt-shaking" />
-    </Button>
+      <FaDownload className="tilt-shaking h-4 w-4 text-accent-electric-blue" />
+      <span>Download as PDF</span>
+    </MyLink>
   );
 };
