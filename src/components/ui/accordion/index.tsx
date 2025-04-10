@@ -29,7 +29,7 @@ export const Accordion = ({ data, className, itemClassName }: AccordionProps) =>
   const accordionClasses = clsx(className);
 
   return (
-    <section className={accordionClasses}>
+    <section id="accordion-wrapper" className={accordionClasses}>
       {data.map((item) => (
         <AccordionItem
           id={item.id}
