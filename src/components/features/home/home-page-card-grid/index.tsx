@@ -1,16 +1,9 @@
 import { Button } from '@/components/ui/button';
+import { MyLink } from '@/components/ui/my-link';
 import { SocialIconLink } from '@/components/ui/social-icon-link';
 import { FaArrowDown } from 'react-icons/fa';
 import { HomepageCard } from '../homepage-card';
-import { IconList } from '../icon-list';
-
-import JavaScriptIcon from '@/public/icons/javascript-48.png';
-import NextJsIcon from '@/public/icons/nextjs-200.png';
-import ReactIcon from '@/public/icons/react-40.png';
-import SanityIcon from '@/public/icons/sanity-180.png';
-import TailwindIcon from '@/public/icons/tailwindcss-48.png';
-import TypeScriptIcon from '@/public/icons/typescript-50.png';
-import { MyLink } from '@/components/ui/my-link';
+import { SpecialisationsIconList } from '../specialisations-icon-list';
 
 /* TODO: make a heading component that takes level, size, weight, and color props */
 export const HomepageCardGrid = () => {
@@ -45,7 +38,7 @@ export const HomepageCardGrid = () => {
         <div className="mb-4 flex flex-wrap items-center justify-between gap-4">
           <h2 className="text-3xl font-light">Tech</h2>
 
-          <IconList iconList={[NextJsIcon, ReactIcon, JavaScriptIcon, TypeScriptIcon, TailwindIcon, SanityIcon]} />
+          <SpecialisationsIconList />
         </div>
 
         <p className="text-gray-500">Next.js, React, JavaScript, TypeScript, Tailwind CSS, Sanity CMS</p>
