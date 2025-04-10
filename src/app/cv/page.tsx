@@ -1,13 +1,15 @@
-import { Badge } from '@/components/ui/badge';
 import { DownloadButton } from '@/components/features/cv/download-button';
 import { Experience } from '@/components/features/experience';
-import { MyLink } from '@/components/ui/my-link';
-import { MyImage } from '@/components/ui/image';
 import { Section } from '@/components/layout/section';
+import { Badge } from '@/components/ui/badge';
+import { Headshot } from '@/components/ui/headshot';
+import { InfoBox } from '@/components/ui/info-box';
+import { MyLink } from '@/components/ui/my-link';
 import { SocialIconLink } from '@/components/ui/social-icon-link';
 import type { Metadata } from 'next';
-import { experiences } from './data';
-import { InfoBox } from '@/components/ui/info-box';
+import { HiOutlineGlobeAsiaAustralia } from 'react-icons/hi2';
+import { IoLocationOutline } from 'react-icons/io5';
+import { experiences, skillsMethodologies } from './data';
 
 export const metadata: Metadata = {
   title: "Arjun Puri's CV",
@@ -15,96 +17,62 @@ export const metadata: Metadata = {
     'Frontend Engineer with expertise in JavaScript, TypeScript, React, Next.js and Tailwind CSS. View my professional experience, skills, and qualifications.',
 };
 
-const SKILLS = [
-  'JavaScript',
-  'TypeScript',
-  'React',
-  'HTML',
-  'CSS',
-  'SCSS',
-  'Tailwind CSS',
-  'Framer Motion',
-  'Bootstrap',
-  'Next.js',
-  'Cypress',
-  'Jest',
-  'Test Automation',
-  'REST',
-  'CI/CD',
-  'Git',
-  'Sanity CMS',
-  'Monorepo',
-  'Figma',
-  'Accessibility',
-  'Agile',
-  'Scrum',
-  'Pair Programming',
-  'AI Pair Programming',
-  'Coaching',
-  'Wordpress',
-  'Strapi CMS',
-  'Remote Work',
-  'Nuxt',
-  'VueJS',
-  'NPM',
-  'Github Actions',
-  'Prettier',
-  'EsLint',
-  'Micro Animations',
-  'Husky',
-  'Web Components',
-];
-
-// TODO: Go through the text here for any issues and things that dont fit properly
 // TODO: Extract page parts to components
 const CvPage = () => {
   return (
-    <Section paddingTop="medium" paddingBottom="medium" className="space-y-10">
-      <DownloadButton />
-
+    <Section paddingTop="medium" paddingBottom="medium" className="relative space-y-10">
       <header className="flex flex-col items-center gap-8 md:block">
-        <MyImage
-          src="/cv/headshot.webp"
-          alt="Arjun Puri"
-          priority
-          sizes="50vw"
-          containerClasses="w-48 h-48 rounded-full overflow-hidden flex-shrink-0 border-4 border-accent-lime hover:scale-105 transition-transform duration-300 md:hidden"
-        />
+        <Headshot size="medium" className="md:hidden" />
 
-        <div className="space-y-4">
-          <p className="text-lg font-bold text-accent-lime-foreground md:max-w-[700px]">
+        <h1 className="text-4xl text-foreground md:hidden">
+          Arjun <span className="text-accent-electric-blue">Puri</span>
+        </h1>
+
+        <div className="space-y-6">
+          <p className="text-lg font-bold text-foreground md:max-w-[700px]">
             Frontend Engineer | React, Next.js, JavaScript, TypeScript, TailwindCss | Building Reliable, Engaging & User-Centric
             Web Experiences
           </p>
 
-          <p className="text-accent-lime-foreground">Location - Netherlands</p>
+          <div className="space-y-4">
+            <p className="flex items-center gap-2 text-accent-lime-foreground">
+              <IoLocationOutline />
+              <span>Netherlands</span>
+            </p>
 
-          <p className="text-accent-lime-foreground">Nationality - Indian (Dutch Permanent Residency)</p>
+            <p className="flex items-center gap-2 text-accent-lime-foreground">
+              <HiOutlineGlobeAsiaAustralia />
+              <span>Indian (Dutch Permanent Residency)</span>
+            </p>
+          </div>
 
-          <div className="flex gap-4 font-sans text-sm font-medium">
+          <div className="flex items-center gap-4 font-sans text-sm font-medium">
             <SocialIconLink platform="github" />
             <SocialIconLink platform="linkedin" />
             <SocialIconLink platform="email" />
+
+            <DownloadButton className="ml-2" />
           </div>
         </div>
       </header>
 
       {/* Experience section */}
       <div className="space-y-6 text-foreground">
-        <h1 className="text-2xl">Professional Experience</h1>
+        <h2 className="text-2xl">Professional Experience</h2>
 
         <InfoBox className="md:max-w-[700px]">
-          <p>You can hit the button in the top right corner to download my CV as a PDF (designed in Figma).</p>
+          <p>
+            In case you'd like to save a copy of my CV, you can hit the button above to download it as a PDF (designed in Figma).
+          </p>
         </InfoBox>
 
         <p>
-          Please keep in mind, my CV contains consolidated and condensed information about my experiences. Should you wish to gain
-          a deeper understanding of the projects I have worked on, including the situation, tasks, results, technical details, and
-          specializations, I invite you to explore the{' '}
+          My CV contains consolidated and condensed information about my experiences. If you'd like a bit more detail on the
+          projects I've worked on, including the situation, tasks, results, technical details, and specializations, check out the{' '}
           <MyLink type="internal" href="/projects">
             projects section
           </MyLink>{' '}
-          of this website.
+          of my website.
         </p>
 
         <div className="space-y-10 font-sans md:space-y-12">
@@ -114,12 +82,12 @@ const CvPage = () => {
         </div>
       </div>
 
-      {/* Skills */}
+      {/* Skills & Methodologies */}
       <Section isFullWidth>
         <h4 className="mb-6 text-2xl text-accent-electric-blue">Skills & Methodologies</h4>
 
         <ul className="flex flex-wrap gap-2">
-          {SKILLS.map((skill) => (
+          {skillsMethodologies.map((skill) => (
             <li key={skill}>
               <Badge color="electric-blue-700">{skill}</Badge>
             </li>
