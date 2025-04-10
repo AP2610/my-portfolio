@@ -32,6 +32,7 @@ export const Accordion = ({ data, className, itemClassName }: AccordionProps) =>
     <section className={accordionClasses}>
       {data.map((item) => (
         <AccordionItem
+          id={item.id}
           key={item.id}
           title={item.title}
           content={item.content}
