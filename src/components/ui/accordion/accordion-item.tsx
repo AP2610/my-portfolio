@@ -1,8 +1,10 @@
 'use client';
 
+import { useMediaQuery } from '@/hooks/use-media-query';
+import { scrollToElement } from '@/utils/scroll-to-element';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { AccordionContent, IdType, TitleSize } from './types';
 
 type AccordionItemProps = {
@@ -17,6 +19,32 @@ type AccordionItemProps = {
 
 export const AccordionItem = ({ id, title, titleSize, content, isOpen, onToggle, className }: AccordionItemProps) => {
   const contentRef = useRef<HTMLDivElement>(null);
+  const scrollRef = useRef<HTMLElement>(null);
+  const isMdOrLargerScreen = useMediaQuery('md');
+
+  // Need to do some hacky workarounds to compensate for the scroll when an accoridon is collapsed and another is opened
+  useEffect(() => {
+    if (isOpen) {
+      const accordionWrapper = document.getElementById('accordion-wrapper');
+      if (!accordionWrapper) return;
+
+      const includeHeaderHeight = !isMdOrLargerScreen;
+      const headerHeight = includeHeaderHeight
+        ? parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 0
+        : 0;
+
+      // Get accordion wrapper's position relative to viewport
+      const wrapperRect = accordionWrapper.getBoundingClientRect();
+      const wrapperTopPosition = wrapperRect.top + window.scrollY;
+
+      // Only scroll to the top of the scrollRef if we're scrolled past the top of the wrapper (accounting for header)
+      if (window.scrollY > wrapperTopPosition - headerHeight) {
+        setTimeout(() => {
+          scrollToElement(scrollRef.current?.id as string, includeHeaderHeight);
+        }, 400);
+      }
+    }
+  }, [isOpen]);
 
   let accordionContent;
 
@@ -57,7 +85,7 @@ export const AccordionItem = ({ id, title, titleSize, content, isOpen, onToggle,
   });
 
   return (
-    <article id={id.toString()} className={wrapperClasses}>
+    <article id={id.toString()} className={wrapperClasses} ref={scrollRef}>
       <div className="border-b border-foreground">
         <button
           className="group flex w-full items-center justify-between gap-6 p-4 text-foreground transition-all duration-300 hover:bg-foreground/10 active:bg-foreground/20"
