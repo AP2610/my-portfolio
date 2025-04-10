@@ -1,9 +1,10 @@
 'use client';
 
-import clsx from 'clsx';
-import { ButtonVariants } from '@/components/ui/button/types';
 import { buttonStyles } from '@/components/ui/button/styles';
+import { ButtonVariants } from '@/components/ui/button/types';
+import clsx from 'clsx';
 import Link from 'next/link';
+import { AnchorHTMLAttributes } from 'react';
 import { CgExternal, CgInternal } from 'react-icons/cg';
 
 type LinkVariants = ButtonVariants | 'inline';
@@ -17,7 +18,7 @@ const LinkStyles = {
   },
 };
 
-type ExternalLinkProps = {
+type MyLinkProps = {
   children: React.ReactNode;
   href: string;
   type: 'internal' | 'external';
@@ -26,18 +27,21 @@ type ExternalLinkProps = {
   showIcon?: boolean;
   isRounded?: boolean;
   hasHover?: boolean;
-};
+  target?: string;
+} & AnchorHTMLAttributes<HTMLAnchorElement>;
 
 export const MyLink = ({
   children,
   href,
   className,
   type,
+  target,
   variant = 'inline',
   showIcon = false,
   isRounded = true,
   hasHover = true,
-}: ExternalLinkProps) => {
+  ...props
+}: MyLinkProps) => {
   const isInlineVariant = variant === 'inline';
   const isInternal = type === 'internal';
 
@@ -53,7 +57,7 @@ export const MyLink = ({
   const isMailTo = href.startsWith('mailto:');
 
   return isInternal ? (
-    <Link href={href as string} className={classes} target="_self">
+    <Link href={href as string} className={classes} target={target || '_self'} {...props}>
       {children}
       {showIcon && <CgInternal className="tilt-shaking ml-2" />}
     </Link>
@@ -65,6 +69,7 @@ export const MyLink = ({
         target: '_blank',
         rel: 'noopener noreferrer',
       })}
+      {...props}
     >
       {children}
       {showIcon && !isInlineVariant && !isMailTo && <CgExternal className="tilt-shaking ml-2" />}
