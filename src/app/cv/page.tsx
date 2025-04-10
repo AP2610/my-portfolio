@@ -1,5 +1,5 @@
 import { Badge } from '@/components/ui/badge';
-// import { DownloadButton } from '@/components/features/cv/download-button';
+import { DownloadButton } from '@/components/features/cv/download-button';
 import { Experience } from '@/components/features/experience';
 import { MyLink } from '@/components/ui/my-link';
 import { MyImage } from '@/components/ui/image';
@@ -59,49 +59,42 @@ const SKILLS = [
 // TODO: Extract page parts to components
 const CvPage = () => {
   return (
-    <Section hasTopPadding hasBottomPadding>
-      <Section isFullWidth className="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row">
-        <header className="flex flex-col items-center gap-8 md:block">
-          <MyImage
-            src="/cv/headshot.webp"
-            alt="Arjun Puri"
-            priority
-            sizes="50vw"
-            containerClasses="w-48 h-48 rounded-full overflow-hidden flex-shrink-0 border-4 border-accent-lime hover:scale-105 transition-transform duration-300 md:hidden"
-          />
+    <Section paddingTop="medium" paddingBottom="medium" className="space-y-10">
+      <DownloadButton />
 
-          <div className="space-y-4">
-            <div className="mb-4 flex items-center justify-between gap-12">
-              <p className="text-lg font-bold text-accent-lime-foreground md:max-w-[700px]">
-                Frontend Engineer | React, Next.js, JavaScript, TypeScript, TailwindCss | Building Reliable, Engaging &
-                User-Centric Web Experiences
-              </p>
+      <header className="flex flex-col items-center gap-8 md:block">
+        <MyImage
+          src="/cv/headshot.webp"
+          alt="Arjun Puri"
+          priority
+          sizes="50vw"
+          containerClasses="w-48 h-48 rounded-full overflow-hidden flex-shrink-0 border-4 border-accent-lime hover:scale-105 transition-transform duration-300 md:hidden"
+        />
 
-              {/* Place in top right corner of screen on desktop and mobible figure it out */}
-              {/* <DownloadButton /> */}
-            </div>
-
-            <p className="text-accent-lime-foreground">Location - Netherlands</p>
-
-            <p className="text-accent-lime-foreground">Nationality - Indian (Dutch Permanent Residency)</p>
-
-            <div className="flex gap-4 font-sans text-sm font-medium">
-              <SocialIconLink platform="github" />
-              <SocialIconLink platform="linkedin" />
-              <SocialIconLink platform="email" />
-            </div>
-          </div>
-        </header>
-      </Section>
-
-      <div className="mb-8 text-foreground">
-        <h1 className="mb-4 text-2xl">Professional Experience</h1>
-
-        <InfoBox className="my-8">
-          <p>
-            You can hit the button in the top right corner to download my CV as a PDF. My downloadable CV has been designed in
-            Figma.
+        <div className="space-y-4">
+          <p className="text-lg font-bold text-accent-lime-foreground md:max-w-[700px]">
+            Frontend Engineer | React, Next.js, JavaScript, TypeScript, TailwindCss | Building Reliable, Engaging & User-Centric
+            Web Experiences
           </p>
+
+          <p className="text-accent-lime-foreground">Location - Netherlands</p>
+
+          <p className="text-accent-lime-foreground">Nationality - Indian (Dutch Permanent Residency)</p>
+
+          <div className="flex gap-4 font-sans text-sm font-medium">
+            <SocialIconLink platform="github" />
+            <SocialIconLink platform="linkedin" />
+            <SocialIconLink platform="email" />
+          </div>
+        </div>
+      </header>
+
+      {/* Experience section */}
+      <div className="space-y-6 text-foreground">
+        <h1 className="text-2xl">Professional Experience</h1>
+
+        <InfoBox className="md:max-w-[700px]">
+          <p>You can hit the button in the top right corner to download my CV as a PDF (designed in Figma).</p>
         </InfoBox>
 
         <p>
@@ -113,17 +106,16 @@ const CvPage = () => {
           </MyLink>{' '}
           of this website.
         </p>
-      </div>
 
-      {/* Experience section */}
-      <div className="space-y-10 font-sans md:space-y-12">
-        {experiences.map((experience, index) => (
-          <Experience key={index} {...experience} />
-        ))}
+        <div className="space-y-10 font-sans md:space-y-12">
+          {experiences.map((experience, index) => (
+            <Experience key={index} {...experience} />
+          ))}
+        </div>
       </div>
 
       {/* Skills */}
-      <div className="mt-10">
+      <Section isFullWidth>
         <h4 className="mb-6 text-2xl text-accent-electric-blue">Skills & Methodologies</h4>
 
         <ul className="flex flex-wrap gap-2">
@@ -133,10 +125,10 @@ const CvPage = () => {
             </li>
           ))}
         </ul>
-      </div>
+      </Section>
 
       {/* Languages & Certifications */}
-      <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <div>
           <h4 className="mb-6 text-2xl text-accent-electric-blue">Languages</h4>
 
@@ -216,7 +208,7 @@ const CvPage = () => {
       </div>
 
       {/* Education section */}
-      <div className="mt-10">
+      <Section isFullWidth>
         <h3 className="mb-6 text-2xl text-accent-electric-blue">Education</h3>
 
         <div className="flex flex-col gap-8 md:flex-row">
@@ -238,7 +230,7 @@ const CvPage = () => {
             <p className="text-sm text-gray-400">2019</p>
           </div>
         </div>
-      </div>
+      </Section>
     </Section>
   );
 };
