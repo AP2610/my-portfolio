@@ -13,6 +13,11 @@ const twBreakpoints: Record<Breakpoints, string> = {
 } as const;
 
 // TODO: can be updated to accept additional media queries like color scheme, reduced motion, and orientation.
+
+/**
+ * // Returns true when viewport width >= 768px (md)
+ * const isMediumScreenOrLarger = useMediaQuery('md');
+ */
 export const useMediaQuery = (breakpoint: 'sm' | 'md' | 'lg' | 'xl' | '2xl') => {
   const [matches, setMatches] = useState<boolean>(false);
 
