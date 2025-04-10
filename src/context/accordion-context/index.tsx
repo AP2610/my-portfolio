@@ -1,7 +1,7 @@
 'use client';
 
 import { IdType } from '@/components/ui/accordion/types';
-import { createContext, useEffect, useState } from 'react';
+import { createContext, useState } from 'react';
 
 type AccordionContextType = {
   activeId: IdType | null;
@@ -19,10 +19,6 @@ type AccordionProviderProps = {
 
 export const AccordionProvider = ({ children }: AccordionProviderProps) => {
   const [activeId, setActiveIds] = useState<IdType | null>(null);
-
-  useEffect(() => {
-    console.log('activeIds:', activeId);
-  }, [activeId]);
 
   const setOpenAccordionIds = (id: IdType) => {
     setActiveIds((prevId) => (prevId === id ? null : id));
