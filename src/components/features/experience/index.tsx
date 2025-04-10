@@ -1,6 +1,5 @@
-import { Experience as ExperienceType } from '@/app/cv/data';
+import { ExperienceType } from '@/app/cv/data';
 import clsx from 'clsx';
-import { MyLink } from '../../ui/my-link';
 
 type ExperienceProps = ExperienceType & {
   className?: string;
@@ -13,8 +12,9 @@ export const Experience = ({
   location = 'Netherlands',
   subText,
   description,
-  bulletPoints,
-  link,
+  projects,
+  additionalProjects,
+  carriedOverProjects,
   className,
 }: ExperienceProps) => {
   return (
@@ -31,21 +31,47 @@ export const Experience = ({
         </p>
       </header>
 
-      <div className="space-y-4 text-foreground print:text-rich-black">
-        {Array.isArray(description) ? description.map((desc, index) => <p key={index}>{desc}</p>) : <p>{description}</p>}
+      <div className="space-y-6 text-foreground print:text-rich-black">
+        <p>{description}</p>
 
-        {bulletPoints && (
-          <ul className="list-disc space-y-2 pl-5">
-            {bulletPoints.map((point, index) => (
-              <li key={index}>{point}</li>
+        {projects && projects.length > 0 && (
+          <div className="space-y-6">
+            {projects.map((project, index) => (
+              <div key={index} className="space-y-2">
+                <h3 className="font-semibold">{project.name}</h3>
+                {project.description && <p>{project.description}</p>}
+                {project.bulletPoints && (
+                  <ul className="list-disc space-y-2 pl-5">
+                    {project.bulletPoints.map((point, bulletIndex) => (
+                      <li key={bulletIndex}>{point}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
             ))}
-          </ul>
+          </div>
         )}
 
-        {link && (
-          <MyLink type="external" href={link.url} className="mt-4 print:hidden">
-            {link.text}
-          </MyLink>
+        {additionalProjects && additionalProjects.length > 0 && (
+          <div>
+            <h3 className="mb-2 font-semibold">Additional Projects</h3>
+            <ul className="list-disc space-y-2 pl-5">
+              {additionalProjects.map((project, index) => (
+                <li key={index}>{project}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {carriedOverProjects && carriedOverProjects.length > 0 && (
+          <div>
+            <h3 className="mb-2 font-semibold">Carried Over Projects</h3>
+            <ul className="list-disc space-y-2 pl-5">
+              {carriedOverProjects.map((project, index) => (
+                <li key={index}>{project}</li>
+              ))}
+            </ul>
+          </div>
         )}
       </div>
     </article>
