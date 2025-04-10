@@ -26,7 +26,7 @@ export const AccordionItem = ({ id, title, titleSize, content, isOpen, onToggle,
   useEffect(() => {
     if (!isOpen) return;
 
-    const accordionWrapper = document.getElementById('accordion-wrapper');
+    const accordionWrapper = scrollRef.current?.closest('#accordion-wrapper');
     if (!accordionWrapper) return;
 
     const includeHeaderHeight = !isMdOrLargerScreen;
