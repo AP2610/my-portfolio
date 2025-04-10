@@ -14,7 +14,11 @@ export const ThemeContext = createContext<ThemeContextType>({
   handleThemeToggle: () => {},
 });
 
-export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
+type ThemeProviderProps = {
+  children: React.ReactNode;
+};
+
+export const ThemeProvider = ({ children }: ThemeProviderProps) => {
   const [theme, setTheme] = useState<ThemeType>(null);
 
   const handleThemeToggle = () => {
