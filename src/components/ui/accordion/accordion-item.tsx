@@ -2,10 +2,11 @@
 
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
-import { useRef } from 'react';
-import { AccordionContent, TitleSize } from './types';
+import React, { useRef } from 'react';
+import { AccordionContent, IdType, TitleSize } from './types';
 
 type AccordionItemProps = {
+  id: IdType;
   title: string;
   titleSize?: TitleSize;
   content: AccordionContent;
@@ -14,12 +15,13 @@ type AccordionItemProps = {
   className: string;
 };
 
-export const AccordionItem = ({ title, titleSize, content, isOpen, onToggle, className }: AccordionItemProps) => {
+export const AccordionItem = ({ id, title, titleSize, content, isOpen, onToggle, className }: AccordionItemProps) => {
   const contentRef = useRef<HTMLDivElement>(null);
 
   let accordionContent;
 
-  if (Array.isArray(content)) {
+  // Check if content is an array of strings to make sure its not JSX wrapped in a fragment
+  if (Array.isArray(content) && content.every((item) => typeof item === 'string')) {
     accordionContent = content.map((item, index) => (
       <p key={index} className="text-foreground">
         {item}
@@ -28,7 +30,7 @@ export const AccordionItem = ({ title, titleSize, content, isOpen, onToggle, cla
   } else if (typeof content === 'string') {
     accordionContent = <p className="text-foreground">{content}</p>;
   } else {
-    // react node
+    // react node/children
     accordionContent = <>{content}</>;
   }
 
@@ -41,7 +43,7 @@ export const AccordionItem = ({ title, titleSize, content, isOpen, onToggle, cla
     y: '-50%',
   };
 
-  const titleClasses = clsx({
+  const titleClasses = clsx('text-left', {
     'text-base': titleSize === 'default',
     'text-sm': titleSize === 'small',
     'text-lg': titleSize === 'medium',
@@ -49,8 +51,13 @@ export const AccordionItem = ({ title, titleSize, content, isOpen, onToggle, cla
     'text-2xl': titleSize === 'xl',
   });
 
+  // Only add space between paragraphs if content is an array
+  const accordionContentClasses = clsx('p-4', {
+    'space-y-4': Array.isArray(content),
+  });
+
   return (
-    <article className={wrapperClasses}>
+    <article id={id.toString()} className={wrapperClasses}>
       <div className="border-b border-foreground">
         <button
           className="group flex w-full items-center justify-between p-4 text-foreground transition-all duration-300 hover:bg-foreground/10 active:bg-foreground/20"
@@ -83,8 +90,7 @@ export const AccordionItem = ({ title, titleSize, content, isOpen, onToggle, cla
         animate={isOpen ? 'open' : 'closed'}
         variants={{
           open: {
-            height: contentRef.current?.scrollHeight || 'auto',
-            maxHeight: contentRef.current?.scrollHeight,
+            height: contentRef.current?.scrollHeight,
             opacity: 1,
             scaleY: 1,
           },
@@ -96,7 +102,7 @@ export const AccordionItem = ({ title, titleSize, content, isOpen, onToggle, cla
         }}
         className="origin-top overflow-hidden"
       >
-        <div className="space-y-4 p-4">{accordionContent}</div>
+        <div className={accordionContentClasses}>{accordionContent}</div>
       </motion.div>
     </article>
   );
