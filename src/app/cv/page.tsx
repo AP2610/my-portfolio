@@ -3,7 +3,6 @@ import { Experience } from '@/components/features/experience';
 import { Section } from '@/components/layout/section';
 import { Badge } from '@/components/ui/badge';
 import { Headshot } from '@/components/ui/headshot';
-import { InfoBox } from '@/components/ui/info-box';
 import { MyLink } from '@/components/ui/my-link';
 import { SocialIconLink } from '@/components/ui/social-icon-link';
 import type { Metadata } from 'next';
@@ -59,12 +58,6 @@ const CvPage = () => {
       {/* Experience section */}
       <div className="space-y-6 text-foreground">
         <h2 className="text-2xl">Professional Experience</h2>
-
-        <InfoBox className="md:max-w-[700px]">
-          <p>
-            In case you'd like to save a copy of my CV, you can hit the button above to download it as a PDF (designed in Figma).
-          </p>
-        </InfoBox>
 
         <p>
           My CV contains consolidated and condensed information about my experiences. If you'd like a bit more detail on the
