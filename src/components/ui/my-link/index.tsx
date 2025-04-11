@@ -11,11 +11,6 @@ type LinkVariants = ButtonVariants | 'inline';
 
 const LinkStyles = {
   ...buttonStyles,
-  variants: {
-    ...buttonStyles.variants,
-    inline:
-      'inline-flex items-center font-sans text-accent-electric-blue relative cursor-pointer after:content-[""] after:absolute after:h-[1px] after:w-0 after:bg-accent-electric-blue after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300',
-  },
 };
 
 type MyLinkProps = {
