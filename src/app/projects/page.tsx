@@ -14,23 +14,19 @@ export const metadata: Metadata = {
 
 const ProjectsPage = () => {
   return (
-    <Section className="mt-[var(--header-height)]" hasTopPadding hasBottomPadding>
+    <Section paddingTop="medium" paddingBottom="medium" className="scroll-smooth">
       <div className="space-y-12">
         <header>
           <h1 className="mb-8 text-4xl text-foreground">My Projects</h1>
 
           <div className="space-y-6">
-            <p className="text-foreground">TLDR: Hit the Projects button below if you're just interested in my projects.</p>
-
-            <div className="flex items-center gap-4 md:w-1/2">
-              <MyLink type="internal" variant="primary" href="/cv">
-                View my CV here
-              </MyLink>
-
-              <Button variant="secondary" scrollTo="featured-projects">
-                Projects <FaArrowDown className="bounce-vertical ml-2" />
-              </Button>
-            </div>
+            <p className="text-foreground">
+              TLDR:{' '}
+              <Button variant="inline" scrollTo="featured-projects" className="flex items-center gap-2">
+                Jump straight to projects
+                <FaArrowDown className="bounce-vertical" />
+              </Button>{' '}
+            </p>
 
             <p className="text-foreground">
               What you'll find below are some of the most impactful projects I've worked on—both in my growth as a developer and
