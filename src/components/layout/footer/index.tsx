@@ -10,7 +10,7 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="print:hidden">
+    <footer>
       <Section hasTopPadding hasBottomPadding>
         <div className="grid gap-8 border-t border-primary pt-8 md:grid-cols-2 md:gap-12 lg:grid-cols-4">
           <div className="space-y-4">
@@ -19,18 +19,13 @@ export const Footer = () => {
             <p className="text-accent-electric-blue">Building Reliable, Engaging & User-Centric Web Experiences</p>
           </div>
 
-          <div>
-            <h3 className="mb-4 text-xl font-bold text-foreground">Quick Links</h3>
+          <div className="text-foreground">
+            <h3 className="mb-4 text-xl font-bold">Quick Links</h3>
 
             <ul className="space-y-2">
               {NAVIGATION_LINKS.map((link) => (
                 <li key={link.href}>
-                  <NavLink
-                    href={link.href}
-                    fontSize="small"
-                    showBorder={false}
-                    className="font-medium text-foreground hover:text-accent-lime"
-                  >
+                  <NavLink href={link.href} fontSize="small" showBorder={false} textAlign="left">
                     {link.label}
                   </NavLink>
                 </li>
