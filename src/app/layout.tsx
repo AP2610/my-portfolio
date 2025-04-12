@@ -59,7 +59,7 @@ const RootLayout = ({
             <div className="flex min-h-dvh pt-header-height md:pt-0">
               <Sidebar className="hidden md:flex" />
 
-              <div className="flex flex-1 flex-col">
+              <div className="flex min-w-0 flex-1 flex-col">
                 <AccordionProvider>
                   <main className="flex-grow">{children}</main>
                 </AccordionProvider>

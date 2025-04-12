@@ -3,17 +3,30 @@ import Link from 'next/link';
 
 type LogoProps = {
   isNavOpen: boolean;
+  isCollapsed?: boolean;
+  className?: string;
 };
 
-export const Logo = ({ isNavOpen }: LogoProps) => {
-  const linkLogoClasses = clsx('text-3xl z-20 relative font-sans font-black transition-colors duration-300', {
-    'text-accent-electric-blue hover:text-electric-blue-700': isNavOpen,
-    'text-accent-lime-foreground hover:text-lime-700': !isNavOpen,
-  });
+export const Logo = ({ isNavOpen, isCollapsed = false, className }: LogoProps) => {
+  const linkLogoClasses = clsx(
+    'text-3xl z-20 relative font-sans font-black transition-all duration-300',
+    {
+      'text-accent-electric-blue hover:text-electric-blue-700': isNavOpen,
+      'text-accent-lime-foreground hover:text-lime-800 dark:text-accent-lime dark:hover:text-lime-700': !isNavOpen,
+    },
+    className
+  );
 
   return (
     <Link href="/" className={linkLogoClasses}>
-      AP.DEV
+      {isCollapsed ? (
+        <span className="flex flex-col">
+          <span>AP.</span>
+          <span>DEV</span>
+        </span>
+      ) : (
+        'AP.DEV'
+      )}
     </Link>
   );
 };
