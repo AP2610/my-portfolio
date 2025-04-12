@@ -129,10 +129,11 @@
   --accent-violet: var(--violet-600);
 
   --homepage-card-bg: var(--cosmic-latte-200);
-
   --radial-background-color: var(--cosmic-latte-700);
-
   --sidebar-bg: var(--cosmic-latte-600);
+
+  --sidebar-collapse-button-color: var(--accent-lime-foreground);
+  --sidebar-collapse-button-color-hover: var(--lime-800);
 }
 
 .dark {
@@ -150,10 +151,11 @@
   --accent-violet: var(--violet);
 
   --homepage-card-bg: var(--rich-black);
-
   --radial-background-color: var(--lime);
-
   --sidebar-bg: var(--rich-black);
+
+  --sidebar-collapse-button-color: var(--rich-black-200);
+  --sidebar-collapse-button-color-hover: var(--rich-black-300);
 }
 
 /* TODO: Implement the same for framer motion animations using useReducedMotion hook */

@@ -55,6 +55,8 @@ export default {
         'accent-violet': 'rgba(var(--accent-violet))',
         'homepage-card-bg': 'rgba(var(--homepage-card-bg))',
         'sidebar-bg': 'rgba(var(--sidebar-bg))',
+        'sidebar-collapse-button-color': 'rgba(var(--sidebar-collapse-button-color))',
+        'sidebar-collapse-button-color-hover': 'rgba(var(--sidebar-collapse-button-color-hover))',
 
         // Original color scales
         'rich-black': {
