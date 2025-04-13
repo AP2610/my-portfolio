@@ -16,7 +16,6 @@ export const metadata: Metadata = {
     'Frontend Engineer with expertise in JavaScript, TypeScript, React, Next.js and Tailwind CSS. View my professional experience, skills, and qualifications.',
 };
 
-// TODO: Extract page parts to components
 const CvPage = () => {
   return (
     <Section paddingTop="medium" paddingBottom="medium" className="relative space-y-10">
