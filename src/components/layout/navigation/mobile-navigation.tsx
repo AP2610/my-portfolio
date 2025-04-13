@@ -14,7 +14,7 @@ type MobileNavigationProps = {
 
 export const MobileNavigation = ({ isOpen, setIsOpen, className }: MobileNavigationProps) => {
   useEffect(() => {
-    document.body.style.overflow = isOpen ? 'hidden' : 'auto';
+    document.body.style.overflow = isOpen ? 'hidden' : '';
   }, [isOpen]);
 
   const motionSpanCommonClasses = 'absolute h-[2px] rounded-md transition-[background-color] duration-200';
