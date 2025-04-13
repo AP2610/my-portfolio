@@ -5,7 +5,6 @@ import { FaArrowDown } from 'react-icons/fa';
 import { HomepageCard } from '../homepage-card';
 import { SpecialisationsIconList } from '../specialisations-icon-list';
 
-/* TODO: make a heading component that takes level, size, weight, and color props */
 export const HomepageCardGrid = () => {
   return (
     <div className="grid h-full auto-rows-auto grid-cols-1 gap-6 sm:grid-cols-2 lg:auto-rows-fr lg:grid-cols-12">

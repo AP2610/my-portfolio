@@ -23,7 +23,7 @@ export const Button = ({ children, scrollTo, className, variant = 'primary', isR
   const classes = clsx(
     {
       [buttonStyles.variants[variant]]: true,
-      [buttonStyles.nonIconButtonStyles]: variant !== 'icon-button',
+      [buttonStyles.nonIconButtonStyles]: variant !== 'inline' && variant !== 'icon-button',
       'rounded-md': isRounded,
       'cursor-not-allowed opacity-50': 'disabled' in props && props.disabled,
     },

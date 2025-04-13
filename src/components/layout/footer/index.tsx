@@ -11,7 +11,7 @@ export const Footer = () => {
 
   return (
     <footer>
-      <Section hasTopPadding hasBottomPadding>
+      <Section paddingTop="medium" paddingBottom="small">
         <div className="grid gap-8 border-t border-primary pt-8 md:grid-cols-2 md:gap-12 lg:grid-cols-4">
           <div className="space-y-4">
             <Logo isNavOpen={false} />

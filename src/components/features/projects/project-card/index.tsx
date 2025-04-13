@@ -1,30 +1,37 @@
-import { Project } from '@/app/projects/data';
-import { MyLink } from '@/components/ui/my-link';
-import { MyImage } from '@/components/ui/image';
-import clsx from 'clsx';
+'use client';
 
-type ProjectCardProps = Pick<Project, 'slug' | 'company' | 'role' | 'situation' | 'image'>;
+import { ProjectType } from '@/app/projects/data';
+import { ModalDialog } from '@/components/ui/modal-dialog';
+import { useRef } from 'react';
+import { ProjectDetails } from '../project-details';
+import { buttonStyles } from '@/components/ui/button/styles';
 
-export const ProjectCard = ({ slug, company, role, situation, image }: ProjectCardProps) => {
+type ProjectCardProps = {
+  project: ProjectType;
+};
+
+const inlineButtonStyle = buttonStyles.variants.inline;
+
+export const ProjectCard = ({ project }: ProjectCardProps) => {
+  const dialogRef = useRef<HTMLDialogElement | null>(null);
+
   return (
-    <article className="flex h-full flex-col overflow-hidden rounded-lg bg-cosmic-latte-600/10 shadow-md transition-transform hover:scale-[1.02] hover:transform dark:border-2 dark:border-rich-black-400 dark:bg-rich-black-400/30">
-      {/* I use aspect-video here to avoid having to set an explicit height. I do this so the image does not get cut off. */}
-      {image && <MyImage src={image} alt={`${company} project`} containerClasses="aspect-video" sizes="40vw" />}
-
-      <div className="flex flex-grow flex-col space-y-4 p-4">
-        <h2 className="text-2xl text-accent-electric-blue">{company}</h2>
-        <p className="text-xl font-semibold text-foreground">{role}</p>
-
-        <div className="flex flex-grow flex-col">
-          {/* Show full situation text when there is no image */}
-          <p className={`${clsx({ 'line-clamp-3': image })} mb-6 text-foreground`}>{situation}</p>
-
-          {/* Button is always at the bottom using mt-auto */}
-          <MyLink type="internal" href={`/projects/${slug}`} variant="primary-outline" className="mt-auto">
-            Read More
-          </MyLink>
+    <>
+      <button
+        onClick={() => dialogRef.current?.showModal()}
+        className="flex flex-col gap-6 rounded-md bg-homepage-card-bg p-6 text-left text-foreground shadow-md transition-transform hover:scale-[1.02]"
+      >
+        <div className="space-y-2">
+          <h2 className="text-xl font-light">{project.company}</h2>
+          <p className="text-foreground text-gray-500">{project.role}</p>
         </div>
-      </div>
-    </article>
+
+        <span className={`${inlineButtonStyle} ml-auto mt-auto`}>Read More</span>
+      </button>
+
+      <ModalDialog ref={dialogRef}>
+        <ProjectDetails {...project} />
+      </ModalDialog>
+    </>
   );
 };

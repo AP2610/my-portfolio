@@ -16,7 +16,6 @@ export const metadata: Metadata = {
     'Frontend Engineer with expertise in JavaScript, TypeScript, React, Next.js and Tailwind CSS. View my professional experience, skills, and qualifications.',
 };
 
-// TODO: Extract page parts to components
 const CvPage = () => {
   return (
     <Section paddingTop="medium" paddingBottom="medium" className="relative space-y-10">
@@ -56,17 +55,20 @@ const CvPage = () => {
       </header>
 
       {/* Experience section */}
-      <div className="space-y-6 text-foreground">
-        <h2 className="text-2xl">Professional Experience</h2>
+      <div className="space-y-12 text-foreground">
+        <div className="space-y-6">
+          <h2 className="text-2xl">Professional Experience</h2>
 
-        <p>
-          My CV contains consolidated and condensed information about my experiences. If you'd like a bit more detail on the
-          projects I've worked on, including the situation, tasks, results, technical details, and specializations, check out the{' '}
-          <MyLink type="internal" href="/projects">
-            projects section
-          </MyLink>{' '}
-          of my website.
-        </p>
+          <p>
+            My CV contains consolidated and condensed information about my experiences. If you'd like a bit more detail on the
+            projects I've worked on, including the situation, tasks, results, technical details, and specializations, check out
+            the{' '}
+            <MyLink type="internal" href="/projects">
+              projects section
+            </MyLink>{' '}
+            of my website.
+          </p>
+        </div>
 
         <div className="space-y-10 font-sans md:space-y-12">
           {experiences.map((experience, index) => (
@@ -76,7 +78,7 @@ const CvPage = () => {
       </div>
 
       {/* Skills & Methodologies */}
-      <Section isFullWidth>
+      <Section isFullWidth paddingTop="small">
         <h4 className="mb-6 text-2xl text-accent-electric-blue">Skills & Methodologies</h4>
 
         <ul className="flex flex-wrap gap-2">
