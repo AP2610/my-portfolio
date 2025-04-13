@@ -196,6 +196,10 @@
 
 body {
   background: rgba(var(--background));
+
+  &:has(dialog[open]) {
+    overflow: hidden;
+  }
 }
 
 h1,
