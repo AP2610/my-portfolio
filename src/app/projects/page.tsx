@@ -1,9 +1,6 @@
 import { ProjectCard } from '@/components/features/projects/project-card';
 import { Section } from '@/components/layout/section';
-import { Button } from '@/components/ui/button';
-import { MyLink } from '@/components/ui/my-link';
 import type { Metadata } from 'next';
-import { FaArrowDown } from 'react-icons/fa';
 import { projectsData } from './data';
 
 export const metadata: Metadata = {
@@ -14,83 +11,30 @@ export const metadata: Metadata = {
 
 const ProjectsPage = () => {
   return (
-    <Section paddingTop="medium" paddingBottom="medium" className="scroll-smooth">
+    <Section paddingTop="medium" paddingBottom="medium">
       <div className="space-y-12">
         <header>
-          <h1 className="mb-8 text-4xl text-foreground">My Projects</h1>
+          <h1 className="mb-8 text-3xl text-foreground md:text-4xl">Projects</h1>
 
           <div className="space-y-6">
             <p className="text-foreground">
-              TLDR:{' '}
-              <Button variant="inline" scrollTo="featured-projects" className="flex items-center gap-2">
-                Jump straight to projects
-                <FaArrowDown className="bounce-vertical" />
-              </Button>{' '}
+              These are some of the most impactful projects I've worked on—both in my growth as a developer and in their impact on
+              users. These aren't all the projects I've contributed to throughout my career, but the most substantial ones.
             </p>
 
             <p className="text-foreground">
-              What you'll find below are some of the most impactful projects I've worked on—both in my growth as a developer and
-              in their impact on users. These aren't all the projects I've contributed to throughout my career, but they represent
-              key milestones.
-            </p>
-
-            <p className="text-foreground">
-              Earlier in my career, I worked on fully custom WordPress themes, handling both frontend and backend development.
-              These projects leveraged the then-new Gutenberg editor, which heavily utilises React. This was my first professional
-              exposure to React and marked the beginning of my journey into modern frontend development.
-            </p>
-
-            <p className="text-foreground">
-              Beyond client-facing applications, I've also built internal tools for my teams. Two of the most notable ones
-              include:
-            </p>
-
-            <ul className="mb-4 ml-4 list-inside list-disc text-foreground">
-              <li>A team randomiser (Coronavirus Dashboard) – Used to fairly assign a team member to lead each sprint.</li>
-              <li>
-                An XML parser (VodafoneZiggo) – Designed to handle large XML files from Salesforce Commerce Cloud and convert them
-                into a usable format.
-              </li>
-            </ul>
-
-            <p className="text-foreground">
-              Both tools were built with React. I still have access to the code for these projects and plan to add them to my
-              portfolio soon - they need to be cleaned up and refined slightly. The XML parser especially was created in a rush, I
-              need to refactor its code.
-            </p>
-
-            <p className="text-foreground">
-              Additionally, my very first use of React was for a technical assignment during my interview with Clockwork. I built
-              a weather widget, which, while simple, was an important learning experience for me. The API is no longer free, but
-              the code is still available on my{' '}
-              <MyLink type="external" href="https://github.com/AP2610?tab=repositories" variant="inline">
-                GitHub
-              </MyLink>{' '}
-              if you'd like to check it out. (Be kind—it was my first React project, just a few months after I started coding!)
+              Earlier in my career, I worked on fully custom WordPress implementations, handling both frontend and backend
+              development. These projects leveraged the then-new Gutenberg editor, which heavily utilises React. This was my first
+              professional exposure to React and marked the beginning of my journey into modern frontend development.
             </p>
           </div>
         </header>
 
-        <Section isFullWidth id="featured-projects">
-          <div className="mb-12">
-            <h2 className="mb-4 text-2xl text-foreground">Featured Projects</h2>
-
-            <p className="font-semibold text-accent-lime">Projects are listed in chronological order, more or less.</p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {projectsData.map((project, index) => (
-              <ProjectCard
-                key={index}
-                slug={project.slug}
-                company={project.company}
-                role={project.role}
-                situation={project.situation}
-                image={project.image}
-              />
-            ))}
-          </div>
-        </Section>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {projectsData.map((project, index) => (
+            <ProjectCard key={index} project={project} />
+          ))}
+        </div>
       </div>
     </Section>
   );
