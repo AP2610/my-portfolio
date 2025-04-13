@@ -1,8 +1,9 @@
 'use client';
 
+import clsx from 'clsx';
+import { useEffect } from 'react';
 import { IoCloseOutline } from 'react-icons/io5';
 import { Button } from '../button';
-import clsx from 'clsx';
 import styles from './styles.module.scss';
 
 type ModalDialogProps = {
@@ -17,6 +18,32 @@ export const ModalDialog = ({ children, className, ref }: ModalDialogProps) => {
     styles.dialog,
     className
   );
+
+  useEffect(() => {
+    const dialog = ref.current;
+    if (!dialog) return;
+
+    const handleClick = (event: MouseEvent) => {
+      const rect = dialog.getBoundingClientRect();
+
+      // Check if the click is inside the dialog because the backdrop is also considered the dialog
+      const isInDialog =
+        rect.top <= event.clientY &&
+        event.clientY <= rect.top + rect.height &&
+        rect.left <= event.clientX &&
+        event.clientX <= rect.left + rect.width;
+
+      if (!isInDialog) {
+        dialog.close();
+      }
+    };
+
+    dialog.addEventListener('click', handleClick);
+
+    return () => {
+      dialog.removeEventListener('click', handleClick);
+    };
+  }, [ref]);
 
   return (
     <dialog ref={ref} className={dialogClasses}>
