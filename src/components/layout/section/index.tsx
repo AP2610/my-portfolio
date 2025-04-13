@@ -7,8 +7,6 @@ type SectionProps = {
   className?: string;
   id?: string;
   isFullWidth?: boolean;
-  hasBottomPadding?: boolean;
-  hasTopPadding?: boolean;
   hasHeaderPaddingTop?: boolean;
   paddingTop?: PaddingSizes;
   paddingBottom?: PaddingSizes;
@@ -21,22 +19,19 @@ export const Section = ({
   paddingTop,
   paddingBottom,
   isFullWidth = false,
-  hasBottomPadding = false,
-  hasTopPadding = false,
   hasHeaderPaddingTop = false,
 }: SectionProps) => {
   const sectionClasses = clsx(
     {
       container: !isFullWidth,
       'w-full': isFullWidth,
-      // TODO: Remove hasTopPadding and hasBottomPadding, once they have all been removed
-      'pt-16': hasTopPadding || paddingTop === 'medium',
-      'pb-16': hasBottomPadding || paddingBottom === 'medium',
-      'pt-header-height': hasHeaderPaddingTop,
+      'pt-16': paddingTop === 'medium',
+      'pb-16': paddingBottom === 'medium',
       'pt-8': paddingTop === 'small',
       'pt-24': paddingTop === 'large',
       'pb-8': paddingBottom === 'small',
       'pb-24': paddingBottom === 'large',
+      'pt-header-height': hasHeaderPaddingTop,
     },
     className
   );
