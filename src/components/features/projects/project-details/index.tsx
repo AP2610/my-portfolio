@@ -1,14 +1,14 @@
-import { Project as ProjectType } from '@/app/projects/data';
+import { ProjectType } from '@/app/projects/data';
 import { Badge } from '@/components/ui/badge';
 import { MyLink } from '@/components/ui/my-link';
 import { MyImage } from '@/components/ui/image';
+import { Accordion, AccordionData } from '@/components/ui/accordion';
 
-type ProjectProps = ProjectType;
+type ProjectDetailsProps = ProjectType;
 
 export const ProjectDetails = ({
   role,
   company,
-  period,
   situation,
   tasks,
   results,
@@ -16,14 +16,39 @@ export const ProjectDetails = ({
   image,
   githubUrl,
   websiteUrl,
-  additionalInfo,
-}: ProjectProps) => {
+}: ProjectDetailsProps) => {
+  const projectDetailsAccordionData: AccordionData[] = [
+    {
+      id: 'situation',
+      title: 'Situation',
+      column: 'left',
+      content: situation,
+    },
+    {
+      id: 'tasks',
+      title: 'Tasks',
+      column: 'left',
+      content: (
+        <ul className="list-disc space-y-2 pl-5">
+          {tasks.map((task, index) => (
+            <li key={index}>{task}</li>
+          ))}
+        </ul>
+      ),
+    },
+    {
+      id: 'results',
+      title: 'Results',
+      column: 'right',
+      content: results,
+    },
+  ];
+
   return (
     <article className="space-y-8 border-b border-cosmic-latte/10 last:border-b-0">
-      <header className="mb-8">
+      <header>
         <h2 className="mb-4 text-2xl text-accent-electric-blue">{company}</h2>
-        <span className="mb-2 font-sans text-xl font-medium text-foreground md:mb-0">{role}</span>
-        <span className="block font-sans font-medium text-accent-lime md:ml-4 md:inline">{period}</span>
+        <span className="font-sans font-normal text-foreground">{role}</span>
       </header>
 
       {image && (
@@ -31,43 +56,18 @@ export const ProjectDetails = ({
           <MyImage
             src={image}
             alt={`${company} project screenshot`}
+            sizes="50vw"
             containerClasses="aspect-video rounded-lg overflow-hidden md:max-h-[32rem]"
           />
         </div>
       )}
 
-      <div className="space-y-6 text-foreground">
-        <div>
-          <h3 className="mb-4 text-xl font-semibold">Situation</h3>
-          <p>{situation}</p>
-        </div>
-
-        <div className="text-foreground">
-          <h3 className="mb-4 text-xl font-semibold">Tasks</h3>
-
-          <ul className="list-disc space-y-2 pl-4 font-sans">
-            {tasks.map((task, index) => (
-              <li key={index}>{task}</li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="text-foreground">
-          <h3 className="mb-4 text-xl font-semibold">Results</h3>
-          <p>{results}</p>
-        </div>
-
-        {additionalInfo && (
-          <div className="text-foreground">
-            <h3 className="mb-4 text-xl font-semibold">Additional Information</h3>
-            <p>{additionalInfo}</p>
-          </div>
-        )}
+      <div className="text-foreground">
+        <Accordion isTwoColumns data={projectDetailsAccordionData} className="mb-10" />
 
         <div className="text-foreground">
           <h3 className="mb-4 text-xl font-semibold">Technologies & Skills</h3>
 
-          {/* TODO: Create generic list component */}
           <ul className="flex flex-wrap gap-2">
             {specializations.map((skill) => (
               <li key={skill}>
@@ -77,19 +77,21 @@ export const ProjectDetails = ({
           </ul>
         </div>
 
-        <div className="flex gap-4 pt-4">
-          {websiteUrl && (
-            <MyLink type="external" href={websiteUrl} variant="primary" showIcon>
-              Visit Project Website
-            </MyLink>
-          )}
+        {(websiteUrl || githubUrl) && (
+          <div className="mt-8 flex gap-4">
+            {websiteUrl && (
+              <MyLink type="external" href={websiteUrl} variant="primary" showIcon>
+                Visit Project Website
+              </MyLink>
+            )}
 
-          {githubUrl && (
-            <MyLink type="external" href={githubUrl} variant="electric-blue-secondary" showIcon>
-              View Source Code
-            </MyLink>
-          )}
-        </div>
+            {githubUrl && (
+              <MyLink type="external" href={githubUrl} variant="electric-blue-secondary" showIcon>
+                View Source Code
+              </MyLink>
+            )}
+          </div>
+        )}
       </div>
     </article>
   );
