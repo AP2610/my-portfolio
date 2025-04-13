@@ -57,7 +57,7 @@ export const ModalDialog = ({ children, className, ref }: ModalDialogProps) => {
         </Button>
 
         {/* Modal content */}
-        <div>{children}</div>
+        {children}
       </div>
     </dialog>
   );
