@@ -21,7 +21,7 @@ export const MobileNavigation = ({ isOpen, setIsOpen, className }: MobileNavigat
   const backgroundColor = isOpen ? 'rgb(var(--accent-electric-blue))' : 'rgb(var(--accent-lime-foreground))';
 
   return (
-    <nav className={clsx('h-14 w-14', className)}>
+    <nav className={clsx('h-14 w-12', className)}>
       <MotionConfig
         transition={{
           duration: 0.2,

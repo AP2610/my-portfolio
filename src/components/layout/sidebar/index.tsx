@@ -23,7 +23,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
     'relative bg-sidebar-bg sticky top-0 h-screen flex-col items-center py-8 gap-14 text-foreground shadow-md transition-all duration-300',
     {
       'w-18': isCollapsed,
-      'w-[300px]': !isCollapsed,
+      'w-[250px]': !isCollapsed,
     },
     className
   );
