@@ -49,9 +49,9 @@ const RootLayout = ({
         />
       </head>
 
-      <body className={clsx(`${raleway.variable} bg-background antialiased`)}>
+      <body className={clsx(`${raleway.variable} antialiased`)}>
         <Providers>
-          <div className="bg-background transition-colors duration-300">
+          <div className="isolate bg-background transition-colors duration-300">
             {/* Header is only shown upto the md breakpoint, then the sidebar takes over */}
             <Header className="md:hidden" />
 
