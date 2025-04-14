@@ -1,0 +1,26 @@
+.light.high-contrast {
+  // Cards
+  --card-body-text-color: var(--foreground);
+
+  // Navigation
+  --accent-lime-foreground: var(--lime-800);
+
+  // Buttons
+  .btn {
+    &-secondary {
+      @apply bg-lime-800/10 text-lime-800 hover:bg-lime-800/20 border-lime-800;
+    }
+
+    &-inline {
+      @apply text-electric-blue-700;
+
+      &::after {
+        @apply bg-electric-blue-700;
+      }
+    }
+  }
+}
+
+.dark.high-contrast {
+  --card-body-text-color: var(--foreground);
+}
