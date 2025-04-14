@@ -25,7 +25,7 @@ export const Footer = () => {
             <ul className="space-y-2">
               {NAVIGATION_LINKS.map((link) => (
                 <li key={link.href}>
-                  <NavLink href={link.href} fontSize="small" showBorder={false} textAlign="left">
+                  <NavLink isInFooter href={link.href} fontSize="small" showBorder={false} textAlign="left">
                     {link.label}
                   </NavLink>
                 </li>

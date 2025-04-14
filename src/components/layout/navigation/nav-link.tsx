@@ -14,6 +14,7 @@ type NavLinkProps = {
   fontSize?: 'default' | 'small';
   showBorder?: boolean;
   textAlign?: 'center' | 'left';
+  isInFooter?: boolean;
 };
 
 export const NavLink = ({
@@ -24,6 +25,7 @@ export const NavLink = ({
   fontSize = 'default',
   showBorder = true,
   textAlign = 'center',
+  isInFooter = false,
 }: NavLinkProps) => {
   const pathname = usePathname();
   const { isHighContrast } = useContext(ContrastContext);
@@ -39,7 +41,7 @@ export const NavLink = ({
         'font-normal text-foreground': !isActiveLink,
         'text-4xl': fontSize === 'default',
         'text-base': fontSize === 'small',
-        'md:!text-xl': isHighContrast,
+        'md:!text-xl': isHighContrast && !isInFooter,
         'text-left': textAlign === 'left',
         'text-center': textAlign === 'center',
       },
