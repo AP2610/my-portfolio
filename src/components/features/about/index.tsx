@@ -1,5 +1,4 @@
 import { Accordion } from '@/components/ui/accordion';
-import { Blockquote } from '@/components/ui/blockquote';
 import { MyLink } from '@/components/ui/my-link';
 import { aboutMeData } from './data';
 
@@ -11,11 +10,6 @@ export const About = () => {
       </h2>
 
       <Accordion data={aboutMeData} isTwoColumns className="!mb-14 !mt-10" />
-
-      <Blockquote color="electric-blue">
-        Quality is king, but flexibility is key. I believe in delivering high-quality work while adapting to real-world
-        constraints.
-      </Blockquote>
 
       <div className="space-y-4 text-foreground">
         <p>If you've gone through all the above, I appreciate you taking the time to read a little bit about my story.</p>
