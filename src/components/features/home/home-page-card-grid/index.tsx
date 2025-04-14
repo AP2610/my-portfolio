@@ -10,18 +10,18 @@ export const HomepageCardGrid = () => {
     <div className="grid h-full auto-rows-auto grid-cols-1 gap-6 sm:grid-cols-2 lg:auto-rows-fr lg:grid-cols-12">
       <HomepageCard className="lg:col-span-3">
         <h2 className="mb-4 text-3xl font-light">5 years</h2>
-        <p className="text-gray-500">Of frontend development experience</p>
+        <p className="text-card-body-text-color">Of frontend development experience</p>
       </HomepageCard>
 
       <HomepageCard className="lg:col-span-3">
         <h2 className="mb-4 text-3xl font-light">10+ Projects</h2>
-        <p className="text-gray-500">Delivered Successfully</p>
+        <p className="text-card-body-text-color">Delivered Successfully</p>
       </HomepageCard>
 
       <HomepageCard className="gap-4 sm:col-span-2 lg:col-span-6 lg:row-span-2" textAlign="left" alignItems="start">
         <h2 className="text-3xl font-light">About me</h2>
 
-        <p className="flex-grow text-gray-500">
+        <p className="flex-grow text-card-body-text-color">
           I'm a frontend engineer with a passion for creating beautiful, interactive, and accessible applications that prioritise
           the user experience. While trained as a full-stack developer, I gravitated towards the frontend for its direct impact on
           users. I thrive on transforming ideas into functional, visually appealing web applications and believe in clear, honest
@@ -40,7 +40,7 @@ export const HomepageCardGrid = () => {
           <SpecialisationsIconList />
         </div>
 
-        <p className="text-gray-500">Next.js, React, JavaScript, TypeScript, Tailwind CSS, Sanity CMS</p>
+        <p className="text-card-body-text-color">Next.js, React, JavaScript, TypeScript, Tailwind CSS, Sanity CMS</p>
       </HomepageCard>
 
       <HomepageCard className="lg:col-span-4 xl:col-span-3">
