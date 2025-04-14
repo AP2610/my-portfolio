@@ -1,5 +1,6 @@
 'use client';
 
+import { useMediaQuery } from '@/hooks/use-media-query';
 import { createContext, useEffect, useState } from 'react';
 
 type ContrastContextType = {
@@ -18,6 +19,11 @@ type ContrastProviderProps = {
 
 export const ContrastProvider = ({ children }: ContrastProviderProps) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
+  const prefersHighContrast = useMediaQuery('(prefers-contrast: more)');
+
+  useEffect(() => {
+    setIsHighContrast(prefersHighContrast);
+  }, [prefersHighContrast]);
 
   useEffect(() => {
     if (isHighContrast) {
