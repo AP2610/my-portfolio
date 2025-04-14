@@ -1,0 +1,39 @@
+@layer components {
+  .btn-base {
+    @apply px-4 py-2 min-w-[160px] font-sans font-medium text-center text-base transition-all duration-300 flex items-center justify-center;
+  }
+
+  .btn {
+    &-icon {
+      @apply w-[fit-content] p-4;
+    }
+
+    &-primary {
+      @apply bg-primary text-primary-foreground hover:bg-primary/80 border-2 border-transparent;
+
+      &-outline {
+        @apply bg-cosmic-latte-600/20 dark:bg-primary/20 text-foreground border-2 border-cosmic-latte-600 dark:border-primary hover:bg-cosmic-latte-600/40 dark:hover:bg-primary/40;
+      }
+    }
+
+    &-secondary {
+      @apply bg-accent-lime/20 text-accent-lime-foreground border-2 border-accent-lime hover:bg-accent-lime/5;
+    }
+
+    &-electric-blue-secondary {
+      @apply text-accent-electric-blue border-2 border-accent-electric-blue hover:bg-accent-electric-blue/10;
+    }
+
+    &-inline {
+      @apply inline-flex items-center font-sans text-accent-electric-blue relative cursor-pointer;
+
+      &::after {
+        @apply content-[""] absolute h-[1px] w-0 bg-accent-electric-blue bottom-0 left-0 transition-all duration-300;
+      }
+
+      &:hover::after {
+        @apply w-full;
+      }
+    }
+  }
+}
