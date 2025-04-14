@@ -65,7 +65,7 @@ export const AccordionItem = ({ id, title, titleSize, content, isOpen, onToggle,
   }
 
   const wrapperClasses = clsx('overflow-hidden', className);
-  const commonSpanButtonClasses = 'absolute rounded-md bg-accent-lime-foreground';
+  const commonSpanButtonClasses = 'absolute rounded-md bg-accent-lime';
   const commonSpanButtonStyles = {
     left: '50%',
     top: '50%',

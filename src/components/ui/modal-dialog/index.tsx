@@ -51,7 +51,7 @@ export const ModalDialog = ({ children, className, ref }: ModalDialogProps) => {
       <div className="relative p-6">
         <Button
           variant="icon-button"
-          className="absolute right-0 top-0 text-accent-lime-foreground transition-all duration-300 hover:text-lime-800"
+          className="absolute right-0 top-0 text-accent-lime transition-all duration-300 hover:text-lime-800"
           onClick={() => ref.current?.close()}
         >
           <IoCloseOutline className="h-6 w-6" />

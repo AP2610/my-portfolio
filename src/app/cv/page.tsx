@@ -33,12 +33,12 @@ const CvPage = () => {
           </p>
 
           <div className="space-y-4">
-            <p className="flex items-center gap-2 text-accent-lime-foreground">
+            <p className="flex items-center gap-2 text-accent-lime">
               <IoLocationOutline />
               <span>Netherlands</span>
             </p>
 
-            <p className="flex items-center gap-2 text-accent-lime-foreground">
+            <p className="flex items-center gap-2 text-accent-lime">
               <HiOutlineGlobeAsiaAustralia />
               <span>Indian (Dutch Permanent Residency)</span>
             </p>
@@ -177,7 +177,7 @@ const CvPage = () => {
           <div className="flex flex-col">
             <div className="mb-2">
               <h4 className="text-xl font-light text-foreground">Ecole hôtelière de Lausanne</h4>
-              <p className="text-accent-lime-foreground">Bachelor of Science Degree, Hospitality Administration/Management</p>
+              <p className="text-accent-lime">Bachelor of Science Degree, Hospitality Administration/Management</p>
             </div>
 
             <p className="text-sm text-gray-400">2014 - 2018</p>
@@ -186,7 +186,7 @@ const CvPage = () => {
           <div className="flex flex-col">
             <div className="mb-2">
               <h4 className="text-xl font-light text-foreground">Le Wagon</h4>
-              <p className="text-accent-lime-foreground">Computer Programming</p>
+              <p className="text-accent-lime">Computer Programming</p>
             </div>
 
             <p className="text-sm text-gray-400">2019</p>

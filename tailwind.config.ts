@@ -47,10 +47,7 @@ export default {
           DEFAULT: 'rgba(var(--primary))',
           foreground: 'rgba(var(--primary-foreground))',
         },
-        'accent-lime': {
-          DEFAULT: 'rgba(var(--accent-lime))',
-          foreground: 'rgba(var(--accent-lime-foreground))',
-        },
+        'accent-lime': 'rgba(var(--accent-lime))',
         'accent-electric-blue': 'rgba(var(--accent-electric-blue))',
         'accent-violet': 'rgba(var(--accent-violet))',
         'homepage-card-bg': 'rgba(var(--homepage-card-bg))',

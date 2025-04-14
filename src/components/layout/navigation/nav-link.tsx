@@ -34,10 +34,10 @@ export const NavLink = ({
     const isActiveLink = (href !== '/' && pathname.startsWith(href)) || pathname === href;
 
     const navLinkClasses = clsx(
-      'hover:text-accent-lime-foreground w-full inline-block transition-colors duration-300 font-sans',
+      'hover:text-accent-lime w-full inline-block transition-colors duration-300 font-sans',
       {
-        'font-bold text-accent-lime-foreground': isActiveLink,
-        'border-l-4 border-accent-lime-foreground border-r-4 border-r-transparent': isActiveLink && showBorder,
+        'font-bold text-accent-lime': isActiveLink,
+        'border-l-4 border-accent-lime border-r-4 border-r-transparent': isActiveLink && showBorder,
         'font-normal text-foreground': !isActiveLink,
         'text-4xl': fontSize === 'default',
         'text-base': fontSize === 'small',

@@ -117,8 +117,7 @@
     --primary-foreground: var(--cosmic-latte);
 
     // Accents
-    --accent-lime: var(--lime-600);
-    --accent-lime-foreground: var(--lime-700);
+    --accent-lime: var(--lime-700);
     --accent-electric-blue: var(--electric-blue-600);
     --accent-violet: var(--violet-600);
 
@@ -133,7 +132,7 @@
     --sidebar-bg: var(--cosmic-latte-600);
 
     // various settings buttons
-    --setting-button-color: var(--accent-lime-foreground);
+    --setting-button-color: var(--accent-lime);
     --setting-button-color-hover: var(--lime-800);
   }
 
@@ -146,7 +145,6 @@
 
     // Accents
     --accent-lime: var(--lime);
-    --accent-lime-foreground: var(--lime);
     --accent-electric-blue: var(--electric-blue);
     --accent-violet: var(--violet);
 
