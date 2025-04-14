@@ -9,7 +9,7 @@ import styles from './styles.module.scss';
 export const ThemeSwitcher = ({ className }: { className?: string }) => {
   const { theme, handleThemeToggle } = useContext(ThemeContext);
   const classes = clsx(
-    'flex w-[var(--switchWidth)] h-5 cursor-pointer items-center rounded-full bg-accent-lime-foreground/30 outline outline-2 outline-accent-lime-foreground dark:bg-rich-black-200/30 dark:outline-rich-black-200 hover:bg-accent-lime-foreground/60 dark:hover:bg-rich-black-200/60 transition-all duration-300',
+    'flex w-[var(--switchWidth)] h-5 cursor-pointer items-center rounded-full bg-setting-button-color/30 outline outline-2 outline-setting-button-color hover:bg-setting-button-color/60 transition-all duration-300',
     styles['themeSwitcher'],
     className
   );
