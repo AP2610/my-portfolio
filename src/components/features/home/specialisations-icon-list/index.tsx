@@ -20,13 +20,38 @@ export const SpecialisationsIconList = () => {
     setNextJsIcon(theme === 'dark' ? NextJsIconDark : NextJsIconLight);
   }, [theme]);
 
-  const iconList = [nextJsIcon, ReactIcon, JavaScriptIcon, TypeScriptIcon, TailwindIcon, SanityIcon];
+  const iconList = [
+    {
+      image: nextJsIcon,
+      alt: 'Next.js icon',
+    },
+    {
+      image: ReactIcon,
+      alt: 'React icon',
+    },
+    {
+      image: JavaScriptIcon,
+      alt: 'JavaScript icon',
+    },
+    {
+      image: TypeScriptIcon,
+      alt: 'TypeScript icon',
+    },
+    {
+      image: TailwindIcon,
+      alt: 'Tailwind CSS icon',
+    },
+    {
+      image: SanityIcon,
+      alt: 'Sanity CMS icon',
+    },
+  ];
 
   return (
     <ul className="flex flex-wrap items-center gap-2">
       {iconList.map((icon) => (
-        <li key={icon.src}>
-          <MyImage src={icon} sizes="10vw" alt="Technology icon" containerClasses="w-6 h-6" />
+        <li key={icon.image.src}>
+          <MyImage src={icon.image} sizes="10vw" priority alt={icon.alt} containerClasses="w-6 h-6" />
         </li>
       ))}
     </ul>

@@ -24,6 +24,7 @@ export const Experience = ({
     content: (
       <div className="space-y-2">
         {project.description && <p>{project.description}</p>}
+
         {project.bulletPoints && (
           <ul className="list-disc space-y-2 pl-5">
             {project.bulletPoints.map((point, bulletIndex) => (
@@ -38,9 +39,9 @@ export const Experience = ({
   return (
     <article className={clsx('space-y-4', className)}>
       <header className="space-y-1">
-        <h2 className="font-semi-bold text-xl text-accent-electric-blue">{company}</h2>
+        <h2 className="text-2xl font-medium text-accent-electric-blue">{company}</h2>
 
-        <p className="text-lg text-foreground">{role}</p>
+        <p className="text-foreground">{role}</p>
 
         {subText && <p className="text-sm text-foreground">{subText}</p>}
 
@@ -54,7 +55,8 @@ export const Experience = ({
 
         {carriedOverProjects && carriedOverProjects.length > 0 && (
           <div>
-            <h3 className="mb-2 font-semibold">Carried Over Projects</h3>
+            <h3 className="mb-2 font-medium">Carried Over Projects</h3>
+
             <ul className="list-disc space-y-2 pl-5">
               {carriedOverProjects.map((project, index) => (
                 <li key={index}>{project}</li>
@@ -71,7 +73,7 @@ export const Experience = ({
 
         {additionalProjects && additionalProjects.length > 0 && (
           <div>
-            <h3 className="mb-2 font-semibold">Additional Projects</h3>
+            <h3 className="mb-2 font-medium">Additional Projects</h3>
 
             <ul className="list-disc space-y-2 pl-5">
               {additionalProjects.map((project, index) => (

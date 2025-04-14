@@ -1,5 +1,6 @@
 'use client';
 
+import { useMediaQuery } from '@/hooks/use-media-query';
 import { createContext, useEffect, useState } from 'react';
 
 type ThemeType = 'light' | 'dark' | null;
@@ -20,6 +21,7 @@ type ThemeProviderProps = {
 
 export const ThemeProvider = ({ children }: ThemeProviderProps) => {
   const [theme, setTheme] = useState<ThemeType>(null);
+  const isDarkPreferred = useMediaQuery('(prefers-color-scheme: dark)');
 
   const handleThemeToggle = () => {
     setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
@@ -30,7 +32,7 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
     const storedTheme = localStorage.getItem('theme');
 
     // Match media ternary needs to be wrapped in () for ?? to take precedence over ternary.
-    const preferredTheme = storedTheme ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    const preferredTheme = storedTheme ?? (isDarkPreferred ? 'dark' : 'light');
 
     setTheme(preferredTheme as ThemeType);
   }, []);

@@ -196,6 +196,7 @@
 
 body {
   background: rgba(var(--background));
+  transition: background .3s ease-in-out;
 
   &:has(dialog[open]) {
     overflow: hidden;

@@ -34,8 +34,9 @@ export const AccordionItem = ({ id, title, titleSize, content, isOpen, onToggle,
       ? parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 0
       : 0;
 
-    // Get accordion wrapper's position relative to viewport
     const wrapperRect = accordionWrapper.getBoundingClientRect();
+
+    // Get the wrappers absolute position to the top of the page
     const wrapperTopPosition = wrapperRect.top + window.scrollY;
 
     // Only scroll to the top of the scrollRef if we're scrolled past the top of the wrapper (accounting for header)
@@ -49,7 +50,6 @@ export const AccordionItem = ({ id, title, titleSize, content, isOpen, onToggle,
   }, [isOpen]);
 
   let accordionContent;
-
   // Check if content is an array of strings to make sure its not JSX wrapped in a fragment
   if (Array.isArray(content) && content.every((item) => typeof item === 'string')) {
     accordionContent = content.map((item, index) => (
@@ -73,12 +73,13 @@ export const AccordionItem = ({ id, title, titleSize, content, isOpen, onToggle,
     y: '-50%',
   };
 
-  const titleClasses = clsx('text-left font-semibold', {
+  const titleClasses = clsx('text-left font-normal group-hover:font-semibold transition-all duration-300', {
     'text-base': titleSize === 'default',
     'text-sm': titleSize === 'small',
     'text-lg': titleSize === 'medium',
     'text-xl': titleSize === 'large',
     'text-2xl': titleSize === 'xl',
+    'font-semibold': isOpen,
   });
 
   // Only add space between paragraphs if content is an array

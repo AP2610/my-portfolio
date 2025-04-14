@@ -45,9 +45,9 @@ export const ProjectDetails = ({
   ];
 
   return (
-    <article className="space-y-8 border-b border-cosmic-latte/10 last:border-b-0">
+    <article className="space-y-12">
       <header>
-        <h2 className="mb-4 text-2xl text-accent-electric-blue">{company}</h2>
+        <h2 className="mb-2 text-2xl text-accent-electric-blue">{company}</h2>
         <span className="font-sans font-normal text-foreground">{role}</span>
       </header>
 
@@ -63,7 +63,7 @@ export const ProjectDetails = ({
       )}
 
       <div className="text-foreground">
-        <Accordion isTwoColumns data={projectDetailsAccordionData} className="mb-10" />
+        <Accordion data={projectDetailsAccordionData} className="mb-12" />
 
         <div className="text-foreground">
           <h3 className="mb-4 text-xl font-semibold">Technologies & Skills</h3>
@@ -78,7 +78,7 @@ export const ProjectDetails = ({
         </div>
 
         {(websiteUrl || githubUrl) && (
-          <div className="mt-8 flex gap-4">
+          <div className="mt-10 flex gap-4">
             {websiteUrl && (
               <MyLink type="external" href={websiteUrl} variant="primary" showIcon>
                 Visit Project Website

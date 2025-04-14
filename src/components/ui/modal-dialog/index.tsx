@@ -14,7 +14,7 @@ type ModalDialogProps = {
 
 export const ModalDialog = ({ children, className, ref }: ModalDialogProps) => {
   const dialogClasses = clsx(
-    'fixed inset-0 m-auto max-h-[90vh] max-w-2xl rounded-md bg-background shadow-md backdrop:bg-black/60 backdrop:backdrop-blur-[2px]',
+    'fixed inset-0 m-auto max-h-[90vh] max-w-3xl rounded-md bg-background shadow-md backdrop:bg-black/60 backdrop:backdrop-blur-[2px]',
     styles.dialog,
     className
   );
@@ -23,6 +23,7 @@ export const ModalDialog = ({ children, className, ref }: ModalDialogProps) => {
     const dialog = ref.current;
     if (!dialog) return;
 
+    // Close modal when clickiing outside the dialog
     const handleClick = (event: MouseEvent) => {
       const rect = dialog.getBoundingClientRect();
 

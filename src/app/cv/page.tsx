@@ -27,7 +27,7 @@ const CvPage = () => {
         </h1>
 
         <div className="space-y-6">
-          <p className="text-lg font-bold text-foreground md:max-w-[700px]">
+          <p className="text-lg text-foreground md:max-w-[700px]">
             Frontend Engineer | React, Next.js, JavaScript, TypeScript, TailwindCss | Building Reliable, Engaging & User-Centric
             Web Experiences
           </p>
@@ -57,12 +57,11 @@ const CvPage = () => {
       {/* Experience section */}
       <div className="space-y-12 text-foreground">
         <div className="space-y-6">
-          <h2 className="text-2xl">Professional Experience</h2>
+          <h2 className="text-3xl">Professional Experience</h2>
 
           <p>
             My CV contains consolidated and condensed information about my experiences. If you'd like a bit more detail on the
-            projects I've worked on, including the situation, tasks, results, technical details, and specializations, check out
-            the{' '}
+            projects I've worked on, including the situation, tasks, results, and technical details check out the{' '}
             <MyLink type="internal" href="/projects">
               projects section
             </MyLink>{' '}
@@ -79,7 +78,7 @@ const CvPage = () => {
 
       {/* Skills & Methodologies */}
       <Section isFullWidth paddingTop="small">
-        <h4 className="mb-6 text-2xl text-accent-electric-blue">Skills & Methodologies</h4>
+        <h4 className="mb-6 text-2xl text-foreground">Skills & Methodologies</h4>
 
         <ul className="flex flex-wrap gap-2">
           {skillsMethodologies.map((skill) => (
@@ -93,7 +92,7 @@ const CvPage = () => {
       {/* Languages & Certifications */}
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <div>
-          <h4 className="mb-6 text-2xl text-accent-electric-blue">Languages</h4>
+          <h4 className="mb-6 text-2xl text-foreground">Languages</h4>
 
           <ul className="flex flex-wrap gap-2 font-sans">
             <li>
@@ -112,7 +111,7 @@ const CvPage = () => {
         </div>
 
         <div>
-          <h4 className="mb-6 text-2xl text-accent-electric-blue">Certifications</h4>
+          <h4 className="mb-6 text-2xl text-foreground">Certifications</h4>
 
           <ul className="flex flex-wrap gap-2 font-sans">
             <li>
@@ -172,12 +171,12 @@ const CvPage = () => {
 
       {/* Education section */}
       <Section isFullWidth>
-        <h3 className="mb-6 text-2xl text-accent-electric-blue">Education</h3>
+        <h3 className="mb-6 text-2xl text-foreground">Education</h3>
 
         <div className="flex flex-col gap-8 md:flex-row">
           <div className="flex flex-col">
             <div className="mb-2">
-              <h4 className="text-xl font-semibold text-foreground">Ecole hôtelière de Lausanne</h4>
+              <h4 className="text-xl font-light text-foreground">Ecole hôtelière de Lausanne</h4>
               <p className="text-accent-lime-foreground">Bachelor of Science Degree, Hospitality Administration/Management</p>
             </div>
 
@@ -186,7 +185,7 @@ const CvPage = () => {
 
           <div className="flex flex-col">
             <div className="mb-2">
-              <h4 className="text-xl font-semibold text-foreground">Le Wagon</h4>
+              <h4 className="text-xl font-light text-foreground">Le Wagon</h4>
               <p className="text-accent-lime-foreground">Computer Programming</p>
             </div>
 
