@@ -2,6 +2,7 @@
 
 import { AnimatedText } from '@/components/ui/animated-text';
 import { Button } from '@/components/ui/button';
+import { ContrastSwitch } from '@/components/ui/contrast-switcher';
 import { Headshot } from '@/components/ui/headshot';
 import { Logo } from '@/components/ui/logo';
 import { ThemeSwitcher } from '@/components/ui/theme-switcher';
@@ -29,7 +30,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
   );
 
   const collapseButtonClasses = clsx(
-    'text-sidebar-collapse-button-color hover:text-sidebar-collapse-button-color-hover hover:scale-110 active:scale-100 absolute bottom-0 transition-all duration-300',
+    'text-sidebar-setting-button-color hover:text-sidebar-setting-button-color-hover hover:scale-110 active:scale-100 absolute bottom-0 transition-all duration-300',
     {
       'rotate-180 left-0': !isCollapsed,
       'rotate-0 left-1/2 -translate-x-1/2': isCollapsed,
@@ -42,10 +43,17 @@ export const Sidebar = ({ className }: SidebarProps) => {
         <GoSidebarCollapse className="h-6 w-6" />
       </Button>
 
+      <ContrastSwitch
+        className={clsx('absolute transition-all duration-300', {
+          'bottom-0 right-14': !isCollapsed,
+          'bottom-10 right-1/2 translate-x-1/2': isCollapsed,
+        })}
+      />
+
       <ThemeSwitcher
         className={clsx('absolute mb-[2px]', {
           'bottom-4 right-4': !isCollapsed,
-          'bottom-16 right-1/2 translate-x-1/2 scale-[0.8]': isCollapsed,
+          'bottom-24 right-1/2 translate-x-1/2 scale-[0.8]': isCollapsed,
         })}
       />
 
