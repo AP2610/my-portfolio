@@ -12,14 +12,19 @@ type ContrastSwitchProps = {
 
 const iconProps = {
   strokeWidth: 1.5,
-  className: 'h-6 w-6 text-sidebar-setting-button-color hover:text-sidebar-setting-button-color-hover',
+  className: 'h-6 w-6 text-setting-button-color hover:text-setting-button-color-hover transition-all duration-300',
 };
 
 export const ContrastSwitch = ({ className }: ContrastSwitchProps) => {
   const { isHighContrast, handleContrastToggle } = useContext(ContrastContext);
 
   return (
-    <Button title="Toggle high contrast mode" onClick={handleContrastToggle} variant="icon-button" className={className}>
+    <Button
+      title={isHighContrast ? 'Disable high contrast mode' : 'Enable high contrast mode'}
+      onClick={handleContrastToggle}
+      variant="icon-button"
+      className={className}
+    >
       {isHighContrast ? <TbContrastOff {...iconProps} /> : <TbContrast {...iconProps} />}
     </Button>
   );
