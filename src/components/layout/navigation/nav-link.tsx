@@ -1,8 +1,10 @@
 'use client';
 
+import { ContrastContext } from '@/context/contrast-context';
 import clsx from 'clsx';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useContext } from 'react';
 
 type NavLinkProps = {
   href: string;
@@ -24,6 +26,7 @@ export const NavLink = ({
   textAlign = 'center',
 }: NavLinkProps) => {
   const pathname = usePathname();
+  const { isHighContrast } = useContext(ContrastContext);
 
   const getNavLinkClasses = () => {
     const isActiveLink = (href !== '/' && pathname.startsWith(href)) || pathname === href;
@@ -34,8 +37,9 @@ export const NavLink = ({
         'font-bold text-accent-lime-foreground': isActiveLink,
         'border-l-4 border-accent-lime-foreground border-r-4 border-r-transparent': isActiveLink && showBorder,
         'font-normal text-foreground': !isActiveLink,
-        'text-4xl md:text-xl': fontSize === 'default',
+        'text-4xl': fontSize === 'default',
         'text-base': fontSize === 'small',
+        'md:!text-xl': isHighContrast,
         'text-left': textAlign === 'left',
         'text-center': textAlign === 'center',
       },
