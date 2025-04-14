@@ -30,7 +30,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
   );
 
   const collapseButtonClasses = clsx(
-    'text-sidebar-setting-button-color hover:text-sidebar-setting-button-color-hover hover:scale-110 active:scale-100 absolute bottom-0 transition-all duration-300',
+    'text-setting-button-color hover:text-setting-button-color-hover hover:scale-110 active:scale-100 absolute bottom-0 transition-all duration-300',
     {
       'rotate-180 left-0': !isCollapsed,
       'rotate-0 left-1/2 -translate-x-1/2': isCollapsed,
