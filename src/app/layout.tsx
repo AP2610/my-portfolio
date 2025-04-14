@@ -1,9 +1,8 @@
 import { Footer } from '@/components/layout/footer';
 import { Header } from '@/components/layout/header';
+import { Providers } from '@/components/layout/providers';
 import { Sidebar } from '@/components/layout/sidebar';
 import { AnimatedElementPresence } from '@/components/ui/animated-element-presence';
-import { AccordionProvider } from '@/context/accordion-context';
-import { ThemeProvider } from '@/context/theme-context';
 import clsx from 'clsx';
 import type { Metadata } from 'next';
 import { Raleway } from 'next/font/google';
@@ -50,26 +49,27 @@ const RootLayout = ({
         />
       </head>
 
-      <ThemeProvider>
-        <body className={clsx(`${raleway.variable} antialiased`)}>
-          {/* Header is only shown upto the md breakpoint, then the sidebar takes over */}
-          <Header className="md:hidden" />
+      <body className={clsx(`${raleway.variable} antialiased`)}>
+        <Providers>
+          <div className="bg-background transition-colors duration-300">
+            {/* Header is only shown upto the md breakpoint, then the sidebar takes over */}
+            <Header className="md:hidden" />
 
-          <AnimatedElementPresence entryAnimationDelay={0.2} animationProperty="opacity">
-            <div className="flex min-h-dvh pt-header-height md:pt-0">
-              <Sidebar className="hidden md:flex" />
+            <AnimatedElementPresence entryAnimationDelay={0.2} animationProperty="opacity">
+              <div className="flex min-h-dvh pt-header-height md:pt-0">
+                <Sidebar className="hidden md:flex" />
 
-              <div className="flex min-w-0 flex-1 flex-col">
-                <AccordionProvider>
+                {/* min-w-0 https://www.bigbinary.com/blog/understanding-the-automatic-minimum-size-of-flex-items */}
+                <div className="flex min-w-0 flex-1 flex-col">
                   <main className="flex-grow">{children}</main>
-                </AccordionProvider>
 
-                <Footer />
+                  <Footer />
+                </div>
               </div>
-            </div>
-          </AnimatedElementPresence>
-        </body>
-      </ThemeProvider>
+            </AnimatedElementPresence>
+          </div>
+        </Providers>
+      </body>
     </html>
   );
 };
