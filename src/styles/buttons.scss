@@ -1,6 +1,6 @@
 @layer components {
   .btn-base {
-    @apply px-4 py-2 min-w-[160px] font-sans font-medium text-center text-base transition-all duration-300 flex items-center justify-center;
+    @apply px-4 py-2 min-w-[160px] min-h-[44px] font-sans font-medium text-center text-base transition-all duration-300 flex items-center justify-center;
   }
 
   .btn {
@@ -17,11 +17,11 @@
     }
 
     &-secondary {
-      @apply bg-accent-lime/20 text-accent-lime-foreground border-2 border-accent-lime hover:bg-accent-lime/5;
+      @apply bg-accent-lime/20 text-accent-lime border-2 border-accent-lime hover:bg-accent-lime/5;
     }
 
     &-electric-blue-secondary {
-      @apply text-accent-electric-blue border-2 border-accent-electric-blue hover:bg-accent-electric-blue/10;
+      @apply text-accent-electric-blue bg-accent-electric-blue/10 border-2 border-accent-electric-blue hover:bg-accent-electric-blue/10;
     }
 
     &-inline {
