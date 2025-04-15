@@ -63,7 +63,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
       </nav>
 
       <div
-        className={clsx('mt-auto flex w-full items-center justify-between', {
+        className={clsx('-mb-4 mt-auto flex w-full items-center justify-between', {
           'flex-col-reverse justify-center': isCollapsed,
         })}
       >
