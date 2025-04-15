@@ -22,15 +22,15 @@ const CvPage = () => {
       <header className="flex flex-col items-center gap-8 md:block">
         <Headshot size="medium" className="md:hidden" />
 
-        <h1 className="text-4xl text-foreground md:hidden">
+        <h2 className="text-4xl text-foreground md:hidden">
           Arjun <span className="text-accent-electric-blue">Puri</span>
-        </h1>
+        </h2>
 
         <div className="space-y-6">
-          <p className="text-lg text-foreground md:max-w-[700px]">
+          <h1 className="text-lg font-normal text-foreground md:max-w-[700px]">
             Frontend Engineer | React, Next.js, JavaScript, TypeScript, TailwindCss | Building Reliable, Engaging & User-Centric
             Web Experiences
-          </p>
+          </h1>
 
           <div className="space-y-4">
             <p className="flex items-center gap-2 text-accent-lime">
@@ -44,20 +44,28 @@ const CvPage = () => {
             </p>
           </div>
 
-          <div className="flex items-center gap-4 font-sans text-sm font-medium">
-            <SocialIconLink platform="github" />
-            <SocialIconLink platform="linkedin" />
-            <SocialIconLink platform="email" />
+          <ul className="flex items-center gap-4 font-sans text-sm font-medium">
+            <li>
+              <SocialIconLink platform="github" />
+            </li>
+            <li>
+              <SocialIconLink platform="linkedin" />
+            </li>
+            <li>
+              <SocialIconLink platform="email" />
+            </li>
 
-            <DownloadButton className="ml-2" />
-          </div>
+            <li>
+              <DownloadButton className="ml-2" />
+            </li>
+          </ul>
         </div>
       </header>
 
       {/* Experience section */}
       <div className="space-y-12 text-foreground">
         <div className="space-y-6">
-          <h2 className="text-3xl">Professional Experience</h2>
+          <h2 className="text-2xl md:text-3xl">Professional Experience</h2>
 
           <p>
             My CV contains consolidated and condensed information about my experiences. If you'd like a bit more detail on the
@@ -83,7 +91,7 @@ const CvPage = () => {
         <ul className="flex flex-wrap gap-2">
           {skillsMethodologies.map((skill) => (
             <li key={skill}>
-              <Badge color="electric-blue-700">{skill}</Badge>
+              <Badge color="electric-blue">{skill}</Badge>
             </li>
           ))}
         </ul>
@@ -180,7 +188,7 @@ const CvPage = () => {
               <p className="text-accent-lime">Bachelor of Science Degree, Hospitality Administration/Management</p>
             </div>
 
-            <p className="text-sm text-gray-400">2014 - 2018</p>
+            <p className="text-sm text-foreground">2014 - 2018</p>
           </div>
 
           <div className="flex flex-col">
@@ -189,7 +197,7 @@ const CvPage = () => {
               <p className="text-accent-lime">Computer Programming</p>
             </div>
 
-            <p className="text-sm text-gray-400">2019</p>
+            <p className="text-sm text-foreground">2019</p>
           </div>
         </div>
       </Section>
