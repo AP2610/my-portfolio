@@ -15,26 +15,22 @@ export const About = () => {
         <p>If you've gone through all the above, I appreciate you taking the time to read a little bit about my story.</p>
 
         <p>
-          If you're still interested, head over to my CV by clicking the button below, it will give you a comprehensive overview
-          of my work experience and my skills.
+          If you're still interested, head over to{' '}
+          <MyLink type="internal" href="/cv">
+            my CV
+          </MyLink>
+          , it will give you a comprehensive overview of my work experience and my skills.
         </p>
 
         <p className="font-semibold">You'll also be able to download my CV as a PDF from there.</p>
 
         <p>
-          If you'd rather see my work first, hit the button below to dive into the projects I've worked on over the last 5 years
-          of my career.
+          If you'd rather see my work first, head over to the{' '}
+          <MyLink type="internal" href="/projects">
+            projects page
+          </MyLink>{' '}
+          to dive into the projects I've worked on over the last 5 years of my career.
         </p>
-      </div>
-
-      <div className="flex gap-4 md:mt-12 md:w-1/4">
-        <MyLink type="internal" variant="primary" href="/cv" className="w-full">
-          View My CV
-        </MyLink>
-
-        <MyLink type="internal" href="/projects" variant="electric-blue-secondary" className="w-full">
-          See My Projects
-        </MyLink>
       </div>
     </article>
   );
