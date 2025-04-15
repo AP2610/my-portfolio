@@ -1,39 +1,37 @@
-import { About } from '@/components/about';
-import { AnimatedElementPresence } from '@/components/animated-element-presence';
-import { Button } from '@/components/buttons';
-import { Section } from '@/components/section';
-import { FaArrowDown } from 'react-icons/fa';
+import { About } from '@/components/features/about';
+import { HomepageCardGrid } from '@/components/features/home/home-page-card-grid';
+import { SmallScreenHeroTitle } from '@/components/features/home/small-screen-hero-title';
+import { Section } from '@/components/layout/section';
+import { AnimatedRadialGradientBackground } from '@/components/ui/animated-radial-gradient-background';
+import { AnimatedText } from '@/components/ui/animated-text';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Arjun Puri's Portfolio Homepage",
+  description:
+    'The homepage contains facts about Arjun Puri and his work. It includes an about me section which goes into more detail.',
+};
 
 const Home = () => {
   return (
     <>
       <Section
-        className="custom-background-violet flex min-h-[100svh] flex-col items-center justify-center"
-        isFullWidth
-        // The id is needed for my animated styling on the header to work. Note to self: Consider getting rid of it and the associated logic.
-        id="hero"
+        className="relative flex min-h-dvh flex-col justify-around gap-16 md:gap-8"
+        paddingTop="small"
+        paddingBottom="small"
       >
-        <AnimatedElementPresence entryAnimationDelay={0.2} animationProperty="opacity">
-          <Section className="flex h-full flex-col items-center justify-center gap-16 font-sans">
-            <div className="flex flex-col gap-4">
-              <h1 className="text-center text-4xl text-foreground">Hi! I'm Arjun</h1>
-              <p className="text-center text-2xl font-medium text-accent-lime">Welcome to my portfolio</p>
-            </div>
+        <AnimatedRadialGradientBackground />
 
-            <div className="flex gap-4">
-              <Button isLinkButton href="/cv">
-                View CV
-              </Button>
+        <h1 className="hidden text-3xl text-foreground md:block">
+          <AnimatedText text="Frontend Engineer" delay={0.4} />
+        </h1>
 
-              <Button variant="secondary" scrollTo="about">
-                About Me <FaArrowDown className="bounce-vertical ml-2" />
-              </Button>
-            </div>
-          </Section>
-        </AnimatedElementPresence>
+        <SmallScreenHeroTitle className="md:hidden" />
+
+        <HomepageCardGrid />
       </Section>
 
-      <Section id="about" isFullWidth hasTopPadding hasBottomPadding>
+      <Section id="about" paddingTop="medium" paddingBottom="medium">
         <About />
       </Section>
     </>

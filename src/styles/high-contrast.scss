@@ -1,0 +1,21 @@
+.light.high-contrast {
+  // Variables 
+  --card-body-text-color: var(--foreground);
+  --accent-lime: var(--lime-800);
+  --accent-electric-blue: var(--electric-blue-800);
+
+  // Buttons START HERE: HIGH CONTRAST
+  .btn {
+    &-secondary {
+      @apply bg-accent-lime/10 font-semibold hover:bg-accent-lime/20;
+    }
+
+    &-electric-blue-secondary {
+      @apply bg-accent-electric-blue/10 font-semibold hover:bg-accent-electric-blue/20;
+    }
+  }
+}
+
+.dark.high-contrast {
+  --card-body-text-color: var(--foreground);
+}

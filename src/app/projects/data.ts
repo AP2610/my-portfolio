@@ -1,4 +1,4 @@
-export type Project = {
+export type ProjectType = {
   role: string;
   company: string;
   period: string;
@@ -13,7 +13,8 @@ export type Project = {
   additionalInfo?: string;
 };
 
-export const projectsData: Project[] = [
+// TODO: Remove period
+export const projectsData: ProjectType[] = [
   {
     slug: 'capacare',
     role: 'Team Lead, Frontend Developer, Designer',
@@ -52,7 +53,7 @@ export const projectsData: Project[] = [
     ],
     results:
       'Successfully delivered the rebranding project and maintained the platform, ensuring a smooth transition from Ordina to Sopra Steria branding while keeping the technical blog platform running efficiently.',
-    specializations: ['Vue.js', 'Nuxt.js', 'JavaScript', 'TypeScript', 'CSS', 'SCSS', 'Git', 'Scrum'],
+    specializations: ['Vue.js', 'Nuxt.js', 'JavaScript', 'TypeScript', 'CSS', 'SCSS', 'Strapi', 'Git', 'Scrum'],
   },
   {
     slug: 'ministry-of-health',

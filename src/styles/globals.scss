@@ -1,0 +1,44 @@
+@use './variables.scss';
+@use './animations/bounce.scss';
+@use './animations/shake.scss';
+@use './backgrounds.scss';
+@use './buttons.scss';
+@use './high-contrast.scss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* TODO: Implement the same for framer motion animations using useReducedMotion hook */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  &:has(dialog[open]) {
+    overflow: hidden;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-sans font-black;
+}
+
+p,
+button,
+ul {
+  @apply font-sans font-normal;
+}

@@ -1,4 +1,4 @@
-export const scrollToElement = (elementId: string) => {
+export const scrollToElement = (elementId: string, includeHeaderHeight: boolean) => {
   const element = document.getElementById(elementId);
   if (!element) return;
 
@@ -8,7 +8,7 @@ export const scrollToElement = (elementId: string) => {
   const elementPosition = element.getBoundingClientRect().top + window.scrollY;
 
   window.scrollTo({
-    top: elementPosition - headerHeight,
+    top: elementPosition - (includeHeaderHeight ? headerHeight : 0),
     behavior: 'smooth',
   });
 };

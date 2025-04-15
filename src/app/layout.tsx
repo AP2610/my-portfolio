@@ -1,20 +1,16 @@
-import { Footer } from '@/components/footer';
-import { Header } from '@/components/header';
-import { ThemeProvider } from '@/context/theme-context';
+import { Footer } from '@/components/layout/footer';
+import { Header } from '@/components/layout/header';
+import { Providers } from '@/components/layout/providers';
+import { Sidebar } from '@/components/layout/sidebar';
+import { AnimatedElementPresence } from '@/components/ui/animated-element-presence';
 import clsx from 'clsx';
-import type { Metadata } from 'next';
 import { Raleway } from 'next/font/google';
-import '../styles/globals.css';
+import '../styles/globals.scss';
 
 const raleway = Raleway({
   variable: '--font-raleway',
   subsets: ['latin'],
 });
-
-export const metadata: Metadata = {
-  title: "Arjun Puri's Portfolio",
-  description: 'A portfolio website for Arjun Puri representing his work and skills.',
-};
 
 const RootLayout = ({
   children,
@@ -47,13 +43,27 @@ const RootLayout = ({
         />
       </head>
 
-      <ThemeProvider>
-        <body className={clsx(`${raleway.variable} flex min-h-screen flex-col antialiased`)}>
-          <Header />
-          <main className="flex-grow">{children}</main>
-          <Footer />
-        </body>
-      </ThemeProvider>
+      <body className={clsx(`${raleway.variable} antialiased`)}>
+        <Providers>
+          <div className="isolate bg-background transition-colors duration-300">
+            {/* Header is only shown upto the md breakpoint, then the sidebar takes over */}
+            <Header className="md:hidden" />
+
+            <AnimatedElementPresence entryAnimationDelay={0.2} animationProperty="opacity">
+              <div className="flex min-h-dvh pt-header-height md:pt-0">
+                <Sidebar className="hidden md:flex" />
+
+                {/* min-w-0 https://www.bigbinary.com/blog/understanding-the-automatic-minimum-size-of-flex-items */}
+                <div className="flex min-w-0 flex-1 flex-col">
+                  <main className="flex-grow">{children}</main>
+
+                  <Footer />
+                </div>
+              </div>
+            </AnimatedElementPresence>
+          </div>
+        </Providers>
+      </body>
     </html>
   );
 };
