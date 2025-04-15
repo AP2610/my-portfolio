@@ -7,9 +7,9 @@ import { AnimatedText } from '@/components/ui/animated-text';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Arjun Puri's Portfolio Homepage",
+  title: 'Arjun Puri | Frontend Engineer Portfolio',
   description:
-    'The homepage contains facts about Arjun Puri and his work. It includes an about me section which goes into more detail.',
+    'Frontend Engineer specializing in React, Next.js, and TypeScript. View my background, CV, projects, and qualifications.',
 };
 
 const Home = () => {
