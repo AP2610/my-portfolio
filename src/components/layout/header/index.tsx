@@ -7,6 +7,7 @@ import clsx from 'clsx';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { MobileNavigation } from '../navigation/mobile-navigation';
+import { ContrastSwitcher } from '@/components/ui/contrast-switcher';
 
 type HeaderProps = {
   className?: string;
@@ -32,6 +33,8 @@ export const Header = ({ className }: HeaderProps) => {
         <Logo isNavOpen={isNavOpen} className="z-20" />
 
         <div className="flex items-center gap-6 md:gap-10">
+          <ContrastSwitcher />
+
           <ThemeSwitcher />
 
           <MobileNavigation isOpen={isNavOpen} setIsOpen={setIsNavOpen} />
