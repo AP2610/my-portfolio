@@ -10,7 +10,7 @@ export const HomepageCardGrid = () => {
     <div className="grid h-full auto-rows-auto grid-cols-1 gap-6 sm:grid-cols-2 lg:auto-rows-fr lg:grid-cols-12">
       <HomepageCard className="lg:col-span-3">
         <h2 className="mb-4 text-3xl font-light">5 years</h2>
-        <p className="text-card-body-text-color">Of frontend development experience</p>
+        <p className="text-card-body-text-color">Of frontend experience</p>
       </HomepageCard>
 
       <HomepageCard className="lg:col-span-3">
