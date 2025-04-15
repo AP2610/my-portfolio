@@ -4,7 +4,6 @@ import { Providers } from '@/components/layout/providers';
 import { Sidebar } from '@/components/layout/sidebar';
 import { AnimatedElementPresence } from '@/components/ui/animated-element-presence';
 import clsx from 'clsx';
-import type { Metadata } from 'next';
 import { Raleway } from 'next/font/google';
 import '../styles/globals.scss';
 
@@ -12,11 +11,6 @@ const raleway = Raleway({
   variable: '--font-raleway',
   subsets: ['latin'],
 });
-
-export const metadata: Metadata = {
-  title: "Arjun Puri's Portfolio",
-  description: 'A portfolio website for Arjun Puri representing his work and skills.',
-};
 
 const RootLayout = ({
   children,
