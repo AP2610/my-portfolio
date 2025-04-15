@@ -15,7 +15,7 @@ const iconProps = {
   className: 'h-6 w-6 text-setting-button-color hover:text-setting-button-color-hover transition-all duration-300',
 };
 
-export const ContrastSwitch = ({ className }: ContrastSwitchProps) => {
+export const ContrastSwitcher = ({ className }: ContrastSwitchProps) => {
   const { isHighContrast, handleContrastToggle } = useContext(ContrastContext);
 
   return (
@@ -25,6 +25,7 @@ export const ContrastSwitch = ({ className }: ContrastSwitchProps) => {
       variant="icon-button"
       className={className}
     >
+      <span className="sr-only">Contrast switcher</span>
       {isHighContrast ? <TbContrastOff {...iconProps} /> : <TbContrast {...iconProps} />}
     </Button>
   );

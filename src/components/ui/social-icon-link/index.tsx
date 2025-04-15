@@ -30,7 +30,6 @@ const PLATFORM_CONFIG = {
   },
 } as const;
 
-// START HERE: ADJUST CONTRAST
 export const SocialIconLink = ({ platform, size = 24, className, iconClassNAme }: SocialIconProps) => {
   const { icon: Icon, href, title } = PLATFORM_CONFIG[platform];
 

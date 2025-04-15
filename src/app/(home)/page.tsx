@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <>
       <Section
-        className="relative flex min-h-dvh flex-col justify-around gap-16 md:gap-0"
+        className="relative flex min-h-dvh flex-col justify-around gap-16 md:gap-8"
         paddingTop="small"
         paddingBottom="small"
       >

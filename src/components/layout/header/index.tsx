@@ -29,7 +29,7 @@ export const Header = ({ className }: HeaderProps) => {
         animationProperty="opacity"
         className="container relative mx-auto flex h-full items-center justify-between"
       >
-        <Logo isNavOpen={isNavOpen} />
+        <Logo isNavOpen={isNavOpen} className="z-20" />
 
         <div className="flex items-center gap-6 md:gap-10">
           <ThemeSwitcher />
