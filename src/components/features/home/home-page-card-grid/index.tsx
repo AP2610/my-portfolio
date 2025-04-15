@@ -58,11 +58,17 @@ export const HomepageCardGrid = () => {
       <HomepageCard className="gap-4 lg:col-span-4 xl:col-span-6" shouldWrap flexDirection="row">
         <p className="text-2xl font-light">Get in touch</p>
 
-        <div className="flex gap-4">
-          <SocialIconLink platform="linkedin" size={32} />
-          <SocialIconLink platform="github" size={32} />
-          <SocialIconLink platform="email" size={32} />
-        </div>
+        <ul className="flex gap-4">
+          <li key="linkedin">
+            <SocialIconLink platform="linkedin" size={32} />
+          </li>
+          <li key="github">
+            <SocialIconLink platform="github" size={32} />
+          </li>
+          <li key="email">
+            <SocialIconLink platform="email" size={32} />
+          </li>
+        </ul>
       </HomepageCard>
     </div>
   );
