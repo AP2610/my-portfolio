@@ -44,21 +44,21 @@ const CvPage = () => {
             </p>
           </div>
 
-          <ul className="flex items-center gap-4 font-sans text-sm font-medium">
-            <li>
-              <SocialIconLink platform="github" />
-            </li>
-            <li>
-              <SocialIconLink platform="linkedin" />
-            </li>
-            <li>
-              <SocialIconLink platform="email" />
-            </li>
+          <div className="flex items-center gap-4">
+            <ul className="flex items-center gap-4 font-sans">
+              <li>
+                <SocialIconLink platform="github" />
+              </li>
+              <li>
+                <SocialIconLink platform="linkedin" />
+              </li>
+              <li>
+                <SocialIconLink platform="email" />
+              </li>
+            </ul>
 
-            <li>
-              <DownloadButton className="ml-2" />
-            </li>
-          </ul>
+            <DownloadButton className="ml-2" />
+          </div>
         </div>
       </header>
 
