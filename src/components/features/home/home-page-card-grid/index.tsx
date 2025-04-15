@@ -59,13 +59,13 @@ export const HomepageCardGrid = () => {
         <p className="text-2xl font-light">Get in touch</p>
 
         <ul className="flex gap-4">
-          <li key="linkedin">
+          <li>
             <SocialIconLink platform="linkedin" size={32} />
           </li>
-          <li key="github">
+          <li>
             <SocialIconLink platform="github" size={32} />
           </li>
-          <li key="email">
+          <li>
             <SocialIconLink platform="email" size={32} />
           </li>
         </ul>

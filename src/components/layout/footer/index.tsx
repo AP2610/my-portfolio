@@ -12,7 +12,7 @@ export const Footer = () => {
   return (
     <footer>
       <Section paddingTop="medium" paddingBottom="small">
-        <div className="grid gap-8 border-t border-primary pt-8 md:grid-cols-2 md:gap-12 lg:grid-cols-4">
+        <div className="grid gap-8 border-t border-primary py-8 md:grid-cols-2 md:gap-12 lg:grid-cols-4">
           <div className="space-y-4">
             <Logo isNavOpen={false} />
 
@@ -45,14 +45,18 @@ export const Footer = () => {
           <div>
             <h3 className="mb-4 text-xl font-bold text-foreground">More Ways to Connect</h3>
 
-            <div className="flex gap-4">
-              <SocialIconLink platform="github" />
-              <SocialIconLink platform="linkedin" />
-            </div>
+            <ul className="flex gap-4">
+              <li>
+                <SocialIconLink platform="github" />
+              </li>
+              <li>
+                <SocialIconLink platform="linkedin" />
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div className="mt-12 border-t border-primary pt-8 text-center text-sm text-foreground">
+        <div className="border-t border-primary pt-8 text-center text-sm text-foreground">
           <p>© {currentYear} Arjun Puri. All Rights Reserved.</p>
         </div>
       </Section>
