@@ -35,7 +35,7 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
     const preferredTheme = storedTheme ?? (isDarkPreferred ? 'dark' : 'light');
 
     setTheme(preferredTheme as ThemeType);
-  }, []);
+  }, [isDarkPreferred]);
 
   useEffect(() => {
     if (!theme) return;

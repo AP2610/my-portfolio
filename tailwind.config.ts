@@ -47,16 +47,14 @@ export default {
           DEFAULT: 'rgba(var(--primary))',
           foreground: 'rgba(var(--primary-foreground))',
         },
-        'accent-lime': {
-          DEFAULT: 'rgba(var(--accent-lime))',
-          foreground: 'rgba(var(--accent-lime-foreground))',
-        },
+        'accent-lime': 'rgba(var(--accent-lime))',
         'accent-electric-blue': 'rgba(var(--accent-electric-blue))',
         'accent-violet': 'rgba(var(--accent-violet))',
         'homepage-card-bg': 'rgba(var(--homepage-card-bg))',
         'sidebar-bg': 'rgba(var(--sidebar-bg))',
-        'sidebar-collapse-button-color': 'rgba(var(--sidebar-collapse-button-color))',
-        'sidebar-collapse-button-color-hover': 'rgba(var(--sidebar-collapse-button-color-hover))',
+        'setting-button-color': 'rgba(var(--setting-button-color))',
+        'setting-button-color-hover': 'rgba(var(--setting-button-color-hover))',
+        'card-body-text-color': 'rgba(var(--card-body-text-color))',
 
         // Original color scales
         'rich-black': {

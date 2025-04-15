@@ -34,7 +34,7 @@ export const DesktopNavigation = ({ isCollapsed, className }: DesktopNavigationP
 
   return (
     <nav className={navclasses}>
-      <ul className="flex w-full flex-col items-center gap-12" role="Navigation list">
+      <ul className="flex w-full flex-col items-center gap-12">
         {(isCollapsed ? COLLAPSED_NAV_LINKS : NAVIGATION_LINKS).map((link) => (
           <li key={link.href} className="flex w-full text-center">
             <NavLink href={link.href} fontSize="small">

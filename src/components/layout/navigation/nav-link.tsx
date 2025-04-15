@@ -1,8 +1,10 @@
 'use client';
 
+import { ContrastContext } from '@/context/contrast-context';
 import clsx from 'clsx';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useContext } from 'react';
 
 type NavLinkProps = {
   href: string;
@@ -12,6 +14,7 @@ type NavLinkProps = {
   fontSize?: 'default' | 'small';
   showBorder?: boolean;
   textAlign?: 'center' | 'left';
+  isInFooter?: boolean;
 };
 
 export const NavLink = ({
@@ -22,20 +25,23 @@ export const NavLink = ({
   fontSize = 'default',
   showBorder = true,
   textAlign = 'center',
+  isInFooter = false,
 }: NavLinkProps) => {
   const pathname = usePathname();
+  const { isHighContrast } = useContext(ContrastContext);
 
   const getNavLinkClasses = () => {
     const isActiveLink = (href !== '/' && pathname.startsWith(href)) || pathname === href;
 
     const navLinkClasses = clsx(
-      'hover:text-accent-lime-foreground w-full inline-block transition-colors duration-300 font-sans',
+      'hover:text-accent-lime w-full inline-block transition-colors duration-300 font-sans py-2',
       {
-        'font-bold text-accent-lime-foreground': isActiveLink,
-        'border-l-4 border-accent-lime-foreground border-r-4 border-r-transparent': isActiveLink && showBorder,
+        'font-bold text-accent-lime': isActiveLink,
+        'border-l-4 border-accent-lime border-r-4 border-r-transparent': isActiveLink && showBorder,
         'font-normal text-foreground': !isActiveLink,
-        'text-4xl md:text-xl': fontSize === 'default',
+        'text-4xl': fontSize === 'default',
         'text-base': fontSize === 'small',
+        'md:!text-xl': isHighContrast && !isInFooter,
         'text-left': textAlign === 'left',
         'text-center': textAlign === 'center',
       },

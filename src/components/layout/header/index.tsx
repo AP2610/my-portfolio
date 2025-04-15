@@ -7,6 +7,7 @@ import clsx from 'clsx';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { MobileNavigation } from '../navigation/mobile-navigation';
+import { ContrastSwitcher } from '@/components/ui/contrast-switcher';
 
 type HeaderProps = {
   className?: string;
@@ -18,7 +19,7 @@ export const Header = ({ className }: HeaderProps) => {
   const pathname = usePathname();
 
   const headerClasses = clsx(
-    'fixed left-0 right-0 top-0 z-10 h-[var(--header-height)] bg-background/50 backdrop-blur-[10px] print:hidden',
+    'fixed left-0 right-0 top-0 z-10 h-[var(--header-height)] bg-background/50 backdrop-blur-[10px]',
     className
   );
 
@@ -29,9 +30,11 @@ export const Header = ({ className }: HeaderProps) => {
         animationProperty="opacity"
         className="container relative mx-auto flex h-full items-center justify-between"
       >
-        <Logo isNavOpen={isNavOpen} />
+        <Logo isNavOpen={isNavOpen} className="z-20" />
 
         <div className="flex items-center gap-6 md:gap-10">
+          <ContrastSwitcher />
+
           <ThemeSwitcher />
 
           <MobileNavigation isOpen={isNavOpen} setIsOpen={setIsNavOpen} />

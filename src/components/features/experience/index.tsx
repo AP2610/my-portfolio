@@ -45,7 +45,7 @@ export const Experience = ({
 
         {subText && <p className="text-sm text-foreground">{subText}</p>}
 
-        <p className="text-accent-lime-foreground">
+        <p className="text-accent-lime">
           {period} | {location}
         </p>
       </header>

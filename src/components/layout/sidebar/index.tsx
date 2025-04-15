@@ -2,6 +2,7 @@
 
 import { AnimatedText } from '@/components/ui/animated-text';
 import { Button } from '@/components/ui/button';
+import { ContrastSwitcher } from '@/components/ui/contrast-switcher';
 import { Headshot } from '@/components/ui/headshot';
 import { Logo } from '@/components/ui/logo';
 import { ThemeSwitcher } from '@/components/ui/theme-switcher';
@@ -16,7 +17,6 @@ type SidebarProps = {
 
 export const Sidebar = ({ className }: SidebarProps) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
-  const [showRole, setShowRole] = useState(false);
 
   // Flex class is applied where the component is used for a better overview
   const asideClasses = clsx(
@@ -29,26 +29,15 @@ export const Sidebar = ({ className }: SidebarProps) => {
   );
 
   const collapseButtonClasses = clsx(
-    'text-sidebar-collapse-button-color hover:text-sidebar-collapse-button-color-hover hover:scale-110 active:scale-100 absolute bottom-0 transition-all duration-300',
+    'text-setting-button-color hover:text-setting-button-color-hover hover:scale-110 active:scale-100 transition-all duration-300',
     {
-      'rotate-180 left-0': !isCollapsed,
-      'rotate-0 left-1/2 -translate-x-1/2': isCollapsed,
+      'rotate-180': !isCollapsed,
+      'rotate-0': isCollapsed,
     }
   );
 
   return (
     <aside className={asideClasses}>
-      <Button variant="icon-button" className={collapseButtonClasses} onClick={() => setIsCollapsed(!isCollapsed)}>
-        <GoSidebarCollapse className="h-6 w-6" />
-      </Button>
-
-      <ThemeSwitcher
-        className={clsx('absolute mb-[2px]', {
-          'bottom-4 right-4': !isCollapsed,
-          'bottom-16 right-1/2 translate-x-1/2 scale-[0.8]': isCollapsed,
-        })}
-      />
-
       <div className="flex flex-col items-center gap-8">
         <Logo
           className={clsx({
@@ -62,22 +51,9 @@ export const Sidebar = ({ className }: SidebarProps) => {
           <Headshot size={isCollapsed ? 'xs' : 'small'} />
 
           {!isCollapsed && (
-            <div className="space-y-1 text-center">
-              <h2 className="text-2xl">
-                <AnimatedText text="Arjun Puri" delay={0.4} onComplete={() => setShowRole(true)} />
-              </h2>
-
-              <p className="relative text-lg">
-                {/* This is a hack to avoid layout shift when the AnimatedText enters the DOM */}
-                {!showRole && (
-                  <span className="text-sidebar-bg" aria-hidden="true">
-                    Frontend Engineer
-                  </span>
-                )}
-
-                {showRole && <AnimatedText text="Frontend Engineer" />}
-              </p>
-            </div>
+            <h2 className="text-2xl font-medium">
+              <AnimatedText text="Arjun Puri" delay={0.4} />
+            </h2>
           )}
         </div>
       </div>
@@ -85,6 +61,28 @@ export const Sidebar = ({ className }: SidebarProps) => {
       <nav className="w-full">
         <DesktopNavigation isCollapsed={isCollapsed} />
       </nav>
+
+      <div
+        className={clsx('mt-auto flex w-full items-center justify-between', {
+          'flex-col-reverse justify-center': isCollapsed,
+        })}
+      >
+        <Button
+          aria-label="Collapse sidebar"
+          variant="icon-button"
+          className={collapseButtonClasses}
+          onClick={() => setIsCollapsed(!isCollapsed)}
+        >
+          <span className="sr-only">Collapse sidebar</span>
+          <GoSidebarCollapse className="h-6 w-6" />
+        </Button>
+
+        <ContrastSwitcher />
+
+        <div className="p-4">
+          <ThemeSwitcher />
+        </div>
+      </div>
     </aside>
   );
 };

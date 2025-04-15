@@ -9,10 +9,10 @@ type LogoProps = {
 
 export const Logo = ({ isNavOpen, isCollapsed = false, className }: LogoProps) => {
   const linkLogoClasses = clsx(
-    'text-3xl z-20 relative font-sans font-black transition-all duration-300',
+    'text-3xl relative font-sans font-black transition-all duration-300',
     {
-      'text-accent-electric-blue hover:text-electric-blue-700': isNavOpen,
-      'text-accent-lime-foreground hover:text-lime-800 dark:text-accent-lime dark:hover:text-lime-700': !isNavOpen,
+      'text-accent-electric-blue hover:text-electric-blue-700': isNavOpen, // Only for small screens
+      'text-accent-lime hover:scale-110 dark:text-accent-lime': !isNavOpen,
     },
     className
   );
