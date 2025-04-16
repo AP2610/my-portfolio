@@ -1,7 +1,4 @@
 import { AccordionData } from '@/components/ui/accordion';
-import { Badge } from '@/components/ui/badge';
-
-const specialisations = ['JavaScript', 'TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'Sanity CMS'];
 
 // TODO: Edit all about me content
 export const aboutMeData: AccordionData[] = [
@@ -13,39 +10,24 @@ export const aboutMeData: AccordionData[] = [
       <>
         <div className="space-y-4 text-foreground">
           <p>
-            I'm a frontend engineer with a passion for creating beautiful, interactive, and accessible applications that
-            prioritise the user experience. While trained as a full-stack developer, I gravitated towards the frontend for its
-            direct impact on users. I thrive on transforming ideas into functional, visually appealing web applications and
-            believe in clear, honest communication—no beating around the bush, just constructive and transparent discussions.
+            I'm a frontend engineer with 5 years of experience. I create beautiful, interactive and accessible applications that
+            prioritise UX. While trained as a full-stack developer, I leaned into frontend because of its direct user impact. With
+            a user-centric mindset, I'm always looking for ways to improve the experience.
           </p>
 
           <p>
-            I have worked on a diverse range of projects across e-commerce, telecom, logistics, media, and public sector
-            domains—including the <span className="text-accent-electric-blue">Corona Dashboard</span>, which saw over{' '}
-            <span className="text-accent-electric-blue">250,000 daily visitors</span> at its peak. This project was particularly
-            meaningful, requiring rapid execution, accessibility considerations, and a high level of responsibility during a
-            critical period.
+            I specialise in React, Next.js, Javascript, Typescript, TailwindCSS, and Sanity CMS With more than 4 years of React
+            experience. My fundamentals are strong, having worked on many vanilla JavaScript projects in the past. My experience
+            with these technologies spans numerous industries like e-commerce, telecom, logistics, media, and the public sector.
+            From large-scale e-commerce and telecom to projects like the Corona Dashboard which served the entirety of the
+            Netherlands, I'm comfortable working on all sizes of projects.
           </p>
-        </div>
 
-        <div className="space-y-4 text-foreground">
-          <p className="font-semibold">I specialise in:</p>
-
-          <ul className="flex flex-wrap gap-2">
-            {specialisations.map((skill) => (
-              <li key={skill}>
-                <Badge>{skill}</Badge>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="text-foreground">
           <p>
-            With a service mindset shaped by a hospitality education, I bring strong interpersonal skills and a keen eye for
-            detail, ensuring that both user experience and technical execution are of the highest quality. Having lived in
-            Australia, India, Kenya, Switzerland, and now the Netherlands, I excel at navigating cultural dynamics and seamlessly
-            integrating into diverse teams.
+            With an education and background in hospitality, I am detail-oriented and have strong interpersonal skills. Having
+            lived in Australia, India, Kenya, Switzerland, and the Netherlands, I understand cultural dynamics well and find
+            myself fitting into diverse teams easily. Beyond coding, my strengths lie in coaching juniors, technical analysis,
+            strategic planning, giving presentations, and communication.
           </p>
         </div>
       </>
@@ -56,13 +38,12 @@ export const aboutMeData: AccordionData[] = [
     id: 'beyond-coding',
     title: 'Beyond Coding',
     column: 'left',
-    content: `Beyond coding, I excel at coaching juniors, technical analysis, and strategic planning, often leading meetings (more
-            for the sake of keeping them efficient if nothing else) and shaping project direction.`,
+    content: `Beyond writing code, I enjoy coahing junior developers, helping them consolidate their understanding of various topics. I've done this a few times already and hope to do more in the future. I've been told that I'm quite good at creating and giving presentations, often geeking out on desiging slides. Apart from that, I consider myself adept in technical analysis and strategic planning for new and existing projects.`,
   },
   {
     id: 'large-codebases-clean-code',
     title: 'Experience with Large Codebases & Clean Code Philosophy',
-    content: `I have experience with large-scale codebases, particularly at the Corona Dashboard and Blokker. I am a strong advocate
+    content: `I have experience with large-scale codebases, like the Corona Dashboard and Blokker. The Corona Dashboard served the entire country of the Netherlands, while Blokker was one of the largest department stores in the Netherlands. I am a strong advocate
           for refactoring—a clean, well-structured codebase is paramount to long-term productivity and maintainability. However, I
           also understand the need for balance between code quality and efficient delivery. Like my mother taught me, "a clean
           closet makes for a clear mind."`,
@@ -71,35 +52,30 @@ export const aboutMeData: AccordionData[] = [
     id: 'outside-of-work',
     title: 'Outside of Work',
     column: 'left',
-    content: `Outside of work, I foster creativity through cooking, DIY projects, gaming, and reading—constantly learning,
-          experimenting, and building, both digitally and physically.`,
+    content: `Outside of work, I nurture my creativity through cooking, DIY projects, gaming, and reading. I'm a big fan of learning new things - whether its a new recipe, some random facts, or how to customise a piece of furniture. Food is probably my biggest hobby though, I'm always experimenting in the kithcen and coming up with my own recipes.`,
   },
   {
     id: 'ai-in-my-workflow',
     title: 'AI in My Workflow',
     column: 'right',
     content: `In the past year, I have worked with AI tools like GitHub Copilot, Augment, and ChatGPT and found ways to integrate them
-          into my development workflow, leveraging them to optimise development processes, automate repetitive tasks, and enhance
-          productivity. Beyond work, I use AI extensively in my personal life, whether it's for DIY projects or recipe
-          development—helping me refine and improve ideas efficiently.`,
+          into my development workflow to enhance productivity when needed. While I still enjoy doing things manually for the sake of learning and staying sharp, when I need speed, AI is the way to go. In any case, not a single line of AI generated code gets through without thorough scrutiny and review. Beyond work, I use AI extensively in my personal life, whether it's for DIY projects or recipe
+          development, it helps me get to where I am trying to go faster.`,
   },
   {
     id: 'remote-work',
     title: 'Remote & Hybrid Work Experience',
     column: 'right',
-    content: `I've worked remotely for the past five years, honing my skills in remote collaboration, asynchronous communication,
+    content: `I've worked hybrid for the past five years, honing my skills in remote collaboration, asynchronous communication,
             and cross-timezone teamwork. While I appreciate the autonomy and trust required for remote work, I'm also happy to
-            return to a hybrid environment.`,
+            return to a hybrid environment where I can enjoy the benefits of both worlds.`,
   },
   {
     id: 'beauty-in-simplicity',
     title: 'Beauty in Simplicity',
     column: 'right',
-    content: `While some pride themselves on complex solutions, I value clarity and simplicity in code. A well-structured, simple
-          codebase improves both productivity and collaboration. Having said that, I myself have written some overly complex logic
-          in the past, only to find myself returning months later trying to demystify it. That's only reinforced my belief in KISS
-          - Keep It Simple, Stupid. Additionally, working in teams with a varying range of experience, I've learnt the importance
-          of keeping code understandable by all levels. I am far from perfect at this, but I always try to keep it in mind when
-          writing code.`,
+    content: `I value clarity and simplicity in code - readability over complexity. A well-structured, simple
+          codebase improves both productivity and collaboration. Having worked on a wide variety of codebases, I've seen the good, bad, and ugly. While I'm comfortable working in less than optimal set ups, I've seen first-hand the productivity gains of a clean, well-structured codebase. Additionally, working in teams with a varying range of experience, I've learnt the importance
+          of keeping code understandable by all levels.`,
   },
 ];
