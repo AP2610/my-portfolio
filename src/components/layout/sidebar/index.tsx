@@ -51,7 +51,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
           <Headshot size={isCollapsed ? 'xs' : 'small'} />
 
           {!isCollapsed && (
-            <h2 className="text-2xl font-medium">
+            <h2 className="text-2xl font-light">
               <AnimatedText text="Arjun Puri" delay={0.4} />
             </h2>
           )}
