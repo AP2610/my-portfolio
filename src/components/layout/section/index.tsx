@@ -1,4 +1,7 @@
+'use client';
+
 import clsx from 'clsx';
+import { motion } from 'framer-motion';
 
 type PaddingSizes = 'small' | 'medium' | 'large';
 
@@ -10,6 +13,7 @@ type SectionProps = {
   hasHeaderPaddingTop?: boolean;
   paddingTop?: PaddingSizes;
   paddingBottom?: PaddingSizes;
+  animateOnScroll?: boolean;
 };
 
 export const Section = ({
@@ -20,7 +24,9 @@ export const Section = ({
   paddingBottom,
   isFullWidth = false,
   hasHeaderPaddingTop = false,
+  animateOnScroll = false,
 }: SectionProps) => {
+  // Get rid of isFullWidth styling
   const sectionClasses = clsx(
     {
       container: !isFullWidth,
@@ -36,9 +42,26 @@ export const Section = ({
     className
   );
 
+  const motionProps = {
+    initial: { opacity: 0 },
+    whileInView: { opacity: 1 },
+    transition: { duration: 1, delay: 0.5 },
+    viewport: { once: true, margin: '-100px' },
+  };
+
+  const sectionProps = {
+    id,
+    className: sectionClasses,
+    ...(animateOnScroll ? motionProps : {}),
+  };
+
   return (
-    <section id={id} className={sectionClasses}>
-      {children}
-    </section>
+    <>
+      {animateOnScroll ? (
+        <motion.section {...sectionProps}>{children}</motion.section>
+      ) : (
+        <section {...sectionProps}>{children}</section>
+      )}
+    </>
   );
 };
