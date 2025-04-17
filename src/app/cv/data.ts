@@ -2,6 +2,7 @@ export type Project = {
   name: string;
   description?: string;
   bulletPoints?: string[];
+  technology?: string;
 };
 
 export type ExperienceType = {
@@ -27,7 +28,7 @@ export const experiences: ExperienceType[] = [
       'Continued working on existing projects while taking on new responsibilities in AI enablement and team leadership.',
     projects: [
       {
-        name: 'Project - 1: CapaCare (NGO Platform – Next.js, Typescript, Tailwind, Sanity CMS)',
+        name: 'CapaCare NGO Platform',
         description:
           'The goal was to provide them with a platform they could use for at least 5 years with no developer involvement.',
         bulletPoints: [
@@ -38,18 +39,21 @@ export const experiences: ExperienceType[] = [
           'Served as primary client contact: ran demos, gathered feedback, and aligned on goals throughout',
           'Built CI/CD pipelines using Github actions to deploy on Vercel',
         ],
+        technology:
+          'Next.js 14, React 18, TailwindCss, Typescript, Sanity CMS, Framer-Motion, Vercel, Github Actions, NextUI(HeroUI), Jest',
       },
       {
-        name: 'Project - 2: ToTheRoot (Developer Blog – Vue, Strapi CMS, Typescript)',
+        name: 'ToTheRoot',
         description: "Extended and maintained ToTheRoot, Sopra Steria's internal developer blog platform.",
         bulletPoints: [
           'Worked with Vue and Nuxt to implement layout and design improvements',
           "Led the rebranding to reflect Sopra Steria's brand identity, created the new designs and implemented the frontend changes",
           'Extended and configured Strapi CMS to streamline content creation',
         ],
+        technology: 'Vue.js, Nuxt.js, SCSS, Typescript, Strapi CMS, Github Actions',
       },
       {
-        name: 'Project - 3: rAIse Program (AI Enablement – Internal)',
+        name: 'rAIse Program (AI Enablement – Internal)',
         description: "Contributed 1–2 days/week to Sopra Steria's internal initiative for scaling AI tools across teams.",
         bulletPoints: [
           'Helped onboard over 2,000 developers to GitHub Copilot',
@@ -71,18 +75,7 @@ export const experiences: ExperienceType[] = [
     carriedOverProjects: ['Prenatal', 'Schuurman Schoenen'],
     projects: [
       {
-        name: 'Project - 1: VodafoneZiggo (Salesforce Commerce Cloud)',
-        bulletPoints: [
-          'Built a product configurator using Web Components, allowing customers to customise telecom bundles with real-time pricing and validation',
-          'Created an advanced address validation component to check bandwidth availability per postcode',
-          'Developed custom HTML emails',
-          'Worked with modern ES6+ standards and Web Components to implement a single-page application',
-          'Implemented a drag-and-drop-style page builder',
-          'Led project handover',
-        ],
-      },
-      {
-        name: 'Project - 2: Corona Dashboard (Dutch Ministry of Health, Next.js, Typescript, Styled Components)',
+        name: 'Corona Dashboard (Dutch Ministry of Health)',
         description:
           "Worked on the Dutch government's open-source COVID-19 dashboard, a high-traffic public health platform used by millions during the pandemic. The project required reliability, accessibility, and accurate data presentation under constant scrutiny.",
         bulletPoints: [
@@ -94,6 +87,20 @@ export const experiences: ExperienceType[] = [
           'Handled sensitive data and urgent updates, balancing speed and precision under time-sensitive conditions',
           'Led project handover',
         ],
+        technology: 'Next.js, React, Typescript, Styled Components, Sanity CMS, Git, Cypress, VisX, GitHub Actions',
+      },
+      {
+        name: 'VodafoneZiggo (Salesforce Commerce Cloud)',
+        bulletPoints: [
+          'Built a product configurator using Web Components, allowing customers to customise telecom bundles with real-time pricing and validation',
+          'Created an advanced address validation component to check bandwidth availability per postcode',
+          'Developed custom HTML emails',
+          'Worked with modern ES6+ standards and Web Components to implement a single-page application',
+          'Implemented a drag-and-drop-style page builder',
+          'Led project handover',
+        ],
+        technology:
+          'JavaScript, HTML 5, CSS, SCSS, Git, Cypress, Salesforce Commerce Cloud, Bootstrap 5, Web Components, BitBucket, Jenkins',
       },
     ],
   },
@@ -107,16 +114,17 @@ export const experiences: ExperienceType[] = [
       'Worked as a frontend engineer on multiple projects (few simultaneously) spanning custom WordPress builds and large-scale e-commerce platforms on Salesforce Commerce Cloud. This role marked my first professional experience using React.',
     projects: [
       {
-        name: 'First Projects: WordPress Projects (Bindinc & Paazl)',
+        name: 'WordPress Projects (Bindinc & Paazl)',
         bulletPoints: [
           'Built two fully custom WordPress websites using the Gutenberg block editor (React-based)',
           'Developed a bespoke theme from scratch — no reliance on theme libraries — tailored to advanced visual designs',
           'Customised and extended Gutenberg blocks to support unique content and layout needs',
           'Used PHP and SCSS to create modular, responsive layouts with strong accessibility and editor usability in mind',
         ],
+        technology: 'PHP, SCSS, JavaScript, React, WordPress, Gutenberg',
       },
       {
-        name: 'Project - 2: Prenatal (E-commerce, Salesforce Commerce Cloud)',
+        name: 'Prenatal (E-commerce, Salesforce Commerce Cloud)',
         bulletPoints: [
           'Integrated the PostNL API for dynamic address validation and completion',
           'Worked on a product configurator feature for complex item customisation',
@@ -124,15 +132,17 @@ export const experiences: ExperienceType[] = [
           'Built reusable UI components in vanilla JavaScript within SFCC templates',
           'Contributed to the complete redesign of the checkout process, improving flow and reliability',
         ],
+        technology: 'JavaScript, jQuery, HTML 5, CSS, SCSS, Git, Salesforce Commerce Cloud, Bootstrap',
       },
       {
-        name: 'Project - 3: Schuurman Schoenen (E-commerce, Salesforce Commerce Cloud)',
+        name: 'Schuurman Schoenen (E-commerce, Salesforce Commerce Cloud)',
         bulletPoints: [
           'Built a custom JavaScript countdown component for campaign promotions, designed for reuse by non-developers',
           'Developed advanced UI layouts including masonry-style product grids for seasonal campaigns',
           'Worked on dynamic components that pulled and displayed promotion-specific content',
           'Contributed to email redesign work, improving consistency and readability across devices',
         ],
+        technology: 'JavaScript, jQuery, HTML 5, CSS, SCSS, Git, Salesforce Commerce Cloud, Bootstrap',
       },
     ],
     additionalProjects: ['Denham E-commerce store', 'Sole E-commerce Store', 'LaDress E-commerce Store'],

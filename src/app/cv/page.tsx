@@ -85,7 +85,7 @@ const CvPage = () => {
       </div>
 
       {/* Skills & Methodologies */}
-      <Section isFullWidth paddingTop="small">
+      <Section isFullWidth animateOnScroll paddingTop="small" paddingBottom="small">
         <h4 className="mb-6 text-2xl text-foreground">Skills & Methodologies</h4>
 
         <ul className="flex flex-wrap gap-2">
@@ -98,7 +98,13 @@ const CvPage = () => {
       </Section>
 
       {/* Languages & Certifications */}
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+      <Section
+        isFullWidth
+        animateOnScroll
+        paddingTop="small"
+        paddingBottom="small"
+        className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-6"
+      >
         <div>
           <h4 className="mb-6 text-2xl text-foreground">Languages</h4>
 
@@ -175,10 +181,10 @@ const CvPage = () => {
             </li>
           </ul>
         </div>
-      </div>
+      </Section>
 
       {/* Education section */}
-      <Section isFullWidth>
+      <Section isFullWidth animateOnScroll>
         <h3 className="mb-6 text-2xl text-foreground">Education</h3>
 
         <div className="flex flex-col gap-8 md:flex-row">

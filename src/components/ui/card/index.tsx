@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-type HomepageCardProps = {
+type CardProps = {
   children: React.ReactNode;
   className?: string;
   textAlign?: 'center' | 'left';
@@ -9,16 +9,16 @@ type HomepageCardProps = {
   shouldWrap?: boolean;
 };
 
-export const HomepageCard = ({
+export const Card = ({
   children,
   className,
   textAlign = 'center',
   alignItems = 'center',
   flexDirection = 'column',
   shouldWrap = false,
-}: HomepageCardProps) => {
+}: CardProps) => {
   const cardClasses = clsx(
-    'flex justify-center rounded-md bg-homepage-card-bg p-6 text-foreground shadow-md',
+    'flex justify-center rounded-md bg-card-bg p-6 text-foreground shadow-md',
     {
       'text-center': textAlign === 'center',
       'text-left': textAlign === 'left',

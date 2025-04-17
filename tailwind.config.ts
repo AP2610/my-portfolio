@@ -48,7 +48,7 @@ export default {
         'accent-lime': 'rgba(var(--accent-lime))',
         'accent-electric-blue': 'rgba(var(--accent-electric-blue))',
         'accent-violet': 'rgba(var(--accent-violet))',
-        'homepage-card-bg': 'rgba(var(--homepage-card-bg))',
+        'card-bg': 'rgba(var(--card-bg))',
         'sidebar-bg': 'rgba(var(--sidebar-bg))',
         'setting-button-color': 'rgba(var(--setting-button-color))',
         'setting-button-color-hover': 'rgba(var(--setting-button-color-hover))',

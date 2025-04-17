@@ -15,23 +15,19 @@ export const metadata: Metadata = {
 const Home = () => {
   return (
     <>
-      <Section
-        className="relative flex min-h-dvh flex-col justify-around gap-16 md:gap-8"
-        paddingTop="small"
-        paddingBottom="small"
-      >
-        <AnimatedRadialGradientBackground />
-
-        <h1 className="hidden text-3xl text-foreground md:block">
+      <Section className="relative flex min-h-dvh flex-col justify-center gap-16" paddingTop="small" paddingBottom="small">
+        <h1 className="col-span-12 hidden text-3xl text-foreground md:block">
           <AnimatedText text="Frontend Engineer" delay={0.4} />
         </h1>
+
+        <AnimatedRadialGradientBackground />
 
         <SmallScreenHeroTitle className="md:hidden" />
 
         <HomepageCardGrid />
       </Section>
 
-      <Section id="about" paddingTop="medium" paddingBottom="medium">
+      <Section id="about" paddingTop="medium" paddingBottom="medium" animateOnScroll>
         <About />
       </Section>
     </>
