@@ -1,4 +1,5 @@
 import { ExperienceType } from '@/app/cv/data';
+import { Section } from '@/components/layout/section';
 import { Accordion } from '@/components/ui/accordion';
 import clsx from 'clsx';
 
@@ -22,7 +23,7 @@ export const Experience = ({
     id: `${company}-project-${index}`,
     title: project.name,
     content: (
-      <div className="space-y-2">
+      <div className="mb-4 space-y-4">
         {project.description && <p>{project.description}</p>}
 
         {project.bulletPoints && (
@@ -32,12 +33,20 @@ export const Experience = ({
             ))}
           </ul>
         )}
+
+        {project.technology && (
+          <div className="space-y-2">
+            <h3 className="font-semibold">Technologies & Skills</h3>
+
+            <p className="text-foreground">{project.technology}</p>
+          </div>
+        )}
       </div>
     ),
   }));
 
   return (
-    <article className={clsx('space-y-4', className)}>
+    <Section animateOnScroll isFullWidth className={clsx('space-y-4', className)}>
       <header className="space-y-1">
         <h2 className="text-2xl font-medium text-accent-electric-blue">{company}</h2>
 
@@ -55,7 +64,7 @@ export const Experience = ({
 
         {carriedOverProjects && carriedOverProjects.length > 0 && (
           <div>
-            <h3 className="mb-2 font-medium">Carried Over Projects</h3>
+            <h3 className="mb-2 font-semibold">Carried Over Projects</h3>
 
             <ul className="list-disc space-y-2 pl-5">
               {carriedOverProjects.map((project, index) => (
@@ -65,6 +74,8 @@ export const Experience = ({
           </div>
         )}
 
+        <h3 className="font-semibold text-foreground">Projects</h3>
+
         {projectAccordionData && projectAccordionData.length > 0 && (
           <div className="space-y-6">
             <Accordion data={projectAccordionData} />
@@ -72,8 +83,8 @@ export const Experience = ({
         )}
 
         {additionalProjects && additionalProjects.length > 0 && (
-          <div>
-            <h3 className="mb-2 font-medium">Additional Projects</h3>
+          <div className="space-y-2">
+            <h3 className="font-semibold">Additional Projects</h3>
 
             <ul className="list-disc space-y-2 pl-5">
               {additionalProjects.map((project, index) => (
@@ -83,6 +94,6 @@ export const Experience = ({
           </div>
         )}
       </div>
-    </article>
+    </Section>
   );
 };
