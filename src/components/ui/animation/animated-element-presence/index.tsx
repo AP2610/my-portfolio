@@ -20,8 +20,8 @@ export const AnimatedElementPresence = ({
 }: AnimatedElementPresenceProps) => {
   const animationTypes = {
     position: {
-      initial: { opacity: 0, scale: 0.5, y: 50 },
-      animate: { opacity: 1, scale: 1, y: 0 },
+      initial: { opacity: 0, y: 100 },
+      animate: { opacity: 1, y: 0 },
       transition: {
         delay: entryAnimationDelay,
         duration: 0.8,
