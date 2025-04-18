@@ -107,36 +107,8 @@
 
     // Header
     --header-height: 75px;
-  }
 
-  .light {
-    --background: var(--cosmic-latte);
-    --foreground: var(--rich-black);
-
-    --primary: var(--rich-black);
-    --primary-foreground: var(--cosmic-latte);
-
-    // Accents
-    --accent-lime: var(--lime-700);
-    --accent-electric-blue: var(--electric-blue-600);
-    --accent-violet: var(--violet-600);
-
-    // Semantic colors
-    // Cards
-    --card-bg: var(--cosmic-latte-200);
-    --card-body-text-color: 107 114 128; // Tailwind text-gray-500
-
-    --radial-background-color: var(--cosmic-latte-700);
-
-    // Sidebar
-    --sidebar-bg: var(--cosmic-latte-600);
-
-    // various settings buttons
-    --setting-button-color: var(--accent-lime);
-    --setting-button-color-hover: var(--lime-800);
-  }
-
-  .dark {
+    // Semantic Colours - default dark mode
     --background: 17 24 39; // Tailwind bg-gray-900
     --foreground: var(--cosmic-latte);
 
@@ -162,5 +134,40 @@
     // Various settings buttons
     --setting-button-color: var(--rich-black-200);
     --setting-button-color-hover: var(--rich-black-300);
+
+    // Toasts
+    --toast-bg: var(--violet-800);
+    --toast-border-color: var(--violet-700);
+  }
+
+  .light {
+    --background: var(--cosmic-latte);
+    --foreground: var(--rich-black);
+
+    --primary: var(--rich-black);
+    --primary-foreground: var(--cosmic-latte);
+
+    // Accents
+    --accent-lime: var(--lime-700);
+    --accent-electric-blue: var(--electric-blue-600);
+    --accent-violet: var(--violet-600);
+
+    // Semantic colors
+    // Cards
+    --card-bg: var(--cosmic-latte-200);
+    --card-body-text-color: 107 114 128; // Tailwind text-gray-500
+
+    --radial-background-color: var(--cosmic-latte-700);
+
+    // Sidebar
+    --sidebar-bg: var(--cosmic-latte-600);
+
+    // Various settings buttons
+    --setting-button-color: var(--accent-lime);
+    --setting-button-color-hover: var(--lime-800);
+
+    // Toasts
+    --toast-bg: var(--cosmic-latte-600);
+    --toast-border-color: var(--cosmic-latte-700);
   }
 }
