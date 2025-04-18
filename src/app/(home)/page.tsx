@@ -4,6 +4,7 @@ import { SmallScreenHeroTitle } from '@/components/features/home/small-screen-he
 import { Section } from '@/components/layout/section';
 import { AnimatedRadialGradientBackground } from '@/components/ui/animation/animated-radial-gradient-background';
 import { AnimatedText } from '@/components/ui/animation/animated-text';
+import { Heading } from '@/components/ui/heading';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -16,9 +17,9 @@ const Home = () => {
   return (
     <>
       <Section className="relative flex min-h-dvh flex-col justify-center gap-16" paddingTop="small" paddingBottom="small">
-        <h1 className="col-span-12 hidden text-3xl text-foreground md:block">
+        <Heading level="h1" weight="black" className="hidden md:block">
           <AnimatedText text="Frontend Engineer" delay={0.4} />
-        </h1>
+        </Heading>
 
         <AnimatedRadialGradientBackground />
 

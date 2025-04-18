@@ -1,13 +1,14 @@
 import { Accordion } from '@/components/ui/accordion';
 import { MyLink } from '@/components/ui/my-link';
 import { aboutMeData } from './data';
+import { Heading } from '@/components/ui/heading';
 
 export const About = () => {
   return (
     <article className="space-y-8">
-      <h2 className="text-3xl text-foreground md:text-4xl">
+      <Heading level="h2" weight="black">
         About <span className="text-accent-electric-blue">Me</span>
-      </h2>
+      </Heading>
 
       <Accordion data={aboutMeData} isTwoColumns className="!mb-14 !mt-10" />
 
