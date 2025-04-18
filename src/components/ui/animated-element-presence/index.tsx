@@ -1,12 +1,11 @@
 'use client';
 
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 type AnimatedElementPresenceProps = {
   children: React.ReactNode;
-  exitCondition?: boolean;
-  entryAnimationDelay: number;
   animationProperty: 'opacity' | 'position';
+  entryAnimationDelay?: number;
   exitAnimationDelay?: number;
   className?: string;
 };
@@ -14,16 +13,15 @@ type AnimatedElementPresenceProps = {
 // Animates element position or opacity
 export const AnimatedElementPresence = ({
   children,
-  exitCondition,
-  entryAnimationDelay,
-  exitAnimationDelay,
-  className,
   animationProperty,
+  className,
+  entryAnimationDelay = 0,
+  exitAnimationDelay = 0,
 }: AnimatedElementPresenceProps) => {
   const animationTypes = {
     position: {
-      initial: { y: 50 },
-      animate: { y: -15 },
+      initial: { opacity: 0, scale: 0.5, y: 50 },
+      animate: { opacity: 1, scale: 1, y: 0 },
       transition: {
         delay: entryAnimationDelay,
         duration: 0.8,
@@ -33,8 +31,8 @@ export const AnimatedElementPresence = ({
       },
       exit: {
         opacity: 0,
-        y: -100,
-        transition: { delay: exitAnimationDelay, duration: 0.5, type: 'easeInOut' },
+        y: 50,
+        transition: { delay: exitAnimationDelay, duration: 3, type: 'easeInOut' },
       },
     },
     opacity: {
@@ -47,17 +45,9 @@ export const AnimatedElementPresence = ({
 
   const animateProps = animationTypes[animationProperty];
 
-  const commonJsx = (
+  return (
     <motion.div className={className} {...animateProps}>
       {children}
     </motion.div>
-  );
-
-  return (
-    <AnimatePresence mode="wait">
-      {exitCondition && commonJsx}
-      {/* For now, all opacity based animations do not have an exit option */}
-      {animationProperty === 'opacity' && commonJsx}
-    </AnimatePresence>
   );
 };
