@@ -2,8 +2,8 @@ import { About } from '@/components/features/about';
 import { HomepageCardGrid } from '@/components/features/home/home-page-card-grid';
 import { SmallScreenHeroTitle } from '@/components/features/home/small-screen-hero-title';
 import { Section } from '@/components/layout/section';
-import { AnimatedRadialGradientBackground } from '@/components/ui/animated-radial-gradient-background';
-import { AnimatedText } from '@/components/ui/animated-text';
+import { AnimatedRadialGradientBackground } from '@/components/ui/animation/animated-radial-gradient-background';
+import { AnimatedText } from '@/components/ui/animation/animated-text';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {

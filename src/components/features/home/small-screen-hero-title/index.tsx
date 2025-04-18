@@ -1,7 +1,7 @@
 'use client';
 
-import { AnimatedElementPresence } from '@/components/ui/animated-element-presence';
-import { AnimatedText } from '@/components/ui/animated-text';
+import { AnimatedElementPresence } from '@/components/ui/animation/animated-element-presence';
+import { AnimatedText } from '@/components/ui/animation/animated-text';
 import clsx from 'clsx';
 import { useState } from 'react';
 

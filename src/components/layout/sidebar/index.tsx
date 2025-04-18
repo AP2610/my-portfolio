@@ -1,6 +1,6 @@
 'use client';
 
-import { AnimatedText } from '@/components/ui/animated-text';
+import { AnimatedText } from '@/components/ui/animation/animated-text';
 import { Button } from '@/components/ui/button';
 import { ContrastSwitcher } from '@/components/ui/contrast-switcher';
 import { Headshot } from '@/components/ui/headshot';

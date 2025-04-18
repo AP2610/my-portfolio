@@ -2,7 +2,7 @@ import { Footer } from '@/components/layout/footer';
 import { Header } from '@/components/layout/header';
 import { Providers } from '@/components/layout/providers';
 import { Sidebar } from '@/components/layout/sidebar';
-import { AnimatedElementPresence } from '@/components/ui/animated-element-presence';
+import { AnimatedElementPresence } from '@/components/ui/animation/animated-element-presence';
 import { ToastList } from '@/components/ui/toast-list';
 import clsx from 'clsx';
 import { Raleway } from 'next/font/google';
