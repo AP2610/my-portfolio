@@ -26,7 +26,6 @@ export const Section = ({
   hasHeaderPaddingTop = false,
   animateOnScroll = false,
 }: SectionProps) => {
-  // Get rid of isFullWidth styling
   const sectionClasses = clsx(
     {
       container: !isFullWidth,
@@ -43,10 +42,10 @@ export const Section = ({
   );
 
   const motionProps = {
-    initial: { opacity: 0 },
-    whileInView: { opacity: 1 },
-    transition: { duration: 1, delay: 0.5 },
-    viewport: { once: true, margin: '-100px' },
+    initial: { opacity: 0, y: 50 },
+    whileInView: { opacity: 1, y: 0 },
+    transition: { duration: 0.6, delay: 0.3, type: 'easeInOut' },
+    viewport: { once: true, margin: '-75px' },
   };
 
   const sectionProps = {
