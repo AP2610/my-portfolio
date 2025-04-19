@@ -17,7 +17,7 @@ const Home = () => {
   return (
     <>
       <Section className="relative flex min-h-dvh flex-col justify-center gap-16" paddingTop="small" paddingBottom="small">
-        <Heading level="h1" as="h2" weight="black" className="hidden md:block">
+        <Heading level="h1" as="h2" className="hidden md:block">
           <AnimatedText text="Frontend Engineer" delay={0.4} />
         </Heading>
 

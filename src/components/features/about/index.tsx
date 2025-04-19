@@ -6,7 +6,7 @@ import { Heading } from '@/components/ui/heading';
 export const About = () => {
   return (
     <article className="space-y-8">
-      <Heading level="h2" weight="black">
+      <Heading level="h2">
         About <span className="text-accent-electric-blue">Me</span>
       </Heading>
 

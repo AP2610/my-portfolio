@@ -11,7 +11,7 @@ type HeadingProps = {
   className?: string;
 };
 
-export const Heading = ({ level, as, children, className, color = 'foreground', weight = 'normal' }: HeadingProps) => {
+export const Heading = ({ level, as, children, className, color = 'foreground', weight = 'black' }: HeadingProps) => {
   const HeadingTag = level;
 
   const headingFontSizes = {

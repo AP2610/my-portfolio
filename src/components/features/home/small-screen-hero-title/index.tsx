@@ -17,7 +17,7 @@ export const SmallScreenHeroTitle = ({ className }: SmallScreenHeroTitleProps) =
 
   return (
     <div className={classes}>
-      <Heading level="h1" weight="black">
+      <Heading level="h1">
         <AnimatedText text="Hi, I'm Arjun" delay={0.4} onComplete={() => setShowDescription(true)} />
       </Heading>
 

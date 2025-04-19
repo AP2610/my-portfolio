@@ -15,7 +15,7 @@ const ProjectsPage = () => {
     <Section paddingTop="medium" paddingBottom="medium">
       <div className="space-y-12">
         <header>
-          <Heading level="h1" weight="black" className="mb-8">
+          <Heading level="h1" className="mb-8">
             Projects
           </Heading>
 

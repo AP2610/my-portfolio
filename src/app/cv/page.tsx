@@ -23,7 +23,7 @@ const CvPage = () => {
       <header className="flex flex-col items-center gap-8 md:block">
         <Headshot size="medium" className="md:hidden" />
 
-        <Heading level="h2" weight="black" className="md:hidden">
+        <Heading level="h2" className="md:hidden">
           Arjun <span className="text-accent-electric-blue">Puri</span>
         </Heading>
 
@@ -66,9 +66,7 @@ const CvPage = () => {
       {/* Experience section */}
       <div className="space-y-12 text-foreground">
         <div className="space-y-6">
-          <Heading level="h2" weight="black">
-            Professional Experience
-          </Heading>
+          <Heading level="h2">Professional Experience</Heading>
 
           <p>
             My CV contains consolidated and condensed information about my experiences. If you'd like a bit more detail on the
@@ -89,7 +87,7 @@ const CvPage = () => {
 
       {/* Skills & Methodologies */}
       <Section isFullWidth animateOnScroll paddingTop="small" paddingBottom="small">
-        <Heading level="h2" weight="black" className="mb-6">
+        <Heading level="h2" className="mb-6">
           Skills & Methodologies
         </Heading>
 
@@ -111,7 +109,7 @@ const CvPage = () => {
         className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-6"
       >
         <div>
-          <Heading level="h2" weight="black" className="mb-6">
+          <Heading level="h2" className="mb-6">
             Languages
           </Heading>
 
@@ -132,7 +130,7 @@ const CvPage = () => {
         </div>
 
         <div>
-          <Heading level="h2" weight="black" className="mb-6">
+          <Heading level="h2" className="mb-6">
             Certifications
           </Heading>
 
@@ -194,7 +192,7 @@ const CvPage = () => {
 
       {/* Education section */}
       <Section isFullWidth animateOnScroll>
-        <Heading level="h2" weight="black" className="mb-6">
+        <Heading level="h2" className="mb-6">
           Education
         </Heading>
 

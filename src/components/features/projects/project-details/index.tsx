@@ -48,7 +48,7 @@ export const ProjectDetails = ({
   return (
     <article className="space-y-12">
       <header>
-        <Heading level="h2" as="h3" weight="black" color="electric-blue" className="mb-2">
+        <Heading level="h2" as="h3" color="electric-blue" className="mb-2">
           {company}
         </Heading>
 
