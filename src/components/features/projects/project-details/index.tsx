@@ -82,7 +82,7 @@ export const ProjectDetails = ({
         </div>
 
         {(websiteUrl || githubUrl) && (
-          <div className="mt-10 flex gap-4">
+          <div className="mt-10 flex flex-col gap-4 md:flex-row">
             {websiteUrl && (
               <MyLink type="external" href={websiteUrl} variant="primary" showIcon>
                 Visit Project Website
