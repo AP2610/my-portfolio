@@ -5,19 +5,19 @@ import { scrollToElement } from '@/utils/scroll-to-element';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import React, { useEffect, useRef } from 'react';
-import { AccordionContent, IdType, TitleSize } from './types';
+import { AccordionContent, IdType } from './types';
+import { Heading } from '../heading';
 
 type AccordionItemProps = {
   id: IdType;
   title: string;
-  titleSize?: TitleSize;
   content: AccordionContent;
   isOpen: boolean;
   onToggle: () => void;
   className: string;
 };
 
-export const AccordionItem = ({ id, title, titleSize, content, isOpen, onToggle, className }: AccordionItemProps) => {
+export const AccordionItem = ({ id, title, content, isOpen, onToggle, className }: AccordionItemProps) => {
   const contentRef = useRef<HTMLDivElement>(null);
   const scrollRef = useRef<HTMLElement>(null);
   const isMdOrLargerScreen = useMediaQuery('md');
@@ -73,15 +73,6 @@ export const AccordionItem = ({ id, title, titleSize, content, isOpen, onToggle,
     y: '-50%',
   };
 
-  const titleClasses = clsx('text-left font-normal group-hover:font-semibold transition-all duration-300', {
-    'text-base': titleSize === 'default',
-    'text-sm': titleSize === 'small',
-    'text-lg': titleSize === 'medium',
-    'text-xl': titleSize === 'large',
-    'text-2xl': titleSize === 'xl',
-    'font-semibold': isOpen,
-  });
-
   // Only add space between paragraphs if content is an array
   const accordionContentClasses = clsx('p-4', {
     'space-y-4': Array.isArray(content),
@@ -95,7 +86,14 @@ export const AccordionItem = ({ id, title, titleSize, content, isOpen, onToggle,
           onClick={onToggle}
           aria-expanded={isOpen}
         >
-          <h3 className={titleClasses}>{title}</h3>
+          <Heading
+            level="h3"
+            as="h6"
+            weight={isOpen ? 'semibold' : 'normal'}
+            className="text-left transition-all duration-300 group-hover:font-semibold"
+          >
+            {title}
+          </Heading>
 
           <span className="relative block h-3 w-3 transition-all duration-300 group-hover:scale-125 group-active:scale-100">
             <motion.span className={`${commonSpanButtonClasses} h-[2px] w-3`} style={commonSpanButtonStyles}></motion.span>
