@@ -19,7 +19,11 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 
   return (
     <>
-      <button onClick={() => dialogRef.current?.showModal()} aria-label={`Read more about the ${project.company} project`}>
+      <button
+        onClick={() => dialogRef.current?.showModal()}
+        aria-label={`Read more about the ${project.company} project`}
+        className="h-full w-full"
+      >
         <Card
           textAlign="left"
           alignItems="start"
