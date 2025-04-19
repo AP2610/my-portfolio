@@ -14,7 +14,7 @@ type ModalDialogProps = {
 
 export const ModalDialog = ({ children, className, ref }: ModalDialogProps) => {
   const dialogClasses = clsx(
-    'fixed inset-0 m-auto max-h-[90vh] max-w-3xl mx-6 rounded-md bg-background shadow-md backdrop:bg-black/60 backdrop:backdrop-blur-[2px]',
+    'fixed inset-0 max-h-[90vh] max-w-[90vw] md:max-w-3xl m-auto rounded-md bg-background shadow-md backdrop:bg-black/60 backdrop:backdrop-blur-[2px]',
     styles.dialog,
     className
   );
@@ -51,7 +51,7 @@ export const ModalDialog = ({ children, className, ref }: ModalDialogProps) => {
       <div className="relative p-6">
         <Button
           variant="icon-button"
-          className="absolute right-0 top-0 text-accent-lime transition-all duration-300 hover:text-lime-800"
+          className="w- absolute right-0 top-0 text-accent-lime transition-all duration-300 hover:text-lime-800"
           onClick={() => ref.current?.close()}
         >
           <IoCloseOutline className="h-6 w-6" />
