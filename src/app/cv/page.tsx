@@ -9,6 +9,7 @@ import type { Metadata } from 'next';
 import { HiOutlineGlobeAsiaAustralia } from 'react-icons/hi2';
 import { IoLocationOutline } from 'react-icons/io5';
 import { experiences, skillsMethodologies } from './data';
+import { Heading } from '@/components/ui/heading';
 
 export const metadata: Metadata = {
   title: "Arjun Puri's CV",
@@ -22,15 +23,15 @@ const CvPage = () => {
       <header className="flex flex-col items-center gap-8 md:block">
         <Headshot size="medium" className="md:hidden" />
 
-        <h2 className="text-4xl text-foreground md:hidden">
+        <Heading level="h2" weight="black" className="md:hidden">
           Arjun <span className="text-accent-electric-blue">Puri</span>
-        </h2>
+        </Heading>
 
         <div className="space-y-6">
-          <h1 className="text-lg font-normal text-foreground md:max-w-[700px]">
+          <Heading level="h1" as="h5" className="md:max-w-[700px]">
             Frontend Engineer | React, Next.js, JavaScript, TypeScript, TailwindCss | Building Reliable, Engaging & User-Centric
             Web Experiences
-          </h1>
+          </Heading>
 
           <div className="space-y-4">
             <p className="flex items-center gap-2 text-accent-lime">
@@ -65,7 +66,9 @@ const CvPage = () => {
       {/* Experience section */}
       <div className="space-y-12 text-foreground">
         <div className="space-y-6">
-          <h2 className="text-2xl md:text-3xl">Professional Experience</h2>
+          <Heading level="h2" weight="black">
+            Professional Experience
+          </Heading>
 
           <p>
             My CV contains consolidated and condensed information about my experiences. If you'd like a bit more detail on the
@@ -86,7 +89,9 @@ const CvPage = () => {
 
       {/* Skills & Methodologies */}
       <Section isFullWidth animateOnScroll paddingTop="small" paddingBottom="small">
-        <h4 className="mb-6 text-2xl text-foreground">Skills & Methodologies</h4>
+        <Heading level="h2" weight="black" className="mb-6">
+          Skills & Methodologies
+        </Heading>
 
         <ul className="flex flex-wrap gap-2">
           {skillsMethodologies.map((skill) => (
@@ -106,7 +111,9 @@ const CvPage = () => {
         className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-6"
       >
         <div>
-          <h4 className="mb-6 text-2xl text-foreground">Languages</h4>
+          <Heading level="h2" weight="black" className="mb-6">
+            Languages
+          </Heading>
 
           <ul className="flex flex-wrap gap-2 font-sans">
             <li>
@@ -125,7 +132,9 @@ const CvPage = () => {
         </div>
 
         <div>
-          <h4 className="mb-6 text-2xl text-foreground">Certifications</h4>
+          <Heading level="h2" weight="black" className="mb-6">
+            Certifications
+          </Heading>
 
           <ul className="flex flex-wrap gap-2 font-sans">
             <li>
@@ -185,12 +194,17 @@ const CvPage = () => {
 
       {/* Education section */}
       <Section isFullWidth animateOnScroll>
-        <h3 className="mb-6 text-2xl text-foreground">Education</h3>
+        <Heading level="h2" weight="black" className="mb-6">
+          Education
+        </Heading>
 
         <div className="flex flex-col gap-8 md:flex-row">
           <div className="flex flex-col">
             <div className="mb-2">
-              <h4 className="text-xl font-light text-foreground">Ecole hôtelière de Lausanne</h4>
+              <Heading level="h4" weight="light">
+                Ecole hôtelière de Lausanne
+              </Heading>
+
               <p className="text-accent-lime">Bachelor of Science Degree, Hospitality Administration/Management</p>
             </div>
 
@@ -199,7 +213,9 @@ const CvPage = () => {
 
           <div className="flex flex-col">
             <div className="mb-2">
-              <h4 className="text-xl font-light text-foreground">Le Wagon</h4>
+              <Heading level="h4" weight="light">
+                Le Wagon
+              </Heading>
               <p className="text-accent-lime">Computer Programming</p>
             </div>
 
