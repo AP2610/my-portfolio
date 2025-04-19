@@ -22,13 +22,11 @@ export const ProjectDetails = ({
     {
       id: 'situation',
       title: 'Situation',
-      column: 'left',
       content: situation,
     },
     {
       id: 'tasks',
       title: 'Tasks',
-      column: 'left',
       content: (
         <ul className="list-disc space-y-2 pl-5">
           {tasks.map((task, index) => (

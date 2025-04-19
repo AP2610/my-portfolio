@@ -5,6 +5,7 @@ import { MyLink } from '@/components/ui/my-link';
 import { Logo } from '@/components/ui/logo';
 import { SocialIconLink } from '@/components/ui/social-icon-link';
 import { FaEnvelope } from 'react-icons/fa';
+import { Heading } from '@/components/ui/heading';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -20,7 +21,9 @@ export const Footer = () => {
           </div>
 
           <div className="text-foreground">
-            <h3 className="mb-4 text-xl font-bold">Quick Links</h3>
+            <Heading level="h3" as="h4" weight="bold" className="mb-4">
+              Quick Links
+            </Heading>
 
             <ul className="space-y-2">
               {NAVIGATION_LINKS.map((link) => (
@@ -34,7 +37,9 @@ export const Footer = () => {
           </div>
 
           <div className="space-y-6">
-            <h3 className="text-xl font-bold text-foreground">Let's Connect</h3>
+            <Heading level="h3" as="h4" weight="bold">
+              Let's Connect
+            </Heading>
             <p className="text-foreground">Interested in working together? Let's chat!</p>
 
             <MyLink type="external" href="mailto:corned-tippets-5g@icloud.com" variant="secondary">
@@ -43,7 +48,9 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h3 className="mb-4 text-xl font-bold text-foreground">More Ways to Connect</h3>
+            <Heading level="h3" as="h4" weight="bold" className="mb-4">
+              More Ways to Connect
+            </Heading>
 
             <ul className="flex gap-4">
               <li>

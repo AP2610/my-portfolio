@@ -3,6 +3,7 @@
 import { AnimatedText } from '@/components/ui/animation/animated-text';
 import { Button } from '@/components/ui/button';
 import { ContrastSwitcher } from '@/components/ui/contrast-switcher';
+import { Heading } from '@/components/ui/heading';
 import { Headshot } from '@/components/ui/headshot';
 import { Logo } from '@/components/ui/logo';
 import { ThemeSwitcher } from '@/components/ui/theme-switcher';
@@ -51,9 +52,9 @@ export const Sidebar = ({ className }: SidebarProps) => {
           <Headshot size={isCollapsed ? 'xs' : 'small'} />
 
           {!isCollapsed && (
-            <h2 className="text-2xl font-light">
+            <Heading level="h2" as="h3" weight="light">
               <AnimatedText text="Arjun Puri" delay={0.4} />
-            </h2>
+            </Heading>
           )}
         </div>
       </div>
