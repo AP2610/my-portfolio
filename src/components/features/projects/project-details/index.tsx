@@ -1,8 +1,9 @@
 import { ProjectType } from '@/app/projects/data';
-import { Badge } from '@/components/ui/badge';
-import { MyLink } from '@/components/ui/my-link';
-import { MyImage } from '@/components/ui/image';
 import { Accordion, AccordionData } from '@/components/ui/accordion';
+import { Badge } from '@/components/ui/badge';
+import { Heading } from '@/components/ui/heading';
+import { MyImage } from '@/components/ui/image';
+import { MyLink } from '@/components/ui/my-link';
 
 type ProjectDetailsProps = ProjectType;
 
@@ -47,7 +48,10 @@ export const ProjectDetails = ({
   return (
     <article className="space-y-12">
       <header>
-        <h2 className="mb-2 text-2xl text-accent-electric-blue">{company}</h2>
+        <Heading level="h2" as="h3" weight="black" color="electric-blue" className="mb-2">
+          {company}
+        </Heading>
+
         <span className="font-sans font-normal text-foreground">{role}</span>
       </header>
 
@@ -66,7 +70,9 @@ export const ProjectDetails = ({
         <Accordion data={projectDetailsAccordionData} className="mb-12" />
 
         <div className="text-foreground">
-          <h3 className="mb-4 text-xl font-semibold">Technologies & Skills</h3>
+          <Heading level="h3" as="h4" weight="semibold" className="mb-4">
+            Technologies & Skills
+          </Heading>
 
           <ul className="flex flex-wrap gap-2">
             {specializations.map((skill) => (

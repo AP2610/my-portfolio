@@ -1,5 +1,6 @@
 import { ProjectCard } from '@/components/features/projects/project-card';
 import { Section } from '@/components/layout/section';
+import { Heading } from '@/components/ui/heading';
 import type { Metadata } from 'next';
 import { projectsData } from './data';
 
@@ -14,7 +15,9 @@ const ProjectsPage = () => {
     <Section paddingTop="medium" paddingBottom="medium">
       <div className="space-y-12">
         <header>
-          <h1 className="mb-8 text-3xl text-foreground md:text-4xl">Projects</h1>
+          <Heading level="h1" weight="black" className="mb-8">
+            Projects
+          </Heading>
 
           <div className="space-y-6">
             <p className="text-foreground">

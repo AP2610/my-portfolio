@@ -28,7 +28,7 @@ const CvPage = () => {
         </Heading>
 
         <div className="space-y-6">
-          <Heading level="h1" as="h5" className="md:max-w-[700px]">
+          <Heading level="h1" as="h5" weight="normal" className="md:max-w-[700px]">
             Frontend Engineer | React, Next.js, JavaScript, TypeScript, TailwindCss | Building Reliable, Engaging & User-Centric
             Web Experiences
           </Heading>
