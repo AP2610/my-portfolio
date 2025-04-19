@@ -1,8 +1,9 @@
 import { ProjectType } from '@/app/projects/data';
-import { Badge } from '@/components/ui/badge';
-import { MyLink } from '@/components/ui/my-link';
-import { MyImage } from '@/components/ui/image';
 import { Accordion, AccordionData } from '@/components/ui/accordion';
+import { Badge } from '@/components/ui/badge';
+import { Heading } from '@/components/ui/heading';
+import { MyImage } from '@/components/ui/image';
+import { MyLink } from '@/components/ui/my-link';
 
 type ProjectDetailsProps = ProjectType;
 
@@ -21,13 +22,11 @@ export const ProjectDetails = ({
     {
       id: 'situation',
       title: 'Situation',
-      column: 'left',
       content: situation,
     },
     {
       id: 'tasks',
       title: 'Tasks',
-      column: 'left',
       content: (
         <ul className="list-disc space-y-2 pl-5">
           {tasks.map((task, index) => (
@@ -47,7 +46,10 @@ export const ProjectDetails = ({
   return (
     <article className="space-y-12">
       <header>
-        <h2 className="mb-2 text-2xl text-accent-electric-blue">{company}</h2>
+        <Heading level="h2" as="h3" color="electric-blue" className="mb-2">
+          {company}
+        </Heading>
+
         <span className="font-sans font-normal text-foreground">{role}</span>
       </header>
 
@@ -66,7 +68,9 @@ export const ProjectDetails = ({
         <Accordion data={projectDetailsAccordionData} className="mb-12" />
 
         <div className="text-foreground">
-          <h3 className="mb-4 text-xl font-semibold">Technologies & Skills</h3>
+          <Heading level="h3" as="h4" weight="semibold" className="mb-4">
+            Technologies & Skills
+          </Heading>
 
           <ul className="flex flex-wrap gap-2">
             {specializations.map((skill) => (
@@ -78,7 +82,7 @@ export const ProjectDetails = ({
         </div>
 
         {(websiteUrl || githubUrl) && (
-          <div className="mt-10 flex gap-4">
+          <div className="mt-10 flex flex-col gap-4 md:flex-row">
             {websiteUrl && (
               <MyLink type="external" href={websiteUrl} variant="primary" showIcon>
                 Visit Project Website

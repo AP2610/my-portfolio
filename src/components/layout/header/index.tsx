@@ -1,6 +1,6 @@
 'use client';
 
-import { AnimatedElementPresence } from '@/components/ui/animated-element-presence';
+import { AnimatedElementPresence } from '@/components/ui/animation/animated-element-presence';
 import { Logo } from '@/components/ui/logo';
 import { ThemeSwitcher } from '@/components/ui/theme-switcher';
 import clsx from 'clsx';

@@ -1,9 +1,9 @@
 'use client';
 
 import { ContrastContext } from '@/context/contrast-context';
+import { useToast } from '@/hooks/use-toast';
 import { useContext } from 'react';
-import { TbContrast } from 'react-icons/tb';
-import { TbContrastOff } from 'react-icons/tb';
+import { TbContrast, TbContrastOff } from 'react-icons/tb';
 import { Button } from '../button';
 
 type ContrastSwitchProps = {
@@ -17,11 +17,17 @@ const iconProps = {
 
 export const ContrastSwitcher = ({ className }: ContrastSwitchProps) => {
   const { isHighContrast, handleContrastToggle } = useContext(ContrastContext);
+  const { showToast } = useToast();
+
+  const handleClick = () => {
+    handleContrastToggle();
+    showToast('contrast-toggled', `High contrast mode ${isHighContrast ? 'disabled' : 'enabled'}`);
+  };
 
   return (
     <Button
       title={isHighContrast ? 'Disable high contrast mode' : 'Enable high contrast mode'}
-      onClick={handleContrastToggle}
+      onClick={handleClick}
       variant="icon-button"
       className={className}
     >

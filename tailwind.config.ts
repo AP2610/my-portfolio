@@ -53,6 +53,8 @@ export default {
         'setting-button-color': 'rgba(var(--setting-button-color))',
         'setting-button-color-hover': 'rgba(var(--setting-button-color-hover))',
         'card-body-text-color': 'rgba(var(--card-body-text-color))',
+        'toast-bg': 'rgba(var(--toast-bg))',
+        'toast-border-color': 'rgba(var(--toast-border-color))',
 
         // Original color scales
         'rich-black': {

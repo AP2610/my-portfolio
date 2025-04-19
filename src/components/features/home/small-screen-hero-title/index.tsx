@@ -1,7 +1,8 @@
 'use client';
 
-import { AnimatedElementPresence } from '@/components/ui/animated-element-presence';
-import { AnimatedText } from '@/components/ui/animated-text';
+import { AnimatedElementPresence } from '@/components/ui/animation/animated-element-presence';
+import { AnimatedText } from '@/components/ui/animation/animated-text';
+import { Heading } from '@/components/ui/heading';
 import clsx from 'clsx';
 import { useState } from 'react';
 
@@ -16,9 +17,9 @@ export const SmallScreenHeroTitle = ({ className }: SmallScreenHeroTitleProps) =
 
   return (
     <div className={classes}>
-      <h1 className="text-3xl">
+      <Heading level="h1">
         <AnimatedText text="Hi, I'm Arjun" delay={0.4} onComplete={() => setShowDescription(true)} />
-      </h1>
+      </Heading>
 
       {/* TODO: Create hook or HOC to handle this for various scenarios */}
       <div className="relative">

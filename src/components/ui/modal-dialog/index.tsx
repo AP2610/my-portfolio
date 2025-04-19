@@ -14,7 +14,7 @@ type ModalDialogProps = {
 
 export const ModalDialog = ({ children, className, ref }: ModalDialogProps) => {
   const dialogClasses = clsx(
-    'fixed inset-0 m-auto max-h-[90vh] max-w-3xl rounded-md bg-background shadow-md backdrop:bg-black/60 backdrop:backdrop-blur-[2px]',
+    'max-w-[90vw] md:max-w-3xl m-auto rounded-md bg-background shadow-md backdrop:bg-black/60 backdrop:backdrop-blur-[2px]',
     styles.dialog,
     className
   );
@@ -48,18 +48,18 @@ export const ModalDialog = ({ children, className, ref }: ModalDialogProps) => {
 
   return (
     <dialog ref={ref} className={dialogClasses}>
-      <div className="relative p-6">
+      <header className="relative">
         <Button
           variant="icon-button"
-          className="absolute right-0 top-0 text-accent-lime transition-all duration-300 hover:text-lime-800"
+          className="absolute right-0 top-0 text-accent-lime transition-all duration-300 hover:text-lime-800 focus:outline-none"
           onClick={() => ref.current?.close()}
         >
           <IoCloseOutline className="h-6 w-6" />
         </Button>
+      </header>
 
-        {/* Modal content */}
-        {children}
-      </div>
+      {/* Modal content */}
+      <div className="p-6">{children}</div>
     </dialog>
   );
 };

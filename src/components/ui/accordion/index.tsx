@@ -4,14 +4,13 @@ import { AccordionContext } from '@/context/accordion-context';
 import clsx from 'clsx';
 import { useContext } from 'react';
 import { AccordionItem } from './accordion-item';
-import { AccordionContent, IdType, TitleSize } from './types';
+import { AccordionContent, IdType } from './types';
 
 type Column = 'left' | 'right';
 
 export type AccordionData = {
   id: IdType;
   title: string;
-  titleSize?: TitleSize;
   column?: Column;
   content: AccordionContent;
 };
@@ -51,7 +50,6 @@ export const Accordion = ({ data, className, itemClassName, isTwoColumns = false
               onToggle={() => handleToggle(item.id)}
               isOpen={activeId === item.id}
               className={itemClassName as string}
-              titleSize={item.titleSize}
             />
           ))}
         </div>
@@ -66,7 +64,6 @@ export const Accordion = ({ data, className, itemClassName, isTwoColumns = false
               onToggle={() => handleToggle(item.id)}
               isOpen={activeId === item.id}
               className={itemClassName as string}
-              titleSize={item.titleSize}
             />
           ))}
         </div>
@@ -85,7 +82,6 @@ export const Accordion = ({ data, className, itemClassName, isTwoColumns = false
           onToggle={() => handleToggle(item.id)}
           isOpen={activeId === item.id}
           className={itemClassName as string}
-          titleSize={item.titleSize}
         />
       ))}
     </section>

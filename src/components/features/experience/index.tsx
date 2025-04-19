@@ -1,6 +1,7 @@
 import { ExperienceType } from '@/app/cv/data';
 import { Section } from '@/components/layout/section';
 import { Accordion } from '@/components/ui/accordion';
+import { Heading } from '@/components/ui/heading';
 import clsx from 'clsx';
 
 type ExperienceProps = ExperienceType & {
@@ -36,7 +37,9 @@ export const Experience = ({
 
         {project.technology && (
           <div className="space-y-2">
-            <h3 className="font-semibold">Technologies & Skills</h3>
+            <Heading level="h4" weight="semibold">
+              Technologies & Skills
+            </Heading>
 
             <p className="text-foreground">{project.technology}</p>
           </div>
@@ -48,7 +51,9 @@ export const Experience = ({
   return (
     <Section animateOnScroll isFullWidth className={clsx('space-y-4', className)}>
       <header className="space-y-1">
-        <h2 className="text-2xl font-medium text-accent-electric-blue">{company}</h2>
+        <Heading level="h2" color="electric-blue" weight="medium">
+          {company}
+        </Heading>
 
         <p className="text-foreground">{role}</p>
 
@@ -64,7 +69,9 @@ export const Experience = ({
 
         {carriedOverProjects && carriedOverProjects.length > 0 && (
           <div>
-            <h3 className="mb-2 font-semibold">Carried Over Projects</h3>
+            <Heading level="h4" weight="semibold" className="mb-2">
+              Carried Over Projects
+            </Heading>
 
             <ul className="list-disc space-y-2 pl-5">
               {carriedOverProjects.map((project, index) => (
@@ -74,7 +81,9 @@ export const Experience = ({
           </div>
         )}
 
-        <h3 className="font-semibold text-foreground">Projects</h3>
+        <Heading level="h4" weight="semibold">
+          Projects
+        </Heading>
 
         {projectAccordionData && projectAccordionData.length > 0 && (
           <div className="space-y-6">
@@ -84,7 +93,9 @@ export const Experience = ({
 
         {additionalProjects && additionalProjects.length > 0 && (
           <div className="space-y-2">
-            <h3 className="font-semibold">Additional Projects</h3>
+            <Heading level="h4" weight="semibold">
+              Additional Projects
+            </Heading>
 
             <ul className="list-disc space-y-2 pl-5">
               {additionalProjects.map((project, index) => (

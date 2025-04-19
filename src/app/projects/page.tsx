@@ -1,7 +1,9 @@
 import { ProjectCard } from '@/components/features/projects/project-card';
 import { Section } from '@/components/layout/section';
+import { Heading } from '@/components/ui/heading';
 import type { Metadata } from 'next';
 import { projectsData } from './data';
+import { AnimatedElementPresence } from '@/components/ui/animation/animated-element-presence';
 
 export const metadata: Metadata = {
   title: "Arjun Puri's Projects",
@@ -14,7 +16,9 @@ const ProjectsPage = () => {
     <Section paddingTop="medium" paddingBottom="medium">
       <div className="space-y-12">
         <header>
-          <h1 className="mb-8 text-3xl text-foreground md:text-4xl">Projects</h1>
+          <Heading level="h1" className="mb-8">
+            Projects
+          </Heading>
 
           <div className="space-y-6">
             <p className="text-foreground">
@@ -32,7 +36,9 @@ const ProjectsPage = () => {
 
         <div className="grid auto-rows-fr grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projectsData.map((project, index) => (
-            <ProjectCard key={index} project={project} />
+            <AnimatedElementPresence key={index} animationProperty="position" entryAnimationDelay={1 + index * 0.2}>
+              <ProjectCard project={project} />
+            </AnimatedElementPresence>
           ))}
         </div>
       </div>

@@ -1,11 +1,12 @@
 'use client';
 
 import { ProjectType } from '@/app/projects/data';
+import { buttonStyles } from '@/components/ui/button/styles';
+import { Card } from '@/components/ui/card';
+import { Heading } from '@/components/ui/heading';
 import { ModalDialog } from '@/components/ui/modal-dialog';
 import { useRef } from 'react';
 import { ProjectDetails } from '../project-details';
-import { buttonStyles } from '@/components/ui/button/styles';
-import { Card } from '@/components/ui/card';
 
 type ProjectCardProps = {
   project: ProjectType;
@@ -18,14 +19,20 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 
   return (
     <>
-      <button onClick={() => dialogRef.current?.showModal()} aria-label={`Read more about the ${project.company} project`}>
+      <button
+        onClick={() => dialogRef.current?.showModal()}
+        aria-label={`Read more about the ${project.company} project`}
+        className="h-full w-full"
+      >
         <Card
           textAlign="left"
           alignItems="start"
           className="h-full gap-6 transition-all duration-300 hover:scale-105 hover:shadow-lg"
         >
           <div className="space-y-2">
-            <h2 className="text-xl font-light">{project.company}</h2>
+            <Heading level="h2" as="h4" weight="light">
+              {project.company}
+            </Heading>
             <p className="text-card-body-text-color">{project.role}</p>
           </div>
 
