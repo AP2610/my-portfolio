@@ -34,13 +34,13 @@ const ProjectsPage = () => {
           </div>
         </header>
 
-        <div className="grid auto-rows-fr grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <Section isFullWidth animateOnScroll className="grid auto-rows-fr grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projectsData.map((project, index) => (
             <AnimatedElementPresence key={index} animationProperty="position" entryAnimationDelay={1 + index * 0.2}>
               <ProjectCard project={project} />
             </AnimatedElementPresence>
           ))}
-        </div>
+        </Section>
       </div>
     </Section>
   );

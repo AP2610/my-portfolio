@@ -4,9 +4,9 @@ import { ProjectType } from '@/app/projects/data';
 import { buttonStyles } from '@/components/ui/button/styles';
 import { Card } from '@/components/ui/card';
 import { Heading } from '@/components/ui/heading';
-import { ModalDialog } from '@/components/ui/modal-dialog';
-import { useRef } from 'react';
 import { ProjectDetails } from '../project-details';
+import { useModal } from '@/hooks/use-modal';
+import { Modal } from '@/components/ui/modal';
 
 type ProjectCardProps = {
   project: ProjectType;
@@ -15,15 +15,11 @@ type ProjectCardProps = {
 const inlineButtonStyle = buttonStyles.variants.inline;
 
 export const ProjectCard = ({ project }: ProjectCardProps) => {
-  const dialogRef = useRef<HTMLDialogElement | null>(null);
+  const { isOpen, showModal, closeModal } = useModal();
 
   return (
     <>
-      <button
-        onClick={() => dialogRef.current?.showModal()}
-        aria-label={`Read more about the ${project.company} project`}
-        className="h-full w-full"
-      >
+      <button onClick={() => showModal()} aria-label={`Read more about the ${project.company} project`} className="h-full w-full">
         <Card
           textAlign="left"
           alignItems="start"
@@ -40,9 +36,9 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
         </Card>
       </button>
 
-      <ModalDialog ref={dialogRef}>
+      <Modal isOpen={isOpen} closeModal={closeModal}>
         <ProjectDetails {...project} />
-      </ModalDialog>
+      </Modal>
     </>
   );
 };

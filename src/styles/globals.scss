@@ -22,12 +22,6 @@
   }
 }
 
-body {
-  &:has(dialog[open]) {
-    overflow: hidden;
-  }
-}
-
 p,
 button,
 ul {
