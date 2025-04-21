@@ -1,6 +1,5 @@
 import { AccordionData } from '@/components/ui/accordion';
 
-// TODO: Edit all about me content
 export const aboutMeData: AccordionData[] = [
   {
     id: 'background-info',
@@ -17,10 +16,10 @@ export const aboutMeData: AccordionData[] = [
 
           <p>
             I specialise in React, Next.js, Javascript, Typescript, TailwindCSS, and Sanity CMS With more than 4 years of React
-            experience. My fundamentals are strong, having worked on many vanilla JavaScript projects in the past. My experience
-            with these technologies spans numerous industries like e-commerce, telecom, logistics, media, and the public sector.
-            From large-scale e-commerce and telecom to projects like the Corona Dashboard which served the entirety of the
-            Netherlands, I'm comfortable working on all sizes of projects.
+            experience. I also have some experience with Nuxt.js and Vue. My fundamentals are strong, having worked on many
+            vanilla JavaScript projects in the past. My experience with these technologies spans numerous industries like
+            e-commerce, telecom, logistics, media, and the public sector. From large-scale e-commerce and telecom to projects like
+            the Corona Dashboard which served the entirety of the Netherlands, I'm comfortable working on all sizes of projects.
           </p>
 
           <p>

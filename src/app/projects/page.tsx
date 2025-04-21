@@ -27,9 +27,9 @@ const ProjectsPage = () => {
             </p>
 
             <p className="text-foreground">
-              Earlier in my career, I worked on fully custom WordPress implementations, handling both frontend and backend
-              development. These projects leveraged the then-new Gutenberg editor, which heavily utilises React. This was my first
-              professional exposure to React and marked the beginning of my journey into modern frontend development.
+              Earlier in my career, I worked on fully custom WordPress implementations (not mentioned below), handling both
+              frontend and backend development. These projects leveraged the then-new Gutenberg editor, which heavily utilises
+              React.
             </p>
           </div>
         </header>
