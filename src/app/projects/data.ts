@@ -1,12 +1,10 @@
 export type ProjectType = {
   role: string;
   company: string;
-  period: string;
   situation: string;
   tasks: string[];
   results: string;
   specializations: string[];
-  slug: string;
   image?: string;
   githubUrl?: string;
   websiteUrl?: string;
@@ -16,10 +14,8 @@ export type ProjectType = {
 // TODO: Remove period
 export const projectsData: ProjectType[] = [
   {
-    slug: 'capacare',
     role: 'Team Lead, Frontend Developer, Designer',
     company: 'Capacare',
-    period: 'May 2024 - November 2024',
     additionalInfo:
       'Please note that the website URL has not been inlcuded as at the time of writing, the website is not live. This is because the client has yet to fill in the content into the new content management system. Additionally, the Github repository lives inside of a private organisation, therefore, I am unable to share it.',
     situation:
@@ -38,10 +34,8 @@ export const projectsData: ProjectType[] = [
     specializations: ['Agile', 'JavaScript', 'React', 'TailwindCSS', 'TypeScript', 'Git', 'NextJS', 'Sanity', 'Scrum'],
   },
   {
-    slug: 'totheroot',
     role: 'Frontend Engineer',
     company: 'ToTheRoot',
-    period: 'November 2023 - July 2024',
     image: '/project-images/totheroot.png',
     websiteUrl: 'https://totheroot.io/',
     situation:
@@ -56,10 +50,8 @@ export const projectsData: ProjectType[] = [
     specializations: ['Vue.js', 'Nuxt.js', 'JavaScript', 'TypeScript', 'CSS', 'SCSS', 'Strapi', 'Git', 'Scrum'],
   },
   {
-    slug: 'ministry-of-health',
     role: 'Frontend Engineer',
     company: 'Ministry of Health, Wellness, and Sport',
-    period: 'October 2022 - November 2023',
     image: '/project-images/coronavirus-dashboard.png',
     githubUrl: 'https://github.com/minvws/nl-covid19-data-dashboard',
     websiteUrl: 'https://web.archive.org/web/20230320185659/https://coronadashboard.government.nl/',
@@ -97,10 +89,8 @@ export const projectsData: ProjectType[] = [
     ],
   },
   {
-    slug: 'vodafone-ziggo',
     role: 'Frontend Engineer',
     company: 'VodafoneZiggo',
-    period: 'April 2021 - June 2022',
     image: '/project-images/vodafone.png',
     websiteUrl:
       'https://www.vodafone.nl/zakelijk/mobiel/abonnement/sim-only?duration=24&together-extra-subscription-count=0&red-pro-unlimited=1',
@@ -135,10 +125,8 @@ export const projectsData: ProjectType[] = [
     ],
   },
   {
-    slug: 'prenatal',
     role: 'Frontend Developer',
     company: 'Prenatal',
-    period: 'October 2020 - June 2022',
     image: '/project-images/prenatal.png',
     websiteUrl: 'https://www.prenatal.nl',
     additionalInfo: 'I am unable to share the link to the repository for this website as it is within a private organisation.',
@@ -169,10 +157,8 @@ export const projectsData: ProjectType[] = [
     ],
   },
   {
-    slug: 'blokker',
     role: 'Frontend Developer',
     company: 'Blokker',
-    period: 'August 2021 - March 2022',
     image: '/project-images/blokker.png',
     websiteUrl: 'https://web.archive.org/web/20240718234101/https://www.blokker.nl/',
     additionalInfo:
@@ -189,10 +175,8 @@ export const projectsData: ProjectType[] = [
     specializations: ['Agile', 'AJAX', 'JavaScript', 'HTML 5', 'CSS', 'SCSS', 'Git', 'Cypress', 'Bootstrap', 'jQuery', 'Scrum'],
   },
   {
-    slug: 'schuurman-schoenen',
     role: 'Frontend Developer',
     company: 'Schuurman Schoenen',
-    period: 'April 2020 - March 2022',
     image: '/project-images/schuurman-schoenen.png',
     websiteUrl: 'https://www.schuurman-schoenen.nl',
     additionalInfo: 'I am unable to share the link to the repository for this website as it is within a private organisation.',
