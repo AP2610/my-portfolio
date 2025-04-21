@@ -32,7 +32,6 @@ export const aboutMeData: AccordionData[] = [
       </>
     ),
   },
-  // TODO: edit this content
   {
     id: 'beyond-coding',
     title: 'Beyond Coding',
