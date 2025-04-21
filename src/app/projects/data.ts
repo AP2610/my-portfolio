@@ -14,7 +14,7 @@ export type ProjectType = {
 // TODO: Remove period
 export const projectsData: ProjectType[] = [
   {
-    role: 'Team Lead, Frontend Developer, Designer',
+    role: 'Team Lead, Frontend Engineer, Designer',
     company: 'Capacare',
     additionalInfo:
       'Please note that the website URL has not been inlcuded as at the time of writing, the website is not live. This is because the client has yet to fill in the content into the new content management system. Additionally, the Github repository lives inside of a private organisation, therefore, I am unable to share it.',
@@ -125,7 +125,7 @@ export const projectsData: ProjectType[] = [
     ],
   },
   {
-    role: 'Frontend Developer',
+    role: 'Frontend Engineer',
     company: 'Prenatal',
     image: '/project-images/prenatal.png',
     websiteUrl: 'https://www.prenatal.nl',
@@ -157,7 +157,7 @@ export const projectsData: ProjectType[] = [
     ],
   },
   {
-    role: 'Frontend Developer',
+    role: 'Frontend Engineer',
     company: 'Blokker',
     image: '/project-images/blokker.png',
     websiteUrl: 'https://web.archive.org/web/20240718234101/https://www.blokker.nl/',
@@ -175,7 +175,7 @@ export const projectsData: ProjectType[] = [
     specializations: ['Agile', 'AJAX', 'JavaScript', 'HTML 5', 'CSS', 'SCSS', 'Git', 'Cypress', 'Bootstrap', 'jQuery', 'Scrum'],
   },
   {
-    role: 'Frontend Developer',
+    role: 'Frontend Engineer',
     company: 'Schuurman Schoenen',
     image: '/project-images/schuurman-schoenen.png',
     websiteUrl: 'https://www.schuurman-schoenen.nl',
