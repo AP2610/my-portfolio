@@ -1,0 +1,164 @@
+.canvas {
+  --head-and-legs-background: #FFB6C1;
+  --cheeks: #F88379;
+  // min-width: 100vw;
+  background: #CCCCFF;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  place-content: center;
+
+  .container {
+    background: #5D3FD3;
+    border-radius: 50%;
+    box-shadow: 0 1vmin 2vmin rgba(0, 0, 0, 0.2);
+    height: 60vmin;
+    position: relative;
+    width: 60vmin;
+
+    .containerInner {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      left: 50%;
+      position: absolute;
+      top: 30%;
+      transform: translate(-50%, -30%);
+    }
+
+    // This creates the black border around the head.
+    .headBorder {
+      background: #000;
+      border-radius: 50%;
+      height: 31vmin;
+      left: 50%;
+      position: absolute;
+      top: 30%;
+      transform: translate(-50%, -31%);
+      width: 31vmin;
+      z-index: 1;
+    }
+
+    .head {
+      background: var(--head-and-legs-background);
+      border-radius: 50%;
+      height: 30vmin;
+      position: relative;
+      width: 30vmin;
+      z-index: 3;
+
+      .eyeLeft,
+      .eyeRight {
+        background: #000;
+        border-radius: 50% 40% 40% 50%;
+        height: 5vmin;
+        position: absolute;
+        top: 13vmin;
+        width: 5vmin;
+        z-index: 2;
+
+        &::after {
+          background: #fff;
+          border-radius: 50%;
+          content: '';
+          height: 2vmin;
+          left: 2.5vmin;
+          position: absolute;
+          top: 0.5vmin;
+          width: 2vmin;
+        }
+      }
+
+      .eyeLeft {
+        left: 6vmin;
+      }
+
+      .eyeRight {
+        right: 6vmin;
+      }
+
+      .cheeks {
+        background: var(--cheeks);
+        border-radius: 50% 55% 60% 70%; // creates a bit of a blob
+        box-shadow: 18vmin 0 var(--cheeks); // Box shadow creates the second cheek
+        height: 4vmin;
+        left: 4vmin;
+        position: absolute;
+        top: 17vmin;
+        width: 4vmin;
+        z-index: 1;
+      }
+
+      .mouth {
+        border-bottom: 4px solid black;
+        border-radius: 0 0 80% 80%;
+        height: 2vmin;
+        left: 12.5vmin;
+        position: absolute;
+        top: 18vmin;
+        width: 4vmin;
+      }
+    }
+
+    .legs {
+      display: flex;
+      position: relative;
+      top: 5px;
+      z-index: 2;
+
+      .leg {
+        background: var(--head-and-legs-background);
+        // horiztonal raidus / vertical radius
+        border-radius: 0% 0% 50% 50% / 0% 0 100% 100%;
+        border: 0.5vmin solid #000;
+        border-top: 0;
+        position: absolute;
+        width: 6vmin;
+      }
+
+      .legOne,
+      .legFour {
+        height: 6vmin;
+        bottom: -2vmin;
+      }
+
+      .legOne {
+        left: 3vmin;
+        rotate: 23deg;
+      }
+
+      .legFour {
+        right: 3vmin;
+        rotate: -23deg;
+      }
+
+      .legTwo,
+      .legThree {
+        height: 5vmin;
+        bottom: -3vmin;
+      }
+
+      .legTwo {
+        left: 9vmin;
+        rotate: 5deg;
+      }
+
+      .legThree {
+        right: 9vmin;
+        rotate: -5deg;
+      }
+    }
+
+    .shadow {
+      background: #C3B1E1;
+      border-radius: 50%;
+      bottom: -11vmin;
+      height: 6vmin;
+      left: 50%;
+      opacity: 0.5;
+      position: absolute;
+      transform: translateX(-50%);
+      width: 30vmin;
+    }
+  }
+}
