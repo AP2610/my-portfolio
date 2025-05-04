@@ -28,6 +28,9 @@ export default {
       padding: {
         'header-height': 'calc(64px + calc(var(--header-height)/2))',
       },
+      margin: {
+        'header-height': 'calc(64px + calc(var(--header-height)/2))',
+      },
       fontSize: {
         '4xl': ['2.25rem', { lineHeight: '1.3' }],
         '3xl': ['1.875rem', { lineHeight: '1.3' }],

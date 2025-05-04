@@ -45,7 +45,7 @@ export const Heading = ({ level, as, children, className, color = 'foreground', 
       'text-accent-lime': color === 'lime',
       'text-accent-violet': color === 'violet',
     },
-    className
+    className,
   );
 
   return <HeadingTag className={headingClasses}>{children}</HeadingTag>;

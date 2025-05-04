@@ -1,0 +1,18 @@
+@mixin container($background-color, $height: 60vmin, $width: 60vmin) {
+  background: $background-color;
+  border-radius: 50%;
+  box-shadow: 0 1vmin 2vmin rgba(0, 0, 0, 0.2);
+  height: $height;
+  position: relative;
+  width: $width;
+}
+
+@mixin container-inner($top: 30%, $left: 50%) {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  left: $left;
+  position: absolute;
+  top: $top;
+  transform: translate(-$left, -$top);
+}
