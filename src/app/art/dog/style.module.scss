@@ -175,7 +175,7 @@
         height: 8vmin;
         background: var(--body-color);
         border-radius: 0 0 100px 100px;
-        filter: drop-shadow(3px 0px #000) drop-shadow(0px 3px #000) drop-shadow(-3px 0px #000);
+        filter: drop-shadow(0.4vmin 0 #000) drop-shadow(0 0.4vmin #000) drop-shadow(-0.4vmin 0 #000);
         position: absolute;
         top: 12vmin;
 
@@ -228,7 +228,7 @@
     }
 
     .hindLegLeft {
-      filter: drop-shadow(-4px 0 #000) drop-shadow(0px 3px #000);
+      filter: drop-shadow(-0.5vmin 0 #000) drop-shadow(0 0.4vmin #000);
       left: -12vmin;
 
       &::before {
@@ -238,7 +238,7 @@
     }
 
     .hindLegRight {
-      filter: drop-shadow(4px 0 #000) drop-shadow(0px 3px #000);
+      filter: drop-shadow(0.5vmin 0 #000) drop-shadow(0 0.4vmin #000);
       right: -12vmin;
 
       &::before {
