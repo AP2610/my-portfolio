@@ -1,0 +1,281 @@
+@use '../../../styles/art/mixins/container.scss';
+
+.canvas {
+  --body-background: #0047AB;
+  --inner-body: #6495ED;
+  --shadow: var(--inner-body);
+  --body-border: 0.5vmin solid #000;
+
+  // min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background: #F0FFFF;
+
+  .container {
+    @include container.container($background-color: #ADD8E6);
+    overflow: hidden;
+
+    .containerInner {
+      @include container.container-inner($left: 45%);
+    }
+
+    .animationContainer {
+      position: relative;
+
+      &.swim {
+        animation: swimMove 3s linear infinite, swimRotate 1.5s ease-in-out infinite;
+        margin-top: 50px;
+        transform-origin: 0% 50%;
+      }
+    }
+
+    .mainBodyBorder {
+      background: #000;
+      border-radius: 50%;
+      height: 26vmin;
+      left: -0.5vmin;
+      position: absolute;
+      top: -0.5vmin;
+      width: 36vmin;
+      z-index: 1;
+    }
+
+    .topFin {
+      background: var(--body-background);
+      border-radius: 95% 10% 0 0;
+      border: var(--body-border);
+      border-bottom: 0;
+      box-shadow: inset 2px 0px var(--inner-body);
+      height: 7vmin;
+      position: absolute;
+      right: 15vmin;
+      rotate: 16deg;
+      top: -5vmin;
+      width: 6vmin;
+      z-index: 2;
+    }
+
+    .mainBody {
+      width: 35vmin;
+      height: 25vmin;
+      background: var(--body-background);
+      border-radius: 50%;
+      overflow: hidden;
+      position: relative;
+      z-index: 3;
+
+      &::after {
+        content: "";
+        width: 20vmin;
+        height: 23vmin;
+        border-radius: 50% 80%;
+        background: var(--inner-body);
+        position: absolute;
+        top: 15vmin;
+        left: 2vmin;
+        z-index: -1;
+        rotate: -15deg;
+      }
+
+      .eyeLeft,
+      .eyeRight {
+        width: 5vmin;
+        height: 5vmin;
+        background: #000;
+        border-radius: 60% 50%;
+        position: absolute;
+
+        &::after {
+          content: '';
+          width: 1.5vmin;
+          height: 1.5vmin;
+          position: absolute;
+          background: #fff;
+          border-radius: 60% 50% 60%;
+          top: 0.5vmin;
+          left: 3vmin;
+        }
+      }
+
+      .eyeLeft {
+        top: 10vmin;
+        left: 3vmin;
+      }
+
+      .eyeRight {
+        top: 10vmin;
+        right: 16vmin;
+      }
+
+      .mouth {
+        width: 4vmin;
+        height: 1vmin;
+        border: .5vmin solid #000;
+        border-top: 0;
+        position: absolute;
+        top: 14.5vmin;
+        left: 8.5vmin;
+        border-radius: 0 0 100px 100px;
+
+        &::before {
+          content: '';
+          width: 3vmin;
+          height: 2vmin;
+          border: 0.5vmin solid #000;
+          position: absolute;
+          top: .5vmin;
+          left: 0;
+          border-radius: 0% 0% 50% 50% / 0% 0 100% 100%;
+          background: #D22B2B;
+          box-shadow: inset -3px -1px 0 #fff;
+        }
+      }
+
+      .gills {
+        border-radius: 50%;
+        border: .25vmin solid #0000;
+        border-right: .75vmin solid;
+        filter: drop-shadow(1.5vmin 0);
+        height: 4vmin;
+        position: absolute;
+        right: 13vmin;
+        rotate: 5deg;
+        top: 13vmin;
+        width: 3vmin;
+      }
+    }
+
+    .rearFin {
+      position: absolute;
+      top: 17vmin;
+      right: -5vmin;
+      z-index: 2;
+
+      .rearFinTop,
+      .rearFinBottom {
+        background: var(--body-background);
+        border: var(--body-border);
+        border-top: 0;
+        height: 12vmin;
+        position: absolute;
+        width: 7vmin;
+      }
+
+      .rearFinTop {
+        border-radius: 0 0 100% 10%;
+        box-shadow: inset -2px 0px var(--inner-body);
+        right: 2.5vmin;
+        rotate: -164deg;
+        top: -15.5vmin;
+      }
+
+      .rearFinBottom {
+        border-radius: 0 0 10% 100%;
+        bottom: -7vmin;
+        right: 2.5vmin;
+        rotate: -30deg;
+        z-index: -1;
+      }
+    }
+
+    .frontFin {
+      border-radius: 0 0 30% 95%;
+      width: 6vmin;
+      height: 9vmin;
+      background: var(--body-background);
+      border: var(--body-border);
+      border-top: 0;
+      position: absolute;
+      bottom: -4vmin;
+      right: 7vmin;
+      rotate: -25deg;
+      z-index: 3;
+    }
+
+    .behindFin {
+      border-radius: 0% 0% 50% 50% / 0% 0 100% 100%;
+      width: 7vmin;
+      height: 8vmin;
+      background: var(--body-background);
+      border: var(--body-border);
+      border-top: 0;
+      position: absolute;
+      bottom: -3vmin;
+      left: 5vmin;
+      rotate: 22deg;
+    }
+
+    .shadow {
+      background: var(--shadow);
+      border-radius: 50%;
+      bottom: -11vmin;
+      height: 6vmin;
+      left: 50%;
+      opacity: 0.5;
+      position: absolute;
+      top: 75%;
+      transform: translateX(-50%);
+      width: 30vmin;
+    }
+  }
+}
+
+@keyframes swimMove {
+  0% {
+    left: 0;
+  }
+
+  40% {
+    left: -150%;
+  }
+
+  49% {
+    left: -150%;
+    visibility: hidden;
+  }
+
+  // This is needed to prevent the shark from flashing in the middle of the screen before entering from the right
+  49.9% {
+    left: 150%;
+    visibility: hidden;
+  }
+
+  50% {
+    left: 150%;
+    visibility: visible;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes swimRotate {
+  0% {
+    rotate: -2deg;
+    transform: translateY(0);
+  }
+
+  25% {
+    rotate: 2deg;
+    transform: translateY(-5px);
+  }
+
+  50% {
+    rotate: -2deg;
+    transform: translateY(0);
+  }
+
+  75% {
+    rotate: 2deg;
+    transform: translateY(5px);
+  }
+
+  100% {
+    rotate: -2deg;
+    transform: translateY(0);
+  }
+}
