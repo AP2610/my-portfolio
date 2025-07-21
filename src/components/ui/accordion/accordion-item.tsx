@@ -4,7 +4,7 @@ import { useMediaQuery } from '@/hooks/use-media-query';
 import { scrollToElement } from '@/utils/scroll-to-element';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
-import React, { useEffect, useRef } from 'react';
+import React, { memo, useEffect, useRef } from 'react';
 import { AccordionContent, IdType } from './types';
 import { Heading } from '../heading';
 
@@ -17,10 +17,17 @@ type AccordionItemProps = {
   className: string;
 };
 
-export const AccordionItem = ({ id, title, content, isOpen, onToggle, className }: AccordionItemProps) => {
+const shouldRerender = (prevProps: AccordionItemProps, nextProps: AccordionItemProps) => {
+  // Only re-render when isOpen changes to avoid rendering all accordion items when one is opened/closed
+  return prevProps.isOpen === nextProps.isOpen;
+};
+
+export const AccordionItem = memo(({ id, title, content, isOpen, onToggle, className }: AccordionItemProps) => {
   const contentRef = useRef<HTMLDivElement>(null);
   const scrollRef = useRef<HTMLElement>(null);
   const isMdOrLargerScreen = useMediaQuery('md');
+
+  console.log('rendered-item', title);
 
   // Need to do some hacky workarounds to compensate for the scroll when an accoridon is collapsed and another is opened
   useEffect(() => {
@@ -135,4 +142,6 @@ export const AccordionItem = ({ id, title, content, isOpen, onToggle, className 
       </motion.div>
     </article>
   );
-};
+}, shouldRerender);
+
+AccordionItem.displayName = 'AccordionItem';
