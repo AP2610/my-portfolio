@@ -27,8 +27,6 @@ export const AccordionItem = memo(({ id, title, content, isOpen, onToggle, class
   const scrollRef = useRef<HTMLElement>(null);
   const isMdOrLargerScreen = useMediaQuery('md');
 
-  console.log('rendered-item', title);
-
   // Need to do some hacky workarounds to compensate for the scroll when an accoridon is collapsed and another is opened
   useEffect(() => {
     if (!isOpen) return;
