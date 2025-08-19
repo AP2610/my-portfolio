@@ -21,12 +21,12 @@ export const Sidebar = ({ className }: SidebarProps) => {
 
   // Flex class is applied where the component is used for a better overview
   const asideClasses = clsx(
-    'relative bg-sidebar-bg sticky top-0 h-screen flex-col items-center py-8 gap-14 text-foreground shadow-md transition-all duration-300',
+    'bg-sidebar-bg sticky top-0 h-screen flex-col items-center py-8 gap-14 text-foreground shadow-md transition-all duration-300',
     {
       'w-18': isCollapsed,
       'w-[250px]': !isCollapsed,
     },
-    className
+    className,
   );
 
   const collapseButtonClasses = clsx(
@@ -34,7 +34,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
     {
       'rotate-180': !isCollapsed,
       'rotate-0': isCollapsed,
-    }
+    },
   );
 
   return (

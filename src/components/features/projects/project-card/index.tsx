@@ -1,15 +1,16 @@
 'use client';
 
-import { ProjectType } from '@/app/projects/data';
+import { PersonalProjectType, ProfessionalProjectType } from '@/app/projects/data';
 import { buttonStyles } from '@/components/ui/button/styles';
 import { Card } from '@/components/ui/card';
 import { Heading } from '@/components/ui/heading';
-import { ProjectDetails } from '../project-details';
+import { ProfessionalProjectDetails } from '../project-details/professional';
 import { useModal } from '@/hooks/use-modal';
 import { Modal } from '@/components/ui/modal';
+import { PersonalProjectDetails } from '../project-details/personal';
 
 type ProjectCardProps = {
-  project: ProjectType;
+  project: ProfessionalProjectType | PersonalProjectType;
 };
 
 const inlineButtonStyle = buttonStyles.variants.inline;
@@ -19,7 +20,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 
   return (
     <>
-      <button onClick={() => showModal()} aria-label={`Read more about the ${project.company} project`} className="h-full w-full">
+      <button onClick={() => showModal()} aria-label={`Read more about the ${project.name} project`} className="h-full w-full">
         <Card
           textAlign="left"
           alignItems="start"
@@ -27,9 +28,10 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
         >
           <div className="space-y-2">
             <Heading level="h2" as="h4" weight="light">
-              {project.company}
+              {project.name}
             </Heading>
-            <p className="text-card-body-text-color">{project.role}</p>
+
+            {project.type === 'professional' && <p className="text-card-body-text-color">{project.role}</p>}
           </div>
 
           <span className={`${inlineButtonStyle} ml-auto mt-auto`}>Read More</span>
@@ -37,7 +39,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
       </button>
 
       <Modal isOpen={isOpen} closeModal={closeModal}>
-        <ProjectDetails {...project} />
+        {project.type === 'professional' ? <ProfessionalProjectDetails {...project} /> : <PersonalProjectDetails {...project} />}
       </Modal>
     </>
   );

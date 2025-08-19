@@ -13,35 +13,53 @@ export const metadata: Metadata = {
 
 const ProjectsPage = () => {
   return (
-    <Section paddingTop="medium" paddingBottom="medium">
-      <div className="space-y-12">
+    <Section paddingTop="medium" paddingBottom="medium" className="space-y-12">
+      <article className="space-y-12">
         <header>
           <Heading level="h1" className="mb-8">
-            Projects
+            Professional Projects
           </Heading>
-
-          <div className="space-y-6">
-            <p className="text-foreground">
-              These are some of the most impactful projects I've worked on—both in my growth as a developer and in their impact on
-              users. These aren't all the projects I've contributed to throughout my career, but the most substantial ones.
-            </p>
-
-            <p className="text-foreground">
-              Earlier in my career, I worked on fully custom WordPress implementations (not mentioned below), handling both
-              frontend and backend development. These projects leveraged the then-new Gutenberg editor, which heavily utilises
-              React.
-            </p>
-          </div>
         </header>
 
+        <p className="text-foreground">
+          These are some of the most impactful projects I've worked on—both in my growth as a developer and in their impact on
+          users. These aren't all the projects I've contributed to throughout my career, but the most substantial ones.
+        </p>
+
         <Section isFullWidth animateOnScroll className="grid auto-rows-fr grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {projectsData.map((project, index) => (
+          {projectsData.professionalProjects.map((project, index) => (
             <AnimatedElementPresence key={index} animationProperty="position" entryAnimationDelay={1 + index * 0.2}>
               <ProjectCard project={project} />
             </AnimatedElementPresence>
           ))}
         </Section>
-      </div>
+      </article>
+
+      <article className="space-y-12">
+        <Heading level="h2" className="mb-8">
+          Personal Projects
+        </Heading>
+
+        <p className="text-foreground">
+          Below you'll find an ever-growing list of personal projects I've worked on. These are projects that I've worked on in my
+          spare time. The goal with most of these projects was to learn something new and improve my skills, while making
+          something fun and interesting.
+        </p>
+
+        <Section isFullWidth animateOnScroll className="grid auto-rows-fr grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {projectsData.personalProjects.map((project, index) => (
+            <AnimatedElementPresence
+              key={index}
+              shouldUseInView
+              useInViewMargin="100px"
+              animationProperty="position"
+              entryAnimationDelay={1 + index * 0.2}
+            >
+              <ProjectCard project={project} />
+            </AnimatedElementPresence>
+          ))}
+        </Section>
+      </article>
     </Section>
   );
 };
