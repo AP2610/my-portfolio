@@ -6,6 +6,7 @@ import { MyLink } from '@/components/ui/my-link';
 
 type ProjectDetailsProps = PersonalProjectType;
 
+// TODO: Combine this with the professional project details component
 export const PersonalProjectDetails = ({
   name,
   description,
