@@ -28,6 +28,7 @@ export const PersonalProjectDetails = ({
             src={image}
             alt={`${name} project screenshot`}
             sizes="50vw"
+            priority
             containerClasses="aspect-video rounded-lg overflow-hidden md:max-h-[32rem]"
           />
         </div>
