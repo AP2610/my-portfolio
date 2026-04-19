@@ -15,6 +15,7 @@ export const Experience = ({
   location = 'Netherlands',
   subText,
   description,
+  bulletPoints,
   projects,
   additionalProjects,
   carriedOverProjects,
@@ -67,6 +68,14 @@ export const Experience = ({
       <div className="space-y-6 text-foreground">
         <p>{description}</p>
 
+        {bulletPoints && bulletPoints.length > 0 && (
+          <ul className="list-disc space-y-2 pl-5">
+            {bulletPoints.map((point, index) => (
+              <li key={index}>{point}</li>
+            ))}
+          </ul>
+        )}
+
         {carriedOverProjects && carriedOverProjects.length > 0 && (
           <div>
             <Heading level="h4" weight="semibold" className="mb-2">
@@ -81,9 +90,11 @@ export const Experience = ({
           </div>
         )}
 
-        <Heading level="h4" weight="semibold">
-          Projects
-        </Heading>
+        {projects && (
+          <Heading level="h4" weight="semibold">
+            Projects
+          </Heading>
+        )}
 
         {projectAccordionData && projectAccordionData.length > 0 && (
           <div className="space-y-6">

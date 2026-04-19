@@ -15,11 +15,10 @@ export const aboutMeData: AccordionData[] = [
           </p>
 
           <p>
-            I specialise in React, Next.js, Javascript, Typescript, TailwindCSS, and Sanity CMS With more than 4 years of React
-            experience. I also have some experience with Nuxt.js and Vue. My fundamentals are strong, having worked on many
-            vanilla JavaScript projects in the past. My experience with these technologies spans numerous industries like
-            e-commerce, telecom, logistics, media, and the public sector. From large-scale e-commerce and telecom to projects like
-            the Corona Dashboard which served the entirety of the Netherlands, I'm comfortable working on all sizes of projects.
+            I specialise in React, Next.js, Javascript, Typescript, TailwindCSS, and Sanity CMS With more than 5 years of React
+            and Next.js experience. I also have some experience with Nuxt.js and Vue. My fundamentals are strong, having worked on
+            many vanilla JavaScript projects in the past. My experience with these technologies spans numerous industries like
+            health-tech, e-commerce, telecom, logistics, media, and the public sector.
           </p>
 
           <p>
@@ -56,8 +55,8 @@ export const aboutMeData: AccordionData[] = [
     id: 'ai-in-my-workflow',
     title: 'AI in My Workflow',
     column: 'right',
-    content: `In the past year, I have worked with AI tools like GitHub Copilot, Augment, and ChatGPT and found ways to integrate them
-          into my development workflow to enhance productivity when needed. While I still enjoy doing things manually for the sake of learning and staying sharp, when I need speed, AI is the way to go. In any case, not a single line of AI generated code gets through without thorough scrutiny and review. Beyond work, I use AI extensively in my personal life, whether it's for DIY projects or recipe
+    content: `In the past year, I have worked with AI tools like GitHub Copilot, Augment, Codex, and Claude Code, and found ways to integrate them
+          into my development workflow to enhance productivity. While I still enjoy doing things manually for the sake of learning and staying sharp, when I need speed, AI is the way to go. In any case, not a single line of AI generated code gets through without thorough scrutiny and review. I use a comprehensive set of skills for my AI agents, and have a consistent way of structuring my prompts. Beyond work, I use AI extensively in my personal life, whether it's for DIY projects or recipe
           development, it helps me get to where I am trying to go faster.`,
   },
   {

@@ -13,7 +13,7 @@ export const HomepageCardGrid = () => {
       <AnimatedElementPresence animationProperty="position" entryAnimationDelay={1} className="lg:col-span-3">
         <Card className="h-full">
           <Heading level="h2" weight="light" className="mb-4">
-            5 years
+            6 years
           </Heading>
           <p className="text-card-body-text-color">Of frontend experience</p>
         </Card>

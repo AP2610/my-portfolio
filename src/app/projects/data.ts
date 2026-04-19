@@ -28,7 +28,39 @@ export const projectsData: {
   professionalProjects: [
     {
       type: 'professional',
-      role: 'Team Lead, Frontend Engineer, Designer',
+      role: 'Senior Frontend Engineer',
+      name: 'Uw Zorg Online, Health Cloud Initiative',
+      situation:
+        'Contributed to one of the largest digital healthcare platforms in the Netherlands, used by millions for appointments, prescriptions, medical records, and provider communication. The work focused on modernising the product, improving platform scalability, and enabling faster delivery across teams.',
+      tasks: [
+        'Leading the frontend for a full product rebuild, collaborating closely with backend engineers on API design, data flows, and integration patterns',
+        'Led migration from a legacy React application to a Next.js application, improving scalability, performance, and aligning the codebase with current best practices',
+        'Leveraged AI-assisted development (Codex and Claude) with structured workflows to accelerate feature delivery',
+        'Designed and implemented a modular frontend architecture where features are dynamically loaded based on customer subscriptions',
+        'Set up and maintained a Turborepo monorepo to enable shared code, faster builds, and better separation of concerns',
+        'Built and maintained a fully accessible component library using Storybook to standardise UI patterns and speed up delivery',
+        'Improved development velocity by creating a monorepo package generator, reducing manual setup and ensuring consistency across packages',
+        'Collaborated with product, design, and backend teams to deliver user-focused features',
+      ],
+      results:
+        'Successfully established a modern, modular frontend foundation for the platform and accelerated team delivery. CI/CD build times were reduced by approximately 50% through Turborepo caching, while reusable UI standards and shared tooling improved consistency and long-term maintainability.',
+      technologies: [
+        'Agile',
+        'JavaScript',
+        'TypeScript',
+        'React',
+        'NextJS',
+        'Turborepo',
+        'Storybook',
+        'Accessibility',
+        'CI/CD',
+        'Git',
+        'Scrum',
+      ],
+    },
+    {
+      type: 'professional',
+      role: 'Team Lead, Senior Frontend Engineer, Designer',
       name: 'Capacare',
       image: '/project-images/capacare.png',
       websiteUrl: 'https://www.capacare.org/',
@@ -51,7 +83,7 @@ export const projectsData: {
     },
     {
       type: 'professional',
-      role: 'Frontend Engineer',
+      role: 'Senior Frontend Engineer',
       name: 'ToTheRoot',
       image: '/project-images/totheroot.png',
       websiteUrl: 'https://totheroot.io/',
@@ -68,7 +100,7 @@ export const projectsData: {
     },
     {
       type: 'professional',
-      role: 'Frontend Engineer',
+      role: 'Senior Frontend Engineer',
       name: 'Ministry of Health, Wellness, and Sport',
       image: '/project-images/coronavirus-dashboard.png',
       githubUrl: 'https://github.com/minvws/nl-covid19-data-dashboard',

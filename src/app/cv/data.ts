@@ -12,6 +12,7 @@ export type ExperienceType = {
   location?: string;
   subText?: string;
   description: string;
+  bulletPoints?: string[];
   projects?: Project[];
   additionalProjects?: string[];
   carriedOverProjects?: string[];
@@ -19,8 +20,27 @@ export type ExperienceType = {
 
 export const experiences: ExperienceType[] = [
   {
+    company: 'Uw Zorg Online, Health Cloud Initiative',
+    role: 'Senior Frontend Engineer',
+    period: 'October 20255 - Present',
+    location: 'Netherlands',
+    description:
+      'One of the largest digital healthcare platforms in the Netherlands, enabling users to manage healthcare online through appointments, prescriptions, medical records, and provider communication. It serves millions of users.',
+    bulletPoints: [
+      'Leading the frontend for a full product rebuild, collaborating closely with backend engineers on API design, data flows, and integration patterns',
+      'Led migration from a legacy React application to a Next.js application, improving scalability, performance, and aligning the codebase with current best practices',
+      'Leveraged AI-assisted development (Codex and Claude) with structured workflows to accelerate feature delivery',
+      'Designed and implemented a modular frontend architecture where features are dynamically loaded based on customer subscriptions',
+      'Set up and maintained a Turborepo monorepo to enable shared code, faster builds, and better separation of concerns',
+      'Built and maintained a fully accessible component library using Storybook to standardise UI patterns and speed up delivery',
+      'Reduced CI/CD build times by ~50% using Turborepo caching',
+      'Improved development velocity by creating a monorepo package generator, reducing manual setup and ensuring consistency across packages',
+      'Collaborated with product, design, and backend teams to deliver user-focused features',
+    ],
+  },
+  {
     company: 'Sopra Steria',
-    role: 'Frontend Engineer',
+    role: 'Senior Frontend Engineer',
     period: 'December 2023 - March 2025 (1 year 4 months)',
     location: 'Netherlands',
     subText: '(Previously Ordina, which merged with Sopra Steria in late 2023)',
