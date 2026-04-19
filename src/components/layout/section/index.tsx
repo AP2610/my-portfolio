@@ -38,29 +38,27 @@ export const Section = ({
       'pb-24': paddingBottom === 'large',
       'pt-header-height': hasHeaderPaddingTop,
     },
-    className
+    className,
   );
 
-  const motionProps = {
-    initial: { opacity: 0, y: 50 },
-    whileInView: { opacity: 1, y: 0 },
-    transition: { duration: 0.6, delay: 0.3, type: 'easeInOut' },
-    viewport: { once: true, margin: '-75px' },
-  };
-
-  const sectionProps = {
-    id,
-    className: sectionClasses,
-    ...(animateOnScroll ? motionProps : {}),
-  };
+  if (animateOnScroll) {
+    return (
+      <motion.section
+        id={id}
+        className={sectionClasses}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3, ease: 'easeInOut' }}
+        viewport={{ once: true, margin: '-75px' }}
+      >
+        {children}
+      </motion.section>
+    );
+  }
 
   return (
-    <>
-      {animateOnScroll ? (
-        <motion.section {...sectionProps}>{children}</motion.section>
-      ) : (
-        <section {...sectionProps}>{children}</section>
-      )}
-    </>
+    <section id={id} className={sectionClasses}>
+      {children}
+    </section>
   );
 };

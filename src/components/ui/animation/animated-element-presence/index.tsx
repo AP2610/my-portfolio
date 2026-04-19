@@ -42,21 +42,21 @@ export const AnimatedElementPresence = ({
       transition: {
         delay: entryAnimationDelay,
         duration: 0.8,
-        type: 'spring',
+        type: 'spring' as const,
         stiffness: 100,
         damping: 20,
       },
       exit: {
         opacity: 0,
         y: 50,
-        transition: { delay: exitAnimationDelay, duration: 3, type: 'easeInOut' },
+        transition: { delay: exitAnimationDelay, duration: 3, ease: 'easeInOut' as const },
       },
     },
     opacity: {
       initial: { opacity: 0 },
       animate: isInViewValue ? { opacity: 1 } : undefined,
-      transition: { delay: entryAnimationDelay, duration: 0.5, type: 'easeInOut' },
-      exit: { opacity: 0, transition: { delay: exitAnimationDelay, duration: 0.5, type: 'easeInOut' } },
+      transition: { delay: entryAnimationDelay, duration: 0.5, ease: 'easeInOut' as const },
+      exit: { opacity: 0, transition: { delay: exitAnimationDelay, duration: 0.5, ease: 'easeInOut' as const } },
     },
   };
 
